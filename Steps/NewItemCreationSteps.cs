@@ -58,7 +58,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [Then(@"publish the batch")]
         public void ThenPublishTheBatch()
         {
-
+            Thread.Sleep(500);
         }
     }
 }

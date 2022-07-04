@@ -37,7 +37,6 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         
         IWebElement ItemCode => Driver.FindElement(By.XPath("(//input[@class='form-control common-text-feild ng-pristine ng-untouched ng-valid ng-not-empty'])[1]"));
         IWebElement ItemDescription => Driver.FindElement(By.Name("itemDescription"));
-
         IWebElement BatchLink => Driver.FindElement(By.XPath("//div [@class='app-l-item-batch__right']"));
         IWebElement MoreDetails => Driver.FindElement(By.XPath("//span[text()='More Details']"));
         IWebElement NewItemsTab => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[11]"));

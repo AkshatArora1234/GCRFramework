@@ -44,7 +44,7 @@ namespace SpecFlow_MSTestFrameWork
         public void SelectByOption(IWebElement webElement, string text)
         {
             SelectElement selectElement = new SelectElement(webElement);
-            //  selectElement.SelectByOption(text);
+           
         }
 
         public void SelectType(string text)

@@ -7,5 +7,5 @@ Scenario: To Verify the creation of new item
 	When user click side menu and select the item.
 	And user create a new batch
 	And then creates a new item
-    Then confirm the item in thw batch file
-    And publish the batch
+	Then confirm the item in thw batch file
+	And publish the batch
