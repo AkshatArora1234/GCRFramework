@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,14 @@ namespace SpecFlow_MSTestFrameWork
 {
     public class CustomControls : DriverHelper
     {
+        public By TexBoxLocator { get; }
+        public IWebDriver Driver { get; }
+        public CustomControls(IWebDriver driver, By texBoxLocator)
+        {
+            TexBoxLocator = texBoxLocator;
+            Driver = driver;
+        }
+
 
         public void EnterText(IWebElement webElement, string value) => webElement.SendKeys(value);
 
@@ -38,7 +47,13 @@ namespace SpecFlow_MSTestFrameWork
             //  selectElement.SelectByOption(text);
         }
 
-
+        public void SelectType(string text)
+        {
+            var textBoxElement = Driver.FindElement(TexBoxLocator);
+            textBoxElement.Click();
+            Actions keyDown = new Actions(Driver);
+            keyDown.SendKeys(Keys.Down).SendKeys(Keys.Down).SendKeys(Keys.Down).SendKeys(Keys.Enter).SendKeys(Keys.End).Build().Perform();
+        }
 
     }
 }

@@ -42,23 +42,23 @@ namespace SpecFlow_MSTestFrameWork.Steps
         {
             newBatch.CreateBatch();
         }
-        
+
         [When(@"then creates a new item")]
         public void WhenThenCreatesANewItem()
         {
             newItemCreation.CreateNewItem();
         }
-        
+
         [Then(@"confirm the item in thw batch file")]
         public void ThenConfirmTheItemInThwBatchFile()
         {
-            ScenarioContext.Current.Pending();
+            newItemCreation.GetItemDetailsAndPublish();
         }
-        
+
         [Then(@"publish the batch")]
         public void ThenPublishTheBatch()
         {
-            ScenarioContext.Current.Pending();
+
         }
     }
 }
