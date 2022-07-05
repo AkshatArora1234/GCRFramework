@@ -1461,3 +1461,7 @@ C:\Users\prathibha.s\source\repos\SpecflowMSTestGCRAuto\GCRFramework\obj\Debug\n
 C:\Users\prathibha.s\source\repos\SpecflowMSTestGCRAuto\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.dll
 C:\Users\prathibha.s\source\repos\SpecflowMSTestGCRAuto\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.pdb
 C:\Users\prathibha.s\source\repos\SpecflowMSTestGCRAuto\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.genruntimeconfig.cache
+C:\workspace\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.GeneratedMSBuildEditorConfig.editorconfig
+C:\workspace\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.AssemblyInfoInputs.cache
+C:\workspace\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.AssemblyInfo.cs
+C:\workspace\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.csproj.CoreCompileInputs.cache
