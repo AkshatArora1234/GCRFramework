@@ -1,0 +1,248 @@
+-> Loading plugin C:\workspace\GCRFramework\bin\Debug\netcoreapp3.1\LivingDoc.SpecFlowPlugin.dll
+-> Loading plugin C:\workspace\GCRFramework\bin\Debug\netcoreapp3.1\TechTalk.SpecFlow.MSTest.SpecFlowPlugin.dll
+-> Loading plugin C:\workspace\GCRFramework\bin\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.dll
+-> Using default config
+Setup
+Given user navigates to HQ application
+-> done: HQLoginSteps.GivenUserNavigatesToHQApplication() (4.6s)
+When enter valid '<username>', '<hqpassword>'
+-> done: HQLoginSteps.WhenEnterValid("<username>", "<hqpassword>") (0.4s)
+And Clicks on Log In button
+-> done: HQLoginSteps.WhenClicksOnLogInButton() (8.2s)
+Then HQ homepage should be displayed
+-> done: HQLoginSteps.ThenHQHomepageShouldBeDisplayed() (0.3s)
+When User clicks on the Left Menu
+-> No matching step definition found for the step. Use the following code to create one:
+        [When(@"User clicks on the Left Menu")]
+        public void WhenUserClicksOnTheLeftMenu()
+        {
+            _scenarioContext.Pending();
+        }
+
+Then menu should be displayed
+-> No matching step definition found for the step. Use the following code to create one:
+        [Then(@"menu should be displayed")]
+        public void ThenMenuShouldBeDisplayed()
+        {
+            _scenarioContext.Pending();
+        }
+
+When User enters Scale Configuration in the Search Box
+-> No matching step definition found for the step. Use the following code to create one:
+        [When(@"User enters Scale Configuration in the Search Box")]
+        public void WhenUserEntersScaleConfigurationInTheSearchBox()
+        {
+            _scenarioContext.Pending();
+        }
+
+Then Scale Configuration Item should be displayed on the Menu
+-> No matching step definition found for the step. Use the following code to create one:
+        [Then(@"Scale Configuration Item should be displayed on the Menu")]
+        public void ThenScaleConfigurationItemShouldBeDisplayedOnTheMenu()
+        {
+            _scenarioContext.Pending();
+        }
+
+When User Selects the Scale Configuration
+-> No matching step definition found for the step. Use the following code to create one:
+        [When(@"User Selects the Scale Configuration")]
+        public void WhenUserSelectsTheScaleConfiguration()
+        {
+            _scenarioContext.Pending();
+        }
+
+Then Scale Configuration Page should be displayed
+-> No matching step definition found for the step. Use the following code to create one:
+        [Then(@"Scale Configuration Page should be displayed")]
+        public void ThenScaleConfigurationPageShouldBeDisplayed()
+        {
+            _scenarioContext.Pending();
+        }
+
+When User click s on the Add New from Font Section
+-> No matching step definition found for the step. Use the following code to create one:
+        [When(@"User click s on the Add New from Font Section")]
+        public void WhenUserClickSOnTheAddNewFromFontSection()
+        {
+            _scenarioContext.Pending();
+        }
+
+Then Create New Font Pop up should appear
+-> No matching step definition found for the step. Use the following code to create one:
+        [Then(@"Create New Font Pop up should appear")]
+        public void ThenCreateNewFontPopUpShouldAppear()
+        {
+            _scenarioContext.Pending();
+        }
+
+When User enters the '<Code>', '<FontName>'
+-> No matching step definition found for the step. Use the following code to create one:
+        [When(@"User enters the '(.*)', '(.*)'")]
+        public void WhenUserEntersThe(string code, string fontName)
+        {
+            _scenarioContext.Pending();
+        }
+
+Then the save button should be enabled
+-> No matching step definition found for the step. Use the following code to create one:
+        [Then(@"the save button should be enabled")]
+        public void ThenTheSaveButtonShouldBeEnabled()
+        {
+            _scenarioContext.Pending();
+        }
+
+When User clicks on button Save
+-> No matching step definition found for the step. Use the following code to create one:
+        [When(@"User clicks on button Save")]
+        public void WhenUserClicksOnButtonSave()
+        {
+            _scenarioContext.Pending();
+        }
+
+Then Font should get saved and a '<confirmationMsg>' should be displayed for the same
+-> No matching step definition found for the step. Use the following code to create one:
+        [Then(@"Font should get saved and a '(.*)' should be displayed for the same")]
+        public void ThenFontShouldGetSavedAndAShouldBeDisplayedForTheSame(string confirmationMsg)
+        {
+            _scenarioContext.Pending();
+        }
+
+When user Looks Font table
+-> No matching step definition found for the step. Use the following code to create one:
+        [When(@"user Looks Font table")]
+        public void WhenUserLooksFontTable()
+        {
+            _scenarioContext.Pending();
+        }
+
+Then the recently created Font should be displayed
+-> No matching step definition found for the step. Use the following code to create one:
+        [Then(@"the recently created Font should be displayed")]
+        public void ThenTheRecentlyCreatedFontShouldBeDisplayed()
+        {
+            _scenarioContext.Pending();
+        }
+
+
+
+TestContext Messages:
+Given user navigates to HQ application
+-> done: HQLoginSteps.GivenUserNavigatesToHQApplication() (4.6s)
+When enter valid '<username>', '<hqpassword>'
+-> done: HQLoginSteps.WhenEnterValid("<username>", "<hqpassword>") (0.4s)
+And Clicks on Log In button
+-> done: HQLoginSteps.WhenClicksOnLogInButton() (8.2s)
+Then HQ homepage should be displayed
+-> done: HQLoginSteps.ThenHQHomepageShouldBeDisplayed() (0.3s)
+When User clicks on the Left Menu
+-> No matching step definition found for the step. Use the following code to create one:
+        [When(@"User clicks on the Left Menu")]
+        public void WhenUserClicksOnTheLeftMenu()
+        {
+            _scenarioContext.Pending();
+        }
+
+Then menu should be displayed
+-> No matching step definition found for the step. Use the following code to create one:
+        [Then(@"menu should be displayed")]
+        public void ThenMenuShouldBeDisplayed()
+        {
+            _scenarioContext.Pending();
+        }
+
+When User enters Scale Configuration in the Search Box
+-> No matching step definition found for the step. Use the following code to create one:
+        [When(@"User enters Scale Configuration in the Search Box")]
+        public void WhenUserEntersScaleConfigurationInTheSearchBox()
+        {
+            _scenarioContext.Pending();
+        }
+
+Then Scale Configuration Item should be displayed on the Menu
+-> No matching step definition found for the step. Use the following code to create one:
+        [Then(@"Scale Configuration Item should be displayed on the Menu")]
+        public void ThenScaleConfigurationItemShouldBeDisplayedOnTheMenu()
+        {
+            _scenarioContext.Pending();
+        }
+
+When User Selects the Scale Configuration
+-> No matching step definition found for the step. Use the following code to create one:
+        [When(@"User Selects the Scale Configuration")]
+        public void WhenUserSelectsTheScaleConfiguration()
+        {
+            _scenarioContext.Pending();
+        }
+
+Then Scale Configuration Page should be displayed
+-> No matching step definition found for the step. Use the following code to create one:
+        [Then(@"Scale Configuration Page should be displayed")]
+        public void ThenScaleConfigurationPageShouldBeDisplayed()
+        {
+            _scenarioContext.Pending();
+        }
+
+When User click s on the Add New from Font Section
+-> No matching step definition found for the step. Use the following code to create one:
+        [When(@"User click s on the Add New from Font Section")]
+        public void WhenUserClickSOnTheAddNewFromFontSection()
+        {
+            _scenarioContext.Pending();
+        }
+
+Then Create New Font Pop up should appear
+-> No matching step definition found for the step. Use the following code to create one:
+        [Then(@"Create New Font Pop up should appear")]
+        public void ThenCreateNewFontPopUpShouldAppear()
+        {
+            _scenarioContext.Pending();
+        }
+
+When User enters the '<Code>', '<FontName>'
+-> No matching step definition found for the step. Use the following code to create one:
+        [When(@"User enters the '(.*)', '(.*)'")]
+        public void WhenUserEntersThe(string code, string fontName)
+        {
+            _scenarioContext.Pending();
+        }
+
+Then the save button should be enabled
+-> No matching step definition found for the step. Use the following code to create one:
+        [Then(@"the save button should be enabled")]
+        public void ThenTheSaveButtonShouldBeEnabled()
+        {
+            _scenarioContext.Pending();
+        }
+
+When User clicks on button Save
+-> No matching step definition found for the step. Use the following code to create one:
+        [When(@"User clicks on button Save")]
+        public void WhenUserClicksOnButtonSave()
+        {
+            _scenarioContext.Pending();
+        }
+
+Then Font should get saved and a '<confirmationMsg>' should be displayed for the same
+-> No matching step definition found for the step. Use the following code to create one:
+        [Then(@"Font should get saved and a '(.*)' should be displayed for the same")]
+        public void ThenFontShouldGetSavedAndAShouldBeDisplayedForTheSame(string confirmationMsg)
+        {
+            _scenarioContext.Pending();
+        }
+
+When user Looks Font table
+-> No matching step definition found for the step. Use the following code to create one:
+        [When(@"user Looks Font table")]
+        public void WhenUserLooksFontTable()
+        {
+            _scenarioContext.Pending();
+        }
+
+Then the recently created Font should be displayed
+-> No matching step definition found for the step. Use the following code to create one:
+        [Then(@"the recently created Font should be displayed")]
+        public void ThenTheRecentlyCreatedFontShouldBeDisplayed()
+        {
+            _scenarioContext.Pending();
+        }
+

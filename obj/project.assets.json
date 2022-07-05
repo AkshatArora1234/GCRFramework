@@ -11022,19 +11022,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\prathibha.s\\.nuget\\packages\\": {}
+    "C:\\Users\\akshat.arora\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\prathibha.s\\source\\repos\\SpecflowMSTestGCRAuto\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
+      "projectUniqueName": "C:\\workspace\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
       "projectName": "SpecFlow_MSTestFrameWork",
-      "projectPath": "C:\\Users\\prathibha.s\\source\\repos\\SpecflowMSTestGCRAuto\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
-      "packagesPath": "C:\\Users\\prathibha.s\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\prathibha.s\\source\\repos\\SpecflowMSTestGCRAuto\\GCRFramework\\obj\\",
+      "projectPath": "C:\\workspace\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
+      "packagesPath": "C:\\Users\\akshat.arora\\.nuget\\packages\\",
+      "outputPath": "C:\\workspace\\GCRFramework\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\prathibha.s\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\akshat.arora\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
