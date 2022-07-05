@@ -28,7 +28,11 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement EnterItemDescription => Driver.FindElement(By.XPath("//input[@name='itemDescription']"));
         IWebElement EnterDropDown => Driver.FindElement(By.XPath("(//div[@class='selectize-input items not-full ng-valid ng-pristine has-options'])[1]"));
         IWebElement EnterDropDown1 => Driver.FindElement(By.XPath("(//div[@class='selectize-input items not-full ng-valid ng-pristine'])[3]"));
+        IWebElement LeftMenu => Driver.FindElement(By.XPath("//*[@class='SideMenuWrapper SideMenuWrapperSmall']//*[@class='fa fa-bars N_P_A']"));
+        IWebElement ScaleConfigurationMenu => Driver.FindElement(By.XPath("//span/strong[text()='Scale Configuration']"));
 
+        //Print Format
+        IWebElement TabPrintFormat => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[2]"));
         public By TexBoxLocator { get; private set; }
 
         // private string jsonFile = @"C:\Source\Specflow_MSTest FrameWork\SpecFlow_MSTestFrameWork\bin\Debug\netcoreapp3.1\TestData.json";
@@ -59,6 +63,30 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         }
 
-      
+
+        //Actions
+
+        public void ClickLeftMenu()
+        {
+            Thread.Sleep(4000);
+            LeftMenu.Click();
+        }
+        // customcontrol.Click();
+
+        public void ScaleConfiguration()
+        {
+            Searchbar.SendKeys("Scale Configuration");
+        }
+
+        public void MenuScaleConfigurationClick()
+        {
+            ScaleConfigurationMenu.Click();
+        }
+
+        public void TabPrintFormatClick()
+        {
+            TabPrintFormat.Click();
+        }
+
     }
 }

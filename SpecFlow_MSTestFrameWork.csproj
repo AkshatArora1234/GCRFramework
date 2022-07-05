@@ -40,6 +40,9 @@
     <Compile Update="Features\NewItemCreation.feature.cs">
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Update="Features\PublishPrintFormatWithExistingCode.feature.cs">
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Update="Features\ScaleConfiguration.feature.cs">
       <DesignTime>True</DesignTime>
     </Compile>
@@ -49,6 +52,10 @@
     <SpecFlowFeatureFiles Update="Features\NewItemCreation.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>NewItemCreation.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\PublishPrintFormatWithExistingCode.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PublishPrintFormatWithExistingCode.feature.cs</LastGenOutput>
     </SpecFlowFeatureFiles>
     <SpecFlowFeatureFiles Update="Features\ScaleConfiguration.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
