@@ -10,7 +10,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace SpecFlow_MSTestFrameWork.PageObjects
 {
-    class HomePage
+   public class HomePage
     {
         private IWebDriver Driver;
         public HomePage(IWebDriver driver)
@@ -32,23 +32,28 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         public void ClickSignIn() => LinkSignIn.Click();
         public void EnterEmailId(string emailId, string password)
         {
-            var configBuilder = new ConfigurationBuilder().AddJsonFile("appsetting.json");
-            IConfiguration config = configBuilder.Build();
-            EmailId.SendKeys(config["email"]);
-            Txtpassword.SendKeys(config["password"]);
+            // var configBuilder = new ConfigurationBuilder().AddJsonFile("appsetting.json");
+            //IConfiguration config = configBuilder.Build();
+            EmailId.SendKeys(getConfiguration("appsetting.json", "email"));
+            Txtpassword.SendKeys(getConfiguration("appsetting.json", "password"));
         }
 
         public void ClickBtnSignIn() => BtnSignIn.Click();
 
         public void Search()
         {
-            var configBuilder = new ConfigurationBuilder().AddJsonFile("TestData.json");
-            IConfiguration config = configBuilder.Build();
-            Searchbar.SendKeys(config["searchData"]);
+            //var configBuilder = new ConfigurationBuilder().AddJsonFile("TestData.json");
+            //IConfiguration config = configBuilder.Build();
+            Searchbar.SendKeys(getConfiguration("TestData.json", "searchData"));
         }
         public void ClickSearchbutton() => Searchbutton.Click();
 
-        
+        public string getConfiguration(string fileName, string property)
+        {
+            var configBuilder = new ConfigurationBuilder().AddJsonFile(fileName);
+            IConfiguration config = configBuilder.Build();
+            return config[property];
+        }
 
     }
 }

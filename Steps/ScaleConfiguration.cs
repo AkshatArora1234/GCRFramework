@@ -1,4 +1,5 @@
-﻿using SpecFlow_MSTestFrameWork.PageObjects;
+﻿using Microsoft.Extensions.Configuration;
+using SpecFlow_MSTestFrameWork.PageObjects;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,6 +15,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         NewItemCreation newItemCreation;
         HQLoginPage hQLoginPage;
         Scaleconfig scaleConfigurationPage;
+        HomePage homePage;
 
         public ScaleConfiguration(DriverHelper driverHelper)
         {
@@ -21,6 +23,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
             newItemCreation = new NewItemCreation(_driverHelper.driver);
             hQLoginPage = new HQLoginPage(_driverHelper.driver);
             scaleConfigurationPage = new Scaleconfig(_driverHelper.driver);
+            homePage = new HomePage(_driverHelper.driver);
         }
 
 
@@ -137,6 +140,36 @@ namespace SpecFlow_MSTestFrameWork.Steps
         public void ThenTheSelectedPrintFormatCodeShouldBeDisplayedInTab()
         {
 
+        }
+
+        [Then(@"Click on the New Button")]
+        public void ClickonNewButton()
+        {
+            scaleConfigurationPage.ClickNewButton();
+        }
+
+        [When(@"Enter the CodeName and PrintFormat")]
+        public void EnterCodeNameandPrintFormat()
+        {
+            string printCode = homePage.getConfiguration("TestData.json", "PrintCode2.0");
+            string printFormat = homePage.getConfiguration("TestData.json", "PrintFormat2.0");
+            scaleConfigurationPage.EnterCodeandName(printCode, printFormat);
+            System.Threading.Thread.Sleep(5000);
+        }
+
+
+        [Then(@"Click on Edit Button")]
+        public void ClickonEditButton()
+        {
+
+            scaleConfigurationPage.EditCode();
+            System.Threading.Thread.Sleep(5000);
+        }
+
+        [When(@"Check the required text boxes")]
+        public void CheckRequiredTextBoxes()
+        {
+            scaleConfigurationPage.Checkboxes();
         }
 
 

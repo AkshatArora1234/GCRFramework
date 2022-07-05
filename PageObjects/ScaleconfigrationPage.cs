@@ -23,13 +23,23 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement SideMenu => Driver.FindElement(By.XPath("//div[@class='SideMenuWrapper SideMenuWrapperSmall']"));
         IWebElement Searchbar => Driver.FindElement(By.XPath("//input[@id='search-text']"));
         IWebElement ElementClick => Driver.FindElement(By.XPath("//span/strong[text()='Item Maintenance in HQ mode']"));
-        IWebElement NewItembutton => Driver.FindElement(By.XPath("(//span[text()='New'])[1]"));
+        IWebElement NewItembutton => Driver.FindElement(By.XPath("(//span[text()='New'])[7]"));
         IWebElement EnterBarcode => Driver.FindElement(By.XPath("//input[@name='barcode']"));
         IWebElement EnterItemDescription => Driver.FindElement(By.XPath("//input[@name='itemDescription']"));
         IWebElement EnterDropDown => Driver.FindElement(By.XPath("(//div[@class='selectize-input items not-full ng-valid ng-pristine has-options'])[1]"));
         IWebElement EnterDropDown1 => Driver.FindElement(By.XPath("(//div[@class='selectize-input items not-full ng-valid ng-pristine'])[3]"));
         IWebElement LeftMenu => Driver.FindElement(By.XPath("//*[@class='SideMenuWrapper SideMenuWrapperSmall']//*[@class='fa fa-bars N_P_A']"));
         IWebElement ScaleConfigurationMenu => Driver.FindElement(By.XPath("//span/strong[text()='Scale Configuration']"));
+
+        IWebElement EnterCode => Driver.FindElement(By.XPath("(//*[@name='pFCode'])"));
+        IWebElement EnterPrintFormat => Driver.FindElement(By.XPath("(//*[@name='pFName'])"));
+
+        IWebElement Save => Driver.FindElement(By.XPath("//button[@class='button-save ng-scope']"));
+
+        IWebElement ClickEdit => Driver.FindElement(By.XPath("(//*[contains(text(),'OpenSansBiscuits')])[2]"));
+
+        IWebElement CheckProductlife => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasProductLife']"));
+       // (//*[@class='ng-pristine ng-valid ng-empty ng-touched'])
 
         //Print Format
         IWebElement TabPrintFormat => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[2]"));
@@ -87,6 +97,35 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         {
             TabPrintFormat.Click();
         }
+
+        public void ClickNewButton()
+        {
+            NewItembutton.Click();
+        }
+
+        public void EnterCodeandName(string code, string name)
+        {
+            EnterCode.SendKeys("12");
+            EnterPrintFormat.SendKeys("OpenSansBiscuits");
+            Save.Click();
+
+
+        }
+
+        public void EditCode()
+        {
+            Actions actions = new Actions(Driver);
+            
+            actions.DoubleClick(ClickEdit).Perform();
+            
+        }
+
+        public void Checkboxes()
+        {
+            CheckProductlife.Click();
+            System.Threading.Thread.Sleep(5000);
+        }
+
 
     }
 }
