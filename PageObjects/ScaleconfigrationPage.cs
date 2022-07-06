@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using OpenQA.Selenium;
@@ -39,7 +40,18 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement ClickEdit => Driver.FindElement(By.XPath("(//*[contains(text(),'OpenSansBiscuits')])[2]"));
 
         IWebElement CheckProductlife => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasProductLife']"));
-       // (//*[@class='ng-pristine ng-valid ng-empty ng-touched'])
+        IWebElement CheckTare => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasTare']"));
+
+        IWebElement CheckContent => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasContent']"));
+
+        IWebElement CheckPresetmessages => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasPresetMessage']"));
+
+        IWebElement CheckPrintdateformat => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasPackedTime']"));
+
+        IWebElement CheckHasContentSymbol => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasContentSymbol']"));
+
+
+
 
         //Print Format
         IWebElement TabPrintFormat => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[2]"));
@@ -123,7 +135,19 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         public void Checkboxes()
         {
             CheckProductlife.Click();
+            System.Threading.Thread.Sleep(2000);
+            CheckTare.Click();
+            CheckPresetmessages.Click();
+            CheckPrintdateformat.Click();
+            CheckContent.Click();
             System.Threading.Thread.Sleep(5000);
+
+        }
+
+        public void VerifyContentSymbol()
+        {
+            Assert.IsTrue(CheckHasContentSymbol.Enabled);
+            
         }
 
 

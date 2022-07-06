@@ -172,6 +172,12 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.Checkboxes();
         }
 
+        [Then(@"Check the Content Symbol")]
+        public void CheckContentSymbol()
+        {
+            scaleConfigurationPage.VerifyContentSymbol();
+        }
+
 
     }
 }

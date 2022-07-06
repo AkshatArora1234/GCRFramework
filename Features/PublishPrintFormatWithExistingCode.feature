@@ -34,4 +34,5 @@ Given user navigates to HQ application
 	When Enter the CodeName and PrintFormat
 	Then Click on Edit Button
 	When Check the required text boxes
+	Then Check the Content Symbol 
 

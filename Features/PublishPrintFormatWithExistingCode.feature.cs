@@ -239,6 +239,9 @@ testRunner.Given("user navigates to HQ application", ((string)(null)), ((TechTal
 #line 36
  testRunner.When("Check the required text boxes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
+#line 37
+ testRunner.Then("Check the Content Symbol", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
             }
             this.ScenarioCleanup();
         }
