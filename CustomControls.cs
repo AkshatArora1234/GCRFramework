@@ -52,8 +52,17 @@ namespace SpecFlow_MSTestFrameWork
             var textBoxElement = Driver.FindElement(TexBoxLocator);
             textBoxElement.Click();
             Actions keyDown = new Actions(Driver);
-            keyDown.SendKeys(Keys.Down).SendKeys(Keys.Down).SendKeys(Keys.Down).SendKeys(Keys.Enter).SendKeys(Keys.End).Build().Perform();
+            keyDown.SendKeys(Keys.Down).SendKeys(Keys.Down).SendKeys(Keys.Enter).SendKeys(Keys.End).Build().Perform();
         }
+
+        public void SelectByText(string text)
+        {
+            var textBoxElement = Driver.FindElement(TexBoxLocator);
+            textBoxElement.Click();
+            SelectElement selectElement = new SelectElement(textBoxElement);
+            selectElement.SelectByText(text);
+        }
+
 
     }
 }

@@ -242,6 +242,12 @@ testRunner.Given("user navigates to HQ application", ((string)(null)), ((TechTal
 #line 37
  testRunner.Then("Check the Content Symbol", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
+#line 38
+ testRunner.When("Click on Add Section", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 39
+ testRunner.Then("Click on Font Dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
             }
             this.ScenarioCleanup();
         }

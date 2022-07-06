@@ -35,4 +35,9 @@ Given user navigates to HQ application
 	Then Click on Edit Button
 	When Check the required text boxes
 	Then Check the Content Symbol 
+	When Click on Add Section
+	#Then Click on Font Dropdown
+    
+
+
 

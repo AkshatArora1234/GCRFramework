@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using TechTalk.SpecFlow;
-
+using OpenQA.Selenium.Support.UI;
 namespace SpecFlow_MSTestFrameWork.Steps
 {
 
@@ -177,6 +177,19 @@ namespace SpecFlow_MSTestFrameWork.Steps
         {
             scaleConfigurationPage.VerifyContentSymbol();
         }
+
+        [When(@"Click on Add Section")]
+        public void ClickonAddSections()
+        {
+            scaleConfigurationPage.ClickonAddSection();
+        }
+
+        [Then(@"Click on Font Dropdown")]
+        public void ClickOnFontDropDowns()
+        {
+            scaleConfigurationPage.ClickonFontDropdown();
+        }
+
 
 
     }

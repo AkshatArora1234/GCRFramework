@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading;
+using OpenQA.Selenium.Support.UI;
 
 namespace SpecFlow_MSTestFrameWork.PageObjects
 {
@@ -49,6 +50,10 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement CheckPrintdateformat => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasPackedTime']"));
 
         IWebElement CheckHasContentSymbol => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasContentSymbol']"));
+
+        IWebElement AddSection => Driver.FindElement(By.XPath("(//span[text()='Add Section'])[1]"));
+
+        private CustomControls EnterFontValue => new CustomControls(Driver, By.XPath("(//div[@class='common-select-div'])[2]"));
 
 
 
@@ -149,6 +154,23 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Assert.IsTrue(CheckHasContentSymbol.Enabled);
             
         }
+
+        public void ClickonAddSection()
+        {
+            AddSection.Click();
+            System.Threading.Thread.Sleep(3000);
+
+        }
+
+        public void ClickonFontDropdown()
+        {
+            EnterFontValue.SelectByText("FONT_1");
+            System.Threading.Thread.Sleep(5000);
+          
+
+
+        }
+
 
 
     }
