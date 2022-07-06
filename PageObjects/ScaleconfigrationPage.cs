@@ -53,7 +53,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         IWebElement AddSection => Driver.FindElement(By.XPath("(//span[text()='Add Section'])[1]"));
 
-        private CustomControls EnterFontValue => new CustomControls(Driver, By.XPath("(//div[@class='common-select-div'])[2]"));
+        private CustomControls EnterFontValue => new CustomControls(Driver, By.XPath("//select[@ng-model='section.scaleFontId']"));
 
 
 
@@ -162,12 +162,11 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         }
 
-        public void ClickonFontDropdown()
+        public void ClickonFontDropdown(string fontdropdown)
         {
-            EnterFontValue.SelectByText("FONT_1");
+            EnterFontValue.SelectByText(fontdropdown);
             System.Threading.Thread.Sleep(5000);
           
-
 
         }
 

@@ -58,7 +58,6 @@ namespace SpecFlow_MSTestFrameWork
         public void SelectByText(string text)
         {
             var textBoxElement = Driver.FindElement(TexBoxLocator);
-            textBoxElement.Click();
             SelectElement selectElement = new SelectElement(textBoxElement);
             selectElement.SelectByText(text);
         }

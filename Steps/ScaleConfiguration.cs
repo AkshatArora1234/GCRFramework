@@ -187,7 +187,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [Then(@"Click on Font Dropdown")]
         public void ClickOnFontDropDowns()
         {
-            scaleConfigurationPage.ClickonFontDropdown();
+            string selectfont = homePage.getConfiguration("TestData.json", "NonNutritionalValue");
+            scaleConfigurationPage.ClickonFontDropdown(selectfont);
+            System.Threading.Thread.Sleep(5000);
         }
 
 
