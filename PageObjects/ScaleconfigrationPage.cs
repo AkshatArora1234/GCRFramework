@@ -55,7 +55,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         private CustomControls EnterFontValue => new CustomControls(Driver, By.XPath("//select[@ng-model='section.scaleFontId']"));
 
-
+        IWebElement AddDesc => Driver.FindElement(By.XPath("//input[@ng-model='section.sectionDescription']"));
 
 
         //Print Format
@@ -122,8 +122,8 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         public void EnterCodeandName(string code, string name)
         {
-            EnterCode.SendKeys("12");
-            EnterPrintFormat.SendKeys("OpenSansBiscuits");
+            EnterCode.SendKeys(code);
+            EnterPrintFormat.SendKeys(name);
             Save.Click();
 
 
@@ -169,6 +169,22 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
           
 
         }
+
+        public void AddDiscription(string desc)
+        {
+
+            AddDesc.SendKeys(desc);
+
+        }
+
+        public void SavetheFontwithData()
+        {
+
+            Save.Click();
+
+        }
+
+
 
 
 

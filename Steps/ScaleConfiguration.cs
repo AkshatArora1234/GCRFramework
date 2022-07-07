@@ -193,6 +193,23 @@ namespace SpecFlow_MSTestFrameWork.Steps
         }
 
 
+        [Then(@"Add Desc to font")]
+        public void AddDescription()
+        {
+            string Adddesc = homePage.getConfiguration("TestData.json", "NonNutritionalDesc");
+            scaleConfigurationPage.AddDiscription(Adddesc);
+            System.Threading.Thread.Sleep(5000);
+        }
+
+        [Then(@"Save the font with data")]
+        public void SaveFont()
+        {
+            scaleConfigurationPage.SavetheFontwithData();
+            System.Threading.Thread.Sleep(3000);
+        }
+
+
+
 
     }
 }

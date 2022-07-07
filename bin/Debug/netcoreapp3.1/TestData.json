@@ -2,6 +2,7 @@
   "searchData": "selenium",
   "PrintCode2.0": "12",
   "PrintFormat2.0": "OpenSansBiscuits",
-  "NonNutritionalValue": "FONT_1"
+  "NonNutritionalValue": "FONT_1",
+  "NonNutritionalDesc": "nonnutritional"
 
 }

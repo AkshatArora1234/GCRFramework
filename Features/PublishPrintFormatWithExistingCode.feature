@@ -37,6 +37,11 @@ Given user navigates to HQ application
 	Then Check the Content Symbol 
 	When Click on Add Section
 	Then Click on Font Dropdown
+	Then Add Desc to font
+	Then Save the font with data
+
+
+
     
 
 
