@@ -1669,3 +1669,4 @@ C:\workspace\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.cspro
 C:\workspace\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.dll
 C:\workspace\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.pdb
 C:\workspace\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.genruntimeconfig.cache
+C:\workspace\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.csproj.AssemblyReference.cache

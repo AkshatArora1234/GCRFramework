@@ -143,6 +143,7 @@ namespace SpecFlow_MSTestFrameWork.Hooks
         public static void TearDownReport()
         {
             //Flush report once test completes
+
             extent.Flush();
         }
 

@@ -205,8 +205,27 @@ namespace SpecFlow_MSTestFrameWork.Steps
         public void SaveFont()
         {
             scaleConfigurationPage.SavetheFontwithData();
-            System.Threading.Thread.Sleep(3000);
+
+           
         }
+
+        [Then(@"Close the font")]
+        public void ClsoeFont()
+        {
+            scaleConfigurationPage.ClosePF();
+            System.Threading.Thread.Sleep(4000);
+           
+        }
+
+        [Then(@"Publish the PF")]
+        public void PublishthePFM()
+        {
+            scaleConfigurationPage.PublishPrint();
+        }
+
+
+        
+
 
 
 

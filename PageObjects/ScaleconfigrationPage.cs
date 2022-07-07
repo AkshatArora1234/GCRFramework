@@ -37,6 +37,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement EnterPrintFormat => Driver.FindElement(By.XPath("(//*[@name='pFName'])"));
 
         IWebElement Save => Driver.FindElement(By.XPath("//button[@class='button-save ng-scope']"));
+        IWebElement Close => Driver.FindElement(By.XPath("//button[@ng-click='ctrl.onCancel()']"));
 
         IWebElement ClickEdit => Driver.FindElement(By.XPath("(//*[contains(text(),'OpenSansBiscuits')])[2]"));
 
@@ -57,6 +58,8 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         IWebElement AddDesc => Driver.FindElement(By.XPath("//input[@ng-model='section.sectionDescription']"));
 
+
+        IWebElement PublishPF => Driver.FindElement(By.XPath("(//i[@ng-click='ctrl.actions.publishPrintFormat(row.data)'])[1]"));
 
         //Print Format
         IWebElement TabPrintFormat => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[2]"));
@@ -183,6 +186,22 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Save.Click();
 
         }
+
+        public void ClosePF()
+        {
+
+            Close.Click();
+
+        }
+
+        public void PublishPrint()
+        {
+            PublishPF.Click();
+        }
+
+
+
+
 
 
 

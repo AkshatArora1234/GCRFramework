@@ -39,6 +39,10 @@ Given user navigates to HQ application
 	Then Click on Font Dropdown
 	Then Add Desc to font
 	Then Save the font with data
+	Then Close the font
+	#Then Publish the PF
+
+
 
 
 
