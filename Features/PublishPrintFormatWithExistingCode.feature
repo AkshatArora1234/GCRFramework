@@ -40,7 +40,8 @@ Given user navigates to HQ application
 	Then Add Desc to font
 	Then Save the font with data
 	Then Close the font
-	#Then Publish the PF
+	Then Publish the PF
+	Then Select the Store
 
 
 

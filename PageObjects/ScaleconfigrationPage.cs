@@ -39,7 +39,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement Save => Driver.FindElement(By.XPath("//button[@class='button-save ng-scope']"));
         IWebElement Close => Driver.FindElement(By.XPath("//button[@ng-click='ctrl.onCancel()']"));
 
-        IWebElement ClickEdit => Driver.FindElement(By.XPath("(//*[contains(text(),'OpenSansBiscuits')])[2]"));
+        IWebElement ClickEdit => Driver.FindElement(By.XPath("(//*[contains(text(),'OpenSansBiscuits')])[1]"));
 
         IWebElement CheckProductlife => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasProductLife']"));
         IWebElement CheckTare => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasTare']"));
@@ -58,11 +58,17 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         IWebElement AddDesc => Driver.FindElement(By.XPath("//input[@ng-model='section.sectionDescription']"));
 
+        IWebElement ClickStore => Driver.FindElement(By.XPath("//*[@ng-disabled='selectDisabled']"));
 
         IWebElement PublishPF => Driver.FindElement(By.XPath("(//i[@ng-click='ctrl.actions.publishPrintFormat(row.data)'])[1]"));
+        private CustomControls DeletePF => new CustomControls(Driver, By.XPath("(//i[@ng-click='ctrl.actions.deletePrintFormat(row.data)'])[1]"));
 
-        //Print Format
+        IWebElement SelectStore => Driver.FindElement(By.XPath("//*[@class='checkboxInput']"));
+        IWebElement Clickok => Driver.FindElement(By.XPath("//*[text()='OK']"));
+        //Print Format- 
         IWebElement TabPrintFormat => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[2]"));
+
+       
         public By TexBoxLocator { get; private set; }
 
         // private string jsonFile = @"C:\Source\Specflow_MSTest FrameWork\SpecFlow_MSTestFrameWork\bin\Debug\netcoreapp3.1\TestData.json";
@@ -196,8 +202,26 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         public void PublishPrint()
         {
-            PublishPF.Click();
+            Actions action = new Actions(Driver);
+            action.Click(PublishPF).Perform();
+            System.Threading.Thread.Sleep(5000);
+
         }
+
+        public void SelectStoreLatest()
+        {
+
+            ClickStore.Click();
+            SelectStore.Click();
+            System.Threading.Thread.Sleep(3000);
+            ClickStore.Click();
+            Clickok.Click();
+            System.Threading.Thread.Sleep(5000);
+
+        }
+
+
+        public void DeletePrint() => DeletePF.ClickElement();
 
 
 

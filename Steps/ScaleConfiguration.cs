@@ -221,10 +221,19 @@ namespace SpecFlow_MSTestFrameWork.Steps
         public void PublishthePFM()
         {
             scaleConfigurationPage.PublishPrint();
+            System.Threading.Thread.Sleep(5000);
+        }
+
+        [Then(@"Select the Store")]
+        public void SelectStore()
+        {
+            scaleConfigurationPage.SelectStoreLatest();
+            System.Threading.Thread.Sleep(3000);
+
         }
 
 
-        
+
 
 
 

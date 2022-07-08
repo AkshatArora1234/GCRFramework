@@ -62,6 +62,22 @@ namespace SpecFlow_MSTestFrameWork
             selectElement.SelectByText(text);
         }
 
+        
+
+         public void DoubleClickElement()
+        {
+            Actions actions = new Actions(Driver);
+            actions.DoubleClick().Perform();
+        }
+
+        public void ClickElement()
+        {
+            Actions actions = new Actions(Driver);
+            actions.Click().Perform();
+        }
+
+
+
 
     }
 }

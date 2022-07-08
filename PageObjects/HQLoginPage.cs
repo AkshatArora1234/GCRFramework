@@ -5,7 +5,7 @@ using TechTalk.SpecFlow;
 
 namespace SpecFlow_MSTestFrameWork.PageObjects
 {
-    class HQLoginPage
+   public class HQLoginPage
     {
         private IWebDriver Driver;
         public HQLoginPage(IWebDriver driver)

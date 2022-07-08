@@ -260,6 +260,9 @@ testRunner.Given("user navigates to HQ application", ((string)(null)), ((TechTal
 #line 43
  testRunner.Then("Publish the PF", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
+#line 44
+ testRunner.Then("Select the Store", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
             }
             this.ScenarioCleanup();
         }

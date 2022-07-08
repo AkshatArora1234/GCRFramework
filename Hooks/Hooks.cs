@@ -5,6 +5,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
+using SpecFlow_MSTestFrameWork.PageObjects;
 using System;
 using TechTalk.SpecFlow;
 using WebDriverManager;
@@ -23,12 +24,19 @@ namespace SpecFlow_MSTestFrameWork.Hooks
         private readonly ScenarioContext _scenarioContext;
         private static ExtentTest _currentScenarioName;
         private DriverHelper _driverHelper;
+        public static HQLoginPage hq;
+
+
+
+
 
         public Hooks(DriverHelper driverHelper, FeatureContext featureContext, ScenarioContext scenarioContext) : base()
         {
             _driverHelper = driverHelper;
             _featureContext = featureContext;
             _scenarioContext = scenarioContext;
+            hq = new HQLoginPage(_driverHelper.driver);
+            
         }
 
         
@@ -143,7 +151,9 @@ namespace SpecFlow_MSTestFrameWork.Hooks
         public static void TearDownReport()
         {
             //Flush report once test completes
-
+            //hq = new HQLoginPage(_driverHelper.driver);
+            hq.UserVerification();
+            System.Threading.Thread.Sleep(5000);
             extent.Flush();
         }
 
