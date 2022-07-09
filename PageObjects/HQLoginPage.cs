@@ -16,7 +16,9 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement Password => Driver.FindElement(By.XPath("//input[@name='password']"));
         IWebElement LogIn => Driver.FindElement(By.XPath("//span[text()='Log In']"));
         IWebElement ProfileIcon => Driver.FindElement(By.XPath("//button[@class='dropdown-toggle']"));
-       // IWebElement ProfileName1 => Driver.FindElement(By.XPath("//span[text()='AutUser1 AutUser1']"));
+        IWebElement LogOut => Driver.FindElement(By.XPath("//*[contains(text(),'Logout')]"));
+        IWebElement submitbutton => Driver.FindElement(By.Id("submitButton"));
+        // IWebElement ProfileName1 => Driver.FindElement(By.XPath("//span[text()='AutUser1 AutUser1']"));
         IWebElement ProfileName2 => Driver.FindElement(By.XPath("//span[text()='AutUser2 AutUser2']"));
 
         public void EnterURL()
@@ -41,6 +43,16 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             ProfileIcon.Click();
             ProfileName2.Click();
             //Debug.Assert(ProfileName2 = AutUser2 AutUser2, "Test Failed");
+        }
+
+        public void UserLogout()
+        {
+            ProfileIcon.Click();
+            System.Threading.Thread.Sleep(2000);
+            LogOut.Click();
+            submitbutton.Click();
+
+
         }
     }
 

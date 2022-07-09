@@ -157,6 +157,17 @@ namespace SpecFlow_MSTestFrameWork.Steps
             System.Threading.Thread.Sleep(5000);
         }
 
+        [When(@"Enter the Value of Print Name")]
+        public void EnterValueofsearchcode()
+        {
+            
+            string printFormat = homePage.getConfiguration("TestData.json", "PrintFormat2.0");
+            scaleConfigurationPage.SeachPFname(printFormat);
+            System.Threading.Thread.Sleep(5000);
+        }
+
+
+
 
         [Then(@"Click on Edit Button")]
         public void ClickonEditButton()
@@ -230,6 +241,13 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.SelectStoreLatest();
             System.Threading.Thread.Sleep(3000);
 
+        }
+
+        [Then(@"Delete the PF")]
+        public void DeletePF()
+        {
+            scaleConfigurationPage.DeletePrint();
+            System.Threading.Thread.Sleep(5000);
         }
 
 

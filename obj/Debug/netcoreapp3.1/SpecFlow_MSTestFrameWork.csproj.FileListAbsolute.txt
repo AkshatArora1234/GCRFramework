@@ -1661,7 +1661,6 @@ C:\workspace\GCRFramework\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.
 C:\workspace\GCRFramework\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\workspace\GCRFramework\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\workspace\GCRFramework\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Text.Encoding.CodePages.dll
-C:\workspace\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.csproj.AssemblyReference.cache
 C:\workspace\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.GeneratedMSBuildEditorConfig.editorconfig
 C:\workspace\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.AssemblyInfoInputs.cache
 C:\workspace\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.AssemblyInfo.cs
@@ -1670,3 +1669,4 @@ C:\workspace\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.cspro
 C:\workspace\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.dll
 C:\workspace\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.pdb
 C:\workspace\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.genruntimeconfig.cache
+C:\workspace\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.csproj.AssemblyReference.cache

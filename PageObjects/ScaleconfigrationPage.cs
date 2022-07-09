@@ -34,6 +34,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement ScaleConfigurationMenu => Driver.FindElement(By.XPath("//span/strong[text()='Scale Configuration']"));
 
         IWebElement EnterCode => Driver.FindElement(By.XPath("(//*[@name='pFCode'])"));
+
         IWebElement EnterPrintFormat => Driver.FindElement(By.XPath("(//*[@name='pFName'])"));
 
         IWebElement Save => Driver.FindElement(By.XPath("//button[@class='button-save ng-scope']"));
@@ -61,10 +62,14 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement ClickStore => Driver.FindElement(By.XPath("//*[@ng-disabled='selectDisabled']"));
 
         IWebElement PublishPF => Driver.FindElement(By.XPath("(//i[@ng-click='ctrl.actions.publishPrintFormat(row.data)'])[1]"));
-        private CustomControls DeletePF => new CustomControls(Driver, By.XPath("(//i[@ng-click='ctrl.actions.deletePrintFormat(row.data)'])[1]"));
+        IWebElement DeletePF => Driver.FindElement (By.XPath("(//i[@ng-click='ctrl.actions.deletePrintFormat(row.data)'])[1]"));
 
         IWebElement SelectStore => Driver.FindElement(By.XPath("//*[@class='checkboxInput']"));
+        IWebElement Deletebutton => Driver.FindElement(By.Id("submitButton"));
         IWebElement Clickok => Driver.FindElement(By.XPath("//*[text()='OK']"));
+
+        IWebElement Searchbox => Driver.FindElement(By.XPath("(//*[@class='dx-texteditor-input'])[19]"));
+
         //Print Format- 
         IWebElement TabPrintFormat => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[2]"));
 
@@ -135,8 +140,17 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             EnterPrintFormat.SendKeys(name);
             Save.Click();
 
+        }
+
+        public void EnterSearchBox(string code, string name)
+        {
+            EnterCode.SendKeys(code);
+            EnterPrintFormat.SendKeys(name);
+            Save.Click();
 
         }
+
+
 
         public void EditCode()
         {
@@ -218,10 +232,33 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Clickok.Click();
             System.Threading.Thread.Sleep(5000);
 
+
+        }
+
+        public void DeletePrint()
+        {
+            Actions action = new Actions(Driver);
+            action.Click(DeletePF);
+            action.Perform();
+            System.Threading.Thread.Sleep(3000);
+            Deletebutton.Click();
+
+
+        }
+
+        public void SeachPFname(string code)
+        {
+            Searchbox.SendKeys(code);
+           
+
         }
 
 
-        public void DeletePrint() => DeletePF.ClickElement();
+
+
+
+
+
 
 
 

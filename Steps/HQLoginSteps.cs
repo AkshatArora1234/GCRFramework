@@ -43,5 +43,13 @@ namespace SpecFlow_MSTestFrameWork.StepDefinitions
         {
             hQLoginPage.UserVerification();
         }
+
+        [Then(@"User is able to logout")]
+        public void Logout()
+        {
+            hQLoginPage.UserLogout();
+        }
+
+
     }
 }

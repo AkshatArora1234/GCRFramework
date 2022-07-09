@@ -32,6 +32,7 @@ Given user navigates to HQ application
 	When User clicks on Tab Print Format
 	Then Click on the New Button
 	When Enter the CodeName and PrintFormat
+	When Enter the Value of Print Name
 	Then Click on Edit Button
 	When Check the required text boxes
 	Then Check the Content Symbol 
@@ -40,8 +41,12 @@ Given user navigates to HQ application
 	Then Add Desc to font
 	Then Save the font with data
 	Then Close the font
+	#When Enter the Value of Print Name
 	Then Publish the PF
+	#When Enter the Value of Print Name
 	Then Select the Store
+	Then Delete the PF
+	Then User is able to logout
 
 
 

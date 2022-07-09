@@ -23,8 +23,9 @@ namespace SpecFlow_MSTestFrameWork.Hooks
         private readonly FeatureContext _featureContext;
         private readonly ScenarioContext _scenarioContext;
         private static ExtentTest _currentScenarioName;
-        private DriverHelper _driverHelper;
+        private static DriverHelper _driverHelper;
         public static HQLoginPage hq;
+        public static Scaleconfig scale;
 
 
 
@@ -36,6 +37,7 @@ namespace SpecFlow_MSTestFrameWork.Hooks
             _featureContext = featureContext;
             _scenarioContext = scenarioContext;
             hq = new HQLoginPage(_driverHelper.driver);
+           
             
         }
 
@@ -152,7 +154,8 @@ namespace SpecFlow_MSTestFrameWork.Hooks
         {
             //Flush report once test completes
             //hq = new HQLoginPage(_driverHelper.driver);
-            hq.UserVerification();
+           // scale = new Scaleconfig(_driverHelper.driver);
+          //  scale.DeletePrint();
             System.Threading.Thread.Sleep(5000);
             extent.Flush();
         }
