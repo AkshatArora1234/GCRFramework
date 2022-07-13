@@ -6,6 +6,6 @@
   "NonNutritionalDesc": "nonnutritional",
   "PrintCode3.0": "14",
   "PrintFormat3.0": "OpenSansBiscuits1",
-  "NutritionalValue": "Font_2",
-  "NutritionalDesc": "Nutritional"
+  "NutritionalValue": "Font2",
+  "NutritionalDesc": "nutritionalsection"
 }

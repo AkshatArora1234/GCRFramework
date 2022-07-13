@@ -4,7 +4,7 @@
 -> Using default config
 Setup
 Given user navigates to HQ application
--> done: HQLoginSteps.GivenUserNavigatesToHQApplication() (5.7s)
+-> done: HQLoginSteps.GivenUserNavigatesToHQApplication() (3.1s)
 When enter valid '<username>', '<hqpassword>'
 -> done: HQLoginSteps.WhenEnterValid("<username>", "<hqpassword>") (0.2s)
 And Clicks on Log In button
@@ -22,48 +22,47 @@ When User Selects the Scale Configuration
 Then Scale Configuration Page should be displayed
 -> done: ScaleConfiguration.ThenScaleConfigurationPageShouldBeDisplayed() (0.0s)
 When User clicks on Tab Print Format
--> done: ScaleConfiguration.WhenUserClicksOnTabPrintFormat() (0.9s)
+-> done: ScaleConfiguration.WhenUserClicksOnTabPrintFormat() (1.8s)
 Then Click on the New Button
--> done: ScaleConfiguration.ClickonNewButton() (0.2s)
+-> done: ScaleConfiguration.ClickonNewButton() (0.4s)
 When Enter the CodeName and PrintFormat new
--> done: ScaleConfiguration.EnterCodeNameandPrintFormat1() (5.3s)
+-> done: ScaleConfiguration.EnterCodeNameandPrintFormat1() (5.4s)
 When Enter the Value of Print Name OpenSanBiscuit1
--> done: ScaleConfiguration.EnterValueoOfpenSanBiscuit1() (5.3s)
+-> done: ScaleConfiguration.EnterValueoOfpenSanBiscuit1() (5.2s)
 Then Click on Edit Button new PF
 -> done: ScaleConfiguration.ClickonEditButtonNEWPF() (5.4s)
 When Check the required text boxes
 -> done: ScaleConfiguration.CheckRequiredTextBoxes() (7.4s)
 When Click on Add Section
--> done: ScaleConfiguration.ClickonAddSections() (3.4s)
+-> done: ScaleConfiguration.ClickonAddSections() (3.1s)
 Then Click on Font Dropdown
--> done: ScaleConfiguration.ClickOnFontDropDowns() (10.2s)
+-> done: ScaleConfiguration.ClickOnFontDropDowns() (10.1s)
 Then Add Desc to font
--> done: ScaleConfiguration.AddDescription() (5.6s)
+-> done: ScaleConfiguration.AddDescription() (5.3s)
 And check the Manadatory & Fixed Width check box
--> done: ScaleConfiguration.ThenCheckTheManadatoryFixedWidthCheckBox() (0.9s)
+-> done: ScaleConfiguration.ThenCheckTheManadatoryFixedWidthCheckBox() (0.3s)
 And configure the row & Characters values
--> done: ScaleConfiguration.ThenConfigureTheRowCharactersValues() (0.9s)
-When Click on Add Section
--> done: ScaleConfiguration.ClickonAddSections() (3.3s)
-Then Click on Font Dropdown
--> done: ScaleConfiguration.ClickOnFontDropDowns() (10.2s)
+-> done: ScaleConfiguration.ThenConfigureTheRowCharactersValues() (0.2s)
+Then check a new nutritional Panel can be added to another section
+-> done: ScaleConfiguration.ThenCheckANewNutritionalPanelCanBeAddedToAnotherSection() (18.6s)
 And check the Manadatory & Fixed Width check box font2
--> done: ScaleConfiguration.ThenCheckTheManadatoryFixedWidthCheckBoxFont2() (0.6s)
-Then Add Desc to font2
--> done: ScaleConfiguration.AddDescription2() (5.5s)
+-> error: no such element: Unable to locate element: {"method":"xpath","selector":"(//input[@ng-model='section.isFixedWidth'])[2]"}
+  (Session info: chrome=103.0.5060.114) (0.3s)
 And configure the row & Characters values Font2
--> done: ScaleConfiguration.ThenConfigureTheRowCharactersValuesFont() (1.0s)
+-> skipped because of previous errors
 Then Save the font with data
--> done: ScaleConfiguration.SaveFont() (0.2s)
+-> skipped because of previous errors
 Then Close the font
--> done: ScaleConfiguration.ClsoeFont() (5.0s)
+-> skipped because of previous errors
 Then Delete the PF
--> done: ScaleConfiguration.DeletePF() (8.8s)
+-> skipped because of previous errors
+Then User is able to logout
+-> skipped because of previous errors
 
 
 TestContext Messages:
 Given user navigates to HQ application
--> done: HQLoginSteps.GivenUserNavigatesToHQApplication() (5.7s)
+-> done: HQLoginSteps.GivenUserNavigatesToHQApplication() (3.1s)
 When enter valid '<username>', '<hqpassword>'
 -> done: HQLoginSteps.WhenEnterValid("<username>", "<hqpassword>") (0.2s)
 And Clicks on Log In button
@@ -81,40 +80,39 @@ When User Selects the Scale Configuration
 Then Scale Configuration Page should be displayed
 -> done: ScaleConfiguration.ThenScaleConfigurationPageShouldBeDisplayed() (0.0s)
 When User clicks on Tab Print Format
--> done: ScaleConfiguration.WhenUserClicksOnTabPrintFormat() (0.9s)
+-> done: ScaleConfiguration.WhenUserClicksOnTabPrintFormat() (1.8s)
 Then Click on the New Button
--> done: ScaleConfiguration.ClickonNewButton() (0.2s)
+-> done: ScaleConfiguration.ClickonNewButton() (0.4s)
 When Enter the CodeName and PrintFormat new
--> done: ScaleConfiguration.EnterCodeNameandPrintFormat1() (5.3s)
+-> done: ScaleConfiguration.EnterCodeNameandPrintFormat1() (5.4s)
 When Enter the Value of Print Name OpenSanBiscuit1
--> done: ScaleConfiguration.EnterValueoOfpenSanBiscuit1() (5.3s)
+-> done: ScaleConfiguration.EnterValueoOfpenSanBiscuit1() (5.2s)
 Then Click on Edit Button new PF
 -> done: ScaleConfiguration.ClickonEditButtonNEWPF() (5.4s)
 When Check the required text boxes
 -> done: ScaleConfiguration.CheckRequiredTextBoxes() (7.4s)
 When Click on Add Section
--> done: ScaleConfiguration.ClickonAddSections() (3.4s)
+-> done: ScaleConfiguration.ClickonAddSections() (3.1s)
 Then Click on Font Dropdown
--> done: ScaleConfiguration.ClickOnFontDropDowns() (10.2s)
+-> done: ScaleConfiguration.ClickOnFontDropDowns() (10.1s)
 Then Add Desc to font
--> done: ScaleConfiguration.AddDescription() (5.6s)
+-> done: ScaleConfiguration.AddDescription() (5.3s)
 And check the Manadatory & Fixed Width check box
--> done: ScaleConfiguration.ThenCheckTheManadatoryFixedWidthCheckBox() (0.9s)
+-> done: ScaleConfiguration.ThenCheckTheManadatoryFixedWidthCheckBox() (0.3s)
 And configure the row & Characters values
--> done: ScaleConfiguration.ThenConfigureTheRowCharactersValues() (0.9s)
-When Click on Add Section
--> done: ScaleConfiguration.ClickonAddSections() (3.3s)
-Then Click on Font Dropdown
--> done: ScaleConfiguration.ClickOnFontDropDowns() (10.2s)
+-> done: ScaleConfiguration.ThenConfigureTheRowCharactersValues() (0.2s)
+Then check a new nutritional Panel can be added to another section
+-> done: ScaleConfiguration.ThenCheckANewNutritionalPanelCanBeAddedToAnotherSection() (18.6s)
 And check the Manadatory & Fixed Width check box font2
--> done: ScaleConfiguration.ThenCheckTheManadatoryFixedWidthCheckBoxFont2() (0.6s)
-Then Add Desc to font2
--> done: ScaleConfiguration.AddDescription2() (5.5s)
+-> error: no such element: Unable to locate element: {"method":"xpath","selector":"(//input[@ng-model='section.isFixedWidth'])[2]"}
+  (Session info: chrome=103.0.5060.114) (0.3s)
 And configure the row & Characters values Font2
--> done: ScaleConfiguration.ThenConfigureTheRowCharactersValuesFont() (1.0s)
+-> skipped because of previous errors
 Then Save the font with data
--> done: ScaleConfiguration.SaveFont() (0.2s)
+-> skipped because of previous errors
 Then Close the font
--> done: ScaleConfiguration.ClsoeFont() (5.0s)
+-> skipped because of previous errors
 Then Delete the PF
--> done: ScaleConfiguration.DeletePF() (8.8s)
+-> skipped because of previous errors
+Then User is able to logout
+-> skipped because of previous errors

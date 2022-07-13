@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using TechTalk.SpecFlow;
 using OpenQA.Selenium.Support.UI;
+using System;
 namespace SpecFlow_MSTestFrameWork.Steps
 {
 
@@ -311,6 +312,18 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.ConfigureTheRowCharactersValuesFont();
         }
 
+        [Then(@"check a new nutritional Panel can be added to another section")]
+        public void ThenCheckANewNutritionalPanelCanBeAddedToAnotherSection()
+        {
+            scaleConfigurationPage.ClickonAddSection();
+            string selectfont = homePage.getConfiguration("TestData.json", "NutritionalValue");
+            scaleConfigurationPage.ClickonFontDropdown2(selectfont);
+           System.Threading.Thread.Sleep(5000);
+            string Adddesc = homePage.getConfiguration("TestData.json", "NutritionalDesc");
+            scaleConfigurationPage.AddDiscription2(Adddesc);
+            System.Threading.Thread.Sleep(5000);
+            scaleConfigurationPage.FetchValueForNutritionalSection();
+        }
 
 
 

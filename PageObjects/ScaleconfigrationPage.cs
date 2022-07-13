@@ -64,6 +64,8 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement PublishPF => Driver.FindElement(By.XPath("(//i[@ng-click='ctrl.actions.publishPrintFormat(row.data)'])[1]"));
         IWebElement DeletePF => Driver.FindElement (By.XPath("(//i[@ng-click='ctrl.actions.deletePrintFormat(row.data)'])[1]"));
 
+        private CustomControls NutrionalTemplateDropdown => new CustomControls(Driver, By.XPath("//select[@name='nutritionalTemplateName-2']"));
+
         IWebElement SelectStore => Driver.FindElement(By.XPath("//*[@class='checkboxInput']"));
         IWebElement Deletebutton => Driver.FindElement(By.Id("submitButton"));
         IWebElement Clickok => Driver.FindElement(By.XPath("//*[text()='OK']"));
@@ -88,6 +90,8 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         IWebElement Row_Font => Driver.FindElement(By.XPath("//input[@name='rows--3']"));
         IWebElement Characters_Font => Driver.FindElement(By.XPath("//input[@name='characters--3']"));
+
+        private CustomControls EnterNutritionalFontValue => new CustomControls(Driver, By.XPath("(//select[@ng-model='section.scaleFontId'])[2]"));
 
         public By TexBoxLocator { get; private set; }
 
@@ -309,6 +313,13 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Characters_Font.SendKeys("2");
         }
 
+        public void ClickonFontDropdown2(string fontdropdown)
+        {
+            EnterNutritionalFontValue.SelectByText(fontdropdown);
+            Thread.Sleep(5000);
+        }
+
+        public void FetchValueForNutritionalSection() => NutrionalTemplateDropdown.SelectByText("NP1");
 
 
 
