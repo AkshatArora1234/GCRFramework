@@ -71,6 +71,7 @@ Scenario: Edit PF
 	And check the Manadatory & Fixed Width check box
 	And configure the row & Characters values
 	Then check a new nutritional Panel can be added to another section
+	Then Click Support Basic Mode Header and Table
 	#And check the Manadatory & Fixed Width check box font2
 	#And configure the row & Characters values Font2
 	Then Save the font with data

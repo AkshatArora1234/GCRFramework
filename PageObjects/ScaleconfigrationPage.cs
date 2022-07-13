@@ -93,6 +93,11 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         private CustomControls EnterNutritionalFontValue => new CustomControls(Driver, By.XPath("(//select[@ng-model='section.scaleFontId'])[2]"));
 
+        IWebElement Support_Basic_Mode  => Driver.FindElement(By.XPath("//input[@ng-model='section.hasBasicMode']"));
+
+        IWebElement HeaderRows => Driver.FindElement(By.XPath("//input[@id='header--rows--2']"));
+
+        IWebElement TableRows => Driver.FindElement(By.XPath(" //input[@id='table--rows--2']"));
         public By TexBoxLocator { get; private set; }
 
         // private string jsonFile = @"C:\Source\Specflow_MSTest FrameWork\SpecFlow_MSTestFrameWork\bin\Debug\netcoreapp3.1\TestData.json";
@@ -321,7 +326,14 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         public void FetchValueForNutritionalSection() => NutrionalTemplateDropdown.SelectByText("NP1");
 
-
+        public void ClickSupportBasicMode()
+        {
+            Support_Basic_Mode.Click();
+            HeaderRows.Clear();
+            HeaderRows.SendKeys("4");
+            TableRows.Clear();
+            TableRows.SendKeys("6");
+        }
 
 
 

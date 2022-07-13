@@ -217,6 +217,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         public void SaveFont()
         {
             scaleConfigurationPage.SavetheFontwithData();
+            System.Threading.Thread.Sleep(3000);
 
            
         }
@@ -324,6 +325,16 @@ namespace SpecFlow_MSTestFrameWork.Steps
             System.Threading.Thread.Sleep(5000);
             scaleConfigurationPage.FetchValueForNutritionalSection();
         }
+
+
+        [Then(@"Click Support Basic Mode Header and Table")]
+        public void ClickSupportBasicModeHeaderandTable()
+        {
+            scaleConfigurationPage.ClickSupportBasicMode();
+            System.Threading.Thread.Sleep(3000);
+        }
+
+
 
 
 
