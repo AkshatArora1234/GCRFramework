@@ -73,7 +73,22 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         //Print Format- 
         IWebElement TabPrintFormat => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[2]"));
 
-       
+        IWebElement ClickEditNEWPF => Driver.FindElement(By.XPath("(//*[contains(text(),'OpenSansBiscuits1')])"));
+
+        IWebElement Manadatory => Driver.FindElement(By.XPath("(//input[@ng-model='section.isMandatory'])[1]"));
+        IWebElement FixedWidth => Driver.FindElement(By.XPath("(//input[@ng-model='section.isFixedWidth'])[1]"));
+
+        IWebElement Row => Driver.FindElement(By.XPath("//input[@name='rows--1']"));
+        IWebElement Characters => Driver.FindElement(By.XPath("//input[@name='characters--1']"));
+
+        IWebElement Manadatory2 => Driver.FindElement(By.XPath("(//input[@ng-model='section.isMandatory'])[2]"));
+        IWebElement FixedWidth2 => Driver.FindElement(By.XPath("(//input[@ng-model='section.isFixedWidth'])[2]"));
+
+        IWebElement AddDesc2 => Driver.FindElement(By.XPath("(//input[@ng-model='section.sectionDescription'])[2]"));
+
+        IWebElement Row_Font => Driver.FindElement(By.XPath("//input[@name='rows--3']"));
+        IWebElement Characters_Font => Driver.FindElement(By.XPath("//input[@name='characters--3']"));
+
         public By TexBoxLocator { get; private set; }
 
         // private string jsonFile = @"C:\Source\Specflow_MSTest FrameWork\SpecFlow_MSTestFrameWork\bin\Debug\netcoreapp3.1\TestData.json";
@@ -251,6 +266,47 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Searchbox.SendKeys(code);
            
 
+        }
+
+        public void EditCode2()
+        {
+            Actions actions = new Actions(Driver);
+
+            actions.DoubleClick(ClickEditNEWPF).Perform();
+
+        }
+
+        public void ManadatoryFixedWidthCheckBoxCheckboxes()
+        {
+            Manadatory.Click();
+            FixedWidth.Click();
+        }
+
+        public void ConfigureTheRowCharactersValues()
+        {
+            Row.SendKeys("2");
+            Characters.Clear();
+            Characters.SendKeys("2");
+        }
+
+        public void ManadatoryFixedWidthCheckBoxCheckboxes2()
+        {
+            Manadatory2.Click();
+            FixedWidth2.Click();
+        }
+
+        public void AddDiscription2(string desc)
+        {
+
+            AddDesc2.SendKeys(desc);
+
+        }
+
+        public void ConfigureTheRowCharactersValuesFont()
+        {
+            Row_Font.SendKeys("2");
+            Characters_Font.Clear();
+            Characters_Font.SendKeys("2");
         }
 
 

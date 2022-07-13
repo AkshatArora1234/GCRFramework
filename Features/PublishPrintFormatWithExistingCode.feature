@@ -48,7 +48,37 @@ Given user navigates to HQ application
 	Then Delete the PF
 	Then User is able to logout
 
-
+@mytag
+Scenario: Edit PF
+	Given user navigates to HQ application
+	When enter valid '<username>', '<hqpassword>'
+	And Clicks on Log In button
+	When User clicks on the Left Menu
+	Then menu should be displayed
+	When User enters Scale Configuration in the Search Box
+	Then Scale Configuration Item should be displayed on the Menu
+	When User Selects the Scale Configuration
+	Then Scale Configuration Page should be displayed
+	When User clicks on Tab Print Format
+	Then Click on the New Button
+	When Enter the CodeName and PrintFormat new
+	When Enter the Value of Print Name OpenSanBiscuit1
+	Then Click on Edit Button new PF
+	When Check the required text boxes
+	When Click on Add Section
+	Then Click on Font Dropdown
+	Then Add Desc to font
+	And check the Manadatory & Fixed Width check box
+	And configure the row & Characters values
+	When Click on Add Section
+	Then Click on Font Dropdown
+	And check the Manadatory & Fixed Width check box font2
+	Then Add Desc to font2
+	And configure the row & Characters values Font2
+	Then Save the font with data
+	Then Close the font
+	Then Delete the PF
+	Then User is able to logout
 
 
 

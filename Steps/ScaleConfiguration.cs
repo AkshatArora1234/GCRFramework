@@ -251,6 +251,67 @@ namespace SpecFlow_MSTestFrameWork.Steps
         }
 
 
+        [When(@"Enter the CodeName and PrintFormat new")]
+        public void EnterCodeNameandPrintFormat1()
+        {
+            string printCode1 = homePage.getConfiguration("TestData.json", "PrintCode3.0");
+            string printFormat1 = homePage.getConfiguration("TestData.json", "PrintFormat3.0");
+            scaleConfigurationPage.EnterCodeandName(printCode1, printFormat1);
+            System.Threading.Thread.Sleep(5000);
+        }
+
+        [When(@"Enter the Value of Print Name OpenSanBiscuit1")]
+        public void EnterValueoOfpenSanBiscuit1()
+        {
+
+            string printFormat = homePage.getConfiguration("TestData.json", "PrintFormat3.0");
+            scaleConfigurationPage.SeachPFname(printFormat);
+            System.Threading.Thread.Sleep(5000);
+        }
+
+        [Then(@"Click on Edit Button new PF")]
+        public void ClickonEditButtonNEWPF()
+        {
+
+            scaleConfigurationPage.EditCode2();
+            System.Threading.Thread.Sleep(5000);
+        }
+
+        [Then(@"check the Manadatory & Fixed Width check box")]
+        public void ThenCheckTheManadatoryFixedWidthCheckBox()
+        {
+            scaleConfigurationPage.ManadatoryFixedWidthCheckBoxCheckboxes();
+        }
+
+        [Then(@"configure the row & Characters values")]
+        public void ThenConfigureTheRowCharactersValues()
+        {
+            scaleConfigurationPage.ConfigureTheRowCharactersValues();
+        }
+
+
+        [Then(@"check the Manadatory & Fixed Width check box font2")]
+        public void ThenCheckTheManadatoryFixedWidthCheckBoxFont2()
+        {
+            scaleConfigurationPage.ManadatoryFixedWidthCheckBoxCheckboxes2();
+        }
+
+
+        [Then(@"Add Desc to font2")]
+        public void AddDescription2()
+        {
+            string Adddesc1 = homePage.getConfiguration("TestData.json", "NutritionalDesc");
+            scaleConfigurationPage.AddDiscription2(Adddesc1);
+            System.Threading.Thread.Sleep(5000);
+        }
+
+        [Then(@"configure the row & Characters values Font2")]
+        public void ThenConfigureTheRowCharactersValuesFont()
+        {
+            scaleConfigurationPage.ConfigureTheRowCharactersValuesFont();
+        }
+
+
 
 
 
