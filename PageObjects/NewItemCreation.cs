@@ -47,15 +47,12 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement PublishYes => Driver.FindElement(By.Id("submitButton"));
         IWebElement Save => Driver.FindElement(By.XPath("//button[@class='button-save']"));
 
-        // private string jsonFile = @"C:\Source\Specflow_MSTest FrameWork\SpecFlow_MSTestFrameWork\bin\Debug\netcoreapp3.1\TestData.json";
 
         public void SearchForKeyword()
         {
             Thread.Sleep(8000);
             SideMenu.Click();
-            /*var json = File.ReadAllText("TestData.json");
-            var jObject = JObject.Parse(json);
-            var searchItem = jObject["item"];*/
+            Searchbar.Clear();
             Searchbar.SendKeys("Item Maintenance in HQ mode");
             ElementClick.Click();
         }

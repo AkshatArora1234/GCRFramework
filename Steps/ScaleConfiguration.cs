@@ -6,6 +6,8 @@ using System.Text;
 using TechTalk.SpecFlow;
 using OpenQA.Selenium.Support.UI;
 using System;
+using System.Threading;
+
 namespace SpecFlow_MSTestFrameWork.Steps
 {
 
@@ -17,6 +19,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         HQLoginPage hQLoginPage;
         Scaleconfig scaleConfigurationPage;
         HomePage homePage;
+        ColumnChooser columnChooser;
 
         public ScaleConfiguration(DriverHelper driverHelper)
         {
@@ -25,6 +28,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
             hQLoginPage = new HQLoginPage(_driverHelper.driver);
             scaleConfigurationPage = new Scaleconfig(_driverHelper.driver);
             homePage = new HomePage(_driverHelper.driver);
+            columnChooser = new ColumnChooser(_driverHelper.driver);
         }
 
 
@@ -335,9 +339,67 @@ namespace SpecFlow_MSTestFrameWork.Steps
         }
 
 
+        //Step Definition for Publish a PF, Exist with same name as in store.
+
+        [When(@"user search and select the printformat code")]
+        public void WhenUserSearchAndSelectThePrintformatCode()
+        {
+            string pfCode = homePage.getConfiguration("TestData.json", "PrintCode2.0");
+            string pfName = homePage.getConfiguration("TestData.json", "ChangedPFName");
+            scaleConfigurationPage.ClickNewButton();
+            scaleConfigurationPage.EnterCodeandName(pfCode, pfName);
+            Thread.Sleep(8000);
+            scaleConfigurationPage.SearchPF(pfCode);
+            Thread.Sleep(3000);
+            scaleConfigurationPage.EditCode3();
+            Thread.Sleep(3000);
+        }
+
+        [Then(@"user change the PF code and update the checkboxes")]
+        public void ThenUserChangeThePFCodeAndUpdateTheCheckboxes()
+        {
+            string NewPFCode = homePage.getConfiguration("TestData.json", "ChangedPFCOde");
+            scaleConfigurationPage.ChangePFCode(NewPFCode);
+            scaleConfigurationPage.UpdatePF();
+        }
+
+        [Then(@"verify Content Symbol is automatically checked on checking Content")]
+        public void ThenVerifyContentSymbolIsAutomaticallyCheckedOnCheckingContent()
+        {
+            scaleConfigurationPage.VerifyContentSymbol();
+        }
+
+        [Then(@"verify user can Change non nutritional section to the nutritional by adding a nutritional font and description")]
+        public void ThenVerifyUserCanChangeNonNutritionalSectionToTheNutritionalByAddingANutritionalFontAndDescription()
+        {
+            scaleConfigurationPage.ClickonAddSection();
+            string selectfont = homePage.getConfiguration("TestData.json", "NutritionalValue");
+            scaleConfigurationPage.ClickonFontDropdown(selectfont);
+            Thread.Sleep(5000);
+            string Adddesc = homePage.getConfiguration("TestData.json", "NutritionalDesc");
+            scaleConfigurationPage.AddDiscription(Adddesc);
+            Thread.Sleep(5000);
+            scaleConfigurationPage.FetchValueForNutritionalSection();
+        }
 
 
+        [Then(@"Save and close the PF")]
+        public void ThenSaveAndCloseThePF()
+        {
+            scaleConfigurationPage.SavetheFontwithData();
+            scaleConfigurationPage.ClosePF();
+        }
 
+        [Then(@"select a scale item")]
+        public void ThenSelectAScaleItem()
+        {
+            newItemCreation.SearchForKeyword();
+            Thread.Sleep(8000);
+            columnChooser.ChooseAColumn();
+            columnChooser.SelectScaleValue();
+            columnChooser.SelectFirstScaleRecord();
+            columnChooser.ClickScaleTabInItems();
+        }
 
 
 

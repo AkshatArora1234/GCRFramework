@@ -82,6 +82,27 @@ Scenario: Edit PF
 
 
 
+@mytag
+Scenario: Publish PF existing with same name as in store
+	Given user navigates to HQ application
+	When enter valid '<username>', '<hqpassword>'
+	And Clicks on Log In button
+    When User clicks on the Left Menu
+	Then menu should be displayed
+	When User enters Scale Configuration in the Search Box
+	Then Scale Configuration Item should be displayed on the Menu
+	When User Selects the Scale Configuration
+	Then Scale Configuration Page should be displayed
+	When User clicks on Tab Print Format
+	And user search and select the printformat code
+	Then user change the PF code and update the checkboxes
+	And verify Content Symbol is automatically checked on checking Content
+	And verify user can Change non nutritional section to the nutritional by adding a nutritional font and description
+	And Save and close the PF
+    Then select a scale item
+
+    
+
 
 
     
