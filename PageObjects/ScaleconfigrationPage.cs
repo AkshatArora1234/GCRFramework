@@ -32,7 +32,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement EnterDropDown1 => Driver.FindElement(By.XPath("(//div[@class='selectize-input items not-full ng-valid ng-pristine'])[3]"));
         IWebElement LeftMenu => Driver.FindElement(By.XPath("//*[@class='SideMenuWrapper SideMenuWrapperSmall']//*[@class='fa fa-bars N_P_A']"));
         IWebElement ScaleConfigurationMenu => Driver.FindElement(By.XPath("//span/strong[text()='Scale Configuration']"));
-
+        IWebElement ElementSelectFromTable => Driver.FindElement(By.XPath(" //*[@id='gridSCALEPF']/div/div[6]/div/div/div[1]/div/table/tbody/tr[last()-1]/td[1]"));
         IWebElement EnterCode => Driver.FindElement(By.XPath("(//*[@name='pFCode'])"));
 
         IWebElement EnterPrintFormat => Driver.FindElement(By.XPath("(//*[@name='pFName'])"));
@@ -98,37 +98,10 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement HeaderRows => Driver.FindElement(By.XPath("//input[@id='header--rows--2']"));
 
         IWebElement TableRows => Driver.FindElement(By.XPath(" //input[@id='table--rows--2']"));
-        public By TexBoxLocator { get; private set; }
-
-        // private string jsonFile = @"C:\Source\Specflow_MSTest FrameWork\SpecFlow_MSTestFrameWork\bin\Debug\netcoreapp3.1\TestData.json";
-
-        public void SearchForKeyword()
-        {
-            SideMenu.Click();
-            /*var json = File.ReadAllText("TestData.json");
-            var jObject = JObject.Parse(json);
-            var searchItem = jObject["item"];*/
-            Searchbar.SendKeys("Scale Configuration");
-            ElementClick.Click();
-        }
-
-        public void CreateNewItem()
-        {
-            Thread.Sleep(5000);
-            NewItembutton.Click();
-            Random rand = new Random();
-            int number = rand.Next(0, 9999);
-            EnterBarcode.SendKeys("1" + number);
-            EnterItemDescription.SendKeys("Test" + number);
-            EnterDropDown.Click();
-            Actions keyDown = new Actions(Driver);
-            keyDown.SendKeys(Keys.Enter).SendKeys(Keys.End).Build().Perform();
-            keyDown.SendKeys(Keys.Escape).Build().Perform();
-                     
-
-        }
-
-
+        IWebElement SearchCode => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[20]"));
+        IWebElement ChangeCode => Driver.FindElement(By.Id("printFormatCode"));
+       
+       
         //Actions
 
         public void ClickLeftMenu()
@@ -136,34 +109,20 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Thread.Sleep(4000);
             LeftMenu.Click();
         }
-        // customcontrol.Click();
+      
+        public void ScaleConfiguration() => Searchbar.SendKeys("Scale Configuration");
 
-        public void ScaleConfiguration()
-        {
-            Searchbar.SendKeys("Scale Configuration");
-        }
+        public void MenuScaleConfigurationClick()  => ScaleConfigurationMenu.Click();
 
-        public void MenuScaleConfigurationClick()
-        {
-            ScaleConfigurationMenu.Click();
-        }
+        public void TabPrintFormatClick() => TabPrintFormat.Click();
 
-        public void TabPrintFormatClick()
-        {
-            TabPrintFormat.Click();
-        }
-
-        public void ClickNewButton()
-        {
-            NewItembutton.Click();
-        }
-
+        public void ClickNewButton() => NewItembutton.Click();
+ 
         public void EnterCodeandName(string code, string name)
         {
             EnterCode.SendKeys(code);
             EnterPrintFormat.SendKeys(name);
             Save.Click();
-
         }
 
         public void EnterSearchBox(string code, string name)
@@ -171,17 +130,17 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             EnterCode.SendKeys(code);
             EnterPrintFormat.SendKeys(name);
             Save.Click();
-
         }
-
-
 
         public void EditCode()
         {
             Actions actions = new Actions(Driver);
-            
-            actions.DoubleClick(ClickEdit).Perform();
-            
+            actions.DoubleClick(ClickEdit).Perform();  
+        }
+        public void EditCode3()
+        {
+            Actions actions = new Actions(Driver);
+            actions.DoubleClick(ElementSelectFromTable).Perform();
         }
 
         public void Checkboxes()
@@ -192,71 +151,46 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             CheckPresetmessages.Click();
             CheckPrintdateformat.Click();
             CheckContent.Click();
-            System.Threading.Thread.Sleep(5000);
+            Thread.Sleep(5000);
 
         }
 
-        public void VerifyContentSymbol()
-        {
-            Assert.IsTrue(CheckHasContentSymbol.Enabled);
+        public void VerifyContentSymbol() => Assert.IsTrue(CheckHasContentSymbol.Enabled);
             
-        }
-
         public void ClickonAddSection()
         {
             AddSection.Click();
-            System.Threading.Thread.Sleep(3000);
-
+            Thread.Sleep(3000);
         }
 
         public void ClickonFontDropdown(string fontdropdown)
         {
             EnterFontValue.SelectByText(fontdropdown);
-            System.Threading.Thread.Sleep(5000);
-          
-
+            Thread.Sleep(5000);
         }
 
-        public void AddDiscription(string desc)
-        {
+        public void AddDiscription(string desc) => AddDesc.SendKeys(desc);
 
-            AddDesc.SendKeys(desc);
+        public void SavetheFontwithData() => Save.Click();
 
-        }
+        public void ClosePF() => Close.Click();
 
-        public void SavetheFontwithData()
-        {
-
-            Save.Click();
-
-        }
-
-        public void ClosePF()
-        {
-
-            Close.Click();
-
-        }
 
         public void PublishPrint()
         {
             Actions action = new Actions(Driver);
             action.Click(PublishPF).Perform();
-            System.Threading.Thread.Sleep(5000);
-
+            Thread.Sleep(5000);
         }
 
         public void SelectStoreLatest()
         {
-
             ClickStore.Click();
             SelectStore.Click();
-            System.Threading.Thread.Sleep(3000);
+            Thread.Sleep(3000);
             ClickStore.Click();
             Clickok.Click();
-            System.Threading.Thread.Sleep(5000);
-
-
+            Thread.Sleep(5000);
         }
 
         public void DeletePrint()
@@ -264,25 +198,16 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Actions action = new Actions(Driver);
             action.Click(DeletePF);
             action.Perform();
-            System.Threading.Thread.Sleep(3000);
+            Thread.Sleep(3000);
             Deletebutton.Click();
-
-
         }
 
-        public void SeachPFname(string code)
-        {
-            Searchbox.SendKeys(code);
-           
-
-        }
+        public void SeachPFname(string code) => Searchbox.SendKeys(code);
 
         public void EditCode2()
         {
             Actions actions = new Actions(Driver);
-
             actions.DoubleClick(ClickEditNEWPF).Perform();
-
         }
 
         public void ManadatoryFixedWidthCheckBoxCheckboxes()
@@ -304,12 +229,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             FixedWidth2.Click();
         }
 
-        public void AddDiscription2(string desc)
-        {
-
-            AddDesc2.SendKeys(desc);
-
-        }
+        public void AddDiscription2(string desc) => AddDesc2.SendKeys(desc);
 
         public void ConfigureTheRowCharactersValuesFont()
         {
@@ -334,10 +254,20 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             TableRows.Clear();
             TableRows.SendKeys("6");
         }
-
-
-
-
+        public void SearchPF(string text) => SearchCode.SendKeys(text);
+        public void ChangePFCode(string code)
+        {
+            ChangeCode.Clear();
+            ChangeCode.SendKeys(code);
+        }
+        public void UpdatePF()
+        {
+            CheckTare.Click();
+            CheckPresetmessages.Click();
+            CheckPrintdateformat.Click();
+            CheckContent.Click();
+            Thread.Sleep(5000);
+        }
 
 
 
