@@ -20,6 +20,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         Scaleconfig scaleConfigurationPage;
         HomePage homePage;
         ColumnChooser columnChooser;
+        NewBatch newBatch;
 
         public ScaleConfiguration(DriverHelper driverHelper)
         {
@@ -29,6 +30,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage = new Scaleconfig(_driverHelper.driver);
             homePage = new HomePage(_driverHelper.driver);
             columnChooser = new ColumnChooser(_driverHelper.driver);
+            newBatch = new NewBatch(_driverHelper.driver);
         }
 
 
@@ -37,8 +39,10 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [When(@"User clicks on the Left Menu")]
         public void WhenUserClicksOnTheLeftMenu()
         {
-            //Cilck on the Left Menu
-            //
+            //Adding new batch as PF should be associated with a batch
+            Thread.Sleep(2000);
+            newBatch.CreateBatch();
+            Thread.Sleep(2000);
             scaleConfigurationPage.ClickLeftMenu();
         }
 
@@ -205,7 +209,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         {
             string selectfont = homePage.getConfiguration("TestData.json", "NonNutritionalValue");
             scaleConfigurationPage.ClickonFontDropdown(selectfont);
-            System.Threading.Thread.Sleep(5000);
+            Thread.Sleep(5000);
         }
 
 
@@ -214,46 +218,42 @@ namespace SpecFlow_MSTestFrameWork.Steps
         {
             string Adddesc = homePage.getConfiguration("TestData.json", "NonNutritionalDesc");
             scaleConfigurationPage.AddDiscription(Adddesc);
-            System.Threading.Thread.Sleep(5000);
+            Thread.Sleep(5000);
         }
 
         [Then(@"Save the font with data")]
         public void SaveFont()
         {
             scaleConfigurationPage.SavetheFontwithData();
-            System.Threading.Thread.Sleep(3000);
-
-           
+            Thread.Sleep(3000);
         }
 
         [Then(@"Close the font")]
         public void ClsoeFont()
         {
             scaleConfigurationPage.ClosePF();
-            System.Threading.Thread.Sleep(4000);
-           
+            Thread.Sleep(4000);
         }
 
         [Then(@"Publish the PF")]
         public void PublishthePFM()
         {
             scaleConfigurationPage.PublishPrint();
-            System.Threading.Thread.Sleep(5000);
+            Thread.Sleep(5000);
         }
 
         [Then(@"Select the Store")]
         public void SelectStore()
         {
             scaleConfigurationPage.SelectStoreLatest();
-            System.Threading.Thread.Sleep(3000);
-
+            Thread.Sleep(3000);
         }
 
         [Then(@"Delete the PF")]
         public void DeletePF()
         {
-            scaleConfigurationPage.DeletePrint();
-            System.Threading.Thread.Sleep(5000);
+            //scaleConfigurationPage.DeletePrint();
+            Thread.Sleep(5000);
         }
 
 
@@ -263,7 +263,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
             string printCode1 = homePage.getConfiguration("TestData.json", "PrintCode3.0");
             string printFormat1 = homePage.getConfiguration("TestData.json", "PrintFormat3.0");
             scaleConfigurationPage.EnterCodeandName(printCode1, printFormat1);
-            System.Threading.Thread.Sleep(5000);
+            Thread.Sleep(5000);
         }
 
         [When(@"Enter the Value of Print Name OpenSanBiscuit1")]
@@ -272,7 +272,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
 
             string printFormat = homePage.getConfiguration("TestData.json", "PrintFormat3.0");
             scaleConfigurationPage.SeachPFname(printFormat);
-            System.Threading.Thread.Sleep(5000);
+            Thread.Sleep(5000);
         }
 
         [Then(@"Click on Edit Button new PF")]
@@ -280,7 +280,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         {
 
             scaleConfigurationPage.EditCode2();
-            System.Threading.Thread.Sleep(5000);
+            Thread.Sleep(5000);
         }
 
         [Then(@"check the Manadatory & Fixed Width check box")]
@@ -308,7 +308,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         {
             string Adddesc1 = homePage.getConfiguration("TestData.json", "NutritionalDesc");
             scaleConfigurationPage.AddDiscription2(Adddesc1);
-            System.Threading.Thread.Sleep(5000);
+            Thread.Sleep(5000);
         }
 
         [Then(@"configure the row & Characters values Font2")]
@@ -323,10 +323,10 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.ClickonAddSection();
             string selectfont = homePage.getConfiguration("TestData.json", "NutritionalValue");
             scaleConfigurationPage.ClickonFontDropdown2(selectfont);
-           System.Threading.Thread.Sleep(5000);
+            Thread.Sleep(5000);
             string Adddesc = homePage.getConfiguration("TestData.json", "NutritionalDesc");
             scaleConfigurationPage.AddDiscription2(Adddesc);
-            System.Threading.Thread.Sleep(5000);
+            Thread.Sleep(5000);
             scaleConfigurationPage.FetchValueForNutritionalSection();
         }
 
@@ -335,7 +335,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         public void ClickSupportBasicModeHeaderandTable()
         {
             scaleConfigurationPage.ClickSupportBasicMode();
-            System.Threading.Thread.Sleep(3000);
+            Thread.Sleep(3000);
         }
 
 

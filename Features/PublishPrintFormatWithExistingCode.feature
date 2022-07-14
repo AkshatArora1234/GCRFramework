@@ -45,8 +45,8 @@ Given user navigates to HQ application
 	Then Publish the PF
 	#When Enter the Value of Print Name
 	Then Select the Store
-	Then Delete the PF
-	Then User is able to logout
+	#Then Delete the PF
+	#Then User is able to logout
 
 @mytag
 Scenario: Edit PF
@@ -76,8 +76,8 @@ Scenario: Edit PF
 	#And configure the row & Characters values Font2
 	Then Save the font with data
 	Then Close the font
-	Then Delete the PF
-	Then User is able to logout
+	#Then Delete the PF
+	#Then User is able to logout
 
 
 

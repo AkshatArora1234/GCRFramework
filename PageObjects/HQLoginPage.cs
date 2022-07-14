@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using OpenQA.Selenium;
 using System;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace SpecFlow_MSTestFrameWork.PageObjects
@@ -48,7 +49,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         public void UserLogout()
         {
             ProfileIcon.Click();
-            System.Threading.Thread.Sleep(2000);
+            Thread.Sleep(2000);
             LogOut.Click();
             submitbutton.Click();
 
