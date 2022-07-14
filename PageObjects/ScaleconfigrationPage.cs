@@ -26,10 +26,6 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement Searchbar => Driver.FindElement(By.XPath("//input[@id='search-text']"));
         IWebElement ElementClick => Driver.FindElement(By.XPath("//span/strong[text()='Item Maintenance in HQ mode']"));
         IWebElement NewItembutton => Driver.FindElement(By.XPath("(//span[text()='New'])[7]"));
-        IWebElement EnterBarcode => Driver.FindElement(By.XPath("//input[@name='barcode']"));
-        IWebElement EnterItemDescription => Driver.FindElement(By.XPath("//input[@name='itemDescription']"));
-        IWebElement EnterDropDown => Driver.FindElement(By.XPath("(//div[@class='selectize-input items not-full ng-valid ng-pristine has-options'])[1]"));
-        IWebElement EnterDropDown1 => Driver.FindElement(By.XPath("(//div[@class='selectize-input items not-full ng-valid ng-pristine'])[3]"));
         IWebElement LeftMenu => Driver.FindElement(By.XPath("//*[@class='SideMenuWrapper SideMenuWrapperSmall']//*[@class='fa fa-bars N_P_A']"));
         IWebElement ScaleConfigurationMenu => Driver.FindElement(By.XPath("//span/strong[text()='Scale Configuration']"));
         IWebElement ElementSelectFromTable => Driver.FindElement(By.XPath(" //*[@id='gridSCALEPF']/div/div[6]/div/div/div[1]/div/table/tbody/tr[last()-1]/td[1]"));
