@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "C:\\workspace\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj": {}
   },
   "projects": {
@@ -82,6 +83,19 @@
         "packagesPath": "C:\\Users\\prathibha.s\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\prathibha.s\\source\\repos\\SpecflowAutomation\\GCRFramework\\obj\\",
 >>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
+=======
+    "C:\\Users\\prathibha.s\\source\\repos\\SpecflowAutomation\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\prathibha.s\\source\\repos\\SpecflowAutomation\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\prathibha.s\\source\\repos\\SpecflowAutomation\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
+        "projectName": "SpecFlow_MSTestFrameWork",
+        "projectPath": "C:\\Users\\prathibha.s\\source\\repos\\SpecflowAutomation\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
+        "packagesPath": "C:\\Users\\prathibha.s\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\prathibha.s\\source\\repos\\SpecflowAutomation\\GCRFramework\\obj\\",
+>>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -92,8 +106,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           "C:\\Users\\akshat.arora\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+=======
+          "C:\\Users\\prathibha.s\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
 =======
           "C:\\Users\\prathibha.s\\AppData\\Roaming\\NuGet\\NuGet.Config",
 >>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
