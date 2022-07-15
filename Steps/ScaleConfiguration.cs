@@ -175,6 +175,15 @@ namespace SpecFlow_MSTestFrameWork.Steps
             System.Threading.Thread.Sleep(5000);
         }
 
+        [When(@"Searches for PrintFormat")]
+        public void WhenSearchesForPrintFormat()
+        {
+            string printFormat = homePage.getConfiguration("TestData.json", "PrintFormat2.3");
+            scaleConfigurationPage.SeachPFname(printFormat);
+            System.Threading.Thread.Sleep(5000);
+        }
+
+
 
 
 
@@ -400,6 +409,89 @@ namespace SpecFlow_MSTestFrameWork.Steps
             columnChooser.SelectFirstScaleRecord();
             columnChooser.ClickScaleTabInItems();
         }
+
+        //Step Definitions TC2
+        [When(@"User Enters the Code and PrintFormat")]
+        public void WhenUserEntersTheCodeAndPrintFormat()
+        {
+            string printCode = homePage.getConfiguration("TestData.json", "PrintCode2.2");
+            string printFormat = homePage.getConfiguration("TestData.json", "PrintFormat2.2");
+            scaleConfigurationPage.EnterCodeandName(printCode, printFormat);
+            System.Threading.Thread.Sleep(5000);
+
+
+        }
+
+        [When(@"Click on Edit Button")]
+        public void WhenClickOnEditButton()
+        {
+            scaleConfigurationPage.EditRow();
+            System.Threading.Thread.Sleep(5000);
+
+        }
+
+        [When(@"Change the PF name to Popcorn, also uncheck '(.*)' only\.Take any nutritional font and uncheck '(.*)' and check '(.*)'\.")]
+        public void WhenChangeThePFNameToPopcornAlsoUncheckOnly_TakeAnyNutritionalFontAndUncheckAndCheck_(string p0, string p1, string p2)
+        {
+            
+            System.Threading.Thread.Sleep(2000);
+            scaleConfigurationPage.PFClear();
+            string printFormat = homePage.getConfiguration("TestData.json", "PrintFormat2.3");
+            
+            scaleConfigurationPage.EditPrintFormatName(printFormat);
+            
+            System.Threading.Thread.Sleep(2000);
+            
+            
+
+            scaleConfigurationPage.ClickonAddSection();
+            string selectfont = homePage.getConfiguration("TestData.json", "NutritionalValue");
+            scaleConfigurationPage.ClickonFontDropdown(selectfont);
+            Thread.Sleep(5000);
+            string Adddesc = homePage.getConfiguration("TestData.json", "NutritionalDesc");
+            scaleConfigurationPage.AddDiscription(Adddesc);
+            Thread.Sleep(5000);
+            scaleConfigurationPage.FetchValueForNutritionalSection();
+
+
+        }
+
+        [When(@"User Enters the Code and PrintFormat(.*)")]
+        public void WhenUserEntersTheCodeAndPrintFormat(int p0)
+        {
+            
+        }
+
+        [When(@"User Deletes the font added to PF")]
+        public void WhenUserDeletesTheFontAddedToPF()
+        {
+            
+        }
+
+        [Then(@"Verifies the Toast is displayed")]
+        public void ThenVerifiesTheToastIsDisplayed()
+        {
+            
+        }
+
+        [Then(@"a message'(.*)' should be displayed")]
+        public void ThenAMessageShouldBeDisplayed(string p0)
+        {
+            
+        }
+
+        [When(@"User Pubilsh the PF to a Second Store where PF exists with the same Code")]
+        public void WhenUserPubilshThePFToASecondStoreWherePFExistsWithTheSameCode()
+        {
+            
+        }
+
+        [When(@"Verify that at store, all the Tares, Content Symbols and Preset messages of HQ are published and the PF at store with same code is updated with values from HQ in Configuration\.")]
+        public void WhenVerifyThatAtStoreAllTheTaresContentSymbolsAndPresetMessagesOfHQArePublishedAndThePFAtStoreWithSameCodeIsUpdatedWithValuesFromHQInConfiguration_()
+        {
+            
+        }
+
 
 
 

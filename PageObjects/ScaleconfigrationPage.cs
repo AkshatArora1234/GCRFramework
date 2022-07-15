@@ -96,8 +96,8 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement TableRows => Driver.FindElement(By.XPath(" //input[@id='table--rows--2']"));
         IWebElement SearchCode => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[20]"));
         IWebElement ChangeCode => Driver.FindElement(By.Id("printFormatCode"));
-       
-       
+        IWebElement ClickEditNice => Driver.FindElement(By.XPath("(//*[contains(text(),'NiceBiscuits')])[1]"));
+        IWebElement PrintFormatName => Driver.FindElement(By.XPath("//*[@name='printFormatName']"));
         //Actions
 
         public void ClickLeftMenu()
@@ -200,6 +200,15 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         public void SeachPFname(string code) => Searchbox.SendKeys(code);
 
+        public void EditRow()
+        {
+
+            Actions actions = new Actions(Driver);
+
+            actions.DoubleClick(ClickEditNice).Perform();
+        }
+
+
         public void EditCode2()
         {
             Actions actions = new Actions(Driver);
@@ -263,6 +272,24 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             CheckPrintdateformat.Click();
             CheckContent.Click();
             Thread.Sleep(5000);
+        }
+
+        public void PFClear()
+        { 
+        PrintFormatName.Clear();
+        }
+        public void EditPrintFormatName(string printFormat)
+        {
+
+            PrintFormatName.SendKeys(printFormat);
+            SavetheFontwithData();
+
+            // Add New
+            ClickonAddSection();
+            // ClickonFontDropdown(Font2);
+
+
+
         }
 
 
