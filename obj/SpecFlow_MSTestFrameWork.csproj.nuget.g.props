@@ -6,7 +6,11 @@
     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\akshat.arora\.nuget\packages\;C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages</NuGetPackageFolders>
+=======
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\prathibha.s\.nuget\packages\</NuGetPackageFolders>
+>>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
 =======
     <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\prathibha.s\.nuget\packages\</NuGetPackageFolders>
 >>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
@@ -15,8 +19,12 @@
   </PropertyGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <SourceRoot Include="C:\Users\akshat.arora\.nuget\packages\" />
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
+=======
+    <SourceRoot Include="C:\Users\prathibha.s\.nuget\packages\" />
+>>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
 =======
     <SourceRoot Include="C:\Users\prathibha.s\.nuget\packages\" />
 >>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
@@ -35,8 +43,13 @@
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <PkgBoDi Condition=" '$(PkgBoDi)' == '' ">C:\Users\akshat.arora\.nuget\packages\bodi\1.5.0</PkgBoDi>
     <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\akshat.arora\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0</PkgMicrosoft_CodeAnalysis_Analyzers>
+=======
+    <PkgBoDi Condition=" '$(PkgBoDi)' == '' ">C:\Users\prathibha.s\.nuget\packages\bodi\1.5.0</PkgBoDi>
+    <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\prathibha.s\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0</PkgMicrosoft_CodeAnalysis_Analyzers>
+>>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
 =======
     <PkgBoDi Condition=" '$(PkgBoDi)' == '' ">C:\Users\prathibha.s\.nuget\packages\bodi\1.5.0</PkgBoDi>
     <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\prathibha.s\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0</PkgMicrosoft_CodeAnalysis_Analyzers>
