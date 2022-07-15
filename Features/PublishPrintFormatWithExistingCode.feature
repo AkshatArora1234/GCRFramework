@@ -41,13 +41,9 @@ Given user navigates to HQ application
 	Then Add Desc to font
 	Then Save the font with data
 	Then Close the font
-	#When Enter the Value of Print Name
 	Then Publish the PF
-	#When Enter the Value of Print Name
 	Then Select the Store
-	Then Delete the PF
-	Then User is able to logout
-
+	
 @mytag
 Scenario: Edit PF
 	Given user navigates to HQ application
@@ -72,12 +68,9 @@ Scenario: Edit PF
 	And configure the row & Characters values
 	Then check a new nutritional Panel can be added to another section
 	Then Click Support Basic Mode Header and Table
-	#And check the Manadatory & Fixed Width check box font2
-	#And configure the row & Characters values Font2
 	Then Save the font with data
 	Then Close the font
-	Then Delete the PF
-	Then User is able to logout
+	
 
 
 

@@ -5,8 +5,10 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
+using OpenQA.Selenium.Interactions;
 using SpecFlow_MSTestFrameWork.PageObjects;
 using System;
+using System.Threading;
 using TechTalk.SpecFlow;
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
@@ -26,9 +28,7 @@ namespace SpecFlow_MSTestFrameWork.Hooks
         private static DriverHelper _driverHelper;
         public static HQLoginPage hq;
         public static Scaleconfig scale;
-
-
-
+        public static Scaleconfig scaleConfigurationPage;
 
 
         public Hooks(DriverHelper driverHelper, FeatureContext featureContext, ScenarioContext scenarioContext) : base()
@@ -37,17 +37,13 @@ namespace SpecFlow_MSTestFrameWork.Hooks
             _featureContext = featureContext;
             _scenarioContext = scenarioContext;
             hq = new HQLoginPage(_driverHelper.driver);
-           
-            
+            scaleConfigurationPage = new Scaleconfig(_driverHelper.driver);
         }
 
         
         private static ExtentTest featureName;
         private static AventStack.ExtentReports.ExtentReports extent;
-        /*public static ExtentReports extent;
-        public static ExtentTest test;*/
-
-
+      
 
         [AfterStep]
         public void AfterEachStep()
@@ -95,15 +91,14 @@ namespace SpecFlow_MSTestFrameWork.Hooks
         public static void InitializeReport()
         {
             //Initialize Extent report before test starts
-           string path = System.Reflection.Assembly.GetCallingAssembly().CodeBase;
+            string path = System.Reflection.Assembly.GetCallingAssembly().CodeBase;
             string actualPath = path.Substring(0, path.LastIndexOf("bin"));
             string projectPath = new Uri(actualPath).LocalPath;
             var htmlReporter = new ExtentHtmlReporter(projectPath + "Reports\\TestRunReport.html"); //generalized path
-          //  var htmlReporter = new ExtentHtmlReporter(@"C:\Users\akshat.arora\Desktop\seleniumframework\SpecFlow_MSTestFrameWork\Extentreport.html"); //generalized path
+           //var htmlReporter = new ExtentHtmlReporter(@"C:\Users\akshat.arora\Desktop\seleniumframework\SpecFlow_MSTestFrameWork\Extentreport.html"); //generalized path
             htmlReporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
             //Attach report to reporter
             extent = new AventStack.ExtentReports.ExtentReports();
-            // klov = new ExtentKlovReporter();
             extent.AttachReporter(htmlReporter);
         }
 
@@ -153,10 +148,6 @@ namespace SpecFlow_MSTestFrameWork.Hooks
         public static void TearDownReport()
         {
             //Flush report once test completes
-            //hq = new HQLoginPage(_driverHelper.driver);
-           // scale = new Scaleconfig(_driverHelper.driver);
-          //  scale.DeletePrint();
-            System.Threading.Thread.Sleep(5000);
             extent.Flush();
         }
 
@@ -165,12 +156,36 @@ namespace SpecFlow_MSTestFrameWork.Hooks
             setup(browsername);    
         }
 
-    [AfterScenario]
+        IWebElement DeletePF => _driverHelper.driver.FindElement(By.XPath("(//i[@ng-click='ctrl.actions.deletePrintFormat(row.data)'])[1]"));
+        IWebElement Deletebutton => _driverHelper.driver.FindElement(By.Id("submitButton"));
+        IWebElement ProfileIcon => _driverHelper.driver.FindElement(By.XPath("//button[@class='dropdown-toggle']"));
+        IWebElement LogOut => _driverHelper.driver.FindElement(By.XPath("//*[contains(text(),'Logout')]"));
+        IWebElement submitbutton => _driverHelper.driver.FindElement(By.Id("submitButton"));
+
+        [AfterScenario]
         public void AfterScenario()
         {
+            //DeletePF
+            if (_featureContext.FeatureInfo.Title.Equals("PublishPrintFormatWithExistingCode"))
+            {
+                Actions action = new Actions(_driverHelper.driver);
+                action.Click(DeletePF);
+                action.Perform();
+                Thread.Sleep(3000);
+                Deletebutton.Click();
+            }
+
+            //Logout
+            ProfileIcon.Click();
+            Thread.Sleep(2000);
+            LogOut.Click();
+            submitbutton.Click();
+
+            //Quit Driver
             _driverHelper.driver.Quit();
         }
 
+  
         public MediaEntityModelProvider Capture(string Name)
         {
             var screenshot = ((ITakesScreenshot)_driverHelper.driver).GetScreenshot().AsBase64EncodedString;
