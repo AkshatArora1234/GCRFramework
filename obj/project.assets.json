@@ -11022,120 +11022,24 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     "C:\\Users\\akshat.arora\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
-=======
-    "C:\\Users\\prathibha.s\\.nuget\\packages\\": {}
->>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
-=======
-    "C:\\Users\\prathibha.s\\.nuget\\packages\\": {}
->>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
-=======
-    "C:\\Users\\prathibha.s\\.nuget\\packages\\": {}
->>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
-=======
-    "C:\\Users\\prathibha.s\\.nuget\\packages\\": {}
->>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
-=======
-    "C:\\Users\\prathibha.s\\.nuget\\packages\\": {}
->>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
-=======
-    "C:\\Users\\prathibha.s\\.nuget\\packages\\": {}
->>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       "projectUniqueName": "C:\\workspace\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
       "projectName": "SpecFlow_MSTestFrameWork",
       "projectPath": "C:\\workspace\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
       "packagesPath": "C:\\Users\\akshat.arora\\.nuget\\packages\\",
       "outputPath": "C:\\workspace\\GCRFramework\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\prathibha.s\\source\\repos\\SpecflowAutomation\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
-      "projectName": "SpecFlow_MSTestFrameWork",
-      "projectPath": "C:\\Users\\prathibha.s\\source\\repos\\SpecflowAutomation\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
-      "packagesPath": "C:\\Users\\prathibha.s\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\prathibha.s\\source\\repos\\SpecflowAutomation\\GCRFramework\\obj\\",
->>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
-=======
-      "projectUniqueName": "C:\\Users\\prathibha.s\\source\\repos\\SpecflowAutomation\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
-      "projectName": "SpecFlow_MSTestFrameWork",
-      "projectPath": "C:\\Users\\prathibha.s\\source\\repos\\SpecflowAutomation\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
-      "packagesPath": "C:\\Users\\prathibha.s\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\prathibha.s\\source\\repos\\SpecflowAutomation\\GCRFramework\\obj\\",
->>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
-=======
-      "projectUniqueName": "C:\\Users\\prathibha.s\\source\\repos\\SpecflowAutomation\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
-      "projectName": "SpecFlow_MSTestFrameWork",
-      "projectPath": "C:\\Users\\prathibha.s\\source\\repos\\SpecflowAutomation\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
-      "packagesPath": "C:\\Users\\prathibha.s\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\prathibha.s\\source\\repos\\SpecflowAutomation\\GCRFramework\\obj\\",
->>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
-=======
-      "projectUniqueName": "C:\\Users\\prathibha.s\\source\\repos\\SpecflowAutomation\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
-      "projectName": "SpecFlow_MSTestFrameWork",
-      "projectPath": "C:\\Users\\prathibha.s\\source\\repos\\SpecflowAutomation\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
-      "packagesPath": "C:\\Users\\prathibha.s\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\prathibha.s\\source\\repos\\SpecflowAutomation\\GCRFramework\\obj\\",
->>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
-=======
-      "projectUniqueName": "C:\\Users\\prathibha.s\\source\\repos\\SpecflowAutomation\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
-      "projectName": "SpecFlow_MSTestFrameWork",
-      "projectPath": "C:\\Users\\prathibha.s\\source\\repos\\SpecflowAutomation\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
-      "packagesPath": "C:\\Users\\prathibha.s\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\prathibha.s\\source\\repos\\SpecflowAutomation\\GCRFramework\\obj\\",
->>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
-=======
-      "projectUniqueName": "C:\\Users\\prathibha.s\\source\\repos\\SpecflowAutomation\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
-      "projectName": "SpecFlow_MSTestFrameWork",
-      "projectPath": "C:\\Users\\prathibha.s\\source\\repos\\SpecflowAutomation\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
-      "packagesPath": "C:\\Users\\prathibha.s\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\prathibha.s\\source\\repos\\SpecflowAutomation\\GCRFramework\\obj\\",
->>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         "C:\\Users\\akshat.arora\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-=======
-        "C:\\Users\\prathibha.s\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
-=======
-        "C:\\Users\\prathibha.s\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
-=======
-        "C:\\Users\\prathibha.s\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
-=======
-        "C:\\Users\\prathibha.s\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
-=======
-        "C:\\Users\\prathibha.s\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
-=======
-        "C:\\Users\\prathibha.s\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11224,5 +11128,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.409\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\workspace\\GCRFramework\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
