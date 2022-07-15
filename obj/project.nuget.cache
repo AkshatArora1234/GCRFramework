@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "dgSpecHash": "gErS3joWR5b1hDP0IYKVNCU5QL+Gz3t1w9QCVVOEMbeyEZEKQKjhp9OF2JVLhq4Cqzbiu8mmhNaphYI30c8m5A==",
   "success": true,
   "projectFilePath": "C:\\workspace\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
@@ -232,6 +233,12 @@
   "projectFilePath": "C:\\Users\\prathibha.s\\source\\repos\\SpecflowAutomation\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
   "expectedPackageFiles": [
 >>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
+=======
+  "dgSpecHash": "y8GohUXG7n/QVvtCrHqOgtHZAxbIkKifUxPJCE4CvuJq31AdKM2dzkCwUO/lF3DHlg6ch8VXpXYwrQ7dgmsdXA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\prathibha.s\\source\\repos\\SpecflowAutomation\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
+  "expectedPackageFiles": [
+>>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
     "C:\\Users\\prathibha.s\\.nuget\\packages\\anglesharp\\0.17.1\\anglesharp.0.17.1.nupkg.sha512",
     "C:\\Users\\prathibha.s\\.nuget\\packages\\bodi\\1.5.0\\bodi.1.5.0.nupkg.sha512",
     "C:\\Users\\prathibha.s\\.nuget\\packages\\cucumber.messages\\6.0.1\\cucumber.messages.6.0.1.nupkg.sha512",
@@ -442,6 +449,9 @@
     "C:\\Users\\prathibha.s\\.nuget\\packages\\webdrivermanager\\2.14.0\\webdrivermanager.2.14.0.nupkg.sha512"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
+=======
 >>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
 =======
 >>>>>>> 3b310d6ef29e209b860e59807a5c26c0ea1f54b3
