@@ -26,6 +26,8 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement Searchbar => Driver.FindElement(By.XPath("//input[@id='search-text']"));
         IWebElement ElementClick => Driver.FindElement(By.XPath("//span/strong[text()='Item Maintenance in HQ mode']"));
         IWebElement NewItembutton => Driver.FindElement(By.XPath("(//span[text()='New'])[7]"));
+
+        IWebElement FontNewButton => Driver.FindElement(By.XPath("(//span[text()='New'])[1]"));
         IWebElement LeftMenu => Driver.FindElement(By.XPath("//*[@class='SideMenuWrapper SideMenuWrapperSmall']//*[@class='fa fa-bars N_P_A']"));
         IWebElement ScaleConfigurationMenu => Driver.FindElement(By.XPath("//span/strong[text()='Scale Configuration']"));
         IWebElement ElementSelectFromTable => Driver.FindElement(By.XPath(" //*[@id='gridSCALEPF']/div/div[6]/div/div/div[1]/div/table/tbody/tr[last()-1]/td[1]"));
@@ -70,7 +72,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         //Print Format- 
         IWebElement TabPrintFormat => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[2]"));
-
+        IWebElement TabConfigration => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[1]"));
         IWebElement ClickEditNEWPF => Driver.FindElement(By.XPath("(//*[contains(text(),'OpenSansBiscuits1')])"));
 
         IWebElement Manadatory => Driver.FindElement(By.XPath("(//input[@ng-model='section.isMandatory'])[1]"));
@@ -111,6 +113,12 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         public void MenuScaleConfigurationClick()  => ScaleConfigurationMenu.Click();
 
         public void TabPrintFormatClick() => TabPrintFormat.Click();
+
+        public void TabConfiGrationClick() => TabConfigration.Click();
+
+        public void ClickFontNewButton() => FontNewButton.Click();
+
+
 
         public void ClickNewButton() => NewItembutton.Click();
  

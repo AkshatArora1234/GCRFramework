@@ -33,10 +33,22 @@ namespace SpecFlow_MSTestFrameWork.Steps
             newBatch = new NewBatch(_driverHelper.driver);
         }
 
+        [When(@"User clicks on Tab Config page")]
+        public void WhenUserClicksOnTabConfigration()
+        {
+            scaleConfigurationPage.TabConfiGrationClick();
+        }
+
+        [When(@"User clicks on Font New Button")]
+        public void UserClickonFontNewButton()
+        {
+            scaleConfigurationPage.ClickFontNewButton();
+        }
 
 
-   
- 
+
+
+
 
 
 
