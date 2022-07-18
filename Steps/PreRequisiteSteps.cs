@@ -45,6 +45,22 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.ClickFontNewButton();
         }
 
+        [When(@"User clicks on Nutritional Panel New Button")]
+        public void UserClickonNutritionalPanelNewButton()
+        {
+            scaleConfigurationPage.ClickNutritionalNewButton();
+        }
+
+        [When(@"Enter CodeName and Nutritional Panel")]
+        public void WhenEnterCodeNameAndNutritionalPanel()
+        {
+            string printCode1 = homePage.getConfiguration("TestData.json", "NutritionalCode2.0");
+            string printFormat1 = homePage.getConfiguration("TestData.json", "NutritionalName2.0");
+            scaleConfigurationPage.EnterNutritionalCodeandName(printCode1, printFormat1);
+            Thread.Sleep(5000);
+        }
+
+
 
         [When(@"Enter CodeName and Font Name")]
         public void WhenEnterCodeNameAndFontName()
