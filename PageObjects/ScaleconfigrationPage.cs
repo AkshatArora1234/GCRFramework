@@ -28,10 +28,21 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement NewItembutton => Driver.FindElement(By.XPath("(//span[text()='New'])[7]"));
 
         IWebElement FontNewButton => Driver.FindElement(By.XPath("(//span[text()='New'])[1]"));
+        IWebElement NutritionalPanel => Driver.FindElement(By.XPath("(//span[text()='New'])[6]"));
+
         IWebElement LeftMenu => Driver.FindElement(By.XPath("//*[@class='SideMenuWrapper SideMenuWrapperSmall']//*[@class='fa fa-bars N_P_A']"));
         IWebElement ScaleConfigurationMenu => Driver.FindElement(By.XPath("//span/strong[text()='Scale Configuration']"));
         IWebElement ElementSelectFromTable => Driver.FindElement(By.XPath(" //*[@id='gridSCALEPF']/div/div[6]/div/div/div[1]/div/table/tbody/tr[last()-1]/td[1]"));
         IWebElement EnterCode => Driver.FindElement(By.XPath("(//*[@name='pFCode'])"));
+
+        IWebElement EnterFontCode => Driver.FindElement(By.XPath("//*[@name='scaleFontCode']"));
+
+        IWebElement EnterNutritionalCode => Driver.FindElement(By.XPath("//*[@name='panelCode']"));
+
+        IWebElement EnterNutritionalPrintFormat => Driver.FindElement(By.XPath("//*[@name='panelName']"));
+
+        
+        IWebElement EnterFontPrintFormat => Driver.FindElement(By.XPath("//*[@name='scaleFontName']"));
 
         IWebElement EnterPrintFormat => Driver.FindElement(By.XPath("(//*[@name='pFName'])"));
 
@@ -118,6 +129,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         public void ClickFontNewButton() => FontNewButton.Click();
 
+        public void ClickNutritionalNewButton() => NutritionalPanel.Click();
 
 
         public void ClickNewButton() => NewItembutton.Click();
@@ -129,10 +141,30 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Save.Click();
         }
 
+        public void EnterFontCodeandName(string code, string name)
+        {
+            EnterFontCode.SendKeys(code);
+            EnterFontPrintFormat.SendKeys(name);
+           // Save.Click();
+        }
+
+        public void EnterNutritionalCodeandName(string code, string name)
+        {
+            EnterNutritionalCode.SendKeys(code);
+            EnterNutritionalPrintFormat.SendKeys(name);
+            // Save.Click();
+        }
+        
+
+
         public void EnterSearchBox(string code, string name)
         {
             EnterCode.SendKeys(code);
             EnterPrintFormat.SendKeys(name);
+            Save.Click();
+        }
+        public void ClickonSave()
+        {
             Save.Click();
         }
 
