@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\NewItemCreation.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\PublishPrintFormatWithExistingCode - Copy.feature.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -40,6 +41,9 @@
     <Compile Update="Features\NewItemCreation.feature.cs">
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Update="Features\TestData.feature.cs">
+      <DependentUpon>TestData.feature</DependentUpon>
+    </Compile>
     <Compile Update="Features\PublishPrintFormatWithExistingCode.feature.cs">
       <DesignTime>True</DesignTime>
     </Compile>
@@ -52,6 +56,12 @@
     <SpecFlowFeatureFiles Update="Features\NewItemCreation.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>NewItemCreation.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\TestData.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+      <LastGenOutput>PublishPrintFormatWithExistingCode.feature.cs</LastGenOutput>
+      <Generator>SpecFlowSingleFileGenerator</Generator>
     </SpecFlowFeatureFiles>
     <SpecFlowFeatureFiles Update="Features\PublishPrintFormatWithExistingCode.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
