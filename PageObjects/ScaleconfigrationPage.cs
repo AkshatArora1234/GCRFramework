@@ -33,6 +33,9 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement ElementSelectFromTable => Driver.FindElement(By.XPath(" //*[@id='gridSCALEPF']/div/div[6]/div/div/div[1]/div/table/tbody/tr[last()-1]/td[1]"));
         IWebElement EnterCode => Driver.FindElement(By.XPath("(//*[@name='pFCode'])"));
 
+        IWebElement EnterFontCode => Driver.FindElement(By.XPath("//*[@name='scaleFontCode']"));
+        IWebElement EnterFontPrintFormat => Driver.FindElement(By.XPath("//*[@name='scaleFontName']"));
+
         IWebElement EnterPrintFormat => Driver.FindElement(By.XPath("(//*[@name='pFName'])"));
 
         IWebElement Save => Driver.FindElement(By.XPath("//button[@class='button-save ng-scope']"));
@@ -129,10 +132,20 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Save.Click();
         }
 
+        public void EnterFontCodeandName(string code, string name)
+        {
+            EnterFontCode.SendKeys(code);
+            EnterFontPrintFormat.SendKeys(name);
+           // Save.Click();
+        }
         public void EnterSearchBox(string code, string name)
         {
             EnterCode.SendKeys(code);
             EnterPrintFormat.SendKeys(name);
+            Save.Click();
+        }
+        public void ClickonSave()
+        {
             Save.Click();
         }
 

@@ -154,6 +154,12 @@ this.ScenarioInitialize(scenarioInfo);
 #line 17
  testRunner.When("User clicks on Font New Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
+#line 18
+ testRunner.When("Enter CodeName and Font Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 19
+ testRunner.Then("click on save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
             }
             this.ScenarioCleanup();
         }

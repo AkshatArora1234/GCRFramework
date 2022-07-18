@@ -15,4 +15,6 @@ Scenario: Test Data 2.0
 	Then Scale Configuration Page should be displayed
 	When User clicks on Tab Config page
 	When User clicks on Font New Button
+	When Enter CodeName and Font Name
+	Then click on save button
 

@@ -46,10 +46,20 @@ namespace SpecFlow_MSTestFrameWork.Steps
         }
 
 
+        [When(@"Enter CodeName and Font Name")]
+        public void WhenEnterCodeNameAndFontName()
+        {
+            string printCode1 = homePage.getConfiguration("TestData.json", "FontCode2.0");
+            string printFormat1 = homePage.getConfiguration("TestData.json", "Fontname2.0");
+            scaleConfigurationPage.EnterFontCodeandName(printCode1, printFormat1);
+            Thread.Sleep(5000);
+        }
 
-
-
-
+        [Then(@"click on save button")]
+        public void ThenClickOnSaveButton()
+        {
+            scaleConfigurationPage.ClickonSave();
+        }
 
 
     }
