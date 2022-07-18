@@ -157,12 +157,6 @@ this.ScenarioInitialize(scenarioInfo);
 #line 18
  testRunner.Then("Click on the New Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 19
- testRunner.When("User Enters the Code and PrintFormat", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 20
- testRunner.And("User clicks on button Save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
 #line 21
  testRunner.Then("Font should get saved and a \'<confirmationMsg>\' should be displayed for the same", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

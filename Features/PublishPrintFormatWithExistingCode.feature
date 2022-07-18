@@ -16,8 +16,8 @@ Scenario: Verify Print Format with Existing same code as Store
 	When User clicks on Tab Print Format
 	Then Print Format Page should be displayed
 	Then Click on the New Button
-	When User Enters the Code and PrintFormat
-	And User clicks on button Save
+	#When User Enters the Code and PrintFormat
+#	And User clicks on button Save
 	Then Font should get saved and a '<confirmationMsg>' should be displayed for the same
 	When user Looks Font table
 	And Click on Edit Button
