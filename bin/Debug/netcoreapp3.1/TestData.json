@@ -10,7 +10,10 @@
   "NutritionalDesc": "nutritionalsection",
   "ChangedPFCOde": "21",
   "ChangedPFName": "Popcorn",
-  "ColumnName": "Scale"
+  "ColumnName": "Scale",
+  "PrintCode2.2": "25",
+  "PrintFormat2.2": "NiceBiscuits",
+  "PrintFormat2.3": "Popcorn1"
 
 }
 
