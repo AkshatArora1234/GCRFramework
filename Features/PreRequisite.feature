@@ -87,5 +87,3 @@ Scenario: Test Data 2.0 PreSet Message
 	When User clicks on ContentSymbol Button
 	When Enter Code ContentSymbol & Description
 	Then click on save button
-
-
