@@ -41,7 +41,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         IWebElement EnterNutritionalPrintFormat => Driver.FindElement(By.XPath("//*[@name='panelName']"));
 
-        
+
         IWebElement EnterFontPrintFormat => Driver.FindElement(By.XPath("//*[@name='scaleFontName']"));
 
         IWebElement EnterPrintFormat => Driver.FindElement(By.XPath("(//*[@name='pFName'])"));
@@ -66,12 +66,14 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         private CustomControls EnterFontValue => new CustomControls(Driver, By.XPath("//select[@ng-model='section.scaleFontId']"));
 
+        private CustomControls NutritionalEmenetDropDownValue => new CustomControls(Driver, By.Id("//*[@id='nutritionalElementName']"));
+
         IWebElement AddDesc => Driver.FindElement(By.XPath("//input[@ng-model='section.sectionDescription']"));
 
         IWebElement ClickStore => Driver.FindElement(By.XPath("//*[@ng-disabled='selectDisabled']"));
 
         IWebElement PublishPF => Driver.FindElement(By.XPath("(//i[@ng-click='ctrl.actions.publishPrintFormat(row.data)'])[1]"));
-        IWebElement DeletePF => Driver.FindElement (By.XPath("(//i[@ng-click='ctrl.actions.deletePrintFormat(row.data)'])[1]"));
+        IWebElement DeletePF => Driver.FindElement(By.XPath("(//i[@ng-click='ctrl.actions.deletePrintFormat(row.data)'])[1]"));
 
         private CustomControls NutrionalTemplateDropdown => new CustomControls(Driver, By.XPath("//select[@name='nutritionalTemplateName-2']"));
 
@@ -85,6 +87,8 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement TabPrintFormat => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[2]"));
         IWebElement TabConfigration => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[1]"));
         IWebElement ClickEditNEWPF => Driver.FindElement(By.XPath("(//*[contains(text(),'OpenSansBiscuits1')])"));
+
+        IWebElement ClickEditNutritionalPanel => Driver.FindElement(By.XPath("(//*[contains(text(),'ChocoCream')])"));
 
         IWebElement Manadatory => Driver.FindElement(By.XPath("(//input[@ng-model='section.isMandatory'])[1]"));
         IWebElement FixedWidth => Driver.FindElement(By.XPath("(//input[@ng-model='section.isFixedWidth'])[1]"));
@@ -102,7 +106,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         private CustomControls EnterNutritionalFontValue => new CustomControls(Driver, By.XPath("(//select[@ng-model='section.scaleFontId'])[2]"));
 
-        IWebElement Support_Basic_Mode  => Driver.FindElement(By.XPath("//input[@ng-model='section.hasBasicMode']"));
+        IWebElement Support_Basic_Mode => Driver.FindElement(By.XPath("//input[@ng-model='section.hasBasicMode']"));
 
         IWebElement HeaderRows => Driver.FindElement(By.XPath("//input[@id='header--rows--2']"));
 
@@ -111,17 +115,17 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement ChangeCode => Driver.FindElement(By.Id("printFormatCode"));
         IWebElement ClickEditNice => Driver.FindElement(By.XPath("(//*[contains(text(),'NiceBiscuits')])[1]"));
         IWebElement PrintFormatName => Driver.FindElement(By.XPath("//*[@name='printFormatName']"));
-        //Actions
+        IWebElement NutrionalPanelName => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[17]"));
 
         public void ClickLeftMenu()
         {
             Thread.Sleep(4000);
             LeftMenu.Click();
         }
-      
+
         public void ScaleConfiguration() => Searchbar.SendKeys("Scale Configuration");
 
-        public void MenuScaleConfigurationClick()  => ScaleConfigurationMenu.Click();
+        public void MenuScaleConfigurationClick() => ScaleConfigurationMenu.Click();
 
         public void TabPrintFormatClick() => TabPrintFormat.Click();
 
@@ -131,9 +135,19 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         public void ClickNutritionalNewButton() => NutritionalPanel.Click();
 
+        public void NutrionalPanelNam2(string nutritional)
+        {
+            Thread.Sleep(5000);
+            NutrionalPanelName.SendKeys(nutritional);
+        }
+        public void EditNutritionalPanel()
+        {
+            Actions actions = new Actions(Driver);
+            actions.DoubleClick(ClickEditNutritionalPanel).Perform();
+        }
 
         public void ClickNewButton() => NewItembutton.Click();
- 
+
         public void EnterCodeandName(string code, string name)
         {
             EnterCode.SendKeys(code);
@@ -145,7 +159,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         {
             EnterFontCode.SendKeys(code);
             EnterFontPrintFormat.SendKeys(name);
-           // Save.Click();
+            // Save.Click();
         }
 
         public void EnterNutritionalCodeandName(string code, string name)
@@ -154,7 +168,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             EnterNutritionalPrintFormat.SendKeys(name);
             // Save.Click();
         }
-        
+
 
 
         public void EnterSearchBox(string code, string name)
@@ -171,7 +185,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         public void EditCode()
         {
             Actions actions = new Actions(Driver);
-            actions.DoubleClick(ClickEdit).Perform();  
+            actions.DoubleClick(ClickEdit).Perform();
         }
         public void EditCode3()
         {
@@ -192,7 +206,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         }
 
         public void VerifyContentSymbol() => Assert.IsTrue(CheckHasContentSymbol.Enabled);
-            
+
         public void ClickonAddSection()
         {
             AddSection.Click();
@@ -202,6 +216,12 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         public void ClickonFontDropdown(string fontdropdown)
         {
             EnterFontValue.SelectByText(fontdropdown);
+            Thread.Sleep(5000);
+        }
+        
+        public void ClickonNutritionalElementtDropdown(string fontdropdown)
+        {
+            NutritionalEmenetDropDownValue.SelectByText(fontdropdown);
             Thread.Sleep(5000);
         }
 
@@ -315,8 +335,8 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         }
 
         public void PFClear()
-        { 
-        PrintFormatName.Clear();
+        {
+            PrintFormatName.Clear();
         }
         public void EditPrintFormatName(string printFormat)
         {

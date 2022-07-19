@@ -19,7 +19,7 @@ Scenario: Test Data 2.0 Font
 	Then click on save button
 
 	
-Scenario: Test Data 2.0 Nutritional Panel
+Scenario: Test Data 2.0 Nutritional Elements Data
 	Given user navigates to HQ application
 	When enter valid '<username>', '<hqpassword>'
 	And Clicks on Log In button
@@ -33,4 +33,11 @@ Scenario: Test Data 2.0 Nutritional Panel
 	When User clicks on Nutritional Panel New Button
 	When Enter CodeName and Nutritional Panel
 	Then click on save button
+	When i search the Nutrional Panel by Name
+	Then Click on Edit Button NutritionalPanel
+	Then Click on the New Button
+	Then Click on Nutritional Element dropdown
+
+
+
 

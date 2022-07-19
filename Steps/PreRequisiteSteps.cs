@@ -60,6 +60,32 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
+        [When(@"i search the Nutrional Panel by Name")]
+        public void WhenISearchTheNutrionalPanelByName()
+        {
+            string NutritionalPanelName = homePage.getConfiguration("TestData.json", "NutritionalPanelName2.0");
+
+            scaleConfigurationPage.NutrionalPanelNam2(NutritionalPanelName);
+            Thread.Sleep(3000);
+        }
+
+        [Then(@"Click on Edit Button NutritionalPanel")]
+        public void ThenClickOnEditButtonNutritionalPanel()
+        {
+                 scaleConfigurationPage.EditNutritionalPanel();
+                Thread.Sleep(5000);
+            
+        }
+
+        [Then(@"Click on Nutritional Element dropdown")]
+        public void ThenClickOnNutritionalElementDropdown()
+        {
+            string selectfont = homePage.getConfiguration("TestData.json", "NonNutritionalValueDropdwon");
+            scaleConfigurationPage.ClickonNutritionalElementtDropdown(selectfont);
+            Thread.Sleep(5000);
+        }
+
+
 
 
         [When(@"Enter CodeName and Font Name")]
