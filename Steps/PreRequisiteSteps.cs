@@ -77,6 +77,12 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.ClickonSave();
         }
 
+        [Then(@"Search Nutritional Panel by Name")]
+        public void SearchNutritionalPanelbyName()
+        {
+            scaleConfigurationPage.ClickonSave();
+        }
+
 
     }
 }
