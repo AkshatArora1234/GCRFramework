@@ -18,6 +18,8 @@
   "FontCode2.0": "35",
   "Fontname2.0": "BreadCheese",
   "NutritionalCode2.0": "41",
-  "NutritionalName2.0": "ChocoCream"
+  "NutritionalName2.0": "ChocoCream",
+  "NutritionalPanelName2.0": "ChocoCream",
+  "NonNutritionalValueDropdwon2.0": "Energy"
 }
 
