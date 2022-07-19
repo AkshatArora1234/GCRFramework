@@ -45,7 +45,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         IWebElement EnterFontCode => Driver.FindElement(By.XPath("//*[@name='scaleFontCode']"));
 
-        IWebElement EnterTareCode => Driver.FindElement(By.XPath("//*[@name='symbolCode']"));
+        IWebElement EnterTareCode => Driver.FindElement(By.XPath("//*[@name='tareCode']"));
 
         IWebElement EnterContenteCode => Driver.FindElement(By.XPath("//*[@name='symbolCode']"));
 
