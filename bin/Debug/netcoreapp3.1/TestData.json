@@ -22,6 +22,8 @@
   "NutritionalPanelName2.0": "ChocoCream",
   "NonNutritionalValueDropdwon2.0": "Energy",
   "MaskFieldValue2.0": "36",
-  "Measureunit2.0": "kJ"
+  "Measureunit2.0": "kJ",
+  "TareCode2.0": "10",
+  "TareName2.0": "Penuts",
+  "TareValue2.0": "8"
 }
-

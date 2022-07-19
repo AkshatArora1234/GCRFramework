@@ -183,10 +183,6 @@ namespace SpecFlow_MSTestFrameWork.Steps
             System.Threading.Thread.Sleep(5000);
         }
 
-
-
-
-
         [Then(@"Click on Edit Button")]
         public void ClickonEditButton()
         {

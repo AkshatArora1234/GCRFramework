@@ -45,6 +45,13 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.ClickFontNewButton();
         }
 
+        [When(@"User clicks on Tare New Button")]
+        public void WhenUserClicksOnTareNewButton()
+        {
+            scaleConfigurationPage.ClickTareNewButton();
+        }
+
+
         [When(@"User clicks on Nutritional Panel New Button")]
         public void UserClickonNutritionalPanelNewButton()
         {
@@ -106,6 +113,18 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.EnterFontCodeandName(printCode1, printFormat1);
             Thread.Sleep(5000);
         }
+
+        [When(@"Enter TareCode and Name")]
+        public void WhenEnterTareCodeAndName()
+        {
+            string TareCode = homePage.getConfiguration("TestData.json", "TareCode2.0");
+            string TareName = homePage.getConfiguration("TestData.json", "TareName2.0");
+            string TareValue = homePage.getConfiguration("TestData.json", "TareValue2.0");
+
+            scaleConfigurationPage.EnterTaretCodeNameValue(TareCode, TareName, TareValue);
+            Thread.Sleep(5000);
+        }
+
 
         [Then(@"click on save button")]
         public void ThenClickOnSaveButton()

@@ -28,6 +28,9 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement NewItembutton => Driver.FindElement(By.XPath("(//span[text()='New'])[7]"));
 
         IWebElement FontNewButton => Driver.FindElement(By.XPath("(//span[text()='New'])[1]"));
+
+        IWebElement TareNewButton => Driver.FindElement(By.XPath("(//span[text()='New'])[5]"));
+
         IWebElement NutritionalPanel => Driver.FindElement(By.XPath("(//span[text()='New'])[6]"));
 
         IWebElement LeftMenu => Driver.FindElement(By.XPath("//*[@class='SideMenuWrapper SideMenuWrapperSmall']//*[@class='fa fa-bars N_P_A']"));
@@ -36,6 +39,11 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement EnterCode => Driver.FindElement(By.XPath("(//*[@name='pFCode'])"));
 
         IWebElement EnterFontCode => Driver.FindElement(By.XPath("//*[@name='scaleFontCode']"));
+
+        IWebElement EnterTareCode => Driver.FindElement(By.XPath("//*[@name='tareCode']"));
+        IWebElement EnterTareName => Driver.FindElement(By.XPath("//*[@name='tareName']"));
+
+        IWebElement EnterTareValue => Driver.FindElement(By.XPath("//*[@name='tareValue']"));
 
         IWebElement EnterNutritionalCode => Driver.FindElement(By.XPath("//*[@name='panelCode']"));
 
@@ -137,6 +145,10 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         public void ClickFontNewButton() => FontNewButton.Click();
 
+        public void ClickTareNewButton() => TareNewButton.Click();
+
+       
+
         public void ClickNutritionalNewButton() => NutritionalPanel.Click();
 
         public void NutrionalPanelNam2(string nutritional)
@@ -165,6 +177,16 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             EnterFontPrintFormat.SendKeys(name);
             // Save.Click();
         }
+
+        public void EnterTaretCodeNameValue(string code, string name, string value)
+        {
+            EnterTareCode.SendKeys(code);
+            EnterTareName.SendKeys(name);
+            EnterTareValue.SendKeys(value);
+
+            // Save.Click();
+        }
+
 
         public void EnterNutritionalCodeandName(string code, string name)
         {
