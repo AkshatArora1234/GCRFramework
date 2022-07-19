@@ -25,5 +25,10 @@
   "Measureunit2.0": "kJ",
   "TareCode2.0": "10",
   "TareName2.0": "Penuts",
-  "TareValue2.0": "8"
+  "TareValue2.0": "8",
+  "PresetCode2.0": "67",
+  "PresetMessage2.0": "Minerals Qty",
+  "ContentSymbolCode2.0": "27",
+  "ContentSymbol2.0": "G",
+  "ContentSymbolDescription2.0": "Per Grams"
 }

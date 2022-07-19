@@ -31,6 +31,11 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         IWebElement TareNewButton => Driver.FindElement(By.XPath("(//span[text()='New'])[5]"));
 
+        IWebElement PresetNewButton => Driver.FindElement(By.XPath("(//span[text()='New'])[4]"));
+
+        IWebElement ContentNewButton => Driver.FindElement(By.XPath("(//span[text()='New'])[2]"));
+
+
         IWebElement NutritionalPanel => Driver.FindElement(By.XPath("(//span[text()='New'])[6]"));
 
         IWebElement LeftMenu => Driver.FindElement(By.XPath("//*[@class='SideMenuWrapper SideMenuWrapperSmall']//*[@class='fa fa-bars N_P_A']"));
@@ -40,7 +45,18 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         IWebElement EnterFontCode => Driver.FindElement(By.XPath("//*[@name='scaleFontCode']"));
 
-        IWebElement EnterTareCode => Driver.FindElement(By.XPath("//*[@name='tareCode']"));
+        IWebElement EnterTareCode => Driver.FindElement(By.XPath("//*[@name='symbolCode']"));
+
+        IWebElement EnterContenteCode => Driver.FindElement(By.XPath("//*[@name='symbolCode']"));
+
+        IWebElement EnterContentName => Driver.FindElement(By.XPath("//*[@name='symbolName']"));
+
+        IWebElement EnterContentValue => Driver.FindElement(By.XPath("//*[@name='scaleFontName']"));
+
+        IWebElement EnterPresetCode => Driver.FindElement(By.XPath("//*[@name='scalePresetMessageCode']"));
+
+        IWebElement EnterPresetMessage => Driver.FindElement(By.XPath("//*[@name='scalePresetMessage']"));
+
         IWebElement EnterTareName => Driver.FindElement(By.XPath("//*[@name='tareName']"));
 
         IWebElement EnterTareValue => Driver.FindElement(By.XPath("//*[@name='tareValue']"));
@@ -147,7 +163,15 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         public void ClickTareNewButton() => TareNewButton.Click();
 
-       
+        public void ClickPresetNewButton() => PresetNewButton.Click();
+
+        public void ClickContentSymbolNewButton() => ContentNewButton.Click();
+
+        
+
+
+
+
 
         public void ClickNutritionalNewButton() => NutritionalPanel.Click();
 
@@ -183,19 +207,26 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             EnterTareCode.SendKeys(code);
             EnterTareName.SendKeys(name);
             EnterTareValue.SendKeys(value);
-
-            // Save.Click();
         }
 
+        public void EnterContentCodeNameDescription(string code, string name, string value)
+        {
+            EnterContenteCode.SendKeys(code);
+            EnterContentName.SendKeys(name);
+            EnterContentValue.SendKeys(value);
+        }
 
+        public void EnterPresetCodeNameValue(string code, string name)
+        {
+            EnterPresetCode.SendKeys(code);
+            EnterPresetMessage.SendKeys(name);
+            
+        }
         public void EnterNutritionalCodeandName(string code, string name)
         {
             EnterNutritionalCode.SendKeys(code);
             EnterNutritionalPrintFormat.SendKeys(name);
-            // Save.Click();
         }
-
-
 
         public void EnterSearchBox(string code, string name)
         {

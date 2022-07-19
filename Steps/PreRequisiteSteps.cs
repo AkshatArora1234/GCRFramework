@@ -51,6 +51,30 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.ClickTareNewButton();
         }
 
+        [When(@"User clicks on Preset New Button")]
+        public void WhenUserClicksOnPresetNewButton()
+        {
+           scaleConfigurationPage.ClickPresetNewButton();
+        }
+
+        [When(@"User clicks on ContentSymbol Button")]
+        public void WhenUserClicksOnContentSymbolButton()
+        {
+            scaleConfigurationPage.ClickContentSymbolNewButton();
+        }
+
+        [When(@"Enter Code ContentSymbol & Description")]
+        public void WhenEnterCodeContentSymbolDescription()
+        {
+            string ContentCode = homePage.getConfiguration("TestData.json", "ContentSymbolCode2.0");
+            string ContentSymbol = homePage.getConfiguration("TestData.json", "ContentSymbol2.0");
+            string ContentDescription = homePage.getConfiguration("TestData.json", "ContentSymbolDescription2.0");
+            scaleConfigurationPage.EnterContentCodeNameDescription(ContentCode, ContentSymbol, ContentDescription);
+            Thread.Sleep(5000);
+
+        }
+
+
 
         [When(@"User clicks on Nutritional Panel New Button")]
         public void UserClickonNutritionalPanelNewButton()
@@ -124,6 +148,16 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.EnterTaretCodeNameValue(TareCode, TareName, TareValue);
             Thread.Sleep(5000);
         }
+
+        [When(@"Enter PresetMessageCode Name & List")]
+        public void WhenEnterPresetMessageCodeNameList()
+        {
+            string PresetCode = homePage.getConfiguration("TestData.json", "PresetCode2.0");
+            string PresetMessage = homePage.getConfiguration("TestData.json", "PresetMessage2.0");
+            scaleConfigurationPage.EnterPresetCodeNameValue(PresetCode, PresetMessage);
+            Thread.Sleep(5000);
+        }
+
 
 
         [Then(@"click on save button")]
