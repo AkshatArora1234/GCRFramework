@@ -37,6 +37,12 @@ Scenario: Test Data 2.0 Nutritional Elements Data
 	Then Click on Edit Button NutritionalPanel
 	Then Click on the New Button
 	Then Click on Nutritional Element dropdown
+	When Enter the value in MeasurementsUnit
+	Then Enter Value in Mask Field
+	Then click on new save button
+
+
+
 
 
 

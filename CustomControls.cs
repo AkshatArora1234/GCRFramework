@@ -62,9 +62,16 @@ namespace SpecFlow_MSTestFrameWork
             selectElement.SelectByText(text);
         }
 
-        
+        public void SelectByValue(string value)
+        {
+            var textBoxElement = Driver.FindElement(TexBoxLocator);
+            SelectElement selectElement = new SelectElement(textBoxElement);
+            selectElement.SelectByValue(value);
+        }
 
-         public void DoubleClickElement()
+
+
+        public void DoubleClickElement()
         {
             Actions actions = new Actions(Driver);
             actions.DoubleClick().Perform();
