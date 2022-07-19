@@ -80,10 +80,20 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [Then(@"Click on Nutritional Element dropdown")]
         public void ThenClickOnNutritionalElementDropdown()
         {
-            string selectfont = homePage.getConfiguration("TestData.json", "NonNutritionalValueDropdwon");
+            string selectfont = homePage.getConfiguration("TestData.json", "NonNutritionalValueDropdwon2.0");
             scaleConfigurationPage.ClickonNutritionalElementtDropdown(selectfont);
             Thread.Sleep(5000);
         }
+
+        [When(@"Enter the value in MeasurementsUnit")]
+        public void SelectValueMeasurementsUnit()
+        {
+            string selectfont = homePage.getConfiguration("TestData.json", "Measureunit2.0");
+            scaleConfigurationPage.SelectMeasurementDropdown(selectfont);
+            Thread.Sleep(5000);
+        }
+
+
 
 
 
@@ -103,10 +113,25 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.ClickonSave();
         }
 
+        [Then(@"click on new save button")]
+        public void ThenClickOnnewSaveButton()
+        {
+            scaleConfigurationPage.ClickonSaveclass();
+        }
+
         [Then(@"Search Nutritional Panel by Name")]
         public void SearchNutritionalPanelbyName()
         {
             scaleConfigurationPage.ClickonSave();
+        }
+
+        [Then(@"Enter Value in Mask Field")]
+        public void EnterValueinMaskField()
+        {
+            string valueinmask = homePage.getConfiguration("TestData.json", "MaskFieldValue2.0");
+            scaleConfigurationPage.EnterValueinMaskfield(valueinmask);
+            Thread.Sleep(5000);
+
         }
 
 

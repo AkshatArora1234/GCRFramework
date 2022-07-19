@@ -47,6 +47,8 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement EnterPrintFormat => Driver.FindElement(By.XPath("(//*[@name='pFName'])"));
 
         IWebElement Save => Driver.FindElement(By.XPath("//button[@class='button-save ng-scope']"));
+
+        IWebElement Savenew => Driver.FindElement(By.XPath("//*[@class='button-save']"));
         IWebElement Close => Driver.FindElement(By.XPath("//button[@ng-click='ctrl.onCancel()']"));
 
         IWebElement ClickEdit => Driver.FindElement(By.XPath("(//*[contains(text(),'OpenSansBiscuits')])[1]"));
@@ -66,8 +68,9 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         private CustomControls EnterFontValue => new CustomControls(Driver, By.XPath("//select[@ng-model='section.scaleFontId']"));
 
-        private CustomControls NutritionalEmenetDropDownValue => new CustomControls(Driver, By.Id("//*[@id='nutritionalElementName']"));
+        private CustomControls NutritionalEmenetDropDownValue => new CustomControls(Driver, By.Id("nutritionalElementName"));
 
+        private CustomControls MeasurmentDropDown => new CustomControls(Driver, By.XPath("//select[@name='nutritionalMeasurementsUnit']"));
         IWebElement AddDesc => Driver.FindElement(By.XPath("//input[@ng-model='section.sectionDescription']"));
 
         IWebElement ClickStore => Driver.FindElement(By.XPath("//*[@ng-disabled='selectDisabled']"));
@@ -117,6 +120,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement PrintFormatName => Driver.FindElement(By.XPath("//*[@name='printFormatName']"));
         IWebElement NutrionalPanelName => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[17]"));
 
+        IWebElement EnterValueinMask => Driver.FindElement(By.XPath("//*[@name='nutritional-ele-mask']"));
         public void ClickLeftMenu()
         {
             Thread.Sleep(4000);
@@ -182,6 +186,11 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Save.Click();
         }
 
+        public void ClickonSaveclass()
+        {
+            Savenew.Click();
+        }
+
         public void EditCode()
         {
             Actions actions = new Actions(Driver);
@@ -222,6 +231,12 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         public void ClickonNutritionalElementtDropdown(string fontdropdown)
         {
             NutritionalEmenetDropDownValue.SelectByText(fontdropdown);
+            Thread.Sleep(5000);
+        }
+
+        public void SelectMeasurementDropdown(string fontdropdown)
+        {
+            MeasurmentDropDown.SelectByText(fontdropdown);
             Thread.Sleep(5000);
         }
 
@@ -350,6 +365,12 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
 
 
+        }
+
+        public void EnterValueinMaskfield(string maskvalue)
+        {
+            Thread.Sleep(5000);
+            EnterValueinMask.SendKeys(maskvalue);
         }
 
 

@@ -243,6 +243,15 @@ this.ScenarioInitialize(scenarioInfo);
 #line 39
  testRunner.Then("Click on Nutritional Element dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
+#line 40
+ testRunner.When("Enter the value in MeasurementsUnit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 41
+ testRunner.Then("Enter Value in Mask Field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 42
+ testRunner.Then("click on new save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
             }
             this.ScenarioCleanup();
         }
