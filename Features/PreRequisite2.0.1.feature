@@ -38,3 +38,19 @@ Scenario: Test Data 2.0.1 Nutritional Elements Data
 	When Enter the value in MeasurementsUnit Mg
 	Then Enter Value in Mask Field Updated Value
 	Then click on new save button
+
+
+Scenario: Test Data 2.0.1 Tare
+	Given user navigates to HQ application
+	When enter valid '<username>', '<hqpassword>'
+	And Clicks on Log In button
+	When User clicks on the Left Menu
+	Then menu should be displayed
+	When User enters Scale Configuration in the Search Box
+	Then Scale Configuration Item should be displayed on the Menu
+	When User Selects the Scale Configuration
+	Then Scale Configuration Page should be displayed
+	When User clicks on Tab Config page
+	When User clicks on Tare New Button
+	When Enter TareCode and Name TwoZeroOne
+	Then click on save button
