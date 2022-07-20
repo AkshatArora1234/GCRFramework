@@ -74,6 +74,17 @@ namespace SpecFlow_MSTestFrameWork.Steps
 
         }
 
+        [When(@"Enter Code ContentSymbol & Description TwoZeroOne")]
+        public void WhenEnterCodeContentSymbolDescriptionTwoZeroOne()
+        {
+            string ContentCode = homePage.getConfiguration("TestData.json", "ContentSymbolCode2.0.1");
+            string ContentSymbol = homePage.getConfiguration("TestData.json", "ContentSymbol2.0.1");
+            string ContentDescription = homePage.getConfiguration("TestData.json", "ContentSymbolDescription2.0.1");
+            scaleConfigurationPage.EnterContentCodeNameDescription(ContentCode, ContentSymbol, ContentDescription);
+            Thread.Sleep(5000);
+        }
+
+
 
 
         [When(@"User clicks on Nutritional Panel New Button")]
