@@ -235,6 +235,15 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
+        [When(@"Enter PresetMessageCode Name & List TwoZeroOne")]
+        public void WhenEnterPresetMessageCodeNameListTwoZeroOne()
+        {
+            string PresetCode = homePage.getConfiguration("TestData.json", "PresetCode2.0.1");
+            string PresetMessage = homePage.getConfiguration("TestData.json", "PresetMessage2.0.1");
+            scaleConfigurationPage.EnterPresetCodeNameValue(PresetCode, PresetMessage);
+            Thread.Sleep(5000);
+        }
+
 
 
         [Then(@"click on save button")]
