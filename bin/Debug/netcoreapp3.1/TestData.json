@@ -38,7 +38,9 @@
   "NonNutritionalValueDropdwon2.0.1": "Protein",
   "Measureunit2.0.1": "mg",
   "MaskFieldValue2.0.1": "92",
-  "NutritionalPanelName2.0.1": "French fries"
-
+  "NutritionalPanelName2.0.1": "French fries",
+  "TareCode2.0.1": "45",
+  "TareName2.0.1": "RicePowder",
+  "TareValue2.0.1": "30"
 
 }

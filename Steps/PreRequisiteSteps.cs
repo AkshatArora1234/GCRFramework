@@ -204,6 +204,17 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
+        [When(@"Enter TareCode and Name TwoZeroOne")]
+        public void WhenEnterTareCodeAndNameTwoZeroOne()
+        {
+            string TareCode = homePage.getConfiguration("TestData.json", "TareCode2.0.1");
+            string TareName = homePage.getConfiguration("TestData.json", "TareName2.0.1");
+            string TareValue = homePage.getConfiguration("TestData.json", "TareValue2.0.1");
+
+            scaleConfigurationPage.EnterTaretCodeNameValue(TareCode, TareName, TareValue);
+            Thread.Sleep(5000);
+        }
+
         [When(@"Enter PresetMessageCode Name & List")]
         public void WhenEnterPresetMessageCodeNameList()
         {
