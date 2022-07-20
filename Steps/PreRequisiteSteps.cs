@@ -127,8 +127,6 @@ namespace SpecFlow_MSTestFrameWork.Steps
 
 
 
-
-
         [When(@"Enter CodeName and Font Name")]
         public void WhenEnterCodeNameAndFontName()
         {
