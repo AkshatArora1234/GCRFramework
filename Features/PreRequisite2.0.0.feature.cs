@@ -29,7 +29,7 @@ namespace SpecFlow_MSTestFrameWork.Features
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "PreRequisite.feature"
+#line 1 "PreRequisite2.0.0.feature"
 #line hidden
         
         public virtual Microsoft.VisualStudio.TestTools.UnitTesting.TestContext TestContext

@@ -30,5 +30,15 @@
   "PresetMessage2.0": "Minerals Qty",
   "ContentSymbolCode2.0": "27",
   "ContentSymbol2.0": "G",
-  "ContentSymbolDescription2.0": "Per Grams"
+  "ContentSymbolDescription2.0": "Per Grams",
+  "FontCode2.1": "11",
+  "Fontname2.1": "T Popcorn",
+  "NutritionalName2.0.1": "French fries",
+  "NutritionalCode2.0.1": "39",
+  "NonNutritionalValueDropdwon2.0.1": "Protein",
+  "Measureunit2.0.1": "mg",
+  "MaskFieldValue2.0.1": "92",
+  "NutritionalPanelName2.0.1": "French fries"
+
+
 }

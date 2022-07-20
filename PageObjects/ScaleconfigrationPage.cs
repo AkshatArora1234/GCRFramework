@@ -116,7 +116,8 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement ClickEditNEWPF => Driver.FindElement(By.XPath("(//*[contains(text(),'OpenSansBiscuits1')])"));
 
         IWebElement ClickEditNutritionalPanel => Driver.FindElement(By.XPath("(//*[contains(text(),'ChocoCream')])"));
-
+        
+        IWebElement ClickEditNutritionalPanelTwoZeroOne => Driver.FindElement(By.XPath("(//*[contains(text(),'French fries')])"));
         IWebElement Manadatory => Driver.FindElement(By.XPath("(//input[@ng-model='section.isMandatory'])[1]"));
         IWebElement FixedWidth => Driver.FindElement(By.XPath("(//input[@ng-model='section.isFixedWidth'])[1]"));
 
@@ -184,6 +185,12 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         {
             Actions actions = new Actions(Driver);
             actions.DoubleClick(ClickEditNutritionalPanel).Perform();
+        }
+
+         public void EditNutritionalPanelTwoZeroOne()
+        {
+            Actions actions = new Actions(Driver);
+            actions.DoubleClick(ClickEditNutritionalPanelTwoZeroOne).Perform();
         }
 
         public void ClickNewButton() => NewItembutton.Click();
