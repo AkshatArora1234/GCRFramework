@@ -138,6 +138,15 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
+        [When(@"Enter Code and Name with Nutritional Font")]
+        public void EnterCodeandNamewithNutritionalFont()
+        {
+            string Fontcode = homePage.getConfiguration("TestData.json", "FontCode2.0.1");
+            string Fontname = homePage.getConfiguration("TestData.json", "FontName2.0.1");
+            scaleConfigurationPage.EnterFontCodeandName(Fontcode, Fontname);
+            Thread.Sleep(5000);
+        }
+
         [When(@"Enter TareCode and Name")]
         public void WhenEnterTareCodeAndName()
         {
