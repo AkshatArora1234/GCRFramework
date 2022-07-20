@@ -74,6 +74,17 @@ namespace SpecFlow_MSTestFrameWork.Steps
 
         }
 
+        [When(@"Enter Code ContentSymbol & Description TwoZeroOne")]
+        public void WhenEnterCodeContentSymbolDescriptionTwoZeroOne()
+        {
+            string ContentCode = homePage.getConfiguration("TestData.json", "ContentSymbolCode2.0.1");
+            string ContentSymbol = homePage.getConfiguration("TestData.json", "ContentSymbol2.0.1");
+            string ContentDescription = homePage.getConfiguration("TestData.json", "ContentSymbolDescription2.0.1");
+            scaleConfigurationPage.EnterContentCodeNameDescription(ContentCode, ContentSymbol, ContentDescription);
+            Thread.Sleep(5000);
+        }
+
+
 
 
         [When(@"User clicks on Nutritional Panel New Button")]
@@ -218,6 +229,15 @@ namespace SpecFlow_MSTestFrameWork.Steps
         {
             string PresetCode = homePage.getConfiguration("TestData.json", "PresetCode2.0");
             string PresetMessage = homePage.getConfiguration("TestData.json", "PresetMessage2.0");
+            scaleConfigurationPage.EnterPresetCodeNameValue(PresetCode, PresetMessage);
+            Thread.Sleep(5000);
+        }
+
+        [When(@"Enter PresetMessageCode Name & List TwoZeroOne")]
+        public void WhenEnterPresetMessageCodeNameListTwoZeroOne()
+        {
+            string PresetCode = homePage.getConfiguration("TestData.json", "PresetCode2.0.1");
+            string PresetMessage = homePage.getConfiguration("TestData.json", "PresetMessage2.0.1");
             scaleConfigurationPage.EnterPresetCodeNameValue(PresetCode, PresetMessage);
             Thread.Sleep(5000);
         }

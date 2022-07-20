@@ -54,3 +54,33 @@ Scenario: Test Data 2.0.1 Tare
 	When User clicks on Tare New Button
 	When Enter TareCode and Name TwoZeroOne
 	Then click on save button
+
+Scenario: Test Data 2.0.1 ContentSymbol
+	Given user navigates to HQ application
+	When enter valid '<username>', '<hqpassword>'
+	And Clicks on Log In button
+	When User clicks on the Left Menu
+	Then menu should be displayed
+	When User enters Scale Configuration in the Search Box
+	Then Scale Configuration Item should be displayed on the Menu
+	When User Selects the Scale Configuration
+	Then Scale Configuration Page should be displayed
+	When User clicks on Tab Config page
+	When User clicks on ContentSymbol Button
+	When Enter Code ContentSymbol & Description TwoZeroOne
+	Then click on save button
+
+Scenario: Test Data 2.0.1 PreSet Message
+	Given user navigates to HQ application
+	When enter valid '<username>', '<hqpassword>'
+	And Clicks on Log In button
+	When User clicks on the Left Menu
+	Then menu should be displayed
+	When User enters Scale Configuration in the Search Box
+	Then Scale Configuration Item should be displayed on the Menu
+	When User Selects the Scale Configuration
+	Then Scale Configuration Page should be displayed
+	When User clicks on Tab Config page
+	When User clicks on Preset New Button
+	When Enter PresetMessageCode Name & List TwoZeroOne
+	Then click on save button

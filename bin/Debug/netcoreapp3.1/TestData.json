@@ -41,6 +41,10 @@
   "NutritionalPanelName2.0.1": "French fries",
   "TareCode2.0.1": "45",
   "TareName2.0.1": "RicePowder",
-  "TareValue2.0.1": "30"
-
+  "TareValue2.0.1": "30",
+  "ContentSymbolCode2.0.1": "39",
+  "ContentSymbol2.0.1": "ML",
+  "ContentSymbolDescription2.0.1": "10 MilliLitre",
+  "PresetCode2.0.1": "46",
+  "PresetMessage2.0.1": "Contains preservatives"
 }
