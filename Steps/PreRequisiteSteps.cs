@@ -91,14 +91,34 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
+        
+
+        [When(@"Enter CodeName and Nutritional Panel TwoZeroOne")]
+        public void WhenEnterCodeNameAndNutritionalPanelTwoZeroOne()
+        {
+            string printCode1 = homePage.getConfiguration("TestData.json", "NutritionalCode2.0.1");
+            string printFormat1 = homePage.getConfiguration("TestData.json", "NutritionalName2.0.1");
+            scaleConfigurationPage.EnterNutritionalCodeandName(printCode1, printFormat1);
+            Thread.Sleep(5000);
+        }
+
+
         [When(@"i search the Nutrional Panel by Name")]
         public void WhenISearchTheNutrionalPanelByName()
         {
             string NutritionalPanelName = homePage.getConfiguration("TestData.json", "NutritionalPanelName2.0");
-
             scaleConfigurationPage.NutrionalPanelNam2(NutritionalPanelName);
             Thread.Sleep(3000);
         }
+
+        [When(@"i search the Nutrional Panel by Name TwoZeroOne")]
+        public void WhenISearchTheNutrionalPanelByNameTwoZeroOne()
+        {
+            string NutritionalPanelName = homePage.getConfiguration("TestData.json", "NutritionalPanelName2.0.1");
+            scaleConfigurationPage.NutrionalPanelNam2(NutritionalPanelName);
+            Thread.Sleep(3000);
+        }
+
 
         [Then(@"Click on Edit Button NutritionalPanel")]
         public void ThenClickOnEditButtonNutritionalPanel()
@@ -106,6 +126,14 @@ namespace SpecFlow_MSTestFrameWork.Steps
                  scaleConfigurationPage.EditNutritionalPanel();
                 Thread.Sleep(5000);
             
+        }
+
+        [Then(@"Click on Edit Button NutritionalPanel TwoZeroOne")]
+        public void ThenClickOnEditButtonNutritionalPanelTwoZeroOne()
+        {
+
+            scaleConfigurationPage.EditNutritionalPanelTwoZeroOne();
+            Thread.Sleep(5000);
         }
 
         [Then(@"Click on Nutritional Element dropdown")]
@@ -116,10 +144,27 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
+        [Then(@"Click on Nutritional Element dropdown TwoZeroOne")]
+        public void ThenClickOnNutritionalElementDropdownTwoZeroOne()
+        {
+            string selectfont = homePage.getConfiguration("TestData.json", "NonNutritionalValueDropdwon2.0.1");
+            scaleConfigurationPage.ClickonNutritionalElementtDropdown(selectfont);
+            Thread.Sleep(5000);
+        }
+
+
         [When(@"Enter the value in MeasurementsUnit")]
         public void SelectValueMeasurementsUnit()
         {
             string selectfont = homePage.getConfiguration("TestData.json", "Measureunit2.0");
+            scaleConfigurationPage.SelectMeasurementDropdown(selectfont);
+            Thread.Sleep(5000);
+        }
+
+        [When(@"Enter the value in MeasurementsUnit Mg")]
+        public void WhenEnterTheValueInMeasurementsUnitMg()
+        {
+            string selectfont = homePage.getConfiguration("TestData.json", "Measureunit2.0.1");
             scaleConfigurationPage.SelectMeasurementDropdown(selectfont);
             Thread.Sleep(5000);
         }
@@ -137,13 +182,14 @@ namespace SpecFlow_MSTestFrameWork.Steps
         }
 
         [When(@"Enter Code and Name with Nutritional Font")]
-        public void EnterCodeandNamewithNutritionalFont()
+        public void WhenEnterCodeAndNameWithNutritionalFont()
         {
-            string Fontcode = homePage.getConfiguration("TestData.json", "FontCode2.0.1");
-            string Fontname = homePage.getConfiguration("TestData.json", "FontName2.0.1");
-            scaleConfigurationPage.EnterFontCodeandName(Fontcode, Fontname);
+            string FontCode = homePage.getConfiguration("TestData.json", "FontCode2.1");
+            string FontName = homePage.getConfiguration("TestData.json", "Fontname2.1");
+            scaleConfigurationPage.EnterFontCodeandName(FontCode, FontName);
             Thread.Sleep(5000);
         }
+
 
         [When(@"Enter TareCode and Name")]
         public void WhenEnterTareCodeAndName()
@@ -193,6 +239,15 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
 
         }
+
+        [Then(@"Enter Value in Mask Field Updated Value")]
+        public void ThenEnterValueInMaskFieldUpdatedValue()
+        {
+            string valueinmask = homePage.getConfiguration("TestData.json", "MaskFieldValue2.0.1");
+            scaleConfigurationPage.EnterValueinMaskfield(valueinmask);
+            Thread.Sleep(5000);
+        }
+
 
 
     }
