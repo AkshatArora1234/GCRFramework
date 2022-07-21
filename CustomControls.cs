@@ -13,6 +13,7 @@ namespace SpecFlow_MSTestFrameWork
     {
         public By TexBoxLocator { get; }
         public IWebDriver Driver { get; }
+
         public CustomControls(IWebDriver driver, By texBoxLocator)
         {
             TexBoxLocator = texBoxLocator;
@@ -44,7 +45,7 @@ namespace SpecFlow_MSTestFrameWork
         public void SelectByOption(IWebElement webElement, string text)
         {
             SelectElement selectElement = new SelectElement(webElement);
-           
+
         }
 
         public void SelectType(string text)
@@ -62,30 +63,19 @@ namespace SpecFlow_MSTestFrameWork
             selectElement.SelectByText(text);
         }
 
-        public void SelectByValue(string value)
+        public void FillUsingJavascipt(string text)
         {
-            var textBoxElement = Driver.FindElement(TexBoxLocator);
-            SelectElement selectElement = new SelectElement(textBoxElement);
-            selectElement.SelectByValue(value);
+            IJavaScriptExecutor js = (IJavaScriptExecutor)Driver;
+            var element = Driver.FindElement(TexBoxLocator);
+            js.ExecuteScript("arguments[0].scrollIntoView();", element);
+            js.ExecuteScript("arguments[0].value=arguments[1];", element, text);
         }
 
-
-
-        public void DoubleClickElement()
+        public void GetSelectedTextFromDropDown()
         {
-            Actions actions = new Actions(Driver);
-            actions.DoubleClick().Perform();
+            SelectElement oSelection = new SelectElement((IWebElement)Driver);
+            string element = oSelection.SelectedOption.Text;
         }
-
-        public void ClickElement()
-        {
-            Actions actions = new Actions(Driver);
-            actions.Click().Perform();
-        }
-
-
-
-
     }
 }
 

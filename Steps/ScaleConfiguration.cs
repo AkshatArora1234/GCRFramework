@@ -21,6 +21,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         HomePage homePage;
         ColumnChooser columnChooser;
         NewBatch newBatch;
+        ConfigurationPage configurationPage;
 
         public ScaleConfiguration(DriverHelper driverHelper)
         {
@@ -31,11 +32,11 @@ namespace SpecFlow_MSTestFrameWork.Steps
             homePage = new HomePage(_driverHelper.driver);
             columnChooser = new ColumnChooser(_driverHelper.driver);
             newBatch = new NewBatch(_driverHelper.driver);
+            configurationPage = new ConfigurationPage(_driverHelper.driver);
         }
 
 
 
-        // ScaleConfigurationPage ScaleConfigurationPageMethods = new ScaleConfigurationPage();
         [When(@"User clicks on the Left Menu")]
         public void WhenUserClicksOnTheLeftMenu()
         {
@@ -234,14 +235,14 @@ namespace SpecFlow_MSTestFrameWork.Steps
         }
 
         [Then(@"Close the font")]
-        public void ClsoeFont()
+        public void CloseFont()
         {
             scaleConfigurationPage.ClosePF();
             Thread.Sleep(4000);
         }
 
         [Then(@"Publish the PF")]
-        public void PublishthePFM()
+        public void PublishthePF()
         {
             scaleConfigurationPage.PublishPrint();
             Thread.Sleep(5000);
@@ -346,15 +347,32 @@ namespace SpecFlow_MSTestFrameWork.Steps
 
         //Step Definition for Publish a PF, Exist with same name as in store.
 
-        [When(@"user search and select the printformat code")]
-        public void WhenUserSearchAndSelectThePrintformatCode()
+        [When(@"user enter new PF code and name and Publish PF")]
+        public void WhenUserEnterNewPFCodeAndNameAndPublishPF()
         {
             string pfCode = homePage.getConfiguration("TestData.json", "PrintCode2.0");
             string pfName = homePage.getConfiguration("TestData.json", "ChangedPFName");
-            scaleConfigurationPage.ClickNewButton();
             scaleConfigurationPage.EnterCodeandName(pfCode, pfName);
             Thread.Sleep(8000);
             scaleConfigurationPage.SearchPF(pfCode);
+            Thread.Sleep(3000);
+            scaleConfigurationPage.EditCode3();
+            Thread.Sleep(8000);
+            scaleConfigurationPage.UpdatePF();
+            scaleConfigurationPage.ClickonAddSection();
+            ClickOnFontDropDowns();
+            AddDescription();
+            SaveFont();
+            CloseFont();
+            Thread.Sleep(5000);
+            PublishthePF();
+            Thread.Sleep(3000);
+            SelectStore();
+        }
+
+        [When(@"user search and select the printformat code")]
+        public void WhenUserSearchAndSelectThePrintformatCode()
+        {
             Thread.Sleep(3000);
             scaleConfigurationPage.EditCode3();
             Thread.Sleep(3000);
@@ -365,7 +383,6 @@ namespace SpecFlow_MSTestFrameWork.Steps
         {
             string NewPFCode = homePage.getConfiguration("TestData.json", "ChangedPFCOde");
             scaleConfigurationPage.ChangePFCode(NewPFCode);
-            scaleConfigurationPage.UpdatePF();
         }
 
         [Then(@"verify Content Symbol is automatically checked on checking Content")]
@@ -377,16 +394,29 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [Then(@"verify user can Change non nutritional section to the nutritional by adding a nutritional font and description")]
         public void ThenVerifyUserCanChangeNonNutritionalSectionToTheNutritionalByAddingANutritionalFontAndDescription()
         {
-            scaleConfigurationPage.ClickonAddSection();
-            string selectfont = homePage.getConfiguration("TestData.json", "NutritionalValue");
+            string selectfont = homePage.getConfiguration("TestData.json", "Fontname2.0.2");
             scaleConfigurationPage.ClickonFontDropdown(selectfont);
             Thread.Sleep(5000);
             string Adddesc = homePage.getConfiguration("TestData.json", "NutritionalDesc");
             scaleConfigurationPage.AddDiscription(Adddesc);
             Thread.Sleep(5000);
-            scaleConfigurationPage.FetchValueForNutritionalSection();
+            string NutriTemplate = homePage.getConfiguration("TestData.json", "NutritionalName2.0.2");
+            scaleConfigurationPage.FetchValueForNutritionalSection1(NutriTemplate);
         }
 
+        [Then(@"Add another new nutritional Panel to another section")]
+        public void ThenAddAnotherNewNutritionalPanelToAnotherSection()
+        {
+            ClickonAddSections();
+            string selectfont = homePage.getConfiguration("TestData.json", "SecondFontname2.0.2");
+            scaleConfigurationPage.ClickonFontDropdown2(selectfont);
+            Thread.Sleep(5000);
+            string Adddesc = homePage.getConfiguration("TestData.json", "NutritionalDesc");
+            scaleConfigurationPage.AddDiscription2(Adddesc);
+            Thread.Sleep(5000);
+            string NutriTemplate = homePage.getConfiguration("TestData.json", "SecondNutritionalName2.0.2");
+            scaleConfigurationPage.FetchValueForNutritionalSection(NutriTemplate);
+        }
 
         [Then(@"Save and close the PF")]
         public void ThenSaveAndCloseThePF()
@@ -404,6 +434,56 @@ namespace SpecFlow_MSTestFrameWork.Steps
             columnChooser.SelectScaleValue();
             columnChooser.SelectFirstScaleRecord();
             columnChooser.ClickScaleTabInItems();
+        }
+
+        [Then(@"add the PF and ContentSymbol")]
+        public void ThenAddThePFAndContentSymbol()
+        {
+            columnChooser.SelectPFForItem();
+            columnChooser.AddContentSymbol("KG");
+            columnChooser.NutritionalData("10", "15");
+        }
+
+        [Then(@"Save item")]
+        public void ThenSaveItem() => columnChooser.SaveItemPF();
+
+        [Then(@"navigate to the configuration page to edit the content symbol assigned to item")]
+        public void ThenNavigateToTheConfigurationPageToEditTheContentSymbolAssignedToItem()
+        {
+            configurationPage.PageNavigationToScaleConfigPage();
+            configurationPage.PageNavigationToConfigPage();
+            configurationPage.SearchContentSymbol("18");
+            string ContentSymbol = homePage.getConfiguration("TestData.json", "NewContentSymbol2.0.2");
+            // configurationPage.EditContent(ContentSymbol);
+        }
+
+        [Then(@"Delete the second panel added from the configuration page")]
+        public void ThenDeleteTheSecondPanelAddedFromTheConfigurationPage()
+        {
+            // configurationPage.NutriPanelSearch("27");
+            // configurationPage.DeleteNutrionalPanel();
+        }
+
+        [Then(@"Verify that the change is reflected in Item's scale tab")]
+        public void ThenVerifyThatTheChangeIsReflectedInItemSScaleTab()
+        {
+            columnChooser.NavigateToItemDetailPage();
+            _driverHelper.driver.Navigate().Refresh();
+            Thread.Sleep(8000);
+            columnChooser.ClickScaleTabInItems();
+            columnChooser.AssertContentsymbol();
+        }
+
+        [Then(@"Publish the PF to a second store where PF exists with same name")]
+        public void ThenPublishThePFToASecondStoreWherePFExistsWithSameName()
+        {
+            configurationPage.PageNavigationToScaleConfigPage();
+            scaleConfigurationPage.TabPrintFormatClick();
+            scaleConfigurationPage.SearchPF("21");
+            Thread.Sleep(3000);
+            PublishthePF();
+            Thread.Sleep(3000);
+            SelectStore();
         }
 
         //Step Definitions TC2
