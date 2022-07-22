@@ -489,23 +489,50 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("User clicks on Tab Print Format", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 110
- testRunner.And("user search and select the printformat code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("Click on the New Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 111
- testRunner.Then("user change the PF code and update the checkboxes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("user enter new PF code and name and Publish PF", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 112
- testRunner.And("verify Content Symbol is automatically checked on checking Content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("user search and select the printformat code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 113
+ testRunner.Then("user change the PF code and update the checkboxes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 114
+ testRunner.And("verify Content Symbol is automatically checked on checking Content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 115
  testRunner.And("verify user can Change non nutritional section to the nutritional by adding a nut" +
                         "ritional font and description", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 114
+#line 116
+ testRunner.And("Add another new nutritional Panel to another section", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 117
  testRunner.And("Save and close the PF", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 115
+#line 118
     testRunner.Then("select a scale item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 119
+ testRunner.And("add the PF and ContentSymbol", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 120
+ testRunner.And("Save item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 121
+ testRunner.Then("navigate to the configuration page to edit the content symbol assigned to item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 122
+ testRunner.And("Delete the second panel added from the configuration page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 123
+ testRunner.And("Verify that the change is reflected in Item\'s scale tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 124
+ testRunner.And("Publish the PF to a second store where PF exists with same name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

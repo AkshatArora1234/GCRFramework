@@ -15,6 +15,9 @@
   "PrintFormat2.2": "NiceBiscuits",
   "PrintFormat2.3": "Popcorn1",
 
+
+  //TestData 2.0.0
+
   "FontCode2.0": "35",
   "Fontname2.0": "BreadCheese",
   "NutritionalCode2.0": "41",
@@ -31,6 +34,9 @@
   "ContentSymbolCode2.0": "27",
   "ContentSymbol2.0": "G",
   "ContentSymbolDescription2.0": "Per Grams",
+
+  //TestData 2.0.1
+
   "FontCode2.1": "11",
   "Fontname2.1": "T Popcorn",
   "NutritionalName2.0.1": "French fries",
@@ -46,5 +52,17 @@
   "ContentSymbol2.0.1": "ML",
   "ContentSymbolDescription2.0.1": "10 MilliLitre",
   "PresetCode2.0.1": "46",
-  "PresetMessage2.0.1": "Contains preservatives"
+  "PresetMessage2.0.1": "Contains preservatives",
+
+  //TestData 2.0.2
+
+  "FontCode2.0.2": "11",
+  "Fontname2.0.2": "T Popcorn",
+  "SecondFontname2.0.2": "KitKat Cake",
+  "NutritionalCode2.0.2": "39",
+  "NutritionalName2.0.2": "FrenchFries",
+  "SecondNutritionalCode2.0.2": "27",
+  "SecondNutritionalName2.0.2": "Coco cola",
+  "NewContentSymbol2.0.2": "KG"
+
 }

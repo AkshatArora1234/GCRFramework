@@ -133,6 +133,9 @@ this.ScenarioInitialize(scenarioInfo);
 #line 9
  testRunner.Then("HQ homepage should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
+#line 10
+ testRunner.And("User is able to logout", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
             }
             this.ScenarioCleanup();
         }

@@ -107,12 +107,22 @@ Scenario: Publish PF existing with same name as in store
 	When User Selects the Scale Configuration
 	Then Scale Configuration Page should be displayed
 	When User clicks on Tab Print Format
+	Then Click on the New Button
+	When user enter new PF code and name and Publish PF
 	And user search and select the printformat code
 	Then user change the PF code and update the checkboxes
 	And verify Content Symbol is automatically checked on checking Content
 	And verify user can Change non nutritional section to the nutritional by adding a nutritional font and description
+	And Add another new nutritional Panel to another section
 	And Save and close the PF
     Then select a scale item
+	And add the PF and ContentSymbol 
+	And Save item
+	Then navigate to the configuration page to edit the content symbol assigned to item
+	And Delete the second panel added from the configuration page
+	And Verify that the change is reflected in Item's scale tab
+	And Publish the PF to a second store where PF exists with same name
+    
 
     
 

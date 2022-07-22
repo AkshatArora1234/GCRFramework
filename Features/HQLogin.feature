@@ -7,4 +7,5 @@ Scenario: To verify login to HQ application
 	When enter valid '<username>', '<hqpassword>'
 	And Clicks on Log In button
 	Then HQ homepage should be displayed
+	And User is able to logout
 

@@ -102,8 +102,8 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement PublishPF => Driver.FindElement(By.XPath("(//i[@ng-click='ctrl.actions.publishPrintFormat(row.data)'])[1]"));
         IWebElement DeletePF => Driver.FindElement(By.XPath("(//i[@ng-click='ctrl.actions.deletePrintFormat(row.data)'])[1]"));
 
-        private CustomControls NutrionalTemplateDropdown => new CustomControls(Driver, By.XPath("//select[@name='nutritionalTemplateName-2']"));
-
+        private CustomControls NutrionalTemplateDropdown => new CustomControls(Driver, By.XPath("//select[@name='nutritionalTemplateName-10']"));
+        private CustomControls NutrionalTemplateDropdown1 => new CustomControls(Driver, By.XPath("//select[@name='nutritionalTemplateName-16']"));
         IWebElement SelectStore => Driver.FindElement(By.XPath("//*[@class='checkboxInput']"));
         IWebElement Deletebutton => Driver.FindElement(By.Id("submitButton"));
         IWebElement Clickok => Driver.FindElement(By.XPath("//*[text()='OK']"));
@@ -146,6 +146,10 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement NutrionalPanelName => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[17]"));
 
         IWebElement EnterValueinMask => Driver.FindElement(By.XPath("//*[@name='nutritional-ele-mask']"));
+
+
+
+
         public void ClickLeftMenu()
         {
             Thread.Sleep(4000);
@@ -168,7 +172,8 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         public void ClickContentSymbolNewButton() => ContentNewButton.Click();
 
-        
+        public void FetchValueForNutritionalSection(string text) => NutrionalTemplateDropdown.SelectByText(text);
+        public void FetchValueForNutritionalSection1(string text) => NutrionalTemplateDropdown1.SelectByText(text);
 
 
 
