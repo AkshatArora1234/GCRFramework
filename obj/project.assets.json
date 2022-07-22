@@ -11022,19 +11022,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vijay.bhaskar\\.nuget\\packages\\": {}
+    "C:\\Users\\akshat.arora\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GCR_App2\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
+      "projectUniqueName": "C:\\workspace\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
       "projectName": "SpecFlow_MSTestFrameWork",
-      "projectPath": "C:\\GCR_App2\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
-      "packagesPath": "C:\\Users\\vijay.bhaskar\\.nuget\\packages\\",
-      "outputPath": "C:\\GCR_App2\\GCRFramework\\obj\\",
+      "projectPath": "C:\\workspace\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
+      "packagesPath": "C:\\Users\\akshat.arora\\.nuget\\packages\\",
+      "outputPath": "C:\\workspace\\GCRFramework\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\vijay.bhaskar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\akshat.arora\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11120,7 +11125,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.409\\RuntimeIdentifierGraph.json"
       }
     }
   }
