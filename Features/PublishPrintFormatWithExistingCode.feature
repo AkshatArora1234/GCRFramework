@@ -16,27 +16,34 @@ Scenario: Verify Print Format with Existing same code as Store
 	When User clicks on Tab Print Format
 	Then Print Format Page should be displayed
 	Then Click on the New Button
-	#When User Enters the Code and PrintFormat
-#	And User clicks on button Save
+	When User Enters the Code and PrintFormat
 	Then Font should get saved and a '<confirmationMsg>' should be displayed for the same
 	When user Looks Font table
 	And Click on Edit Button
-	When Change the PF name to Popcorn, also uncheck 'product life' only.Take any nutritional font and uncheck 'Nutritional' and check 'Enable copy'.
 	When Check the required text boxes
+	When Change the PF name to Popcorn, also uncheck 'product life' only.Take any nutritional font and uncheck 'Nutritional' and check 'Enable copy'.
 	Then Check the Content Symbol 
-	When User Enters the Code and PrintFormat1
-	And User clicks on button Save
-	When user clicks on the Print Format Code 
-	Then  the Selected Print Format Code should be displayed in tab
+	And verify Content Symbol is automatically checked on checking Content
+	When User clicks on Tab Print Format
+	Then Print Format Page should be displayed
+	When Click on Edit
+	Then Print Format Page should be displayed
+	And verify user can Change non nutritional section to the nutritional by adding a nutritional font and description
+	When click on buttonSave
 	When User Deletes the font added to PF
 	Then Verifies the Toast is displayed 
 	And a message'Scale font <scale font name> is in use and cannot be deleted.' should be displayed
+
 	When User Pubilsh the PF to a Second Store where PF exists with the same Code
 	And Verify that at store, all the Tares, Content Symbols and Preset messages of HQ are published and the PF at store with same code is updated with values from HQ in Configuration.
 	#When Enter the Value of Print Name
+	When User clicks on Tab Print Format
+	Then Print Format Page should be displayed
 	When Searches for PrintFormat
 	Then Delete the PF
 	Then User is able to logout
+
+
 
 @mytag
 Scenario: Publish PF to Store

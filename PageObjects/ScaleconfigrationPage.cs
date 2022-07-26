@@ -147,8 +147,25 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         IWebElement EnterValueinMask => Driver.FindElement(By.XPath("//*[@name='nutritional-ele-mask']"));
 
+        IWebElement ClickEditPopCorn1 => Driver.FindElement(By.XPath("//td[contains(text(),'Popcorn1')]"));
+
+        IWebElement ButtonSave => Driver.FindElement(By.XPath("//*[@class='button-save ng-scope']"));
+
+        IWebElement TabScaleConfiguration => Driver.FindElement(By.XPath("(//*[@class='ng-binding' and contains(text(),'Scale Configuration')])[2]"));
+
+        public void ButtonSaveClick()
+        {
+            ButtonSave.Click();
 
 
+        }
+
+        public void CheckProductLife()
+        {
+            CheckProductlife.Click();
+        }
+
+        public void ScalConfigurationClick() => TabScaleConfiguration.Click();
 
         public void ClickLeftMenu()
         {
@@ -425,7 +442,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             SavetheFontwithData();
 
             // Add New
-            ClickonAddSection();
+          //  ClickonAddSection();
             // ClickonFontDropdown(Font2);
 
 
@@ -436,6 +453,14 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         {
             Thread.Sleep(5000);
             EnterValueinMask.SendKeys(maskvalue);
+        }
+
+        public void EditPopCorn1()
+        {
+            // ClickEditPopCorn1.Click();
+
+            Actions actions = new Actions(Driver);
+            actions.DoubleClick(ClickEditPopCorn1).Perform();
         }
 
 

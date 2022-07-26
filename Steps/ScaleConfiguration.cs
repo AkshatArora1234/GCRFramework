@@ -510,25 +510,24 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [When(@"Change the PF name to Popcorn, also uncheck '(.*)' only\.Take any nutritional font and uncheck '(.*)' and check '(.*)'\.")]
         public void WhenChangeThePFNameToPopcornAlsoUncheckOnly_TakeAnyNutritionalFontAndUncheckAndCheck_(string p0, string p1, string p2)
         {
-            
-            System.Threading.Thread.Sleep(2000);
+
+            System.Threading.Thread.Sleep(15000);
             scaleConfigurationPage.PFClear();
             string printFormat = homePage.getConfiguration("TestData.json", "PrintFormat2.3");
-            
-            scaleConfigurationPage.EditPrintFormatName(printFormat);
-            
-            System.Threading.Thread.Sleep(2000);
-            
-            
 
-            scaleConfigurationPage.ClickonAddSection();
-            string selectfont = homePage.getConfiguration("TestData.json", "NutritionalValue");
-            scaleConfigurationPage.ClickonFontDropdown(selectfont);
-            Thread.Sleep(5000);
-            string Adddesc = homePage.getConfiguration("TestData.json", "NutritionalDesc");
-            scaleConfigurationPage.AddDiscription(Adddesc);
-            Thread.Sleep(5000);
-            scaleConfigurationPage.FetchValueForNutritionalSection();
+            scaleConfigurationPage.EditPrintFormatName(printFormat);
+
+            System.Threading.Thread.Sleep(2000);
+
+            // Uncheck the Product Life
+            scaleConfigurationPage.CheckProductLife();
+
+            scaleConfigurationPage.ScalConfigurationClick();
+            //Click on Configuration Tab
+            scaleConfigurationPage.TabConfiGrationClick();
+            //take any nutritional Font UnCheck 'Nutritional' and check 'Enable copy'
+
+           
 
 
         }
@@ -568,6 +567,19 @@ namespace SpecFlow_MSTestFrameWork.Steps
         {
             
         }
+
+        [When(@"Click on Edit")]
+        public void WhenClickOnEdit()
+        {
+            scaleConfigurationPage.EditPopCorn1();
+        }
+
+        [When(@"click on buttonSave")]
+        public void WhenClickOnButtonSave()
+        {
+            scaleConfigurationPage.ButtonSaveClick();
+        }
+
 
 
 
