@@ -11,10 +11,13 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
     {
         private IWebDriver Driver;
         HomePage homePage;
+      
+
         public ConfigurationPage(IWebDriver driver)
         {
             Driver = driver;
             homePage = new HomePage(driver);
+            
         }
 
         IWebElement ScaleConfigurationTab => Driver.FindElement(By.XPath("(//span[text()='Scale Configuration'])[2]"));
@@ -47,6 +50,14 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             NewContentSymbolName.Click();
             NewContentSymbolNameEdit.FillUsingJavascipt(text);
             NextElement.Click();
+            ////   Driver.Navigate().Refresh();
+            //configurationPage.PageNavigationToScaleConfigPage();
+            //configurationPage.PageNavigationToConfigPage();
+            //EditContentSymbol.Click();
+            //NewContentSymbolName.Click();
+            //NewContentSymbolNameEdit.FillUsingJavascipt(text);
+            //Actions act = new Actions(Driver);
+            //act.SendKeys(Keys.Tab);
             ContentSymbolSave.Click();
             ContentSymbolSaveYes.Click(); 
         }

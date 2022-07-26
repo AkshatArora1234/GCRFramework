@@ -102,7 +102,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement PublishPF => Driver.FindElement(By.XPath("(//i[@ng-click='ctrl.actions.publishPrintFormat(row.data)'])[1]"));
         IWebElement DeletePF => Driver.FindElement(By.XPath("(//i[@ng-click='ctrl.actions.deletePrintFormat(row.data)'])[1]"));
 
-        private CustomControls NutrionalTemplateDropdown => new CustomControls(Driver, By.XPath("//select[@name='nutritionalTemplateName-10']"));
+        private CustomControls NutrionalTemplateDropdown => new CustomControls(Driver, By.XPath("//select[@name='nutritionalTemplateName-15']"));
         private CustomControls NutrionalTemplateDropdown1 => new CustomControls(Driver, By.XPath("//select[@name='nutritionalTemplateName-16']"));
         IWebElement SelectStore => Driver.FindElement(By.XPath("//*[@class='checkboxInput']"));
         IWebElement Deletebutton => Driver.FindElement(By.Id("submitButton"));
@@ -121,8 +121,8 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement Manadatory => Driver.FindElement(By.XPath("(//input[@ng-model='section.isMandatory'])[1]"));
         IWebElement FixedWidth => Driver.FindElement(By.XPath("(//input[@ng-model='section.isFixedWidth'])[1]"));
 
-        IWebElement Row => Driver.FindElement(By.XPath("//input[@name='rows--1']"));
-        IWebElement Characters => Driver.FindElement(By.XPath("//input[@name='characters--1']"));
+        IWebElement Row => Driver.FindElement(By.XPath("//input[@name='rows--14']"));
+        IWebElement Characters => Driver.FindElement(By.XPath("//input[@name='characters--14']"));
 
         IWebElement Manadatory2 => Driver.FindElement(By.XPath("(//input[@ng-model='section.isMandatory'])[2]"));
         IWebElement FixedWidth2 => Driver.FindElement(By.XPath("(//input[@ng-model='section.isFixedWidth'])[2]"));
@@ -136,9 +136,9 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         IWebElement Support_Basic_Mode => Driver.FindElement(By.XPath("//input[@ng-model='section.hasBasicMode']"));
 
-        IWebElement HeaderRows => Driver.FindElement(By.XPath("//input[@id='header--rows--2']"));
+        IWebElement HeaderRows => Driver.FindElement(By.XPath("//input[@id='header--rows--15']"));
 
-        IWebElement TableRows => Driver.FindElement(By.XPath(" //input[@id='table--rows--2']"));
+        IWebElement TableRows => Driver.FindElement(By.XPath(" //input[@id='table--rows--15']"));
         IWebElement SearchCode => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[20]"));
         IWebElement ChangeCode => Driver.FindElement(By.Id("printFormatCode"));
         IWebElement ClickEditNice => Driver.FindElement(By.XPath("(//*[contains(text(),'NiceBiscuits')])[1]"));
@@ -389,7 +389,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Thread.Sleep(5000);
         }
 
-        public void FetchValueForNutritionalSection() => NutrionalTemplateDropdown.SelectByText("NP1");
+        public void FetchValueForNutritionalSection() => NutrionalTemplateDropdown.SelectByText("ChocoCream");
 
         public void ClickSupportBasicMode()
         {

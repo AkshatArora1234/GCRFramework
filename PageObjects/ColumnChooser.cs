@@ -90,7 +90,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             string ContentSymbol = homePage.getConfiguration("TestData.json", "NewContentSymbol2.0.2");
             SelectElement oSelection = new SelectElement(Driver.FindElement(By.XPath("//select[@name='contentSymbol']")));
             string element = oSelection.SelectedOption.Text;
-            Thread.Sleep(3000);
+            Thread.Sleep(6000);
             Assert.AreEqual(element,ContentSymbol);        
         }
     }
