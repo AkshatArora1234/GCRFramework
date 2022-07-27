@@ -7,6 +7,7 @@ Scenario: Verify Print Format with Existing same code as Store
 	When enter valid '<username>', '<hqpassword>'
 	And Clicks on Log In button
 	#Then HQ homepage should be displayed
+	When user create a new batch
 	When User clicks on the Left Menu
 	Then menu should be displayed
 	When User enters Scale Configuration in the Search Box
@@ -50,6 +51,7 @@ Scenario: Publish PF to Store
 Given user navigates to HQ application
 	When enter valid '<username>', '<hqpassword>'
 	And Clicks on Log In button
+	When user create a new batch
 	When User clicks on the Left Menu
 	Then menu should be displayed
 	When User enters Scale Configuration in the Search Box
@@ -76,6 +78,7 @@ Scenario: Edit PF
 	Given user navigates to HQ application
 	When enter valid '<username>', '<hqpassword>'
 	And Clicks on Log In button
+	When user create a new batch
 	When User clicks on the Left Menu
 	Then menu should be displayed
 	When User enters Scale Configuration in the Search Box
@@ -107,6 +110,7 @@ Scenario: Publish PF existing with same name as in store
 	Given user navigates to HQ application
 	When enter valid '<username>', '<hqpassword>'
 	And Clicks on Log In button
+	When user create a new batch
     When User clicks on the Left Menu
 	Then menu should be displayed
 	When User enters Scale Configuration in the Search Box

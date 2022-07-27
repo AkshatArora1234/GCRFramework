@@ -1,6 +1,6 @@
 ﻿Feature: PreRequisite
 
-A short summary of the feature
+This Feature is for generating the test data of Publish PrintFormat scenarios 2.0.0
 
 @tag1
 Scenario: Test Data 2.0 Font

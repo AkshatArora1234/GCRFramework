@@ -1,6 +1,7 @@
 ﻿Feature: PreRequisite2.0.1
 
-A short summary of the feature
+This Feature is for generating the test data of Publish PrintFormat scenarios 2.0.1
+
 Scenario: Test Data 2.0.1 Font
 	Given user navigates to HQ application
 	When enter valid '<username>', '<hqpassword>'

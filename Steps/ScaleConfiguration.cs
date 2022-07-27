@@ -40,9 +40,6 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [When(@"User clicks on the Left Menu")]
         public void WhenUserClicksOnTheLeftMenu()
         {
-            //Adding new batch as PF should be associated with a batch
-            Thread.Sleep(5000);
-            newBatch.CreateBatch();
             Thread.Sleep(4000);
             scaleConfigurationPage.ClickLeftMenu();
         }
@@ -56,7 +53,6 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [When(@"User enters Scale Configuration in the Search Box")]
         public void WhenUserEntersScaleConfigurationInTheSearchBox()
         {
-            //Enter Text Scale Configuration
             scaleConfigurationPage.ScaleConfiguration();
         }
 
@@ -396,10 +392,10 @@ namespace SpecFlow_MSTestFrameWork.Steps
         {
             string selectfont = homePage.getConfiguration("TestData.json", "Fontname2.0.2");
             scaleConfigurationPage.ClickonFontDropdown(selectfont);
-            Thread.Sleep(5000);
+           // Thread.Sleep(5000);
             string Adddesc = homePage.getConfiguration("TestData.json", "NutritionalDesc");
             scaleConfigurationPage.AddDiscription(Adddesc);
-            Thread.Sleep(5000);
+           // Thread.Sleep(5000);
             string NutriTemplate = homePage.getConfiguration("TestData.json", "NutritionalName2.0.2");
             scaleConfigurationPage.FetchValueForNutritionalSection1(NutriTemplate);
         }
@@ -410,10 +406,10 @@ namespace SpecFlow_MSTestFrameWork.Steps
             ClickonAddSections();
             string selectfont = homePage.getConfiguration("TestData.json", "SecondFontname2.0.2");
             scaleConfigurationPage.ClickonFontDropdown2(selectfont);
-            Thread.Sleep(5000);
+          //  Thread.Sleep(5000);
             string Adddesc = homePage.getConfiguration("TestData.json", "NutritionalDesc");
             scaleConfigurationPage.AddDiscription2(Adddesc);
-            Thread.Sleep(5000);
+           // Thread.Sleep(5000);
             string NutriTemplate = homePage.getConfiguration("TestData.json", "SecondNutritionalName2.0.2");
             scaleConfigurationPage.FetchValueForNutritionalSection(NutriTemplate);
         }
@@ -432,7 +428,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(8000);
             columnChooser.ChooseAColumn();
             columnChooser.SelectScaleValue();
+            Thread.Sleep(5000);
             columnChooser.SelectFirstScaleRecord();
+            Thread.Sleep(5000);
             columnChooser.ClickScaleTabInItems();
         }
 
@@ -454,7 +452,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
             configurationPage.PageNavigationToConfigPage();
             configurationPage.SearchContentSymbol("18");
             string ContentSymbol = homePage.getConfiguration("TestData.json", "NewContentSymbol2.0.2");
-          configurationPage.EditContent(ContentSymbol);
+          // configurationPage.EditContent(ContentSymbol);
         }
 
         [Then(@"Delete the second panel added from the configuration page")]

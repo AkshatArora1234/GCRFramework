@@ -1,11 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
-using SpecFlow_MSTestFrameWork.PageObjects;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using SpecFlow_MSTestFrameWork.PageObjects;
 using TechTalk.SpecFlow;
-using OpenQA.Selenium.Support.UI;
-using System;
 using System.Threading;
 
 namespace SpecFlow_MSTestFrameWork.Steps
@@ -15,22 +9,16 @@ namespace SpecFlow_MSTestFrameWork.Steps
     public class PreRequisite
     {
         private readonly DriverHelper _driverHelper;
-        NewItemCreation newItemCreation;
-        HQLoginPage hQLoginPage;
         Scaleconfig scaleConfigurationPage;
         HomePage homePage;
-        ColumnChooser columnChooser;
-        NewBatch newBatch;
+        ConfigurationPage configurationPage;
 
         public PreRequisite(DriverHelper driverHelper)
         {
             _driverHelper = driverHelper;
-            newItemCreation = new NewItemCreation(_driverHelper.driver);
-            hQLoginPage = new HQLoginPage(_driverHelper.driver);
             scaleConfigurationPage = new Scaleconfig(_driverHelper.driver);
             homePage = new HomePage(_driverHelper.driver);
-            columnChooser = new ColumnChooser(_driverHelper.driver);
-            newBatch = new NewBatch(_driverHelper.driver);
+            configurationPage = new ConfigurationPage(_driverHelper.driver);
         }
 
         [When(@"User clicks on Tab Config page")]
@@ -134,9 +122,8 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [Then(@"Click on Edit Button NutritionalPanel")]
         public void ThenClickOnEditButtonNutritionalPanel()
         {
-                 scaleConfigurationPage.EditNutritionalPanel();
-                Thread.Sleep(5000);
-            
+            scaleConfigurationPage.EditNutritionalPanel();
+            Thread.Sleep(5000);           
         }
 
         [Then(@"Click on Edit Button NutritionalPanel TwoZeroOne")]
@@ -180,9 +167,6 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
-
-
-
         [When(@"Enter CodeName and Font Name")]
         public void WhenEnterCodeNameAndFontName()
         {
@@ -208,7 +192,6 @@ namespace SpecFlow_MSTestFrameWork.Steps
             string TareCode = homePage.getConfiguration("TestData.json", "TareCode2.0");
             string TareName = homePage.getConfiguration("TestData.json", "TareName2.0");
             string TareValue = homePage.getConfiguration("TestData.json", "TareValue2.0");
-
             scaleConfigurationPage.EnterTaretCodeNameValue(TareCode, TareName, TareValue);
             Thread.Sleep(5000);
         }
@@ -219,7 +202,6 @@ namespace SpecFlow_MSTestFrameWork.Steps
             string TareCode = homePage.getConfiguration("TestData.json", "TareCode2.0.1");
             string TareName = homePage.getConfiguration("TestData.json", "TareName2.0.1");
             string TareValue = homePage.getConfiguration("TestData.json", "TareValue2.0.1");
-
             scaleConfigurationPage.EnterTaretCodeNameValue(TareCode, TareName, TareValue);
             Thread.Sleep(5000);
         }
@@ -279,6 +261,154 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
+
+        //TestData 2.0.2
+
+        [Then(@"User click on Scale Configuration Item should be displayed on the Menu")]
+        public void ThenUserClickOnScaleConfigurationItemShouldBeDisplayedOnTheMenu()
+        {
+            scaleConfigurationPage.MenuScaleConfigurationClick();
+        }
+
+
+        [When(@"Enter the Code and Name for Testdata TwoZeroTwo")]
+        public void WhenEnterTheCodeAndNameForTestdataTwoZeroTwo()
+        {
+            string fontCode = homePage.getConfiguration("TestData.json", "FontCode2.0.2");
+            string fontName = homePage.getConfiguration("TestData.json", "Fontname2.0.2");
+            scaleConfigurationPage.EnterFontCodeandName(fontCode, fontName);
+            Thread.Sleep(5000);
+        }
+
+        [Then(@"search for the font")]
+        public void ThenSearchForTheFont()
+        {
+            string fontCode = homePage.getConfiguration("TestData.json", "FontCode2.0.2");
+            configurationPage.FontEditClick();
+            Thread.Sleep(3000);
+            configurationPage.SearchFont(fontCode);
+        }
+
+        [Then(@"click the Nutritional Font as yes")]
+        public void ThenClickTheNutritionalFontAsYes()
+        {
+            configurationPage.EditNutrionalFont();
+        }
+
+        [Then(@"search for the second font entered")]
+        public void ThenSearchForTheSecondFontEntered()
+        {
+            string fontCode = homePage.getConfiguration("TestData.json", "SecondFontCode2.0.2");
+            configurationPage.FontEditClick();
+            Thread.Sleep(2000);
+            configurationPage.SearchFont(fontCode);
+        }
+
+
+        [When(@"Enter the Code and Name for second font Testdata TwoZeroTwo")]
+        public void WhenEnterTheCodeAndNameForSecondFontTestdataTwoZeroTwo()
+        {
+            string fontCode = homePage.getConfiguration("TestData.json", "SecondFontCode2.0.2");
+            string fontName = homePage.getConfiguration("TestData.json", "SecondFontname2.0.2");
+            scaleConfigurationPage.EnterFontCodeandName(fontCode, fontName);
+            Thread.Sleep(5000);
+        }
+
+
+        [When(@"Enter ContentSymbol & Description for Testdata TwoZeroTwo")]
+        public void WhenEnterContentSymbolDescriptionForTestdataTwoZeroTwo()
+        {
+            string ContentCode = homePage.getConfiguration("TestData.json", "ContentSymbolCode2.0.2");
+            string ContentSymbol = homePage.getConfiguration("TestData.json", "ContentSymbol2.0.2");
+            string ContentDescription = homePage.getConfiguration("TestData.json", "ContentSymbolDescrition2.0.2");
+            scaleConfigurationPage.EnterContentCodeNameDescription(ContentCode, ContentSymbol, ContentDescription);
+            Thread.Sleep(5000);
+        }
+
+        [When(@"Enter CodeName and Nutritional Panel for Testdata TwoZeroTwo")]
+        public void WhenEnterCodeNameAndNutritionalPanelForTestdataTwoZeroTwo()
+        {
+            string nutriCode = homePage.getConfiguration("TestData.json", "NutritionalCode2.0.2");
+            string nutriName = homePage.getConfiguration("TestData.json", "NutritionalName2.0.2");
+            scaleConfigurationPage.EnterNutritionalCodeandName(nutriCode, nutriName);
+            Thread.Sleep(5000);
+        }
+
+        [When(@"Enter CodeName and Nutritional Panel for second Testdata TwoZeroTwo")]
+        public void WhenEnterCodeNameAndNutritionalPanelForSecondTestdataTwoZeroTwo()
+        {
+            string nutriCode = homePage.getConfiguration("TestData.json", "SecondNutritionalCode2.0.2");
+            string nutriName = homePage.getConfiguration("TestData.json", "SecondNutritionalName2.0.2");
+            scaleConfigurationPage.EnterNutritionalCodeandName(nutriCode, nutriName);
+            Thread.Sleep(5000);
+        }
+
+        [When(@"I search the Nutrional Panel by Name Testdata TwoZeroTwo")]
+        public void WhenISearchTheNutrionalPanelByNameTestdataTwoZeroTwo()
+        {
+            string NutritionalName = homePage.getConfiguration("TestData.json", "NutritionalName2.0.2");
+            scaleConfigurationPage.NutrionalPanelNam2(NutritionalName);
+            Thread.Sleep(3000);
+        }
+
+        [When(@"I search the second Nutrional Panel by Name Testdata TwoZeroTwo")]
+        public void WhenISearchTheSecondNutrionalPanelByNameTestdataTwoZeroTwo()
+        {
+            Thread.Sleep(3000);
+            string NutritionalName = homePage.getConfiguration("TestData.json", "SecondNutritionalName2.0.2");
+            scaleConfigurationPage.NutrionalPanelNam2(NutritionalName);
+            Thread.Sleep(3000);
+        }
+
+        [Then(@"Click on second Nutritional Element dropdown Testdata TwoZeroTwo")]
+        public void ThenClickOnSecondNutritionalElementDropdownTestdataTwoZeroTwo()
+        {
+            string NutritionalName = homePage.getConfiguration("TestData.json", "SecondNonNutritionalValueDropdwon2.0.2");
+            scaleConfigurationPage.ClickonNutritionalElementtDropdown(NutritionalName);
+            Thread.Sleep(5000);
+        }
+
+        [When(@"Enter the value in MeasurementsUnit g")]
+        public void WhenEnterTheValueInMeasurementsUnitG()
+        {
+            string unit = homePage.getConfiguration("TestData.json", "SecondMeasureunit2.0.2");
+            scaleConfigurationPage.SelectMeasurementDropdown(unit);
+            Thread.Sleep(5000);
+        }
+        [Then(@"Enter Value in second Mask Field")]
+        public void ThenEnterValueInSecondMaskField()
+        {
+            string valueinmask = homePage.getConfiguration("TestData.json", "SecondMaskFieldValue2.0.2");
+            scaleConfigurationPage.EnterValueinMaskfield(valueinmask);
+            Thread.Sleep(5000);
+        }
+        [Then(@"click on save and close button Nutritional Panel Element")]
+        public void ThenClickOnSaveAndCloseButtonNutritionalPanelElement()
+        {
+            scaleConfigurationPage.ClickonSaveclass();
+            scaleConfigurationPage.SaveAndCloseNutriPanelElement();
+        }
+
+        [When(@"Enter TareCode and Name for TwoZeroTwo")]
+        public void WhenEnterTareCodeAndNameForTwoZeroTwo()
+        {
+            string TareCode = homePage.getConfiguration("TestData.json", "TareCode2.0.2");
+            string TareName = homePage.getConfiguration("TestData.json", "TareName2.0.2");
+            string TareValue = homePage.getConfiguration("TestData.json", "TareValue2.0.2");
+
+            scaleConfigurationPage.EnterTaretCodeNameValue(TareCode, TareName, TareValue);
+            Thread.Sleep(5000);
+        }
+
+        [When(@"Enter PresetMessageCode Name & List for TwoZeroTwo")]
+        public void WhenEnterPresetMessageCodeNameListForTwoZeroTwo()
+        {
+            string PresetCode = homePage.getConfiguration("TestData.json", "PresetCode2.0.2");
+            string PresetMessage = homePage.getConfiguration("TestData.json", "PresetMessage2.0.2");
+            scaleConfigurationPage.EnterPresetCodeNameValue(PresetCode, PresetMessage);
+            scaleConfigurationPage.EnterPresetListValue();
+            Thread.Sleep(5000);
+        }
 
 
     }

@@ -59,11 +59,29 @@
 
   "FontCode2.0.2": "11",
   "Fontname2.0.2": "T Popcorn",
+  "SecondFontCode2.0.2": "12",
   "SecondFontname2.0.2": "KitKat Cake",
+
   "NutritionalCode2.0.2": "39",
-  "NutritionalName2.0.2": "FrenchFries",
+  "NutritionalName2.0.2": "French fries",
   "SecondNutritionalCode2.0.2": "27",
   "SecondNutritionalName2.0.2": "Coco cola",
-  "NewContentSymbol2.0.2": "KGTest"
+  "SecondNonNutritionalValueDropdwon2.0.2": "Sugar",
+  "SecondMeasureunit2.0.2": "g",
+  "SecondMaskFieldValue2.0.2": "71",
+
+  "ContentSymbolCode2.0.2": "18",
+  "ContentSymbol2.0.2": "KG",
+  "ContentSymbolDescrition2.0.2": "KiloGrams",
+
+  "NewContentSymbol2.0.2": "KGTest",
+
+  "TareCode2.0.2": "46",
+  "TareName2.0.2": "FriedRicePowder",
+  "TareValue2.0.2": "31",
+
+  "PresetCode2.0.2": "47",
+  "PresetMessage2.0.2": "Contains fat",
+  "PresetList2.0.2": "1,2,3"
 
 }
