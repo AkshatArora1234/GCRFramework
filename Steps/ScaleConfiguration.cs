@@ -41,9 +41,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
         public void WhenUserClicksOnTheLeftMenu()
         {
             //Adding new batch as PF should be associated with a batch
-            Thread.Sleep(2000);
+            Thread.Sleep(5000);
             newBatch.CreateBatch();
-            Thread.Sleep(2000);
+            Thread.Sleep(4000);
             scaleConfigurationPage.ClickLeftMenu();
         }
 
@@ -213,7 +213,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [Then(@"Click on Font Dropdown")]
         public void ClickOnFontDropDowns()
         {
-            string selectfont = homePage.getConfiguration("TestData.json", "NonNutritionalValue");
+            string selectfont = homePage.getConfiguration("TestData.json", "Fontname2.0");
             scaleConfigurationPage.ClickonFontDropdown(selectfont);
             Thread.Sleep(5000);
         }
@@ -327,7 +327,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         public void ThenCheckANewNutritionalPanelCanBeAddedToAnotherSection()
         {
             scaleConfigurationPage.ClickonAddSection();
-            string selectfont = homePage.getConfiguration("TestData.json", "NutritionalValue");
+            string selectfont = homePage.getConfiguration("TestData.json", "Fontname2.1");
             scaleConfigurationPage.ClickonFontDropdown2(selectfont);
             Thread.Sleep(5000);
             string Adddesc = homePage.getConfiguration("TestData.json", "NutritionalDesc");
@@ -454,7 +454,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
             configurationPage.PageNavigationToConfigPage();
             configurationPage.SearchContentSymbol("18");
             string ContentSymbol = homePage.getConfiguration("TestData.json", "NewContentSymbol2.0.2");
-            // configurationPage.EditContent(ContentSymbol);
+          configurationPage.EditContent(ContentSymbol);
         }
 
         [Then(@"Delete the second panel added from the configuration page")]
@@ -479,6 +479,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         {
             configurationPage.PageNavigationToScaleConfigPage();
             scaleConfigurationPage.TabPrintFormatClick();
+            Thread.Sleep(4000);
             scaleConfigurationPage.SearchPF("21");
             Thread.Sleep(3000);
             PublishthePF();
@@ -509,25 +510,24 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [When(@"Change the PF name to Popcorn, also uncheck '(.*)' only\.Take any nutritional font and uncheck '(.*)' and check '(.*)'\.")]
         public void WhenChangeThePFNameToPopcornAlsoUncheckOnly_TakeAnyNutritionalFontAndUncheckAndCheck_(string p0, string p1, string p2)
         {
-            
-            System.Threading.Thread.Sleep(2000);
+
+            System.Threading.Thread.Sleep(15000);
             scaleConfigurationPage.PFClear();
             string printFormat = homePage.getConfiguration("TestData.json", "PrintFormat2.3");
-            
-            scaleConfigurationPage.EditPrintFormatName(printFormat);
-            
-            System.Threading.Thread.Sleep(2000);
-            
-            
 
-            scaleConfigurationPage.ClickonAddSection();
-            string selectfont = homePage.getConfiguration("TestData.json", "NutritionalValue");
-            scaleConfigurationPage.ClickonFontDropdown(selectfont);
-            Thread.Sleep(5000);
-            string Adddesc = homePage.getConfiguration("TestData.json", "NutritionalDesc");
-            scaleConfigurationPage.AddDiscription(Adddesc);
-            Thread.Sleep(5000);
-            scaleConfigurationPage.FetchValueForNutritionalSection();
+            scaleConfigurationPage.EditPrintFormatName(printFormat);
+
+            System.Threading.Thread.Sleep(2000);
+
+            // Uncheck the Product Life
+            scaleConfigurationPage.CheckProductLife();
+
+            scaleConfigurationPage.ScalConfigurationClick();
+            //Click on Configuration Tab
+            scaleConfigurationPage.TabConfiGrationClick();
+            //take any nutritional Font UnCheck 'Nutritional' and check 'Enable copy'
+
+           
 
 
         }
@@ -567,6 +567,19 @@ namespace SpecFlow_MSTestFrameWork.Steps
         {
             
         }
+
+        [When(@"Click on Edit")]
+        public void WhenClickOnEdit()
+        {
+            scaleConfigurationPage.EditPopCorn1();
+        }
+
+        [When(@"click on buttonSave")]
+        public void WhenClickOnButtonSave()
+        {
+            scaleConfigurationPage.ButtonSaveClick();
+        }
+
 
 
 
