@@ -346,7 +346,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [When(@"user enter new PF code and name and Publish PF")]
         public void WhenUserEnterNewPFCodeAndNameAndPublishPF()
         {
-            string pfCode = homePage.getConfiguration("TestData.json", "PrintCode2.0");
+            string pfCode = homePage.getConfiguration("TestData.json", "PrintCode2.0.2");
             string pfName = homePage.getConfiguration("TestData.json", "ChangedPFName");
             scaleConfigurationPage.EnterCodeandName(pfCode, pfName);
             Thread.Sleep(8000);
