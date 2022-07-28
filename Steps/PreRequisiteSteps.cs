@@ -30,6 +30,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [When(@"User clicks on Font New Button")]
         public void UserClickonFontNewButton()
         {
+            Thread.Sleep(5000);
             scaleConfigurationPage.ClickFontNewButton();
         }
 
@@ -78,6 +79,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [When(@"User clicks on Nutritional Panel New Button")]
         public void UserClickonNutritionalPanelNewButton()
         {
+            Thread.Sleep(5000);
             scaleConfigurationPage.ClickNutritionalNewButton();
         }
 
@@ -229,6 +231,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [Then(@"click on save button")]
         public void ThenClickOnSaveButton()
         {
+            Thread.Sleep(3000);
             scaleConfigurationPage.ClickonSave();
         }
 
@@ -292,6 +295,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [Then(@"click the Nutritional Font as yes")]
         public void ThenClickTheNutritionalFontAsYes()
         {
+            Thread.Sleep(3000);
             configurationPage.EditNutrionalFont();
         }
 
@@ -310,8 +314,8 @@ namespace SpecFlow_MSTestFrameWork.Steps
         {
             string fontCode = homePage.getConfiguration("TestData.json", "SecondFontCode2.0.2");
             string fontName = homePage.getConfiguration("TestData.json", "SecondFontname2.0.2");
-            scaleConfigurationPage.EnterFontCodeandName(fontCode, fontName);
             Thread.Sleep(5000);
+            scaleConfigurationPage.EnterFontCodeandName(fontCode, fontName);
         }
 
 

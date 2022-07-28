@@ -22,85 +22,49 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Driver = driver;
         }
 
-        IWebElement SideMenu => Driver.FindElement(By.XPath("//div[@class='SideMenuWrapper SideMenuWrapperSmall']"));
         IWebElement Searchbar => Driver.FindElement(By.XPath("//input[@id='search-text']"));
-        IWebElement ElementClick => Driver.FindElement(By.XPath("//span/strong[text()='Item Maintenance in HQ mode']"));
-        IWebElement NewItembutton => Driver.FindElement(By.XPath("(//span[text()='New'])[7]"));
-
+        IWebElement NewItembutton => Driver.FindElement(By.XPath("(//span[text()='New'])[6]"));
         IWebElement FontNewButton => Driver.FindElement(By.XPath("(//span[text()='New'])[1]"));
-
         IWebElement TareNewButton => Driver.FindElement(By.XPath("(//span[text()='New'])[5]"));
-
         IWebElement PresetNewButton => Driver.FindElement(By.XPath("(//span[text()='New'])[4]"));
-
         IWebElement ContentNewButton => Driver.FindElement(By.XPath("(//span[text()='New'])[2]"));
-
-
-        IWebElement NutritionalPanel => Driver.FindElement(By.XPath("(//span[text()='New'])[6]"));
-
+        IWebElement NutritionalPanel => Driver.FindElement(By.XPath("(//span[text()='New'])[5]"));
         IWebElement LeftMenu => Driver.FindElement(By.XPath("//*[@class='SideMenuWrapper SideMenuWrapperSmall']//*[@class='fa fa-bars N_P_A']"));
         IWebElement ScaleConfigurationMenu => Driver.FindElement(By.XPath("//span/strong[text()='Scale Configuration']"));
         IWebElement ElementSelectFromTable => Driver.FindElement(By.XPath(" //*[@id='gridSCALEPF']/div/div[6]/div/div/div[1]/div/table/tbody/tr[last()-1]/td[1]"));
         IWebElement EnterCode => Driver.FindElement(By.XPath("(//*[@name='pFCode'])"));
-
         IWebElement EnterFontCode => Driver.FindElement(By.XPath("//*[@name='scaleFontCode']"));
-
         IWebElement EnterTareCode => Driver.FindElement(By.XPath("//*[@name='tareCode']"));
-
         IWebElement EnterContenteCode => Driver.FindElement(By.XPath("//*[@name='symbolCode']"));
-
         IWebElement EnterContentName => Driver.FindElement(By.XPath("//*[@name='symbolName']"));
-
         IWebElement EnterContentValue => Driver.FindElement(By.XPath("//*[@name='scaleFontName']"));
-
         IWebElement EnterPresetCode => Driver.FindElement(By.XPath("//*[@name='scalePresetMessageCode']"));
-
         IWebElement EnterPresetMessage => Driver.FindElement(By.XPath("//*[@name='scalePresetMessage']"));
-
         IWebElement EnterTareName => Driver.FindElement(By.XPath("//*[@name='tareName']"));
-
         IWebElement EnterTareValue => Driver.FindElement(By.XPath("//*[@name='tareValue']"));
-
         IWebElement EnterNutritionalCode => Driver.FindElement(By.XPath("//*[@name='panelCode']"));
-
         IWebElement EnterNutritionalPrintFormat => Driver.FindElement(By.XPath("//*[@name='panelName']"));
-
-
         IWebElement EnterFontPrintFormat => Driver.FindElement(By.XPath("//*[@name='scaleFontName']"));
-
         IWebElement EnterPrintFormat => Driver.FindElement(By.XPath("(//*[@name='pFName'])"));
-
         IWebElement Save => Driver.FindElement(By.XPath("//button[@class='button-save ng-scope']"));
-
         IWebElement Savenew => Driver.FindElement(By.XPath("//*[@class='button-save']"));
         IWebElement Close => Driver.FindElement(By.XPath("//button[@ng-click='ctrl.onCancel()']"));
-
         IWebElement ClickEdit => Driver.FindElement(By.XPath("(//*[contains(text(),'OpenSansBiscuits')])[1]"));
-
         IWebElement CheckProductlife => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasProductLife']"));
         IWebElement CheckTare => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasTare']"));
-
         IWebElement CheckContent => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasContent']"));
-
         IWebElement CheckPresetmessages => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasPresetMessage']"));
-
         IWebElement CheckPrintdateformat => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasPackedTime']"));
-
         IWebElement CheckHasContentSymbol => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasContentSymbol']"));
-
         IWebElement AddSection => Driver.FindElement(By.XPath("(//span[text()='Add Section'])[1]"));
-
         private CustomControls EnterFontValue => new CustomControls(Driver, By.XPath("//select[@ng-model='section.scaleFontId']"));
-
         private CustomControls NutritionalEmenetDropDownValue => new CustomControls(Driver, By.Id("nutritionalElementName"));
-
         private CustomControls MeasurmentDropDown => new CustomControls(Driver, By.XPath("//select[@name='nutritionalMeasurementsUnit']"));
         IWebElement AddDesc => Driver.FindElement(By.XPath("//input[@ng-model='section.sectionDescription']"));
         IWebElement ClickStore => Driver.FindElement(By.XPath("//*[@ng-disabled='selectDisabled']"));
         IWebElement PublishPF => Driver.FindElement(By.XPath("(//i[@ng-click='ctrl.actions.publishPrintFormat(row.data)'])[1]"));
         IWebElement DeletePF => Driver.FindElement(By.XPath("(//i[@ng-click='ctrl.actions.deletePrintFormat(row.data)'])[1]"));
-        private CustomControls NutrionalTemplateDropdown => new CustomControls(Driver, By.XPath("//select[@name='nutritionalTemplateName-10020']"));
-
+        private CustomControls NutrionalTemplateDropdown => new CustomControls(Driver, By.XPath("(//select[@ng-model='section.scaleNPanelId'])[2]"));
         private CustomControls NutrionalTemplateDropdown2 => new CustomControls(Driver, By.XPath("//select[@name='nutritionalTemplateName-10021']"));
         private CustomControls NutrionalTemplateDropdown1 => new CustomControls(Driver, By.XPath("//select[@ng-model='section.scaleNPanelId']"));
         IWebElement SelectStore => Driver.FindElement(By.XPath("//*[@class='checkboxInput']"));
@@ -111,7 +75,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement TabConfigration => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[1]"));
         IWebElement ClickEditNEWPF => Driver.FindElement(By.XPath("(//*[contains(text(),'OpenSansBiscuits1')])"));
         IWebElement ClickEditNutritionalPanel => Driver.FindElement(By.XPath("(//*[contains(text(),'ChocoCream')])"));   
-        IWebElement ClickEditNutritionalPanelTwoZeroOne => Driver.FindElement(By.XPath("(//*[contains(text(),'French fries')])"));
+        IWebElement ClickEditNutritionalPanelTwoZeroOne => Driver.FindElement(By.XPath("//*[@id='gridSCALENP']/div/div[6]/div/div/div[1]/div/table/tbody/tr[last()-1]/td[2]"));
         IWebElement Manadatory => Driver.FindElement(By.XPath("(//input[@ng-model='section.isMandatory'])[1]"));
         IWebElement FixedWidth => Driver.FindElement(By.XPath("(//input[@ng-model='section.isFixedWidth'])[1]"));
         IWebElement Row => Driver.FindElement(By.XPath("//input[@name='rows--14']"));
@@ -125,7 +89,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement Support_Basic_Mode => Driver.FindElement(By.XPath("//input[@ng-model='section.hasBasicMode']"));
         IWebElement HeaderRows => Driver.FindElement(By.XPath("//input[@id='header--rows--10020']"));
         IWebElement TableRows => Driver.FindElement(By.XPath(" //input[@id='table--rows--10020']"));
-        IWebElement SearchCode => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[20]"));
+        IWebElement SearchCode => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[18]"));
         IWebElement ChangeCode => Driver.FindElement(By.Id("printFormatCode"));
         IWebElement ClickEditNice => Driver.FindElement(By.XPath("(//*[contains(text(),'NiceBiscuits')])[1]"));
         IWebElement PrintFormatName => Driver.FindElement(By.XPath("//*[@name='printFormatName']"));
@@ -165,7 +129,6 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         public void ClickPresetNewButton() => PresetNewButton.Click();
         public void ClickContentSymbolNewButton() => ContentNewButton.Click();
         public void FetchValueForNutritionalSection(string text) => NutrionalTemplateDropdown.SelectByText(text);
-
         public void FetchValueForNutritionalSection5(string text) => NutrionalTemplateDropdown2.SelectByText(text);
         public void FetchValueForNutritionalSection1(string text) => NutrionalTemplateDropdown1.SelectByText(text);
         public void ClickNutritionalNewButton() => NutritionalPanel.Click();
@@ -173,6 +136,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         public void NutrionalPanelNam2(string nutritional)
         {
             Thread.Sleep(5000);
+            NutrionalPanelName.Clear();
             NutrionalPanelName.SendKeys(nutritional);
         }
         public void EditNutritionalPanel()

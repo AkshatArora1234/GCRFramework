@@ -138,10 +138,21 @@ Scenario: Publish PF existing with same name as in store
 	And add the PF and ContentSymbol 
 	And Save item
 	Then navigate to the configuration page to edit the content symbol assigned to item
-	And Delete the second panel added from the configuration page
 	And Verify that the change is reflected in Item's scale tab
+	And Delete the second panel added from the configuration page
 	And Publish the PF to a second store where PF exists with same name
-    
+    #Testdata update to actual one
+	And navigate back to configuration page to change the contentSymbol back
+	When User clicks on Nutritional Panel New Button
+	When Enter CodeName and Nutritional Panel for second Testdata TwoZeroTwo
+	Then click on save button
+	When I search the second Nutrional Panel by Name Testdata TwoZeroTwo
+	Then Click on Edit Button NutritionalPanel TwoZeroOne
+	Then Click on the New Button
+	Then Click on second Nutritional Element dropdown Testdata TwoZeroTwo
+	When Enter the value in MeasurementsUnit g
+	Then Enter Value in second Mask Field
+	Then click on save and close button Nutritional Panel Element
 
     
 

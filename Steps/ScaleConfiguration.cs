@@ -488,14 +488,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
             configurationPage.PageNavigationToConfigPage();
             configurationPage.SearchContentSymbol("18");
             string ContentSymbol = homePage.getConfiguration("TestData.json", "NewContentSymbol2.0.2");
-          // configurationPage.EditContent(ContentSymbol);
-        }
-
-        [Then(@"Delete the second panel added from the configuration page")]
-        public void ThenDeleteTheSecondPanelAddedFromTheConfigurationPage()
-        {
-            // configurationPage.NutriPanelSearch("27");
-            // configurationPage.DeleteNutrionalPanel();
+            configurationPage.EditContent(ContentSymbol);
         }
 
         [Then(@"Verify that the change is reflected in Item's scale tab")]
@@ -508,6 +501,18 @@ namespace SpecFlow_MSTestFrameWork.Steps
             columnChooser.AssertContentsymbol();
         }
 
+        [Then(@"Delete the second panel added from the configuration page")]
+        public void ThenDeleteTheSecondPanelAddedFromTheConfigurationPage()
+        {
+             Thread.Sleep(5000);
+            configurationPage.PageNavigationToScaleConfigPage();
+            configurationPage.PageNavigationToConfigPage();
+            Thread.Sleep(5000);
+            configurationPage.NutriPanelSearch("27");
+            configurationPage.DeleteNutrionalPanel();
+        }
+
+       
         [Then(@"Publish the PF to a second store where PF exists with same name")]
         public void ThenPublishThePFToASecondStoreWherePFExistsWithSameName()
         {
@@ -519,6 +524,16 @@ namespace SpecFlow_MSTestFrameWork.Steps
             PublishthePF();
             Thread.Sleep(3000);
             SelectStore();
+        }
+
+        [Then(@"navigate back to configuration page to change the contentSymbol back")]
+        public void ThenNavigateBackToConfigurationPageToChangeTheContentSymbolBack()
+        {
+            Thread.Sleep(3000);
+            configurationPage.PageNavigationToConfigPage();
+            configurationPage.SearchContentSymbol("18");
+            string ContentSymbol = homePage.getConfiguration("TestData.json", "ContentSymbol2.0.2");
+            configurationPage.EditContent(ContentSymbol);
         }
 
         //Step Definitions TC2

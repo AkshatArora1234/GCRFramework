@@ -19,7 +19,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             homePage = new HomePage(driver);
         }
 
-        IWebElement ShowColumnChooser => Driver.FindElement(By.XPath("(//div[@aria-label='Show Column Chooser'])[8]"));
+        IWebElement ShowColumnChooser => Driver.FindElement(By.XPath("(//div[@aria-label='Show Column Chooser'])[7]"));
         IWebElement Search => Driver.FindElement(By.XPath("//input[@aria-label='Search']"));
         IWebElement DDFrom => Driver.FindElement(By.XPath("//div[text()='Scale Item']"));
         IWebElement DDTo => Driver.FindElement(By.XPath("//*[@id='gridITEMHQ']/div/div[5]/div/table/tbody/tr[1]"));
@@ -38,6 +38,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         {
             Actions actions = new Actions(Driver);
             string scaleColumn = homePage.getConfiguration("TestData.json", "ColumnName");
+            Thread.Sleep(3000);
             ShowColumnChooser.Click();
             Search.SendKeys(scaleColumn);
             actions.DragAndDrop(DDFrom, DDTo).Perform();
@@ -67,6 +68,9 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         {
             Thread.Sleep(5000);
             PFDropDown.SelectType("Popcorn");
+            Actions actions = new Actions(Driver);
+            actions.MoveToElement((IWebElement)PFDropDownValue);
+            actions.Perform();
             PFDropDownValue.Click();
         }
 
@@ -88,9 +92,9 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         public void AssertContentsymbol()
         {
             string ContentSymbol = homePage.getConfiguration("TestData.json", "NewContentSymbol2.0.2");
+            Thread.Sleep(6000);
             SelectElement oSelection = new SelectElement(Driver.FindElement(By.XPath("//select[@name='contentSymbol']")));
             string element = oSelection.SelectedOption.Text;
-            Thread.Sleep(6000);
             Assert.AreEqual(element,ContentSymbol);        
         }
     }

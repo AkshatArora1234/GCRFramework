@@ -569,13 +569,46 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("navigate to the configuration page to edit the content symbol assigned to item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 141
- testRunner.And("Delete the second panel added from the configuration page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Verify that the change is reflected in Item\'s scale tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 142
- testRunner.And("Verify that the change is reflected in Item\'s scale tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Delete the second panel added from the configuration page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 143
  testRunner.And("Publish the PF to a second store where PF exists with same name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 145
+ testRunner.And("navigate back to configuration page to change the contentSymbol back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 146
+ testRunner.When("User clicks on Nutritional Panel New Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 147
+ testRunner.When("Enter CodeName and Nutritional Panel for second Testdata TwoZeroTwo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 148
+ testRunner.Then("click on save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 149
+ testRunner.When("I search the second Nutrional Panel by Name Testdata TwoZeroTwo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 150
+ testRunner.Then("Click on Edit Button NutritionalPanel TwoZeroOne", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 151
+ testRunner.Then("Click on the New Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 152
+ testRunner.Then("Click on second Nutritional Element dropdown Testdata TwoZeroTwo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 153
+ testRunner.When("Enter the value in MeasurementsUnit g", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 154
+ testRunner.Then("Enter Value in second Mask Field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 155
+ testRunner.Then("click on save and close button Nutritional Panel Element", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

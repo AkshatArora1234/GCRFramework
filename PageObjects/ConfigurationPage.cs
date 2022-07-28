@@ -25,10 +25,11 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement EditContentSymbol => Driver.FindElement(By.XPath("(//div[@ng-click='ctrl.toggleEditMode(false)'])[2]"));
         IWebElement EditFont => Driver.FindElement(By.XPath("(//div[@ng-click='ctrl.toggleEditMode(false)'])[1]"));
         IWebElement NewContentSymbolName => Driver.FindElement(By.XPath("//*[@id='gridCONTSYM']/div/div[6]/div/div/div[1]/div/table/tbody/tr[1]/td[2]"));
+        IWebElement ClearContentSymbolName => Driver.FindElement(By.XPath("//*[@id='gridCONTSYM']/div/div[6]/div/div/div[1]/div/table/tbody/tr[1]/td[2]/div/div/div[1]/input"));
         private CustomControls NewContentSymbolNameEdit => new CustomControls(Driver, By.XPath("//*[@id='gridCONTSYM']/div/div[6]/div/div/div[1]/div/table/tbody/tr[1]/td[2]/div/div/div[1]/input"));
         IWebElement ContentSymbolSave => Driver.FindElement(By.XPath("(//span[text()='Save'])[1]"));
         IWebElement ContentSymbolSaveYes => Driver.FindElement(By.Id("submitButton"));
-        IWebElement NutriSearch => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[16]"));
+        IWebElement NutriSearch => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[15]"));
         IWebElement DeleteNutriPanel => Driver.FindElement(By.XPath("//*[@id='gridSCALENP']/div/div[6]/div[1]/div/div/div/table/tbody/tr[1]/td/div/div/div[@class='action-delete ng-scope']"));
         IWebElement DeleteNutriYes => Driver.FindElement(By.Id("submitButton"));
         IWebElement NutriDeletemessage => Driver.FindElement(By.XPath("//p[@class='ng-binding']"));
@@ -46,12 +47,17 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         public void FontEditClick() => EditFont.Click();
         public void EditContent(string text)
         {
-            Thread.Sleep(3000);
             EditContentSymbol.Click();
+            Thread.Sleep(3000);
             NewContentSymbolName.Click();
+            ClearContentSymbolName.Clear();
+            Thread.Sleep(5000);
+            scaleConfigurationPage.TabPrintFormatClick();
+            scaleConfigurationPage.TabConfiGrationClick();
             NewContentSymbolNameEdit.FillUsingJavascipt(text);
             Actions action = new Actions(Driver);
             action.SendKeys(Keys.Enter);
+            action.Perform();
             scaleConfigurationPage.TabPrintFormatClick();
             scaleConfigurationPage.TabConfiGrationClick();
             ContentSymbolSave.Click();
