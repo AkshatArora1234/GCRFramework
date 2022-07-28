@@ -392,12 +392,34 @@ namespace SpecFlow_MSTestFrameWork.Steps
         {
             string selectfont = homePage.getConfiguration("TestData.json", "Fontname2.0.2");
             scaleConfigurationPage.ClickonFontDropdown(selectfont);
-           // Thread.Sleep(5000);
+            Thread.Sleep(5000);
             string Adddesc = homePage.getConfiguration("TestData.json", "NutritionalDesc");
             scaleConfigurationPage.AddDiscription(Adddesc);
-           // Thread.Sleep(5000);
+            Thread.Sleep(5000);
             string NutriTemplate = homePage.getConfiguration("TestData.json", "NutritionalName2.0.2");
             scaleConfigurationPage.FetchValueForNutritionalSection1(NutriTemplate);
+        }
+
+        [Then(@"Change Nutritional to Non Nutritional")]
+        public void ChangeNutritionaltononnutritional()
+        {
+
+            string selectfont = homePage.getConfiguration("TestData.json", "Fontname2.0");
+            scaleConfigurationPage.ClickonFontDropdown2(selectfont);
+            Thread.Sleep(5000);
+            string Adddesc = homePage.getConfiguration("TestData.json", "NutritionalDesc");
+            scaleConfigurationPage.AddDiscription2(Adddesc);
+            Thread.Sleep(5000);
+
+        }
+
+        [When(@"Clear the PrintformatName")]
+        public void ClearThePrintFormatName()
+        {
+
+
+            scaleConfigurationPage.ClearSearchBox();
+            System.Threading.Thread.Sleep(5000);
         }
 
         [Then(@"Add another new nutritional Panel to another section")]
@@ -412,6 +434,20 @@ namespace SpecFlow_MSTestFrameWork.Steps
            // Thread.Sleep(5000);
             string NutriTemplate = homePage.getConfiguration("TestData.json", "SecondNutritionalName2.0.2");
             scaleConfigurationPage.FetchValueForNutritionalSection(NutriTemplate);
+        }
+
+        [Then(@"Add another new nutritional Panel to another section latest")]
+        public void ThenAddAnotherNewNutritionalPanelToAnotherSectionLatest()
+        {
+            ClickonAddSections();
+            string selectfont = homePage.getConfiguration("TestData.json", "SecondFontname2.0.2");
+            scaleConfigurationPage.ClickonFontDropdown2(selectfont);
+            //  Thread.Sleep(5000);
+            string Adddesc = homePage.getConfiguration("TestData.json", "NutritionalDesc");
+            scaleConfigurationPage.AddDiscription2(Adddesc);
+            // Thread.Sleep(5000);
+            string NutriTemplate = homePage.getConfiguration("TestData.json", "SecondNutritionalName2.0.2");
+            scaleConfigurationPage.FetchValueForNutritionalSection5(NutriTemplate);
         }
 
         [Then(@"Save and close the PF")]
@@ -497,6 +533,15 @@ namespace SpecFlow_MSTestFrameWork.Steps
 
         }
 
+        [When(@"Enter the Value of Print Name Nicebiscits")]
+        public void EnterValueofPrintNameNiceBiscuits()
+        {
+
+            string printFormat = homePage.getConfiguration("TestData.json", "PrintFormat2.2");
+            scaleConfigurationPage.SeachPFname(printFormat);
+            System.Threading.Thread.Sleep(5000);
+        }
+
         [When(@"Click on Edit Button")]
         public void WhenClickOnEditButton()
         {
@@ -520,10 +565,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
             // Uncheck the Product Life
             scaleConfigurationPage.CheckProductLife();
 
-            scaleConfigurationPage.ScalConfigurationClick();
-            //Click on Configuration Tab
-            scaleConfigurationPage.TabConfiGrationClick();
-            //take any nutritional Font UnCheck 'Nutritional' and check 'Enable copy'
+
 
            
 
@@ -539,7 +581,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [When(@"User Deletes the font added to PF")]
         public void WhenUserDeletesTheFontAddedToPF()
         {
-            
+            scaleConfigurationPage.DeleteFont();
         }
 
         [Then(@"Verifies the Toast is displayed")]
@@ -576,6 +618,20 @@ namespace SpecFlow_MSTestFrameWork.Steps
         public void WhenClickOnButtonSave()
         {
             scaleConfigurationPage.ButtonSaveClick();
+        }
+
+        [When(@"i search the Font by name")]
+        public void WhenISearchFontByName()
+        {
+            string NutritionalPanelName = homePage.getConfiguration("TestData.json", "Fontname2.1");
+            scaleConfigurationPage.FontName(NutritionalPanelName);
+            Thread.Sleep(3000);
+        }
+
+        [When(@"User Verify the font message")]
+        public void UserVerifythefontmessage()
+        {
+            scaleConfigurationPage.Verifymessage();
         }
 
 

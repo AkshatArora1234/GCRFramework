@@ -99,7 +99,9 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement ClickStore => Driver.FindElement(By.XPath("//*[@ng-disabled='selectDisabled']"));
         IWebElement PublishPF => Driver.FindElement(By.XPath("(//i[@ng-click='ctrl.actions.publishPrintFormat(row.data)'])[1]"));
         IWebElement DeletePF => Driver.FindElement(By.XPath("(//i[@ng-click='ctrl.actions.deletePrintFormat(row.data)'])[1]"));
-        private CustomControls NutrionalTemplateDropdown => new CustomControls(Driver, By.XPath("(//select[@ng-model='section.scaleNPanelId'])[2]"));
+        private CustomControls NutrionalTemplateDropdown => new CustomControls(Driver, By.XPath("//select[@name='nutritionalTemplateName-10020']"));
+
+        private CustomControls NutrionalTemplateDropdown2 => new CustomControls(Driver, By.XPath("//select[@name='nutritionalTemplateName-10021']"));
         private CustomControls NutrionalTemplateDropdown1 => new CustomControls(Driver, By.XPath("//select[@ng-model='section.scaleNPanelId']"));
         IWebElement SelectStore => Driver.FindElement(By.XPath("//*[@class='checkboxInput']"));
         IWebElement Deletebutton => Driver.FindElement(By.Id("submitButton"));
@@ -137,7 +139,13 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement Option5 => Driver.FindElement(By.XPath("(//*[@ng-keydown='option.disabled || keyDownLink($event)'])[5]"));
         IWebElement SaveAndCloseNutriPanel => Driver.FindElement(By.XPath("//button[@class='button-saveandclose']"));
 
+        IWebElement Fontname => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[2]"));
 
+        IWebElement VerifyFontmessage => Driver.FindElement(By.XPath("//p[@class='ng-binding']"));
+
+        IWebElement Okbutton => Driver.FindElement(By.XPath("(//*[text()='OK'])[1]"));
+
+        IWebElement DeleteFont1 => Driver.FindElement(By.XPath("(//i[@ng-click='ctrl.actions.deleteFont(row.data)'])[1]"));
 
         public void ButtonSaveClick() => ButtonSave.Click();
         public void CheckProductLife() => CheckProductlife.Click();
@@ -157,6 +165,8 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         public void ClickPresetNewButton() => PresetNewButton.Click();
         public void ClickContentSymbolNewButton() => ContentNewButton.Click();
         public void FetchValueForNutritionalSection(string text) => NutrionalTemplateDropdown.SelectByText(text);
+
+        public void FetchValueForNutritionalSection5(string text) => NutrionalTemplateDropdown2.SelectByText(text);
         public void FetchValueForNutritionalSection1(string text) => NutrionalTemplateDropdown1.SelectByText(text);
         public void ClickNutritionalNewButton() => NutritionalPanel.Click();
 
@@ -405,6 +415,34 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         {
             Actions actions = new Actions(Driver);
             actions.DoubleClick(ClickEditPopCorn1).Perform();
+        }
+
+        public void ClearSearchBox()
+        {
+            Searchbox.Clear();
+        }
+
+        public void FontName(string nutritional)
+        {
+            Thread.Sleep(5000);
+            Fontname.SendKeys(nutritional);
+        }
+
+        public void Verifymessage()
+        {
+            Thread.Sleep(5000);
+            Assert.IsTrue(VerifyFontmessage.Displayed);
+            Okbutton.Click();
+
+        }
+
+        public void DeleteFont()
+        {
+            Actions action = new Actions(Driver);
+            action.Click(DeleteFont1);
+            action.Perform();
+            Thread.Sleep(3000);
+
         }
 
 

@@ -7,42 +7,50 @@ Scenario: Verify Print Format with Existing same code as Store
 	When enter valid '<username>', '<hqpassword>'
 	And Clicks on Log In button
 	#Then HQ homepage should be displayed
-	When user create a new batch
 	When User clicks on the Left Menu
 	Then menu should be displayed
 	When User enters Scale Configuration in the Search Box
 	Then Scale Configuration Item should be displayed on the Menu
 	When User Selects the Scale Configuration
-	Then Scale Configuration Page should be displayed
 	When User clicks on Tab Print Format
 	Then Print Format Page should be displayed
 	Then Click on the New Button
 	When User Enters the Code and PrintFormat
-	Then Font should get saved and a '<confirmationMsg>' should be displayed for the same
-	When user Looks Font table
-	And Click on Edit Button
+	When Enter the Value of Print Name Nicebiscits
+	When Click on Edit Button
 	When Check the required text boxes
+	Then Check the Content Symbol 
+	When Click on Add Section
+	Then Click on Font Dropdown
+	Then Add Desc to font
+	Then Add another new nutritional Panel to another section latest
+	Then Save the font with data
+	Then Close the font
+	Then Publish the PF
+	Then Select the Store
+	When Clear the PrintformatName
+	When Enter the Value of Print Name Nicebiscits
+	When Click on Edit Button
+	#When Enter the Value of Print Name Nicebiscits
+	#Then Font should get saved and a '<confirmationMsg>' should be displayed for the same
+
+	#When Check the required text boxes
 	When Change the PF name to Popcorn, also uncheck 'product life' only.Take any nutritional font and uncheck 'Nutritional' and check 'Enable copy'.
 	Then Check the Content Symbol 
-	And verify Content Symbol is automatically checked on checking Content
-	When User clicks on Tab Print Format
-	Then Print Format Page should be displayed
-	When Click on Edit
-	Then Print Format Page should be displayed
-	And verify user can Change non nutritional section to the nutritional by adding a nutritional font and description
-	When click on buttonSave
-	When User Deletes the font added to PF
-	Then Verifies the Toast is displayed 
-	And a message'Scale font <scale font name> is in use and cannot be deleted.' should be displayed
-
-	When User Pubilsh the PF to a Second Store where PF exists with the same Code
-	And Verify that at store, all the Tares, Content Symbols and Preset messages of HQ are published and the PF at store with same code is updated with values from HQ in Configuration.
-	#When Enter the Value of Print Name
-	When User clicks on Tab Print Format
-	Then Print Format Page should be displayed
+	#And verify Content Symbol is automatically checked on checking Content
+	Then verify user can Change non nutritional section to the nutritional by adding a nutritional font and description
+	Then Change Nutritional to Non Nutritional
+	Then Save the font with data
+	Then Close the font
+	When Clear the PrintformatName
 	When Searches for PrintFormat
-	Then Delete the PF
-	Then User is able to logout
+	When User clicks on Tab Config page
+	When i search the Font by name
+	When User Deletes the font added to PF
+	When User Verify the font message
+	When User clicks on Tab Print Format
+	Then Publish the PF
+	Then Select the Store
 
 
 

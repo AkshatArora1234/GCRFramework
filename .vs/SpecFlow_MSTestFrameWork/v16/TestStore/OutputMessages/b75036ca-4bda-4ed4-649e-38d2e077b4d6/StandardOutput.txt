@@ -1,0 +1,110 @@
+Setup
+Given user navigates to HQ application
+-> done: HQLoginSteps.GivenUserNavigatesToHQApplication() (13.8s)
+When enter valid '<username>', '<hqpassword>'
+-> done: HQLoginSteps.WhenEnterValid("<username>", "<hqpassword>") (0.4s)
+And Clicks on Log In button
+-> done: HQLoginSteps.WhenClicksOnLogInButton() (8.1s)
+When user create a new batch
+-> done: NewItemCreationSteps.WhenUserCreateANewBatch() (7.0s)
+When User clicks on the Left Menu
+-> done: ScaleConfiguration.WhenUserClicksOnTheLeftMenu() (8.2s)
+Then menu should be displayed
+-> done: ScaleConfiguration.ThenMenuShouldBeDisplayed() (0.0s)
+When User enters Scale Configuration in the Search Box
+-> done: ScaleConfiguration.WhenUserEntersScaleConfigurationInTheSearchBox() (0.5s)
+Then Scale Configuration Item should be displayed on the Menu
+-> done: ScaleConfiguration.ThenScaleConfigurationItemShouldBeDisplayedOnTheMenu() (1.1s)
+When User Selects the Scale Configuration
+-> done: ScaleConfiguration.WhenUserSelectsTheScaleConfiguration() (0.0s)
+Then Scale Configuration Page should be displayed
+-> done: ScaleConfiguration.ThenScaleConfigurationPageShouldBeDisplayed() (0.0s)
+When User clicks on Tab Print Format
+-> done: ScaleConfiguration.WhenUserClicksOnTabPrintFormat() (3.4s)
+Then Click on the New Button
+-> done: ScaleConfiguration.ClickonNewButton() (0.7s)
+When user enter new PF code and name and Publish PF
+-> done: ScaleConfiguration.WhenUserEnterNewPFCodeAndNameAndPublishPF() (82.8s)
+And user search and select the printformat code
+-> done: ScaleConfiguration.WhenUserSearchAndSelectThePrintformatCode() (6.5s)
+Then user change the PF code and update the checkboxes
+-> done: ScaleConfiguration.ThenUserChangeThePFCodeAndUpdateTheCheckboxes() (0.3s)
+And verify Content Symbol is automatically checked on checking Content
+-> done: ScaleConfiguration.ThenVerifyContentSymbolIsAutomaticallyCheckedOnCheckingContent() (0.1s)
+And verify user can Change non nutritional section to the nutritional by adding a nutritional font and description
+-> done: ScaleConfiguration.ThenVerifyUserCanChangeNonNutritionalSectionToTheNutritionalByAddingANutritionalFontAndDescription() (16.1s)
+And Add another new nutritional Panel to another section
+-> done: ScaleConfiguration.ThenAddAnotherNewNutritionalPanelToAnotherSection() (9.8s)
+And Save and close the PF
+-> done: ScaleConfiguration.ThenSaveAndCloseThePF() (0.6s)
+Then select a scale item
+-> error: element click intercepted: Element <div class="SideMenuWrapper SideMenuWrapperSmall" ng-click="ctrl.toggleMenu()" ng-show="ctrl.showMenu" style="">...</div> is not clickable at point (20, 306). Other element would receive the click: <div uib-modal-window="modal-window" class="modal fade ng-scope ng-isolate-scope in" role="dialog" index="0" animate="animate" ng-style="{'z-index': 1050 + $$topModalIndex*10, display: 'block'}" tabindex="-1" uib-modal-animation-class="fade" modal-in-class="in" modal-animation="true" style="z-index: 1050; display: block;">...</div>
+  (Session info: chrome=103.0.5060.134) (9.2s)
+And add the PF and ContentSymbol
+-> skipped because of previous errors
+And Save item
+-> skipped because of previous errors
+Then navigate to the configuration page to edit the content symbol assigned to item
+-> skipped because of previous errors
+And Delete the second panel added from the configuration page
+-> skipped because of previous errors
+And Verify that the change is reflected in Item's scale tab
+-> skipped because of previous errors
+And Publish the PF to a second store where PF exists with same name
+-> skipped because of previous errors
+
+
+TestContext Messages:
+Given user navigates to HQ application
+-> done: HQLoginSteps.GivenUserNavigatesToHQApplication() (13.8s)
+When enter valid '<username>', '<hqpassword>'
+-> done: HQLoginSteps.WhenEnterValid("<username>", "<hqpassword>") (0.4s)
+And Clicks on Log In button
+-> done: HQLoginSteps.WhenClicksOnLogInButton() (8.1s)
+When user create a new batch
+-> done: NewItemCreationSteps.WhenUserCreateANewBatch() (7.0s)
+When User clicks on the Left Menu
+-> done: ScaleConfiguration.WhenUserClicksOnTheLeftMenu() (8.2s)
+Then menu should be displayed
+-> done: ScaleConfiguration.ThenMenuShouldBeDisplayed() (0.0s)
+When User enters Scale Configuration in the Search Box
+-> done: ScaleConfiguration.WhenUserEntersScaleConfigurationInTheSearchBox() (0.5s)
+Then Scale Configuration Item should be displayed on the Menu
+-> done: ScaleConfiguration.ThenScaleConfigurationItemShouldBeDisplayedOnTheMenu() (1.1s)
+When User Selects the Scale Configuration
+-> done: ScaleConfiguration.WhenUserSelectsTheScaleConfiguration() (0.0s)
+Then Scale Configuration Page should be displayed
+-> done: ScaleConfiguration.ThenScaleConfigurationPageShouldBeDisplayed() (0.0s)
+When User clicks on Tab Print Format
+-> done: ScaleConfiguration.WhenUserClicksOnTabPrintFormat() (3.4s)
+Then Click on the New Button
+-> done: ScaleConfiguration.ClickonNewButton() (0.7s)
+When user enter new PF code and name and Publish PF
+-> done: ScaleConfiguration.WhenUserEnterNewPFCodeAndNameAndPublishPF() (82.8s)
+And user search and select the printformat code
+-> done: ScaleConfiguration.WhenUserSearchAndSelectThePrintformatCode() (6.5s)
+Then user change the PF code and update the checkboxes
+-> done: ScaleConfiguration.ThenUserChangeThePFCodeAndUpdateTheCheckboxes() (0.3s)
+And verify Content Symbol is automatically checked on checking Content
+-> done: ScaleConfiguration.ThenVerifyContentSymbolIsAutomaticallyCheckedOnCheckingContent() (0.1s)
+And verify user can Change non nutritional section to the nutritional by adding a nutritional font and description
+-> done: ScaleConfiguration.ThenVerifyUserCanChangeNonNutritionalSectionToTheNutritionalByAddingANutritionalFontAndDescription() (16.1s)
+And Add another new nutritional Panel to another section
+-> done: ScaleConfiguration.ThenAddAnotherNewNutritionalPanelToAnotherSection() (9.8s)
+And Save and close the PF
+-> done: ScaleConfiguration.ThenSaveAndCloseThePF() (0.6s)
+Then select a scale item
+-> error: element click intercepted: Element <div class="SideMenuWrapper SideMenuWrapperSmall" ng-click="ctrl.toggleMenu()" ng-show="ctrl.showMenu" style="">...</div> is not clickable at point (20, 306). Other element would receive the click: <div uib-modal-window="modal-window" class="modal fade ng-scope ng-isolate-scope in" role="dialog" index="0" animate="animate" ng-style="{'z-index': 1050 + $$topModalIndex*10, display: 'block'}" tabindex="-1" uib-modal-animation-class="fade" modal-in-class="in" modal-animation="true" style="z-index: 1050; display: block;">...</div>
+  (Session info: chrome=103.0.5060.134) (9.2s)
+And add the PF and ContentSymbol
+-> skipped because of previous errors
+And Save item
+-> skipped because of previous errors
+Then navigate to the configuration page to edit the content symbol assigned to item
+-> skipped because of previous errors
+And Delete the second panel added from the configuration page
+-> skipped because of previous errors
+And Verify that the change is reflected in Item's scale tab
+-> skipped because of previous errors
+And Publish the PF to a second store where PF exists with same name
+-> skipped because of previous errors

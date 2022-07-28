@@ -176,7 +176,7 @@ namespace SpecFlow_MSTestFrameWork.Hooks
             }
 
             //Logout
-            Thread.Sleep(2000);
+            Thread.Sleep(4000);
             ProfileIcon.Click();
             Thread.Sleep(2000);
             LogOut.Click();
