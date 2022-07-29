@@ -136,6 +136,14 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
+        [Then(@"Click on the New NutritionalPanel Element Button")]
+        public void ThenClickOnTheNewNutritionalPanelElementButton()
+        {
+            Thread.Sleep(5000);
+            scaleConfigurationPage.ClickNew();
+        }
+
+
         [Then(@"Click on Nutritional Element dropdown")]
         public void ThenClickOnNutritionalElementDropdown()
         {

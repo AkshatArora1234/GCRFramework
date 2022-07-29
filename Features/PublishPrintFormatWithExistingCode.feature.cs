@@ -596,7 +596,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("Click on Edit Button NutritionalPanel TwoZeroOne", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 151
- testRunner.Then("Click on the New Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Click on the New NutritionalPanel Element Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 152
  testRunner.Then("Click on second Nutritional Element dropdown Testdata TwoZeroTwo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -609,6 +609,9 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 155
  testRunner.Then("click on save and close button Nutritional Panel Element", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 156
+ testRunner.And("Navigate to PF tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

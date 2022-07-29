@@ -40,6 +40,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement FontSaveYes => Driver.FindElement(By.Id("submitButton"));
 
 
+
         public void PageNavigationToScaleConfigPage() => ScaleConfigurationTab.Click();
         public void PageNavigationToConfigPage() => ConfigurationTab.Click();
         public void SearchContentSymbol(string text) => ContentCodeSearch.SendKeys(text);

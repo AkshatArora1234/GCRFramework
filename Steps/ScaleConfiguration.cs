@@ -271,7 +271,6 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [When(@"Enter the Value of Print Name OpenSanBiscuit1")]
         public void EnterValueoOfpenSanBiscuit1()
         {
-
             string printFormat = homePage.getConfiguration("TestData.json", "PrintFormat3.0");
             scaleConfigurationPage.SeachPFname(printFormat);
             Thread.Sleep(5000);
@@ -447,7 +446,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.AddDiscription2(Adddesc);
             // Thread.Sleep(5000);
             string NutriTemplate = homePage.getConfiguration("TestData.json", "SecondNutritionalName2.0.2");
-            scaleConfigurationPage.FetchValueForNutritionalSection5(NutriTemplate);
+            scaleConfigurationPage.FetchValueForNutritionalSection1(NutriTemplate);
         }
 
         [Then(@"Save and close the PF")]
@@ -504,11 +503,14 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [Then(@"Delete the second panel added from the configuration page")]
         public void ThenDeleteTheSecondPanelAddedFromTheConfigurationPage()
         {
-             Thread.Sleep(5000);
+            Thread.Sleep(5000);
             configurationPage.PageNavigationToScaleConfigPage();
             configurationPage.PageNavigationToConfigPage();
-            Thread.Sleep(5000);
-            configurationPage.NutriPanelSearch("27");
+            Thread.Sleep(3000);
+            configurationPage.NutriPanelSearch("Coco cola");
+            configurationPage.PageNavigationToScaleConfigPage();
+            configurationPage.PageNavigationToConfigPage();
+            Thread.Sleep(3000);
             configurationPage.DeleteNutrionalPanel();
         }
 
@@ -516,9 +518,10 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [Then(@"Publish the PF to a second store where PF exists with same name")]
         public void ThenPublishThePFToASecondStoreWherePFExistsWithSameName()
         {
+            Thread.Sleep(3000);
             configurationPage.PageNavigationToScaleConfigPage();
             scaleConfigurationPage.TabPrintFormatClick();
-            Thread.Sleep(4000);
+            Thread.Sleep(5000);
             scaleConfigurationPage.SearchPF("21");
             Thread.Sleep(3000);
             PublishthePF();
@@ -535,6 +538,13 @@ namespace SpecFlow_MSTestFrameWork.Steps
             string ContentSymbol = homePage.getConfiguration("TestData.json", "ContentSymbol2.0.2");
             configurationPage.EditContent(ContentSymbol);
         }
+        [Then(@"Navigate to PF tab")]
+        public void ThenNavigateToPFTab()
+        {
+            Thread.Sleep(3000);
+            scaleConfigurationPage.TabPrintFormatClick();
+        }
+
 
         //Step Definitions TC2
         [When(@"User Enters the Code and PrintFormat")]

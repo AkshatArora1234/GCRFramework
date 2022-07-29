@@ -148,11 +148,12 @@ Scenario: Publish PF existing with same name as in store
 	Then click on save button
 	When I search the second Nutrional Panel by Name Testdata TwoZeroTwo
 	Then Click on Edit Button NutritionalPanel TwoZeroOne
-	Then Click on the New Button
+	Then Click on the New NutritionalPanel Element Button
 	Then Click on second Nutritional Element dropdown Testdata TwoZeroTwo
 	When Enter the value in MeasurementsUnit g
 	Then Enter Value in second Mask Field
 	Then click on save and close button Nutritional Panel Element
+	And Navigate to PF tab
 
     
 

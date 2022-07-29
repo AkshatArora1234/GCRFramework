@@ -1,15 +1,7 @@
-﻿using Microsoft.Extensions.Configuration;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
 using System.Threading;
-using OpenQA.Selenium.Support.UI;
 
 namespace SpecFlow_MSTestFrameWork.PageObjects
 {
@@ -24,6 +16,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         IWebElement Searchbar => Driver.FindElement(By.XPath("//input[@id='search-text']"));
         IWebElement NewItembutton => Driver.FindElement(By.XPath("(//span[text()='New'])[6]"));
+        IWebElement NewItem => Driver.FindElement(By.XPath("(//span[text()='New'])[7]"));
         IWebElement FontNewButton => Driver.FindElement(By.XPath("(//span[text()='New'])[1]"));
         IWebElement TareNewButton => Driver.FindElement(By.XPath("(//span[text()='New'])[5]"));
         IWebElement PresetNewButton => Driver.FindElement(By.XPath("(//span[text()='New'])[4]"));
@@ -31,7 +24,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement NutritionalPanel => Driver.FindElement(By.XPath("(//span[text()='New'])[5]"));
         IWebElement LeftMenu => Driver.FindElement(By.XPath("//*[@class='SideMenuWrapper SideMenuWrapperSmall']//*[@class='fa fa-bars N_P_A']"));
         IWebElement ScaleConfigurationMenu => Driver.FindElement(By.XPath("//span/strong[text()='Scale Configuration']"));
-        IWebElement ElementSelectFromTable => Driver.FindElement(By.XPath(" //*[@id='gridSCALEPF']/div/div[6]/div/div/div[1]/div/table/tbody/tr[last()-1]/td[1]"));
+        IWebElement ElementSelectFromTable => Driver.FindElement(By.XPath("//*[@id='gridSCALEPF']/div/div[6]/div/div/div[1]/div/table/tbody/tr[last()-1]/td[1]"));
         IWebElement EnterCode => Driver.FindElement(By.XPath("(//*[@name='pFCode'])"));
         IWebElement EnterFontCode => Driver.FindElement(By.XPath("//*[@name='scaleFontCode']"));
         IWebElement EnterTareCode => Driver.FindElement(By.XPath("//*[@name='tareCode']"));
@@ -65,12 +58,11 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement PublishPF => Driver.FindElement(By.XPath("(//i[@ng-click='ctrl.actions.publishPrintFormat(row.data)'])[1]"));
         IWebElement DeletePF => Driver.FindElement(By.XPath("(//i[@ng-click='ctrl.actions.deletePrintFormat(row.data)'])[1]"));
         private CustomControls NutrionalTemplateDropdown => new CustomControls(Driver, By.XPath("(//select[@ng-model='section.scaleNPanelId'])[2]"));
-        private CustomControls NutrionalTemplateDropdown2 => new CustomControls(Driver, By.XPath("//select[@name='nutritionalTemplateName-10021']"));
         private CustomControls NutrionalTemplateDropdown1 => new CustomControls(Driver, By.XPath("//select[@ng-model='section.scaleNPanelId']"));
         IWebElement SelectStore => Driver.FindElement(By.XPath("//*[@class='checkboxInput']"));
         IWebElement Deletebutton => Driver.FindElement(By.Id("submitButton"));
         IWebElement Clickok => Driver.FindElement(By.XPath("//*[text()='OK']"));
-        IWebElement Searchbox => Driver.FindElement(By.XPath("(//*[@class='dx-texteditor-input'])[19]"));
+        IWebElement Searchbox => Driver.FindElement(By.XPath("(//*[@class='dx-texteditor-input'])[17]"));
         IWebElement TabPrintFormat => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[2]"));
         IWebElement TabConfigration => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[1]"));
         IWebElement ClickEditNEWPF => Driver.FindElement(By.XPath("(//*[contains(text(),'OpenSansBiscuits1')])"));
@@ -87,13 +79,13 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement Characters_Font => Driver.FindElement(By.XPath("//input[@name='characters--3']"));
         private CustomControls EnterNutritionalFontValue => new CustomControls(Driver, By.XPath("(//select[@ng-model='section.scaleFontId'])[2]"));
         IWebElement Support_Basic_Mode => Driver.FindElement(By.XPath("//input[@ng-model='section.hasBasicMode']"));
-        IWebElement HeaderRows => Driver.FindElement(By.XPath("//input[@id='header--rows--10020']"));
-        IWebElement TableRows => Driver.FindElement(By.XPath(" //input[@id='table--rows--10020']"));
+        IWebElement HeaderRows => Driver.FindElement(By.XPath("(//input[@ng-model='ctrl.ngModel'])[3]"));
+        IWebElement TableRows => Driver.FindElement(By.XPath("(//input[@ng-model='ctrl.ngModel'])[4]"));
         IWebElement SearchCode => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[18]"));
         IWebElement ChangeCode => Driver.FindElement(By.Id("printFormatCode"));
         IWebElement ClickEditNice => Driver.FindElement(By.XPath("(//*[contains(text(),'NiceBiscuits')])[1]"));
         IWebElement PrintFormatName => Driver.FindElement(By.XPath("//*[@name='printFormatName']"));
-        IWebElement NutrionalPanelName => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[17]"));
+        IWebElement NutritionalPanelName => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[15]"));
         IWebElement EnterValueinMask => Driver.FindElement(By.XPath("//*[@name='nutritional-ele-mask']"));
         IWebElement ClickEditPopCorn1 => Driver.FindElement(By.XPath("//td[contains(text(),'Popcorn1')]"));
         IWebElement ButtonSave => Driver.FindElement(By.XPath("//*[@class='button-save ng-scope']"));
@@ -129,15 +121,26 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         public void ClickPresetNewButton() => PresetNewButton.Click();
         public void ClickContentSymbolNewButton() => ContentNewButton.Click();
         public void FetchValueForNutritionalSection(string text) => NutrionalTemplateDropdown.SelectByText(text);
-        public void FetchValueForNutritionalSection5(string text) => NutrionalTemplateDropdown2.SelectByText(text);
         public void FetchValueForNutritionalSection1(string text) => NutrionalTemplateDropdown1.SelectByText(text);
-        public void ClickNutritionalNewButton() => NutritionalPanel.Click();
+        public void ClickNutritionalNewButton()
+        {
+            Actions actions = new Actions(Driver);
+            TabPrintFormatClick();
+            TabConfiGrationClick();
+            Thread.Sleep(8000);
+            actions.MoveToElement((IWebElement)NutritionalPanel);
+            actions.Perform();
+            NutritionalPanel.Click();
+        }
 
         public void NutrionalPanelNam2(string nutritional)
         {
             Thread.Sleep(5000);
-            NutrionalPanelName.Clear();
-            NutrionalPanelName.SendKeys(nutritional);
+            Actions actions = new Actions(Driver);
+            actions.MoveToElement((IWebElement)NutritionalPanelName);
+            actions.Perform();
+            NutritionalPanelName.Clear();
+            NutritionalPanelName.SendKeys(nutritional);
         }
         public void EditNutritionalPanel()
         {
@@ -152,6 +155,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         }
 
         public void ClickNewButton() => NewItembutton.Click();
+        public void ClickNew() => NewItem.Click();
 
         public void EnterCodeandName(string code, string name)
         {
@@ -311,6 +315,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         public void ConfigureTheRowCharactersValues()
         {
+            Row.Clear();
             Row.SendKeys("2");
             Characters.Clear();
             Characters.SendKeys("2");
@@ -337,7 +342,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Thread.Sleep(5000);
         }
 
-        public void FetchValueForNutritionalSection() => NutrionalTemplateDropdown.SelectByText("ChocoCream");
+        public void FetchValueForNutritionalSection() => NutrionalTemplateDropdown1.SelectByText("ChocoCream");
 
         public void ClickSupportBasicMode()
         {
@@ -347,7 +352,12 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             TableRows.Clear();
             TableRows.SendKeys("6");
         }
-        public void SearchPF(string text) => SearchCode.SendKeys(text);
+        public void SearchPF(string text)
+        {
+            Thread.Sleep(5000);
+            SearchCode.SendKeys(text);
+        }
+        
         public void ChangePFCode(string code)
         {
             ChangeCode.Clear();
