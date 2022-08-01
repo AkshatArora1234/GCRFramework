@@ -485,6 +485,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [Then(@"navigate to the configuration page to edit the content symbol assigned to item")]
         public void ThenNavigateToTheConfigurationPageToEditTheContentSymbolAssignedToItem()
         {
+            Thread.Sleep(4000);
             configurationPage.PageNavigationToScaleConfigPage();
             configurationPage.PageNavigationToConfigPage();
             configurationPage.SearchContentSymbol("18");
@@ -538,6 +539,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
             configurationPage.PageNavigationToConfigPage();
             configurationPage.SearchContentSymbol("18");
             string ContentSymbol = homePage.getConfiguration("TestData.json", "ContentSymbol2.0.2");
+            Thread.Sleep(5000);
             configurationPage.EditContent(ContentSymbol);
         }
         [Then(@"Navigate to PF tab")]
