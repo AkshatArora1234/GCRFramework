@@ -452,7 +452,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [Then(@"Save and close the PF")]
         public void ThenSaveAndCloseThePF()
         {
+            Thread.Sleep(3000);
             scaleConfigurationPage.SavetheFontwithData();
+            Thread.Sleep(5000);
             scaleConfigurationPage.ClosePF();
         }
 
@@ -465,7 +467,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
             columnChooser.SelectScaleValue();
             Thread.Sleep(5000);
             columnChooser.SelectFirstScaleRecord();
-            Thread.Sleep(5000);
+            Thread.Sleep(10000);
             columnChooser.ClickScaleTabInItems();
         }
 

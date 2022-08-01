@@ -42,7 +42,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             ShowColumnChooser.Click();
             Search.SendKeys(scaleColumn);
             actions.DragAndDrop(DDFrom, DDTo).Perform();
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
             actions.DragAndDrop(DDFrom, DDTo).Perform();
             actions.Release();
         }
