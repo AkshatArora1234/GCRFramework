@@ -20,7 +20,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement LogOut => Driver.FindElement(By.XPath("//*[contains(text(),'Logout')]"));
         IWebElement submitbutton => Driver.FindElement(By.Id("submitButton"));
         // IWebElement ProfileName1 => Driver.FindElement(By.XPath("//span[text()='AutUser1 AutUser1']"));
-        IWebElement ProfileName2 => Driver.FindElement(By.XPath("//span[text()='AutUser2 AutUser2']"));
+        IWebElement ProfileName2 => Driver.FindElement(By.XPath("//span[text()='Automation Automation']"));
 
         public void EnterURL()
         {

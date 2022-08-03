@@ -6,6 +6,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Interactions;
+using OpenQA.Selenium.Support.UI;
 using SpecFlow_MSTestFrameWork.PageObjects;
 using System;
 using System.Threading;
@@ -162,28 +163,60 @@ namespace SpecFlow_MSTestFrameWork.Hooks
         IWebElement LogOut => _driverHelper.driver.FindElement(By.XPath("//*[contains(text(),'Logout')]"));
         IWebElement submitbutton => _driverHelper.driver.FindElement(By.Id("submitButton"));
 
+        [AfterStep]
+        public void AfterStep()
+        {
+            if (_scenarioContext.TestError != null)
+            {
+                if (_featureContext.FeatureInfo.Title.Equals("PublishPrintFormatWithExistingCode"))
+                {
+                    Actions action = new Actions(_driverHelper.driver);
+                    action.Click(DeletePF);
+                    action.Perform();
+                    Thread.Sleep(3000);
+                    Deletebutton.Click();
+                }
+
+                //Logout
+                _driverHelper.driver.Navigate().Refresh();
+                Thread.Sleep(4000);
+                ProfileIcon.Click();
+                Thread.Sleep(2000);
+                LogOut.Click();
+                submitbutton.Click();
+
+                //Quit Driver
+                _driverHelper.driver.Quit();
+            }
+        
+        }
+
+
         [AfterScenario]
         public void AfterScenario()
         {
-            //DeletePF
-            if (_featureContext.FeatureInfo.Title.Equals("PublishPrintFormatWithExistingCode"))
+            if (_scenarioContext.TestError == null)
             {
-                Actions action = new Actions(_driverHelper.driver);
-                action.Click(DeletePF);
-                action.Perform();
-                Thread.Sleep(3000);
-                Deletebutton.Click();
+                //DeletePF
+                if (_featureContext.FeatureInfo.Title.Equals("PublishPrintFormatWithExistingCode"))
+                {
+                    Actions action = new Actions(_driverHelper.driver);
+                    action.Click(DeletePF);
+                    action.Perform();
+                    Thread.Sleep(3000);
+                    Deletebutton.Click();
+                }
+
+                //Logout
+                Thread.Sleep(4000);
+                ProfileIcon.Click();
+                Thread.Sleep(2000);
+                LogOut.Click();
+                submitbutton.Click();
+
+                //Quit Driver
+                _driverHelper.driver.Quit();
             }
-
-            //Logout
-            Thread.Sleep(4000);
-            ProfileIcon.Click();
-            Thread.Sleep(2000);
-            LogOut.Click();
-            submitbutton.Click();
-
-            //Quit Driver
-            _driverHelper.driver.Quit();
         }
 
   

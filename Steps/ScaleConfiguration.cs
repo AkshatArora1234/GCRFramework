@@ -160,7 +160,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
             string printCode = homePage.getConfiguration("TestData.json", "PrintCode2.0");
             string printFormat = homePage.getConfiguration("TestData.json", "PrintFormat2.0");
             scaleConfigurationPage.EnterCodeandName(printCode, printFormat);
-            System.Threading.Thread.Sleep(5000);
+            Thread.Sleep(5000);
         }
 
         [When(@"Enter the Value of Print Name")]
@@ -169,7 +169,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
             
             string printFormat = homePage.getConfiguration("TestData.json", "PrintFormat2.0");
             scaleConfigurationPage.SeachPFname(printFormat);
-            System.Threading.Thread.Sleep(5000);
+            Thread.Sleep(5000);
         }
 
         [When(@"Searches for PrintFormat")]
@@ -177,7 +177,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         {
             string printFormat = homePage.getConfiguration("TestData.json", "PrintFormat2.3");
             scaleConfigurationPage.SeachPFname(printFormat);
-            System.Threading.Thread.Sleep(5000);
+            Thread.Sleep(5000);
         }
 
         [Then(@"Click on Edit Button")]
@@ -185,7 +185,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         {
 
             scaleConfigurationPage.EditCode();
-            System.Threading.Thread.Sleep(5000);
+            Thread.Sleep(5000);
         }
 
         [When(@"Check the required text boxes")]
