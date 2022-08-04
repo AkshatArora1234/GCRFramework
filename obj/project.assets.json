@@ -1730,6 +1730,12 @@
           "lib/netstandard2.1/WebDriver.dll": {}
         }
       },
+      "Selenium.WebDriver.ChromeDriver/104.0.5112.7900": {
+        "type": "package",
+        "build": {
+          "build/Selenium.WebDriver.ChromeDriver.targets": {}
+        }
+      },
       "SharpCompress/0.23.0": {
         "type": "package",
         "dependencies": {
@@ -5961,6 +5967,25 @@
         "lib/netstandard2.1/WebDriver.dll",
         "selenium.webdriver.4.3.0.nupkg.sha512",
         "selenium.webdriver.nuspec"
+      ]
+    },
+    "Selenium.WebDriver.ChromeDriver/104.0.5112.7900": {
+      "sha512": "vDH+7FqF4APZtvqyqtJ8XYTTh523EsUV88CpqW4d2xjxKjUp6ifpeLi9rDhnSuruDIoQDLJvRBZPI7UlcMTXOw==",
+      "type": "package",
+      "path": "selenium.webdriver.chromedriver/104.0.5112.7900",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "build/DefinePropertiesChromeDriver.targets",
+        "build/Selenium.WebDriver.ChromeDriver.targets",
+        "driver/linux64/chromedriver",
+        "driver/mac64/chromedriver",
+        "driver/mac64arm/chromedriver",
+        "driver/win32/chromedriver.exe",
+        "nupkg-icon.png",
+        "selenium.webdriver.chromedriver.104.0.5112.7900.nupkg.sha512",
+        "selenium.webdriver.chromedriver.nuspec"
       ]
     },
     "SharpCompress/0.23.0": {
@@ -11016,6 +11041,7 @@
       "Microsoft.SharePointOnline.CSOM >= 16.1.22518.12000",
       "Selenium.Support >= 4.3.0",
       "Selenium.WebDriver >= 4.3.0",
+      "Selenium.WebDriver.ChromeDriver >= 104.0.5112.7900",
       "SpecFlow.MsTest >= 3.9.22",
       "SpecFlow.Plus.LivingDocPlugin >= 3.9.57",
       "WebDriverManager >= 2.14.0"
@@ -11096,6 +11122,10 @@
           "Selenium.WebDriver": {
             "target": "Package",
             "version": "[4.3.0, )"
+          },
+          "Selenium.WebDriver.ChromeDriver": {
+            "target": "Package",
+            "version": "[104.0.5112.7900, )"
           },
           "SpecFlow.MsTest": {
             "target": "Package",
