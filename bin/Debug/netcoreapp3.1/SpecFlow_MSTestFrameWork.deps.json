@@ -16,6 +16,7 @@
           "Microsoft.SharePointOnline.CSOM": "16.1.22518.12000",
           "Selenium.Support": "4.3.0",
           "Selenium.WebDriver": "4.3.0",
+          "Selenium.WebDriver.ChromeDriver": "104.0.5112.7900",
           "SpecFlow.MsTest": "3.9.22",
           "SpecFlow.Plus.LivingDocPlugin": "3.9.57",
           "WebDriverManager": "2.14.0"
@@ -1508,6 +1509,7 @@
           }
         }
       },
+      "Selenium.WebDriver.ChromeDriver/104.0.5112.7900": {},
       "SharpCompress/0.23.0": {
         "dependencies": {
           "System.Text.Encoding.CodePages": "6.0.0"
@@ -3329,6 +3331,13 @@
       "sha512": "sha512-dDRbNrpzmII+ZnPLJF7ka2nygR/jnY0BfIl2rsyp1TJXQmr2ayv9tzq1ZBwqwRc1LkHC5zFAi1X3yboFWp0j+Q==",
       "path": "selenium.webdriver/4.3.0",
       "hashPath": "selenium.webdriver.4.3.0.nupkg.sha512"
+    },
+    "Selenium.WebDriver.ChromeDriver/104.0.5112.7900": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vDH+7FqF4APZtvqyqtJ8XYTTh523EsUV88CpqW4d2xjxKjUp6ifpeLi9rDhnSuruDIoQDLJvRBZPI7UlcMTXOw==",
+      "path": "selenium.webdriver.chromedriver/104.0.5112.7900",
+      "hashPath": "selenium.webdriver.chromedriver.104.0.5112.7900.nupkg.sha512"
     },
     "SharpCompress/0.23.0": {
       "type": "package",
