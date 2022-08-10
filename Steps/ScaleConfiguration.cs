@@ -335,7 +335,12 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [Then(@"Click Support Basic Mode Header and Table")]
         public void ClickSupportBasicModeHeaderandTable()
         {
-            scaleConfigurationPage.ClickSupportBasicMode();
+            string HR = homePage.getConfiguration("TestData.json", "HRows");
+            
+
+            string TR = homePage.getConfiguration("TestData.json", "TRows");
+            scaleConfigurationPage.ClickSupportBasicMode(HR, TR);
+            //  scaleConfigurationPage.ClickSupportBasicMode(string HRows);
             Thread.Sleep(3000);
         }
 
@@ -475,8 +480,13 @@ namespace SpecFlow_MSTestFrameWork.Steps
         public void ThenAddThePFAndContentSymbol()
         {
             columnChooser.SelectPFForItem();
-            columnChooser.AddContentSymbol("KG");
-            columnChooser.NutritionalData("10", "15");
+            string ContentSymbol = homePage.getConfiguration("TestData.json", "ContSymbol");
+            columnChooser.AddContentSymbol(ContentSymbol);
+            // columnChooser.AddContentSymbol("KG");
+
+            string a = homePage.getConfiguration("TestData.json", "a");
+            string b = homePage.getConfiguration("TestData.json", "b");
+            columnChooser.NutritionalData(a, b);
         }
 
         [Then(@"Save item")]
@@ -488,7 +498,10 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(4000);
             configurationPage.PageNavigationToScaleConfigPage();
             configurationPage.PageNavigationToConfigPage();
-            configurationPage.SearchContentSymbol("18");
+            // configurationPage.SearchContentSymbol("18");
+            string SearchContentSymbol = homePage.getConfiguration("TestData.json", "SrchContentSymbol");
+            configurationPage.SearchContentSymbol(SearchContentSymbol);
+
             string ContentSymbol = homePage.getConfiguration("TestData.json", "NewContentSymbol2.0.2");
             configurationPage.EditContent(ContentSymbol);
         }

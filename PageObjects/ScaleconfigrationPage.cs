@@ -344,13 +344,16 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         public void FetchValueForNutritionalSection() => NutrionalTemplateDropdown1.SelectByText("ChocoCream");
 
-        public void ClickSupportBasicMode()
+        public void ClickSupportBasicMode(string HRows, string TRows)
         {
             Support_Basic_Mode.Click();
             HeaderRows.Clear();
-            HeaderRows.SendKeys("4");
+
+            HeaderRows.SendKeys(HRows);
+
+
             TableRows.Clear();
-            TableRows.SendKeys("6");
+            TableRows.SendKeys(TRows);
         }
         public void SearchPF(string text)
         {

@@ -83,6 +83,16 @@
 
   "PresetCode2.0.2": "47",
   "PresetMessage2.0.2": "Contains fat",
-  "PresetList2.0.2": "1,2,3"
+  "PresetList2.0.2": "1,2,3",
+
+  //Test Data
+  "SrchContentSymbol": "18",
+  "ContSymbol": "KG",
+
+  "a": "10",
+  "b": "15",
+  "PFName": "21",
+  "HRows": "4",
+  "TRows": "6",
 
 }
