@@ -16,6 +16,8 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement Username => Driver.FindElement(By.XPath("//input[@id='userNameText']"));
         IWebElement Password => Driver.FindElement(By.XPath("//input[@name='password']"));
         IWebElement LogIn => Driver.FindElement(By.XPath("//span[text()='Log In']"));
+
+        IWebElement LogInSR => Driver.FindElement(By.XPath("//span[text()='Login']"));
         IWebElement ProfileIcon => Driver.FindElement(By.XPath("//button[@class='dropdown-toggle']"));
         IWebElement LogOut => Driver.FindElement(By.XPath("//*[contains(text(),'Logout')]"));
         IWebElement submitbutton => Driver.FindElement(By.Id("submitButton"));
@@ -38,6 +40,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         }
 
         public void ClickBtnSignIn() => LogIn.Click();
+        public void ClickSRBtnSignIn() => LogInSR.Click();
 
         public void UserVerification()
         {
