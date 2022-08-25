@@ -21,12 +21,18 @@ namespace SpecFlow_MSTestFrameWork.Steps
             configurationPage = new ConfigurationPage(_driverHelper.driver);
         }
 
+        /// <summary>
+        /// Click on Tab Config
+        /// </summary>
         [When(@"User clicks on Tab Config page")]
         public void WhenUserClicksOnTabConfigration()
         {
             scaleConfigurationPage.TabConfiGrationClick();
         }
 
+        /// <summary>
+        /// Click Font New Button
+        /// </summary>
         [When(@"User clicks on Font New Button")]
         public void UserClickonFontNewButton()
         {
@@ -34,24 +40,36 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.ClickFontNewButton();
         }
 
+        /// <summary>
+        /// Click on button Tare New
+        /// </summary>
         [When(@"User clicks on Tare New Button")]
         public void WhenUserClicksOnTareNewButton()
         {
             scaleConfigurationPage.ClickTareNewButton();
         }
 
+        /// <summary>
+        /// Click on Preset New
+        /// </summary>
         [When(@"User clicks on Preset New Button")]
         public void WhenUserClicksOnPresetNewButton()
         {
            scaleConfigurationPage.ClickPresetNewButton();
         }
 
+        /// <summary>
+        /// Click on button Content Symbol
+        /// </summary>
         [When(@"User clicks on ContentSymbol Button")]
         public void WhenUserClicksOnContentSymbolButton()
         {
             scaleConfigurationPage.ClickContentSymbolNewButton();
         }
 
+        /// <summary>
+        /// Enter Code Content Symbol and Description
+        /// </summary>
         [When(@"Enter Code ContentSymbol & Description")]
         public void WhenEnterCodeContentSymbolDescription()
         {
@@ -62,6 +80,10 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
 
         }
+
+        /// <summary>
+        /// Click on button Edit in Nutritional Panel Two Zero One
+        /// </summary>
 
         [When(@"Enter Code ContentSymbol & Description TwoZeroOne")]
         public void WhenEnterCodeContentSymbolDescriptionTwoZeroOne()
@@ -75,7 +97,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
 
 
 
-
+        /// <summary>
+        /// Click on button New in Nutritional Panel. 
+        /// </summary>
         [When(@"User clicks on Nutritional Panel New Button")]
         public void UserClickonNutritionalPanelNewButton()
         {
@@ -83,6 +107,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.ClickNutritionalNewButton();
         }
 
+        /// <summary>
+        /// Enter Code Name and Nutritional Panel
+        /// </summary>
         [When(@"Enter CodeName and Nutritional Panel")]
         public void WhenEnterCodeNameAndNutritionalPanel()
         {
@@ -92,7 +119,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
-        
+        /// <summary>
+        /// Enter Code Name and Nutritional Panel
+        /// </summary>
 
         [When(@"Enter CodeName and Nutritional Panel TwoZeroOne")]
         public void WhenEnterCodeNameAndNutritionalPanelTwoZeroOne()
@@ -103,7 +132,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
-
+        /// <summary>
+        /// Search for Nutritional Panel By Name
+        /// </summary>
         [When(@"i search the Nutrional Panel by Name")]
         public void WhenISearchTheNutrionalPanelByName()
         {
@@ -112,6 +143,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(3000);
         }
 
+        /// <summary>
+        /// Search for Nutritional Panel by Name Two Zero One
+        /// </summary>
         [When(@"i search the Nutrional Panel by Name TwoZeroOne")]
         public void WhenISearchTheNutrionalPanelByNameTwoZeroOne()
         {
@@ -120,7 +154,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(3000);
         }
 
-
+        /// <summary>
+        /// Click on button Edit in Nutritional Panel Section
+        /// </summary>
         [Then(@"Click on Edit Button NutritionalPanel")]
         public void ThenClickOnEditButtonNutritionalPanel()
         {
@@ -128,6 +164,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);           
         }
 
+        /// <summary>
+        /// Click on button Edit in Nutritional Panel Two Zero One
+        /// </summary>
         [Then(@"Click on Edit Button NutritionalPanel TwoZeroOne")]
         public void ThenClickOnEditButtonNutritionalPanelTwoZeroOne()
         {
@@ -136,6 +175,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
+        /// <summary>
+        /// Click on Button New in Nutritional Panel
+        /// </summary>
         [Then(@"Click on the New NutritionalPanel Element Button")]
         public void ThenClickOnTheNewNutritionalPanelElementButton()
         {
@@ -143,7 +185,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.ClickNew();
         }
 
-
+        /// <summary>
+        /// Click on Nutritional Element Dropdown to Select a Font. Prerequisite for all PF related tests
+        /// </summary>
         [Then(@"Click on Nutritional Element dropdown")]
         public void ThenClickOnNutritionalElementDropdown()
         {
@@ -151,7 +195,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.ClickonNutritionalElementtDropdown(selectfont);
             Thread.Sleep(5000);
         }
-
+        /// <summary>
+        /// Select Font from Nutritional Element Dropdown in FOnt Section
+        /// </summary>
         [Then(@"Click on Nutritional Element dropdown TwoZeroOne")]
         public void ThenClickOnNutritionalElementDropdownTwoZeroOne()
         {
@@ -160,7 +206,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
-
+        /// <summary>
+        /// Select Font from measurement dropdown
+        /// </summary>
         [When(@"Enter the value in MeasurementsUnit")]
         public void SelectValueMeasurementsUnit()
         {
@@ -168,7 +216,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.SelectMeasurementDropdown(selectfont);
             Thread.Sleep(5000);
         }
-
+        /// <summary>
+        /// Select unit for measurement from Select measurement dropdown
+        /// </summary>
         [When(@"Enter the value in MeasurementsUnit Mg")]
         public void WhenEnterTheValueInMeasurementsUnitMg()
         {
@@ -176,7 +226,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.SelectMeasurementDropdown(selectfont);
             Thread.Sleep(5000);
         }
-
+        /// <summary>
+        /// Entering Print Format Code and Font Name. Common function in all Create and Edit Print Format tests
+        /// </summary>
         [When(@"Enter CodeName and Font Name")]
         public void WhenEnterCodeNameAndFontName()
         {
@@ -186,6 +238,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
+        /// <summary>
+        /// Enter FOnt Code and Name. Common function for tests with create Font
+        /// </summary>
         [When(@"Enter Code and Name with Nutritional Font")]
         public void WhenEnterCodeAndNameWithNutritionalFont()
         {
@@ -195,6 +250,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
+        /// <summary>
+        /// Enter Tarecode and Name and Value. Prerequisite
+        /// </summary>
 
         [When(@"Enter TareCode and Name")]
         public void WhenEnterTareCodeAndName()
@@ -206,6 +264,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
+        /// <summary>
+        /// Enter Tare Code, Tare Name and Tare Value
+        /// </summary>
         [When(@"Enter TareCode and Name TwoZeroOne")]
         public void WhenEnterTareCodeAndNameTwoZeroOne()
         {
@@ -216,6 +277,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
+        /// <summary>
+        /// Enter Preset Coed and Preset message
+        /// </summary>
         [When(@"Enter PresetMessageCode Name & List")]
         public void WhenEnterPresetMessageCodeNameList()
         {
@@ -224,7 +288,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.EnterPresetCodeNameValue(PresetCode, PresetMessage);
             Thread.Sleep(5000);
         }
-
+        /// <summary>
+        /// Enter Preset Code and Preset Message. Prerequisite for all the Create and Edit Print Format
+        /// </summary>
         [When(@"Enter PresetMessageCode Name & List TwoZeroOne")]
         public void WhenEnterPresetMessageCodeNameListTwoZeroOne()
         {
@@ -234,7 +300,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
-
+        /// <summary>
+        /// Click on Save button. Common Function in Edit and Create PF Tests
+        /// </summary>
 
         [Then(@"click on save button")]
         public void ThenClickOnSaveButton()
@@ -243,18 +311,27 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.ClickonSave();
         }
 
+        /// <summary>
+        /// Click on New Save button 
+        /// </summary>
         [Then(@"click on new save button")]
         public void ThenClickOnnewSaveButton()
         {
             scaleConfigurationPage.ClickonSaveclass();
         }
 
+        /// <summary>
+        /// Click on button Save
+        /// </summary>
         [Then(@"Search Nutritional Panel by Name")]
         public void SearchNutritionalPanelbyName()
         {
             scaleConfigurationPage.ClickonSave();
         }
 
+        /// <summary>
+        /// Enter Value in Masked field
+        /// </summary>
         [Then(@"Enter Value in Mask Field")]
         public void EnterValueinMaskField()
         {
@@ -264,6 +341,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
 
         }
 
+        /// <summary>
+        /// Enter updated value in Masked field
+        /// </summary>
         [Then(@"Enter Value in Mask Field Updated Value")]
         public void ThenEnterValueInMaskFieldUpdatedValue()
         {
@@ -274,6 +354,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
 
 
         //TestData 2.0.2
+        /// <summary>
+        /// Click on Scale Configuration Menu. Common function for all scale configuration tests
+        /// </summary>
 
         [Then(@"User click on Scale Configuration Item should be displayed on the Menu")]
         public void ThenUserClickOnScaleConfigurationItemShouldBeDisplayedOnTheMenu()
@@ -281,6 +364,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.MenuScaleConfigurationClick();
         }
 
+        /// <summary>
+        /// Enter Font COde and Font Name. Prerequisite for Print Format tests
+        /// </summary>
 
         [When(@"Enter the Code and Name for Testdata TwoZeroTwo")]
         public void WhenEnterTheCodeAndNameForTestdataTwoZeroTwo()
@@ -291,6 +377,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
+        /// <summary>
+        /// Search for Font. Common Function for Print Format tests
+        /// </summary>
         [Then(@"search for the font")]
         public void ThenSearchForTheFont()
         {
@@ -300,12 +389,19 @@ namespace SpecFlow_MSTestFrameWork.Steps
             configurationPage.SearchFont(fontCode);
         }
 
+        /// <summary>
+        /// Click on the checkbox Nutritional Font and Click on button Save. common Function in Edit PF Tests 
+        /// </summary>
         [Then(@"click the Nutritional Font as yes")]
         public void ThenClickTheNutritionalFontAsYes()
         {
             Thread.Sleep(3000);
             configurationPage.EditNutrionalFont();
         }
+
+        /// <summary>
+        /// Search for the Second Font
+        /// </summary>
 
         [Then(@"search for the second font entered")]
         public void ThenSearchForTheSecondFontEntered()

@@ -36,6 +36,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
         }
 
 
+        /// <summary>
+        /// Common Function for all test cases, click on Left Menu
+        /// </summary>
 
         [When(@"User clicks on the Left Menu")]
         public void WhenUserClicksOnTheLeftMenu()
@@ -50,12 +53,18 @@ namespace SpecFlow_MSTestFrameWork.Steps
 
         }
 
+        /// <summary>
+        /// Common Function for all test cases, enter text scale Configuration in the text field
+        /// </summary>
         [When(@"User enters Scale Configuration in the Search Box")]
         public void WhenUserEntersScaleConfigurationInTheSearchBox()
         {
             scaleConfigurationPage.ScaleConfiguration();
         }
 
+        /// <summary>
+        /// Common Function for all test cases, Scale Configuration should be displayed on the Menu and click on Scale Configuration
+        /// </summary>
         [Then(@"Scale Configuration Item should be displayed on the Menu")]
         public void ThenScaleConfigurationItemShouldBeDisplayedOnTheMenu()
         {
@@ -148,12 +157,18 @@ namespace SpecFlow_MSTestFrameWork.Steps
 
         }
 
+        /// <summary>
+        /// Common Function for Scale Configuration tests, Click on button New for Create Print Format
+        /// </summary>
         [Then(@"Click on the New Button")]
         public void ClickonNewButton()
         {
             scaleConfigurationPage.ClickNewButton();
         }
 
+        /// <summary>
+        /// Common Function for Scale Configuration tests, For enering PF COde and Name
+        /// </summary>
         [When(@"Enter the CodeName and PrintFormat")]
         public void EnterCodeNameandPrintFormat()
         {
@@ -163,6 +178,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
+        /// <summary>
+        /// Common Function for Scale Configuration tests, enter Value for searching PF
+        /// </summary>
         [When(@"Enter the Value of Print Name")]
         public void EnterValueofsearchcode()
         {
@@ -172,6 +190,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
+        /// <summary>
+        /// Common Function for Scale Configuration tests, enter Value for searching PF
+        /// </summary>
         [When(@"Searches for PrintFormat")]
         public void WhenSearchesForPrintFormat()
         {
@@ -180,6 +201,10 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
+        /// <summary>
+        /// Common Function for Scale Configuration tests, click on Edit button against the searched Print Format
+        /// </summary>
+        
         [Then(@"Click on Edit Button")]
         public void ClickonEditButton()
         {
@@ -188,24 +213,36 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
+        /// <summary>
+        /// In Edit PF, selecting check boxes CheckProductlife, CheckTare, CheckPresetmessages, CheckPrintdateformat, CheckContent
+        /// </summary>
         [When(@"Check the required text boxes")]
         public void CheckRequiredTextBoxes()
         {
             scaleConfigurationPage.Checkboxes();
         }
 
+        /// <summary>
+        /// Assert Content Symbol
+        /// </summary>
         [Then(@"Check the Content Symbol")]
         public void CheckContentSymbol()
         {
             scaleConfigurationPage.VerifyContentSymbol();
         }
 
+        /// <summary>
+        /// Click on button Add Section, in Font Section- Common Function in Edit PF-FOnt Section
+        /// </summary>
         [When(@"Click on Add Section")]
         public void ClickonAddSections()
         {
             scaleConfigurationPage.ClickonAddSection();
         }
 
+        /// <summary>
+        /// Font Dropdown in Edit PF. Common Function
+        /// </summary>
         [Then(@"Click on Font Dropdown")]
         public void ClickOnFontDropDowns()
         {
@@ -214,7 +251,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
-
+        /// <summary>
+        /// Adding Description to the Font. Common Functions used in Edit Print Format Tests
+        /// </summary>
         [Then(@"Add Desc to font")]
         public void AddDescription()
         {
@@ -223,6 +262,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
+        /// <summary>
+        /// Click on Save button. Common Function used in Edit PF Testcases
+        /// </summary>
         [Then(@"Save the font with data")]
         public void SaveFont()
         {
@@ -230,6 +272,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(3000);
         }
 
+        /// <summary>
+        /// Click on button Close. Common Function in Edit FOnt Page
+        /// </summary>
         [Then(@"Close the font")]
         public void CloseFont()
         {
@@ -237,12 +282,20 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(4000);
         }
 
+        /// <summary>
+        /// Click on Cloud Icon, Publish PF. In Print Format Page
+        /// </summary>
+        
         [Then(@"Publish the PF")]
         public void PublishthePF()
         {
             scaleConfigurationPage.PublishPrint();
             Thread.Sleep(5000);
         }
+
+        /// <summary>
+        /// Selecting a store from the Stores Tab
+        /// </summary>
 
         [Then(@"Select the Store")]
         public void SelectStore()
@@ -251,6 +304,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(3000);
         }
 
+        /// <summary>
+        /// Click on Delete button against every PF. Common Function used in Delete PF Tests
+        /// </summary>
         [Then(@"Delete the PF")]
         public void DeletePF()
         {
@@ -258,7 +314,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
-
+        /// <summary>
+        /// Entering New Code Name and PF Code. Common Function used to edit the PF
+        /// </summary>
         [When(@"Enter the CodeName and PrintFormat new")]
         public void EnterCodeNameandPrintFormat1()
         {
@@ -268,6 +326,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
+        /// <summary>
+        /// Edit PF Name and COde used in Edit PF Tests
+        /// </summary>
         [When(@"Enter the Value of Print Name OpenSanBiscuit1")]
         public void EnterValueoOfpenSanBiscuit1()
         {
@@ -276,6 +337,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
+        /// <summary>
+        /// Edit PF 
+        /// </summary>
         [Then(@"Click on Edit Button new PF")]
         public void ClickonEditButtonNEWPF()
         {
@@ -284,26 +348,36 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
+        /// <summary>
+        /// click on checkboxes Mandatory and Fixed Width in Font Section
+        /// </summary>
         [Then(@"check the Manadatory & Fixed Width check box")]
         public void ThenCheckTheManadatoryFixedWidthCheckBox()
         {
             scaleConfigurationPage.ManadatoryFixedWidthCheckBoxCheckboxes();
         }
 
+        /// <summary>
+        /// Entering Row and Character Values
+        /// </summary>
         [Then(@"configure the row & Characters values")]
         public void ThenConfigureTheRowCharactersValues()
         {
             scaleConfigurationPage.ConfigureTheRowCharactersValues();
         }
 
-
+        /// <summary>
+        /// click on checkboxes Mandatory and Fixed Width in Font Section for Second Font
+        /// </summary>
         [Then(@"check the Manadatory & Fixed Width check box font2")]
         public void ThenCheckTheManadatoryFixedWidthCheckBoxFont2()
         {
             scaleConfigurationPage.ManadatoryFixedWidthCheckBoxCheckboxes2();
         }
 
-
+        /// <summary>
+        /// Entering Description to Second Font. Common Function in Edit PF Test Cases
+        /// </summary>
         [Then(@"Add Desc to font2")]
         public void AddDescription2()
         {
@@ -312,12 +386,18 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
         }
 
+        /// <summary>
+        /// entering values for Row and Character values for Font2
+        /// </summary>
         [Then(@"configure the row & Characters values Font2")]
         public void ThenConfigureTheRowCharactersValuesFont()
         {
             scaleConfigurationPage.ConfigureTheRowCharactersValuesFont();
         }
 
+        /// <summary>
+        /// To check Nutritional panel can be added to another section
+        /// </summary>
         [Then(@"check a new nutritional Panel can be added to another section")]
         public void ThenCheckANewNutritionalPanelCanBeAddedToAnotherSection()
         {
@@ -331,7 +411,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.FetchValueForNutritionalSection();
         }
 
-
+        /// <summary>
+        /// Entering values in TR and HR
+        /// </summary>
         [Then(@"Click Support Basic Mode Header and Table")]
         public void ClickSupportBasicModeHeaderandTable()
         {
@@ -370,6 +452,10 @@ namespace SpecFlow_MSTestFrameWork.Steps
             SelectStore();
         }
 
+        /// <summary>
+        /// Function to Search and Select the Print Format for Edit 
+        /// </summary>
+
         [When(@"user search and select the printformat code")]
         public void WhenUserSearchAndSelectThePrintformatCode()
         {
@@ -378,6 +464,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(3000);
         }
 
+        /// <summary>
+        /// Function for updating the PF Code. Common Function in Edit PF Test cases
+        /// </summary>
         [Then(@"user change the PF code and update the checkboxes")]
         public void ThenUserChangeThePFCodeAndUpdateTheCheckboxes()
         {
@@ -385,12 +474,18 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.ChangePFCode(NewPFCode);
         }
 
+        /// <summary>
+        /// Function to verify the Content Symbol is checked on Checking the Content
+        /// </summary>
         [Then(@"verify Content Symbol is automatically checked on checking Content")]
         public void ThenVerifyContentSymbolIsAutomaticallyCheckedOnCheckingContent()
         {
             scaleConfigurationPage.VerifyContentSymbol();
         }
 
+        /// <summary>
+        /// Function to select a Non Nutrional Font from the Dropdown and change to Nutritional Section. By Adding Description and Save
+        /// </summary>
         [Then(@"verify user can Change non nutritional section to the nutritional by adding a nutritional font and description")]
         public void ThenVerifyUserCanChangeNonNutritionalSectionToTheNutritionalByAddingANutritionalFontAndDescription()
         {
@@ -404,6 +499,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.FetchValueForNutritionalSection1(NutriTemplate);
         }
 
+        /// <summary>
+        /// Function to select a Nutritional Font and change it to Non Nutritional Font, by adding description and save 
+        /// </summary>
         [Then(@"Change Nutritional to Non Nutritional")]
         public void ChangeNutritionaltononnutritional()
         {
@@ -417,6 +515,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
 
         }
 
+        /// <summary>
+        /// Function to clear the Text field Print Format
+        /// </summary>
         [When(@"Clear the PrintformatName")]
         public void ClearThePrintFormatName()
         {
@@ -425,6 +526,10 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.ClearSearchBox();
             System.Threading.Thread.Sleep(5000);
         }
+
+        /// <summary>
+        /// Function to Add Nutritional Panel to Another section. COmmon Function in eDIT pf Test Cases
+        /// </summary>
 
         [Then(@"Add another new nutritional Panel to another section")]
         public void ThenAddAnotherNewNutritionalPanelToAnotherSection()
@@ -440,6 +545,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.FetchValueForNutritionalSection(NutriTemplate);
         }
 
+        /// <summary>
+        /// Function to Add Another(second) Nutritional Panel
+        /// </summary>
         [Then(@"Add another new nutritional Panel to another section latest")]
         public void ThenAddAnotherNewNutritionalPanelToAnotherSectionLatest()
         {
@@ -454,6 +562,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.FetchValueForNutritionalSection1(NutriTemplate);
         }
 
+        /// <summary>
+        /// Click on Button Save and Click on button Save. Common Function for Edit PF test cases
+        /// </summary>
         [Then(@"Save and close the PF")]
         public void ThenSaveAndCloseThePF()
         {
@@ -463,6 +574,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.ClosePF();
         }
 
+        /// <summary>
+        /// column Chooser- Search and select Scale Value
+        /// </summary>
         [Then(@"select a scale item")]
         public void ThenSelectAScaleItem()
         {
@@ -476,6 +590,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             columnChooser.ClickScaleTabInItems();
         }
 
+        /// <summary>
+        /// Select a PF from the dropdown for Item and Add Content Symbol from ContentSymbolDropdown. Common Function in Item Creation Test Case
+        /// </summary>
         [Then(@"add the PF and ContentSymbol")]
         public void ThenAddThePFAndContentSymbol()
         {
@@ -489,9 +606,15 @@ namespace SpecFlow_MSTestFrameWork.Steps
             columnChooser.NutritionalData(a, b);
         }
 
+        /// <summary>
+        /// Save the Item. Common Function in Item Creation Test Case
+        /// </summary>
         [Then(@"Save item")]
         public void ThenSaveItem() => columnChooser.SaveItemPF();
 
+        /// <summary>
+        /// Click on configuration Tab. Eidt the Content Symbol assigned to Item. Common Function for Create Item Test case
+        /// </summary>
         [Then(@"navigate to the configuration page to edit the content symbol assigned to item")]
         public void ThenNavigateToTheConfigurationPageToEditTheContentSymbolAssignedToItem()
         {
@@ -506,6 +629,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             configurationPage.EditContent(ContentSymbol);
         }
 
+        /// <summary>
+        /// Verify Change is Reflected in Item Scale Tab. Common Function in Item Creation Test Cases
+        /// </summary>
         [Then(@"Verify that the change is reflected in Item's scale tab")]
         public void ThenVerifyThatTheChangeIsReflectedInItemSScaleTab()
         {
@@ -516,6 +642,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             columnChooser.AssertContentsymbol();
         }
 
+        /// <summary>
+        /// Delete the Scond Panel added from the configuration page
+        /// </summary>
         [Then(@"Delete the second panel added from the configuration page")]
         public void ThenDeleteTheSecondPanelAddedFromTheConfigurationPage()
         {
@@ -530,7 +659,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             configurationPage.DeleteNutrionalPanel();
         }
 
-       
+        /// <summary>
+        /// Publish the PF to a second store where PF with same name is available
+        /// </summary>
         [Then(@"Publish the PF to a second store where PF exists with same name")]
         public void ThenPublishThePFToASecondStoreWherePFExistsWithSameName()
         {
@@ -545,6 +676,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             SelectStore();
         }
 
+        /// <summary>
+        /// Click on Configuration page to change the content symbol
+        /// </summary>
         [Then(@"navigate back to configuration page to change the contentSymbol back")]
         public void ThenNavigateBackToConfigurationPageToChangeTheContentSymbolBack()
         {
@@ -555,6 +689,10 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(5000);
             configurationPage.EditContent(ContentSymbol);
         }
+
+        /// <summary>
+        /// Click on Tab Print Format Tab. Common Function for PF related tests
+        /// </summary>
         [Then(@"Navigate to PF tab")]
         public void ThenNavigateToPFTab()
         {
@@ -564,6 +702,10 @@ namespace SpecFlow_MSTestFrameWork.Steps
 
 
         //Step Definitions TC2
+        /// <summary>
+        /// In create PF enter Code and PrintFormat. Common Function in create PF Tests
+        /// </summary>
+
         [When(@"User Enters the Code and PrintFormat")]
         public void WhenUserEntersTheCodeAndPrintFormat()
         {
@@ -575,6 +717,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
 
         }
 
+        /// <summary>
+        /// Search for PF and Select a PF. Common Function in Edit PF Tests
+        /// </summary>
         [When(@"Enter the Value of Print Name Nicebiscits")]
         public void EnterValueofPrintNameNiceBiscuits()
         {
@@ -584,6 +729,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             System.Threading.Thread.Sleep(5000);
         }
 
+        /// <summary>
+        /// Click on button Eidt against a selected PF. Common Function for Edit testcases
+        /// </summary>
         [When(@"Click on Edit Button")]
         public void WhenClickOnEditButton()
         {
@@ -592,6 +740,12 @@ namespace SpecFlow_MSTestFrameWork.Steps
 
         }
 
+        /// <summary>
+        /// Change the PF Name by entering new PF Name, Take any nutritional Font uncheck and Check the Product Life. Common Function in Eidt PF Test cases
+        /// </summary>
+        /// <param name="p0"></param>
+        /// <param name="p1"></param>
+        /// <param name="p2"></param>
         [When(@"Change the PF name to Popcorn, also uncheck '(.*)' only\.Take any nutritional font and uncheck '(.*)' and check '(.*)'\.")]
         public void WhenChangeThePFNameToPopcornAlsoUncheckOnly_TakeAnyNutritionalFontAndUncheckAndCheck_(string p0, string p1, string p2)
         {
@@ -620,6 +774,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             
         }
 
+        /// <summary>
+        /// Click on Delete button against the Font in PF
+        /// </summary>
         [When(@"User Deletes the font added to PF")]
         public void WhenUserDeletesTheFontAddedToPF()
         {
@@ -650,18 +807,27 @@ namespace SpecFlow_MSTestFrameWork.Steps
             
         }
 
+        /// <summary>
+        /// Click Edit against New PF
+        /// </summary>
         [When(@"Click on Edit")]
         public void WhenClickOnEdit()
         {
             scaleConfigurationPage.EditPopCorn1();
         }
 
+        /// <summary>
+        /// Click on button Save
+        /// </summary>
         [When(@"click on buttonSave")]
         public void WhenClickOnButtonSave()
         {
             scaleConfigurationPage.ButtonSaveClick();
         }
 
+        /// <summary>
+        /// Search Font
+        /// </summary>
         [When(@"i search the Font by name")]
         public void WhenISearchFontByName()
         {
@@ -670,6 +836,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(3000);
         }
 
+        /// <summary>
+        /// Verify FOnt message. Common in Create PF Test
+        /// </summary>
         [When(@"User Verify the font message")]
         public void UserVerifythefontmessage()
         {
