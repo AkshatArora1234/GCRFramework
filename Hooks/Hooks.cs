@@ -168,25 +168,30 @@ namespace SpecFlow_MSTestFrameWork.Hooks
         {
             if (_scenarioContext.TestError != null)
             {
-                if (_featureContext.FeatureInfo.Title.Equals("PublishPrintFormatWithExistingCode"))
+                try
                 {
-                    Actions action = new Actions(_driverHelper.driver);
-                    action.Click(DeletePF);
-                    action.Perform();
-                    Thread.Sleep(3000);
-                    Deletebutton.Click();
+                    if (_featureContext.FeatureInfo.Title.Equals("PublishPrintFormatWithExistingCode"))
+                    {
+                        Actions action = new Actions(_driverHelper.driver);
+                        action.Click(DeletePF);
+                        action.Perform();
+                        Thread.Sleep(3000);
+                        Deletebutton.Click();
+                    }
                 }
+                finally
+                {
+                    //Logout
+                    _driverHelper.driver.Navigate().Refresh();
+                    Thread.Sleep(4000);
+                    ProfileIcon.Click();
+                    Thread.Sleep(2000);
+                    LogOut.Click();
+                    submitbutton.Click();
 
-                //Logout
-                _driverHelper.driver.Navigate().Refresh();
-                Thread.Sleep(4000);
-                ProfileIcon.Click();
-                Thread.Sleep(2000);
-                LogOut.Click();
-                submitbutton.Click();
-
-                //Quit Driver
-                _driverHelper.driver.Quit();
+                    //Quit Driver
+                    _driverHelper.driver.Quit();
+                }
             }
         
         }
