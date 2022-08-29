@@ -29,7 +29,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         private CustomControls NewContentSymbolNameEdit => new CustomControls(Driver, By.XPath("//*[@id='gridCONTSYM']/div/div[6]/div/div/div[1]/div/table/tbody/tr[1]/td[2]/div/div/div[1]/input"));
         IWebElement ContentSymbolSave => Driver.FindElement(By.XPath("(//span[text()='Save'])[1]"));
         IWebElement ContentSymbolSaveYes => Driver.FindElement(By.Id("submitButton"));
-        IWebElement NutriSearch => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[15]"));
+        IWebElement NutriSearch => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[14]"));
         IWebElement DeleteNutriPanel => Driver.FindElement(By.XPath("//*[@id='gridSCALENP']/div/div[6]/div[1]/div/div/div/table/tbody/tr[1]/td/div/div/div[@class='action-delete ng-scope']"));
         IWebElement DeleteNutriYes => Driver.FindElement(By.Id("submitButton"));
         IWebElement NutriDeletemessage => Driver.FindElement(By.XPath("//p[@class='ng-binding']"));
