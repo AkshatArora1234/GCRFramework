@@ -43,9 +43,13 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         public void PageNavigationToScaleConfigPage() => ScaleConfigurationTab.Click();
         public void PageNavigationToConfigPage() => ConfigurationTab.Click();
-        public void SearchContentSymbol(string text) => ContentCodeSearch.SendKeys(text);
         public void SearchFont(string text) => FontSearch.SendKeys(text);
         public void FontEditClick() => EditFont.Click();
+        public void SearchContentSymbol(string text)
+        {
+            ContentCodeSearch.Clear();
+            ContentCodeSearch.SendKeys(text);
+        }
         public void EditContent(string text)
         {
             EditContentSymbol.Click();
@@ -63,6 +67,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             scaleConfigurationPage.TabConfiGrationClick();
             ContentSymbolSave.Click();
             ContentSymbolSaveYes.Click();
+            Thread.Sleep(10000);
         }
 
         public void EditNutrionalFont()

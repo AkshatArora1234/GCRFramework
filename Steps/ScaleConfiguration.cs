@@ -22,6 +22,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         ColumnChooser columnChooser;
         NewBatch newBatch;
         ConfigurationPage configurationPage;
+        SRConfigurationPage sRConfigurationPage;
 
         public ScaleConfiguration(DriverHelper driverHelper)
         {
@@ -33,6 +34,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
             columnChooser = new ColumnChooser(_driverHelper.driver);
             newBatch = new NewBatch(_driverHelper.driver);
             configurationPage = new ConfigurationPage(_driverHelper.driver);
+            sRConfigurationPage = new SRConfigurationPage(_driverHelper.driver);
         }
 
 
@@ -621,7 +623,6 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(4000);
             configurationPage.PageNavigationToScaleConfigPage();
             configurationPage.PageNavigationToConfigPage();
-            // configurationPage.SearchContentSymbol("18");
             string SearchContentSymbol = homePage.getConfiguration("TestData.json", "SrchContentSymbol");
             configurationPage.SearchContentSymbol(SearchContentSymbol);
 
@@ -674,6 +675,19 @@ namespace SpecFlow_MSTestFrameWork.Steps
             PublishthePF();
             Thread.Sleep(3000);
             SelectStore();
+        }
+
+        /// <summary>
+        /// Verifying the Tares, Content Symbols and Preset messages in SR is as that in HQ 
+        /// </summary>
+        [Then(@"navigate to verify Tares, Content Symbols and Preset messages")]
+        public void ThenNavigateToVerifyTaresContentSymbolsAndPresetMessages()
+        {
+            Thread.Sleep(3000);
+            _driverHelper.driver.SwitchTo().Window(_driverHelper.driver.WindowHandles[0]);
+            scaleConfigurationPage.TabConfiGrationClick();
+            sRConfigurationPage.CompareDetails();
+            Thread.Sleep(3000);
         }
 
         /// <summary>

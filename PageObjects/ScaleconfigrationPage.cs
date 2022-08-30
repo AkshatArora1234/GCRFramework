@@ -16,12 +16,12 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         IWebElement Searchbar => Driver.FindElement(By.XPath("//input[@id='search-text']"));
         IWebElement NewItembutton => Driver.FindElement(By.XPath("(//span[text()='New'])[6]"));
-        IWebElement NewItem => Driver.FindElement(By.XPath("(//span[text()='New'])[7]"));
+        IWebElement NewItem => Driver.FindElement(By.XPath("(//span[text()='New'])[6]"));
         IWebElement FontNewButton => Driver.FindElement(By.XPath("(//span[text()='New'])[1]"));
         IWebElement TareNewButton => Driver.FindElement(By.XPath("(//span[text()='New'])[5]"));
         IWebElement PresetNewButton => Driver.FindElement(By.XPath("(//span[text()='New'])[4]"));
         IWebElement ContentNewButton => Driver.FindElement(By.XPath("(//span[text()='New'])[2]"));
-        IWebElement NutritionalPanel => Driver.FindElement(By.XPath("(//span[text()='New'])[5]"));
+        IWebElement NutritionalPanel => Driver.FindElement(By.XPath("(//span[text()='New'])[4]"));
         IWebElement LeftMenu => Driver.FindElement(By.XPath("//*[@class='SideMenuWrapper SideMenuWrapperSmall']//*[@class='fa fa-bars N_P_A']"));
         IWebElement ScaleConfigurationMenu => Driver.FindElement(By.XPath("//span/strong[text()='Scale Configuration']"));
         IWebElement ElementSelectFromTable => Driver.FindElement(By.XPath("//*[@id='gridSCALEPF']/div/div[6]/div/div/div[1]/div/table/tbody/tr[last()-1]/td[1]"));

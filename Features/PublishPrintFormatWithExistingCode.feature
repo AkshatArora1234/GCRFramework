@@ -80,14 +80,14 @@ Given user navigates to HQ application
 	Then Close the font
 	Then Publish the PF
 	Then Select the Store
-	#And user navigates to SR application
-	#When enter valid '<username>', '<hqpassword>'
-	#And Clicks on Login button of SR app
-	#When User clicks on the Left Menu
-	#Then menu should be displayed
-	#When User enters Scale Configuration in the Search Box
-	#Then Scale Configuration Item should be displayed on the Menu
-	#When User Selects the Scale Configuration
+	And user navigates to SR application
+	When enter valid '<username>', '<hqpassword>'
+	And Clicks on Login button of SR app
+	When User clicks on the Left Menu
+	Then menu should be displayed
+	When User enters Scale Configuration in the Search Box
+	Then Scale Configuration Item should be displayed on the Menu
+	When User Selects the Scale Configuration
 	
 @mytag
 Scenario: Edit PF
@@ -149,6 +149,15 @@ Scenario: Publish PF existing with same name as in store
 	And Verify that the change is reflected in Item's scale tab
 	And Delete the second panel added from the configuration page
 	And Publish the PF to a second store where PF exists with same name
+	And user navigates to SR application
+	When enter valid '<username>', '<hqpassword>'
+	And Clicks on Login button of SR app
+	When User clicks on the Left Menu
+	Then menu should be displayed
+	When User enters Scale Configuration in the Search Box
+	Then Scale Configuration Item should be displayed on the Menu
+	When User Selects the Scale Configuration
+	Then navigate to verify Tares, Content Symbols and Preset messages 
     #Testdata update to actual one
 	And navigate back to configuration page to change the contentSymbol back
 	When User clicks on Nutritional Panel New Button
