@@ -691,6 +691,20 @@ namespace SpecFlow_MSTestFrameWork.Steps
         }
 
         /// <summary>
+        /// Verifying the Print Format on SR
+        /// </summary>
+        [Then(@"navigate to verify Print Format '(.*)' and '(.*)'")]
+        public void NavigareandverifyPF(string searchcode, string verifytext)
+        {
+
+            Thread.Sleep(3000);
+            scaleConfigurationPage.srPrintFormat1();
+            sRConfigurationPage.ComparePrintFormat(searchcode, verifytext);
+            Thread.Sleep(3000);
+            _driverHelper.driver.SwitchTo().Window(_driverHelper.driver.WindowHandles[0]);
+        }
+
+        /// <summary>
         /// Click on Configuration page to change the content symbol
         /// </summary>
         [Then(@"navigate back to configuration page to change the contentSymbol back")]

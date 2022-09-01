@@ -49,6 +49,7 @@ namespace SpecFlow_MSTestFrameWork.StepDefinitions
         [When(@"Clicks on Login button of SR app")]
         public void WhenClicksOnLoginButtonOfSRApp()
         {
+            Thread.Sleep(4000);
             hQLoginPage.ClickSRBtnSignIn();
             Thread.Sleep(8000);
         }
@@ -64,6 +65,8 @@ namespace SpecFlow_MSTestFrameWork.StepDefinitions
         {
             hQLoginPage.EnterCredentials(username, hqpassword);
         }
+
+        
 
         /// <summary>
         /// Click on button Login in HQ Appliation. Common for all tests

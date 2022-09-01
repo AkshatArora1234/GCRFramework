@@ -87,7 +87,13 @@ Given user navigates to HQ application
 	Then menu should be displayed
 	When User enters Scale Configuration in the Search Box
 	Then Scale Configuration Item should be displayed on the Menu
-	When User Selects the Scale Configuration
+	Then navigate to verify Print Format '<searchcode>' and '<verifytext>'
+
+Examples: 
+	| searchcode | verifytext       |
+	| 12         | OpenSansBiscuits |
+	
+
 	
 @mytag
 Scenario: Edit PF
@@ -122,6 +128,7 @@ Scenario: Edit PF
 
 
 @mytag
+
 Scenario: Publish PF existing with same name as in store
 	Given user navigates to HQ application
 	When enter valid '<username>', '<hqpassword>'
