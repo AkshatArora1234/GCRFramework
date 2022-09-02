@@ -690,14 +690,29 @@ namespace SpecFlow_MSTestFrameWork.Steps
             _driverHelper.driver.SwitchTo().Window(_driverHelper.driver.WindowHandles[0]);
         }
 
-        [Then(@"navigate to verify Content Symbol '(.*)' and '(.*)'")]
-        public void ThenNavigateToVerifyContentSymbolAnd(string searchcode, string verifytext)
+        [Then(@"navigate to verify Content Symbol '(.*)' , '(.*)'and '(.*)'")]
+        public void ThenNavigateToVerifyContentSymbolAnd(string searchcode, string verifytext,string contentsymbolvalues)
         {
             Thread.Sleep(3000);
             scaleConfigurationPage.srContentSymbol();
-            sRConfigurationPage.CompareContentSymbol(searchcode, verifytext);
+            sRConfigurationPage.CompareContentSymbol(searchcode, verifytext, contentsymbolvalues);
             Thread.Sleep(3000);
-            _driverHelper.driver.SwitchTo().Window(_driverHelper.driver.WindowHandles[0]);
+        //    _driverHelper.driver.SwitchTo().Window(_driverHelper.driver.WindowHandles[0]);
+        }
+
+        /// <summary>
+        /// Verifying the Tare
+        /// </summary>
+        [Then(@"navigate to Tare '(.*)' ,'(.*)' and '(.*)'")]
+        public void NavigardVerifyTare(string searchcode, string verifytext, string tarevaluesg)
+        {
+
+            Thread.Sleep(3000);
+            scaleConfigurationPage.srTare();
+            sRConfigurationPage.CompareTare(searchcode, verifytext, tarevaluesg);
+            Thread.Sleep(3000);
+
+            // _driverHelper.driver.SwitchTo().Window(_driverHelper.driver.WindowHandles[0]);
         }
 
         [Then(@"navigate to verify Preset Messages '(.*)' and '(.*)'")]
@@ -706,7 +721,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(3000);
             scaleConfigurationPage.srPresetMessage();
             sRConfigurationPage.ComparePresetMsg(searchcode, verifytext);
-            Thread.Sleep(3000);
+            Thread.Sleep(7000);
             _driverHelper.driver.SwitchTo().Window(_driverHelper.driver.WindowHandles[0]);
         }
 
@@ -722,7 +737,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.srPrintFormat1();
             sRConfigurationPage.ComparePrintFormat(searchcode, verifytext);
             Thread.Sleep(3000);
-            _driverHelper.driver.SwitchTo().Window(_driverHelper.driver.WindowHandles[0]);
+          //  _driverHelper.driver.SwitchTo().Window(_driverHelper.driver.WindowHandles[0]);
         }
 
         /// <summary>
@@ -893,6 +908,8 @@ namespace SpecFlow_MSTestFrameWork.Steps
         {
             scaleConfigurationPage.Verifymessage();
         }
+
+       
 
 
 

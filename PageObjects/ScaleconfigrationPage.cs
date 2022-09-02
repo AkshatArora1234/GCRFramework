@@ -107,6 +107,8 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         IWebElement DeleteFont1 => Driver.FindElement(By.XPath("(//i[@ng-click='ctrl.actions.deleteFont(row.data)'])[1]"));
 
+        IWebElement CloseSR => Driver.FindElement(By.XPath("//button[@ng-click='ctrl.cancelClicked()']"));
+
         public void ButtonSaveClick() => ButtonSave.Click();
         public void CheckProductLife() => CheckProductlife.Click();
         public void ScalConfigurationClick() => TabScaleConfiguration.Click();
@@ -430,6 +432,8 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Thread.Sleep(3000);
 
         }
+
+        public void CloseSRpage() => CloseSR.Click();
 
 
 

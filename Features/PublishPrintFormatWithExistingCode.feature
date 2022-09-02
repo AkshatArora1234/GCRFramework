@@ -88,11 +88,31 @@ Given user navigates to HQ application
 	When User enters Scale Configuration in the Search Box
 	Then Scale Configuration Item should be displayed on the Menu
 	Then navigate to verify Print Format '<searchcode>' and '<verifytext>'
-
+	Then navigate to Tare '<searchcodetare>' ,'<verifytexttare>' and '<Tarevaluesg>'
+	Then navigate to verify Content Symbol '<searchcodecontent>' , '<verifytextcontent>'and '<ContentValues>'
+	Then navigate to verify Preset Messages '<searchcodepreset>' and '<verifytextpreset>'
 Examples: 
-	| searchcode | verifytext       |
-	| 12         | OpenSansBiscuits |
+	| searchcode | verifytext       | searchcodetare | verifytexttare | Tarevaluesg | searchcodecontent | verifytextcontent | ContentValues | searchcodepreset | verifytextpreset |
+	| 12         | OpenSansBiscuits | 45             | RicePowder     | 30          | 18                | KGTest            | KiloGrams     |47                | Contains fat      |
+
+
 	
+
+ 
+	
+	
+
+	
+
+
+	
+
+
+   
+
+
+
+	   
 
 	
 @mytag
