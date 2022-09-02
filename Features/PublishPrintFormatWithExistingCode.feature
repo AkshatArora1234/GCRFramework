@@ -129,7 +129,7 @@ Scenario: Edit PF
 
 @mytag
 
-Scenario: Publish PF existing with same name as in store
+Scenario Outline: Publish PF existing with same name as in store
 	Given user navigates to HQ application
 	When enter valid '<username>', '<hqpassword>'
 	And Clicks on Log In button
@@ -164,7 +164,29 @@ Scenario: Publish PF existing with same name as in store
 	When User enters Scale Configuration in the Search Box
 	Then Scale Configuration Item should be displayed on the Menu
 	When User Selects the Scale Configuration
-	Then navigate to verify Tares, Content Symbols and Preset messages 
+	Then navigate to verify Tare '<searchcode>' and '<verifytext>'
+
+	| searchcode | verifytext       |
+	| 46         | FriedRicePowder  |
+
+	Then navigate to verify Content Symbol '<searchcode>' and '<verifytext>'
+
+ 
+	| searchcode | verifytext       |
+	| 18         | KGTest           |
+
+	Then navigate to verify Preset Messages '<searchcode>' and '<verifytext>'
+
+
+	| searchcode | verifytext       |
+	| 47         | Contains fat     |
+
+	Then navigate to verify Print Format '<searchcode>' and '<verifytext>'
+
+
+	| searchcode | verifytext       |
+	| 21         | Popcorn          |
+
     #Testdata update to actual one
 	And navigate back to configuration page to change the contentSymbol back
 	When User clicks on Nutritional Panel New Button

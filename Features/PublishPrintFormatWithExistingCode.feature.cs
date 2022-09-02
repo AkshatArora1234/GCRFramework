@@ -642,43 +642,76 @@ this.ScenarioInitialize(scenarioInfo);
 #line 166
  testRunner.When("User Selects the Scale Configuration", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "searchcode",
+                            "verifytext"});
+                table1.AddRow(new string[] {
+                            "46",
+                            "FriedRicePowder"});
 #line 167
- testRunner.Then("navigate to verify Tares, Content Symbols and Preset messages", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("navigate to verify Tare \'<searchcode>\' and \'<verifytext>\'", ((string)(null)), table1, "Then ");
 #line hidden
-#line 169
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "searchcode",
+                            "verifytext"});
+                table2.AddRow(new string[] {
+                            "18",
+                            "KGTest"});
+#line 172
+ testRunner.Then("navigate to verify Content Symbol \'<searchcode>\' and \'<verifytext>\'", ((string)(null)), table2, "Then ");
+#line hidden
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                            "searchcode",
+                            "verifytext"});
+                table3.AddRow(new string[] {
+                            "47",
+                            "Contains fat"});
+#line 178
+ testRunner.Then("navigate to verify Preset Messages \'<searchcode>\' and \'<verifytext>\'", ((string)(null)), table3, "Then ");
+#line hidden
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                            "searchcode",
+                            "verifytext"});
+                table4.AddRow(new string[] {
+                            "21",
+                            "Popcorn"});
+#line 184
+ testRunner.Then("navigate to verify Print Format \'<searchcode>\' and \'<verifytext>\'", ((string)(null)), table4, "Then ");
+#line hidden
+#line 191
  testRunner.And("navigate back to configuration page to change the contentSymbol back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 170
+#line 192
  testRunner.When("User clicks on Nutritional Panel New Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 171
+#line 193
  testRunner.When("Enter CodeName and Nutritional Panel for second Testdata TwoZeroTwo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 172
+#line 194
  testRunner.Then("click on save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 173
+#line 195
  testRunner.When("I search the second Nutrional Panel by Name Testdata TwoZeroTwo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 174
+#line 196
  testRunner.Then("Click on Edit Button NutritionalPanel TwoZeroOne", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 175
+#line 197
  testRunner.Then("Click on the New NutritionalPanel Element Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 176
+#line 198
  testRunner.Then("Click on second Nutritional Element dropdown Testdata TwoZeroTwo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 177
+#line 199
  testRunner.When("Enter the value in MeasurementsUnit g", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 178
+#line 200
  testRunner.Then("Enter Value in second Mask Field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 179
+#line 201
  testRunner.Then("click on save and close button Nutritional Panel Element", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 180
+#line 202
  testRunner.And("Navigate to PF tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }

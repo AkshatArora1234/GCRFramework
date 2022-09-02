@@ -21,6 +21,9 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement ScaleConfigurationTab => Driver.FindElement(By.XPath("(//span[text()='Scale Configuration'])[2]"));
         IWebElement ConfigurationTab => Driver.FindElement(By.XPath("//a/uib-tab-heading[text()='Configuration']"));
         IWebElement ContentCodeSearch => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[5]"));
+        IWebElement SRTareCodeSearch => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[12]"));
+        IWebElement SRPresetCodeSearch => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[7]"));
+
         IWebElement pfcodesearch => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[6]"));
         IWebElement FontSearch => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[1]"));
         IWebElement EditContentSymbol => Driver.FindElement(By.XPath("(//div[@ng-click='ctrl.toggleEditMode(false)'])[2]"));
@@ -57,8 +60,18 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             pfcodesearch.Clear();
             pfcodesearch.SendKeys(text);
         }
+        public void Tare(string text)
+        {
+            SRTareCodeSearch.Clear();
+            SRTareCodeSearch.SendKeys(text);
+        }
+        public void PM(string text)
+        {
+            SRPresetCodeSearch.Clear();
+            SRPresetCodeSearch.SendKeys(text);
+        }
 
-        
+
         public void EditContent(string text)
         {
             EditContentSymbol.Click();

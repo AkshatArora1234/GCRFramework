@@ -66,6 +66,9 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement TabPrintFormat => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[2]"));
         IWebElement TabConfigration => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[1]"));
         IWebElement SRPrintFormat => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[7]"));
+        IWebElement SRTare => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[9]"));
+        IWebElement SRContentSymbol => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[3]"));
+        IWebElement SRPresetMsg => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[5]"));
         IWebElement ClickEditNEWPF => Driver.FindElement(By.XPath("(//*[contains(text(),'OpenSansBiscuits1')])"));
         IWebElement ClickEditNutritionalPanel => Driver.FindElement(By.XPath("(//*[contains(text(),'ChocoCream')])"));   
         IWebElement ClickEditNutritionalPanelTwoZeroOne => Driver.FindElement(By.XPath("//*[@id='gridSCALENP']/div/div[6]/div/div/div[1]/div/table/tbody/tr[last()-1]/td[2]"));
@@ -118,6 +121,10 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         public void TabPrintFormatClick() => TabPrintFormat.Click();
         public void TabConfiGrationClick() => TabConfigration.Click();
         public void srPrintFormat1() => SRPrintFormat.Click();
+        public void srTare() => SRTare.Click();
+        public void srContentSymbol() => SRContentSymbol.Click();
+        public void srPresetMessage() => SRPresetMsg.Click();
+
         public void ClickFontNewButton() => FontNewButton.Click();
         public void ClickTareNewButton() => TareNewButton.Click();
         public void ClickPresetNewButton() => PresetNewButton.Click();

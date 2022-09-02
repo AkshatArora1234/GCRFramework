@@ -14,51 +14,60 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         HomePage homePage;
         Scaleconfig scaleConfigurationPage;
         ConfigurationPage configurationPage;
-
+        String VerifyText;
         public SRConfigurationPage(IWebDriver driver)
         {
             Driver = driver;
             scaleConfigurationPage = new Scaleconfig(driver);
             homePage = new HomePage(Driver);
             configurationPage = new ConfigurationPage(Driver);
+
         }
 
-        IWebElement HQNewContentSymbolName => Driver.FindElement(By.XPath("//*[@id='gridCONTSYM']/div/div[6]/div/div/div[1]/div/table/tbody/tr[1]/td[2]"));
-        IWebElement NewContentSymbolNameEdit => Driver.FindElement(By.XPath("//*[@id='gridCONTSYM']/div/div[6]/div/div/div[1]/div/table/tbody/tr[1]/td[2]/div/div/div[1]/input"));
-        IWebElement SRContentSymbolName => Driver.FindElement(By.XPath("//*[@id='gridSCLCNTSYMB']/div/div[6]/div/div/div[1]/div/table/tbody/tr[1]/td[2]"));
-        IWebElement EditContentSymbol => Driver.FindElement(By.XPath("(//div[@ng-click='ctrl.toggleEditMode(false)'])[2]"));
+        
+        //  IWebElement PrintFormatcodeverification => Driver.FindElement(By.XPath("//*[text()='OpenSansBiscuits']"));
+        IWebElement SRcodeverification => Driver.FindElement(By.XPath($"//*[text()='{VerifyText}']"));
+        
+        
 
-        IWebElement PrintFormatcodeverification => Driver.FindElement(By.XPath("//*[text()='OpenSansBiscuits']"));
-
-        IWebElement ContentSymbolTab => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[3]"));
-
-        public void CompareDetails()
+        public void ComparePrintFormat(string searchcode, string verifytext)
         {
+            VerifyText = verifytext;
             Thread.Sleep(3000);
-            string SearchContentSymbol = homePage.getConfiguration("TestData.json", "SrchContentSymbol");
-            configurationPage.SearchContentSymbol(SearchContentSymbol);
-            EditContentSymbol.Click();
-            HQNewContentSymbolName.Click();
-            string ContentSymbolnew = NewContentSymbolNameEdit.GetAttribute("value").ToString();
-            Driver.SwitchTo().Window(Driver.WindowHandles[1]); //switches to SR tab
-            ContentSymbolTab.Click();
-            Thread.Sleep(3000);
-            configurationPage.SearchContentSymbol(SearchContentSymbol);
-            Thread.Sleep(3000);
-            string SRvalue = SRContentSymbolName.Text;
-            Debug.Assert(SRvalue == ContentSymbolnew);
-            Driver.SwitchTo().Window(Driver.WindowHandles[0]);
-        }
-
-        public void ComparePrintFormat(string searchcode , string verifytext)
-        {
-            Thread.Sleep(3000);
-            //string SearchContentSymbol = homePage.getConfiguration("TestData.json", "SrchContentSymbol");
             string printformattext = searchcode;
             configurationPage.Printformat(printformattext);
-            string Printformattextvalue = PrintFormatcodeverification.Text;
-            Assert.AreEqual(Printformattextvalue, verifytext);
-            
+            string textvalue = SRcodeverification.Text;
+            Assert.AreEqual(textvalue, verifytext);
+        }
+
+        public void CompareTare(string searchcode, string verifytext)
+        {
+            VerifyText = verifytext;
+            Thread.Sleep(3000);
+            string text = searchcode;
+            configurationPage.Tare(text);
+            string textvalue = SRcodeverification.Text;
+            Assert.AreEqual(textvalue, verifytext);
+
+        }
+        public void CompareContentSymbol(string searchcode, string verifytext)
+        {
+            VerifyText = verifytext;
+            Thread.Sleep(3000);
+            string text = searchcode;
+            configurationPage.SearchContentSymbol(text);
+            string textvalue = SRcodeverification.Text;
+            Assert.AreEqual(textvalue, verifytext);
+
+        }
+        public void ComparePresetMsg(string searchcode, string verifytext)
+        {
+            Thread.Sleep(3000);
+            string text = searchcode;
+            configurationPage.PM(text);
+            string textvalue = SRcodeverification.Text;
+            Assert.AreEqual(textvalue, verifytext);
+
         }
     }
 }

@@ -680,15 +680,36 @@ namespace SpecFlow_MSTestFrameWork.Steps
         /// <summary>
         /// Verifying the Tares, Content Symbols and Preset messages in SR is as that in HQ 
         /// </summary>
-        [Then(@"navigate to verify Tares, Content Symbols and Preset messages")]
-        public void ThenNavigateToVerifyTaresContentSymbolsAndPresetMessages()
+        [Then(@"navigate to verify Tare '(.*)' and '(.*)'")]
+        public void ThenNavigateToVerifyTareAnd(string searchcode, string verifytext)
         {
             Thread.Sleep(3000);
-            _driverHelper.driver.SwitchTo().Window(_driverHelper.driver.WindowHandles[0]);
-            scaleConfigurationPage.TabConfiGrationClick();
-            sRConfigurationPage.CompareDetails();
+            scaleConfigurationPage.srTare();
+            sRConfigurationPage.CompareTare(searchcode, verifytext);
             Thread.Sleep(3000);
+            _driverHelper.driver.SwitchTo().Window(_driverHelper.driver.WindowHandles[0]);
         }
+
+        [Then(@"navigate to verify Content Symbol '(.*)' and '(.*)'")]
+        public void ThenNavigateToVerifyContentSymbolAnd(string searchcode, string verifytext)
+        {
+            Thread.Sleep(3000);
+            scaleConfigurationPage.srContentSymbol();
+            sRConfigurationPage.CompareContentSymbol(searchcode, verifytext);
+            Thread.Sleep(3000);
+            _driverHelper.driver.SwitchTo().Window(_driverHelper.driver.WindowHandles[0]);
+        }
+
+        [Then(@"navigate to verify Preset Messages '(.*)' and '(.*)'")]
+        public void ThenNavigateToVerifyPresetMessagesAnd(string searchcode, string verifytext)
+        {
+            Thread.Sleep(3000);
+            scaleConfigurationPage.srPresetMessage();
+            sRConfigurationPage.ComparePresetMsg(searchcode, verifytext);
+            Thread.Sleep(3000);
+            _driverHelper.driver.SwitchTo().Window(_driverHelper.driver.WindowHandles[0]);
+        }
+
 
         /// <summary>
         /// Verifying the Print Format on SR
