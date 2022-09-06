@@ -291,7 +291,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [Then(@"Publish the PF")]
         public void PublishthePF()
         {
-            scaleConfigurationPage.PublishPrint();
+           // scaleConfigurationPage.PublishPrint();
             Thread.Sleep(5000);
         }
 
@@ -302,7 +302,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [Then(@"Select the Store")]
         public void SelectStore()
         {
-            scaleConfigurationPage.SelectStoreLatest();
+          //  scaleConfigurationPage.SelectStoreLatest();
             Thread.Sleep(3000);
         }
 
@@ -677,7 +677,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
             SelectStore();
         }
 
-        /// <summary>
+        /*/// <summary>
         /// Verifying the Tares, Content Symbols and Preset messages in SR is as that in HQ 
         /// </summary>
         [Then(@"navigate to verify Tare '(.*)' and '(.*)'")]
@@ -723,6 +723,37 @@ namespace SpecFlow_MSTestFrameWork.Steps
             sRConfigurationPage.ComparePresetMsg(searchcode, verifytext);
             Thread.Sleep(7000);
             _driverHelper.driver.SwitchTo().Window(_driverHelper.driver.WindowHandles[0]);
+        }*/
+
+        /// <summary>
+        /// Verifying the Tares, Content Symbols and Preset messages in SR is as that in HQ 
+        /// </summary>
+        [Then(@"navigate to verify Tare '(.*)' and '(.*)'")]
+        public void ThenNavigateToVerifyTareAnd(string searchcodeTare, string verifytextTare)
+        {
+            Thread.Sleep(3000);
+            scaleConfigurationPage.srTare();
+            sRConfigurationPage.CompareTare(searchcodeTare, verifytextTare);
+            Thread.Sleep(3000);
+        }
+
+        [Then(@"navigate to verify Content Symbol '(.*)' and '(.*)'")]
+        public void ThenNavigateToVerifyContentSymbolAnd(string searchcodeCS, string verifytextCS)
+        {
+            Thread.Sleep(3000);
+            scaleConfigurationPage.srContentSymbol();
+            sRConfigurationPage.CompareContentSymbol(searchcodeCS, verifytextCS);
+            Thread.Sleep(3000);
+        }
+
+
+        [Then(@"navigate to verify Preset Messages '(.*)' and '(.*)'")]
+        public void ThenNavigateToVerifyPresetMessagesAnd(string searchcodePM, string verifytextPM)
+        {
+            Thread.Sleep(3000);
+            scaleConfigurationPage.srPresetMessage();
+            sRConfigurationPage.ComparePresetMsg(searchcodePM, verifytextPM);
+            Thread.Sleep(3000);
         }
 
 
@@ -737,7 +768,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.srPrintFormat1();
             sRConfigurationPage.ComparePrintFormat(searchcode, verifytext);
             Thread.Sleep(3000);
-          //  _driverHelper.driver.SwitchTo().Window(_driverHelper.driver.WindowHandles[0]);
+            _driverHelper.driver.SwitchTo().Window(_driverHelper.driver.WindowHandles[0]);
         }
 
         /// <summary>

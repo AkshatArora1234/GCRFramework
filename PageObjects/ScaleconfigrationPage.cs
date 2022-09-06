@@ -16,12 +16,12 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         IWebElement Searchbar => Driver.FindElement(By.XPath("//input[@id='search-text']"));
         IWebElement NewItembutton => Driver.FindElement(By.XPath("(//span[text()='New'])[6]"));
-        IWebElement NewItem => Driver.FindElement(By.XPath("(//span[text()='New'])[6]"));
+        IWebElement NewItem => Driver.FindElement(By.XPath("(//span[text()='New'])[7]"));
         IWebElement FontNewButton => Driver.FindElement(By.XPath("(//span[text()='New'])[1]"));
         IWebElement TareNewButton => Driver.FindElement(By.XPath("(//span[text()='New'])[5]"));
         IWebElement PresetNewButton => Driver.FindElement(By.XPath("(//span[text()='New'])[4]"));
         IWebElement ContentNewButton => Driver.FindElement(By.XPath("(//span[text()='New'])[2]"));
-        IWebElement NutritionalPanel => Driver.FindElement(By.XPath("(//span[text()='New'])[4]"));
+        IWebElement NutritionalPanel => Driver.FindElement(By.XPath("(//span[text()='New'])[5]"));
         IWebElement LeftMenu => Driver.FindElement(By.XPath("//*[@class='SideMenuWrapper SideMenuWrapperSmall']//*[@class='fa fa-bars N_P_A']"));
         IWebElement ScaleConfigurationMenu => Driver.FindElement(By.XPath("//span/strong[text()='Scale Configuration']"));
         IWebElement ElementSelectFromTable => Driver.FindElement(By.XPath("//*[@id='gridSCALEPF']/div/div[6]/div/div/div[1]/div/table/tbody/tr[last()-1]/td[1]"));
@@ -98,15 +98,10 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement Option4 => Driver.FindElement(By.XPath("(//*[@ng-keydown='option.disabled || keyDownLink($event)'])[4]"));
         IWebElement Option5 => Driver.FindElement(By.XPath("(//*[@ng-keydown='option.disabled || keyDownLink($event)'])[5]"));
         IWebElement SaveAndCloseNutriPanel => Driver.FindElement(By.XPath("//button[@class='button-saveandclose']"));
-
         IWebElement Fontname => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[2]"));
-
         IWebElement VerifyFontmessage => Driver.FindElement(By.XPath("//p[@class='ng-binding']"));
-
         IWebElement Okbutton => Driver.FindElement(By.XPath("(//*[text()='OK'])[1]"));
-
         IWebElement DeleteFont1 => Driver.FindElement(By.XPath("(//i[@ng-click='ctrl.actions.deleteFont(row.data)'])[1]"));
-
         IWebElement CloseSR => Driver.FindElement(By.XPath("//button[@ng-click='ctrl.cancelClicked()']"));
 
         public void ButtonSaveClick() => ButtonSave.Click();

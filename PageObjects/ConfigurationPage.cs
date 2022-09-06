@@ -21,10 +21,10 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement ScaleConfigurationTab => Driver.FindElement(By.XPath("(//span[text()='Scale Configuration'])[2]"));
         IWebElement ConfigurationTab => Driver.FindElement(By.XPath("//a/uib-tab-heading[text()='Configuration']"));
         IWebElement ContentCodeSearch => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[5]"));
-        IWebElement SRTareCodeSearch => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[12]"));
+        IWebElement SRTareCodeSearch => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[5]"));
         IWebElement SRPresetCodeSearch => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[7]"));
 
-        IWebElement pfcodesearch => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[6]"));
+        IWebElement pfcodesearch => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[11]"));
         IWebElement FontSearch => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[1]"));
         IWebElement EditContentSymbol => Driver.FindElement(By.XPath("(//div[@ng-click='ctrl.toggleEditMode(false)'])[2]"));
         IWebElement EditFont => Driver.FindElement(By.XPath("(//div[@ng-click='ctrl.toggleEditMode(false)'])[1]"));
@@ -43,7 +43,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement FontSave => Driver.FindElement(By.XPath("(//span[text()='Save'])[1]"));
         IWebElement FontSaveYes => Driver.FindElement(By.Id("submitButton"));
 
-        IWebElement pfTare => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[7]"));
+      //  IWebElement pfTare => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[7]"));
 
 
 
@@ -56,9 +56,9 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             ContentCodeSearch.Clear();
             Thread.Sleep(10000);
             ContentCodeSearch.SendKeys(text);
-            Thread.Sleep(10000);
+           /* Thread.Sleep(10000);
             ContentCodeSearch.SendKeys(Keys.Enter);
-            Thread.Sleep(10000);
+            Thread.Sleep(10000);*/
         }
 
         public void Printformat(string text)
@@ -68,20 +68,20 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         }
         public void Tare(string text)
         {
-            pfTare.Clear();
-            pfTare.SendKeys(text);
-            Thread.Sleep(7000);
+            SRTareCodeSearch.Clear();
+            SRTareCodeSearch.SendKeys(text);
+            /*Thread.Sleep(7000);
             pfTare.SendKeys(Keys.Enter);
-            Thread.Sleep(7000);
+            Thread.Sleep(7000);*/
         }
         public void PM(string text)
         {
             SRPresetCodeSearch.Clear();
             Thread.Sleep(10000);
             SRPresetCodeSearch.SendKeys(text);
-            Thread.Sleep(10000);
+           /* Thread.Sleep(10000);
             SRPresetCodeSearch.SendKeys(Keys.Enter);
-            Thread.Sleep(10000);
+            Thread.Sleep(10000);*/
         }
 
 

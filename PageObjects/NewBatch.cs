@@ -28,7 +28,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             BatchLink.Click();
             Thread.Sleep(4000);
             NewBatchButton.Click();
-            NewBatchName.SendKeys("TestBatch_1");
+            NewBatchName.SendKeys("TestBatch_34");
             Thread.Sleep(3000);
             NewBatchSave.Click();
         }

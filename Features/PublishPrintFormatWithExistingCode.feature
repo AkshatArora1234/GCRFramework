@@ -148,7 +148,6 @@ Scenario: Edit PF
 
 
 @mytag
-
 Scenario Outline: Publish PF existing with same name as in store
 	Given user navigates to HQ application
 	When enter valid '<username>', '<hqpassword>'
@@ -169,7 +168,7 @@ Scenario Outline: Publish PF existing with same name as in store
 	And verify user can Change non nutritional section to the nutritional by adding a nutritional font and description
 	And Add another new nutritional Panel to another section
 	And Save and close the PF
-    Then select a scale item
+   Then select a scale item
 	And add the PF and ContentSymbol 
 	And Save item
 	Then navigate to the configuration page to edit the content symbol assigned to item
@@ -184,29 +183,10 @@ Scenario Outline: Publish PF existing with same name as in store
 	When User enters Scale Configuration in the Search Box
 	Then Scale Configuration Item should be displayed on the Menu
 	When User Selects the Scale Configuration
-	Then navigate to verify Tare '<searchcode>' and '<verifytext>'
-
-	| searchcode | verifytext       |
-	| 46         | FriedRicePowder  |
-
-	Then navigate to verify Content Symbol '<searchcode>' and '<verifytext>'
-
- 
-	| searchcode | verifytext       |
-	| 18         | KGTest           |
-
-	Then navigate to verify Preset Messages '<searchcode>' and '<verifytext>'
-
-
-	| searchcode | verifytext       |
-	| 47         | Contains fat     |
-
+	Then navigate to verify Tare '<searchcodeTare>' and '<verifytextTare>'
+    Then navigate to verify Content Symbol '<searchcodeCS>' and '<verifytextCS>'
+	Then navigate to verify Preset Messages '<searchcodePM>' and '<verifytextPM>'
 	Then navigate to verify Print Format '<searchcode>' and '<verifytext>'
-
-
-	| searchcode | verifytext       |
-	| 21         | Popcorn          |
-
     #Testdata update to actual one
 	And navigate back to configuration page to change the contentSymbol back
 	When User clicks on Nutritional Panel New Button
@@ -221,6 +201,9 @@ Scenario Outline: Publish PF existing with same name as in store
 	Then click on save and close button Nutritional Panel Element
 	And Navigate to PF tab
 
+     Examples: 
+	| searchcode | verifytext      | searchcodeCS| verifytextCS    | searchcodePM | verifytextPM     | searchcodeTare  | verifytextTare      |
+	| 13         | Popcorn         | 18          | KGTest          | 47           | Contains fat     | 46              | FriedRicePowder     |	
     
 
 
