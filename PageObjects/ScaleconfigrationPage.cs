@@ -87,7 +87,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement TableRows => Driver.FindElement(By.XPath("(//input[@ng-model='ctrl.ngModel'])[4]"));
         IWebElement SearchCode => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[17]"));
         IWebElement ChangeCode => Driver.FindElement(By.Id("printFormatCode"));
-        IWebElement ClickEditNice => Driver.FindElement(By.XPath("(//*[contains(text(),'NiceBiscuits')])[1]"));
+        IWebElement ClickEditNice => Driver.FindElement(By.XPath("(//*[contains(text(),'Popcorn')])[2]"));
         IWebElement PrintFormatName => Driver.FindElement(By.XPath("//*[@name='printFormatName']"));
         IWebElement NutritionalPanelName => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[14]"));
         IWebElement EnterValueinMask => Driver.FindElement(By.XPath("//*[@name='nutritional-ele-mask']"));

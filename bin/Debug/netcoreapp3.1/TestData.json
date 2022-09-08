@@ -11,8 +11,8 @@
   "ChangedPFCOde": "21",
   "ChangedPFName": "Popcorn",
   "ColumnName": "Scale",
-  "PrintCode2.2": "25",
-  "PrintFormat2.2": "NiceBiscuits",
+  "PrintCode2.2": "12",
+  "PrintFormat2.2": "Popcorn",
   "PrintFormat2.3": "Popcorn1",
 
 
@@ -93,6 +93,6 @@
   "b": "15",
   "PFName": "21",
   "HRows": "4",
-  "TRows": "6",
+  "TRows": "6"
 
 }
