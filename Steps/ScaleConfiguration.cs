@@ -769,6 +769,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
             sRConfigurationPage.ComparePrintFormat(searchcode, verifytext);
             Thread.Sleep(3000);
             _driverHelper.driver.SwitchTo().Window(_driverHelper.driver.WindowHandles[0]);
+            Thread.Sleep(2000);
         }
 
         /// <summary>

@@ -56,65 +56,46 @@ Scenario: Verify Print Format with Existing same code as Store
 
 @mytag
 Scenario: Publish PF to Store
-Given user navigates to HQ application
-	When enter valid '<username>', '<hqpassword>'
-	And Clicks on Log In button
-	When user create a new batch
-	When User clicks on the Left Menu
-	Then menu should be displayed
-	When User enters Scale Configuration in the Search Box
-	Then Scale Configuration Item should be displayed on the Menu
-	When User Selects the Scale Configuration
-	Then Scale Configuration Page should be displayed
-	When User clicks on Tab Print Format
-	Then Click on the New Button
-	When Enter the CodeName and PrintFormat
-	When Enter the Value of Print Name
-	Then Click on Edit Button
-	When Check the required text boxes
-	Then Check the Content Symbol 
-	When Click on Add Section
-	Then Click on Font Dropdown
-	Then Add Desc to font
-	Then Save the font with data
-	Then Close the font
-	Then Publish the PF
-	Then Select the Store
-	And user navigates to SR application
-	When enter valid '<username>', '<hqpassword>'
-	And Clicks on Login button of SR app
-	When User clicks on the Left Menu
-	Then menu should be displayed
-	When User enters Scale Configuration in the Search Box
-	Then Scale Configuration Item should be displayed on the Menu
-	Then navigate to verify Print Format '<searchcode>' and '<verifytext>'
-	Then navigate to Tare '<searchcodetare>' ,'<verifytexttare>' and '<Tarevaluesg>'
-	Then navigate to verify Content Symbol '<searchcodecontent>' , '<verifytextcontent>'and '<ContentValues>'
-	Then navigate to verify Preset Messages '<searchcodepreset>' and '<verifytextpreset>'
-Examples: 
-	| searchcode | verifytext       | searchcodetare | verifytexttare | Tarevaluesg | searchcodecontent | verifytextcontent | ContentValues | searchcodepreset | verifytextpreset |
-	| 12         | OpenSansBiscuits | 45             | RicePowder     | 30          | 18                | KGTest            | KiloGrams     |47                | Contains fat      |
+	Given user navigates to HQ application
+    When enter valid '<username>', '<hqpassword>'
+    And Clicks on Log In button
+    When user create a new batch
+    When User clicks on the Left Menu
+    Then menu should be displayed
+    When User enters Scale Configuration in the Search Box
+    Then Scale Configuration Item should be displayed on the Menu
+    When User Selects the Scale Configuration
+    #Then Scale Configuration Page should be displayed
+    When User clicks on Tab Print Format
+    Then Click on the New Button
+    When Enter the CodeName and PrintFormat
+    When Enter the Value of Print Name
+    Then Click on Edit Button
+    When Check the required text boxes
+    Then Check the Content Symbol
+    When Click on Add Section
+    Then Click on Font Dropdown
+    Then Add Desc to font
+    Then Save the font with data
+    Then Close the font
+    Then Publish the PF
+    Then Select the Store
+    And user navigates to SR application
+    When enter valid '<username>', '<hqpassword>'
+    And Clicks on Login button of SR app
+    When User clicks on the Left Menu
+    Then menu should be displayed
+    When User enters Scale Configuration in the Search Box
+    Then Scale Configuration Item should be displayed on the Menu
+    Then navigate to verify Tare '<searchcodeTare>' and '<verifytextTare>'
+    Then navigate to verify Content Symbol '<searchcodeCS>' and '<verifytextCS>'
+    Then navigate to verify Preset Messages '<searchcodePM>' and '<verifytextPM>'
+    Then navigate to verify Print Format '<searchcode>' and '<verifytext>'
+Examples:
+    | searchcode | verifytext      | searchcodeCS| verifytextCS    | searchcodePM | verifytextPM     | searchcodeTare  | verifytextTare      |
+    | 12         | OpenSansBiscuits| 27          | G               | 67           | Minerals Qty     | 10              | Penuts              |  
 
 
-	
-
- 
-	
-	
-
-	
-
-
-	
-
-
-   
-
-
-
-	   
-
-	
 @mytag
 Scenario: Edit PF
 	Given user navigates to HQ application

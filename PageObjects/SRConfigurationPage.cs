@@ -44,6 +44,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Thread.Sleep(3000);
             string printformattext = searchcode;
             configurationPage.Printformat(printformattext);
+            Thread.Sleep(3000);
             string textvalue = SRcodeverification().Text;
             Assert.AreEqual(textvalue, verifytext);
         }

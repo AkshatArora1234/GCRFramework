@@ -63,8 +63,11 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         public void Printformat(string text)
         {
+            Thread.Sleep(5000);
             pfcodesearch.Clear();
+            Thread.Sleep(4000);
             pfcodesearch.SendKeys(text);
+            Thread.Sleep(4000);
         }
         public void Tare(string text)
         {
