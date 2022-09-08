@@ -26,18 +26,15 @@ Scenario: Verify Print Format with Existing same code as Store
 	Then Add another new nutritional Panel to another section latest
 	Then Save the font with data
 	Then Close the font
-	Then Publish the PF
-	Then Select the Store
+	#Then Publish the PF
+	#Then Select the Store
 	When Clear the PrintformatName
 	When Enter the Value of Print Name Nicebiscits
 	When Click on Edit Button
-	#When Enter the Value of Print Name Nicebiscits
-	#Then Font should get saved and a '<confirmationMsg>' should be displayed for the same
-
-	#When Check the required text boxes
+	
 	When Change the PF name to Popcorn, also uncheck 'product life' only.Take any nutritional font and uncheck 'Nutritional' and check 'Enable copy'.
 	Then Check the Content Symbol 
-	#And verify Content Symbol is automatically checked on checking Content
+	
 	Then verify user can Change non nutritional section to the nutritional by adding a nutritional font and description
 	Then Change Nutritional to Non Nutritional
 	Then Save the font with data
@@ -51,6 +48,25 @@ Scenario: Verify Print Format with Existing same code as Store
 	When User clicks on Tab Print Format
 	Then Publish the PF
 	Then Select the Store
+	And user navigates to SR application
+	When enter valid '<username>', '<hqpassword>'
+	And Clicks on Login button of SR app
+	When User clicks on the Left Menu
+	Then menu should be displayed
+	When User enters Scale Configuration in the Search Box
+	Then Scale Configuration Item should be displayed on the Menu
+	When User Selects the Scale Configuration
+	Then navigate to verify Tare '<searchcodeTare>' and '<verifytextTare>'
+    Then navigate to verify Content Symbol '<searchcodeCS>' and '<verifytextCS>'
+	Then navigate to verify Preset Messages '<searchcodePM>' and '<verifytextPM>'
+	Then navigate to verify Print Format '<searchcode>' and '<verifytext>'
+    
+
+     Examples: 
+	| searchcode | verifytext      | searchcodeCS| verifytextCS    | searchcodePM | verifytextPM     | searchcodeTare  | verifytextTare      |
+	| 12         | OpenSansBiscuits| 39          | ML              | 46           | DATE PACKED	     | 45	           | RicePowder	         |	
+    
+
 
 
 
