@@ -186,7 +186,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [When(@"Enter the Value of Print Name")]
         public void EnterValueofsearchcode()
         {
-            
+
             string printFormat = homePage.getConfiguration("TestData.json", "PrintFormat2.0");
             scaleConfigurationPage.SeachPFname(printFormat);
             Thread.Sleep(5000);
@@ -206,7 +206,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         /// <summary>
         /// Common Function for Scale Configuration tests, click on Edit button against the searched Print Format
         /// </summary>
-        
+
         [Then(@"Click on Edit Button")]
         public void ClickonEditButton()
         {
@@ -287,11 +287,11 @@ namespace SpecFlow_MSTestFrameWork.Steps
         /// <summary>
         /// Click on Cloud Icon, Publish PF. In Print Format Page
         /// </summary>
-        
+
         [Then(@"Publish the PF")]
         public void PublishthePF()
         {
-           // scaleConfigurationPage.PublishPrint();
+            // scaleConfigurationPage.PublishPrint();
             Thread.Sleep(5000);
         }
 
@@ -302,7 +302,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [Then(@"Select the Store")]
         public void SelectStore()
         {
-          //  scaleConfigurationPage.SelectStoreLatest();
+            //  scaleConfigurationPage.SelectStoreLatest();
             Thread.Sleep(3000);
         }
 
@@ -420,7 +420,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         public void ClickSupportBasicModeHeaderandTable()
         {
             string HR = homePage.getConfiguration("TestData.json", "HRows");
-            
+
 
             string TR = homePage.getConfiguration("TestData.json", "TRows");
             scaleConfigurationPage.ClickSupportBasicMode(HR, TR);
@@ -539,10 +539,10 @@ namespace SpecFlow_MSTestFrameWork.Steps
             ClickonAddSections();
             string selectfont = homePage.getConfiguration("TestData.json", "SecondFontname2.0.2");
             scaleConfigurationPage.ClickonFontDropdown2(selectfont);
-          //  Thread.Sleep(5000);
+            //  Thread.Sleep(5000);
             string Adddesc = homePage.getConfiguration("TestData.json", "NutritionalDesc");
             scaleConfigurationPage.AddDiscription2(Adddesc);
-           // Thread.Sleep(5000);
+            // Thread.Sleep(5000);
             string NutriTemplate = homePage.getConfiguration("TestData.json", "SecondNutritionalName2.0.2");
             scaleConfigurationPage.FetchValueForNutritionalSection(NutriTemplate);
         }
@@ -856,18 +856,6 @@ namespace SpecFlow_MSTestFrameWork.Steps
 
             // Uncheck the Product Life
             scaleConfigurationPage.CheckProductLife();
-
-
-
-           
-
-
-        }
-
-        [When(@"User Enters the Code and PrintFormat(.*)")]
-        public void WhenUserEntersTheCodeAndPrintFormat(int p0)
-        {
-            
         }
 
         /// <summary>
@@ -882,25 +870,25 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [Then(@"Verifies the Toast is displayed")]
         public void ThenVerifiesTheToastIsDisplayed()
         {
-            
+
         }
 
         [Then(@"a message'(.*)' should be displayed")]
         public void ThenAMessageShouldBeDisplayed(string p0)
         {
-            
+
         }
 
         [When(@"User Pubilsh the PF to a Second Store where PF exists with the same Code")]
         public void WhenUserPubilshThePFToASecondStoreWherePFExistsWithTheSameCode()
         {
-            
+
         }
 
         [When(@"Verify that at store, all the Tares, Content Symbols and Preset messages of HQ are published and the PF at store with same code is updated with values from HQ in Configuration\.")]
         public void WhenVerifyThatAtStoreAllTheTaresContentSymbolsAndPresetMessagesOfHQArePublishedAndThePFAtStoreWithSameCodeIsUpdatedWithValuesFromHQInConfiguration_()
         {
-            
+
         }
 
         /// <summary>
@@ -941,7 +929,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.Verifymessage();
         }
 
-       
+
 
 
 
