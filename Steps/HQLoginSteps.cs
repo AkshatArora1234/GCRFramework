@@ -52,6 +52,7 @@ namespace SpecFlow_MSTestFrameWork.StepDefinitions
             Thread.Sleep(4000);
             hQLoginPage.ClickSRBtnSignIn();
             Thread.Sleep(8000);
+            hQLoginPage.UserLoginAvailable();
         }
 
         /// <summary>
@@ -76,6 +77,8 @@ namespace SpecFlow_MSTestFrameWork.StepDefinitions
         {
             hQLoginPage.ClickBtnSignIn();
             Thread.Sleep(8000);
+            hQLoginPage.UserLoginAvailable();
+         
         }
 
         /// <summary>

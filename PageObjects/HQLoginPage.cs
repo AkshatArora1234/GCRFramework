@@ -23,7 +23,9 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement submitbutton => Driver.FindElement(By.Id("submitButton"));
         // IWebElement ProfileName1 => Driver.FindElement(By.XPath("//span[text()='AutUser1 AutUser1']"));
         IWebElement ProfileName2 => Driver.FindElement(By.XPath("//span[text()='Automation Automation']"));
-
+        IWebElement UserLogin => Driver.FindElement(By.XPath("//span[text()='User Login']"));
+        IWebElement OK => Driver.FindElement(By.XPath("//button[@class='button-save']"));
+        
         public void EnterURL()
         {
             var config = new ConfigurationBuilder().AddJsonFile("appsetting.json").Build();
@@ -37,6 +39,22 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Username.Click();
             Username.SendKeys(config["username"]);
             Password.SendKeys(config["hqpassword"]);
+        }
+        public void UserLoginAvailable()
+        {
+            try
+            {
+                if (UserLogin.Displayed)
+                {
+                    OK.Click();
+                    Thread.Sleep(8000);
+                }
+            }
+            catch (NoSuchElementException e)
+            {
+            //No such element exception
+            }
+             
         }
 
         public void ClickBtnSignIn() => LogIn.Click();

@@ -1,0 +1,210 @@
+-> Loading plugin C:\Users\jesni.as\source\Git\Latest\GCRFramework\bin\Debug\netcoreapp3.1\LivingDoc.SpecFlowPlugin.dll
+-> Loading plugin C:\Users\jesni.as\source\Git\Latest\GCRFramework\bin\Debug\netcoreapp3.1\TechTalk.SpecFlow.MSTest.SpecFlowPlugin.dll
+-> Loading plugin C:\Users\jesni.as\source\Git\Latest\GCRFramework\bin\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.dll
+-> Using default config
+Setup
+Given user navigates to HQ application
+-> done: HQLoginSteps.GivenUserNavigatesToHQApplication() (4.2s)
+When enter valid '<username>', '<hqpassword>'
+-> done: HQLoginSteps.WhenEnterValid("<username>", "<hqpassword>") (0.6s)
+And Clicks on Log In button
+-> done: HQLoginSteps.WhenClicksOnLogInButton() (16.3s)
+When user create a new batch
+-> done: NewItemCreationSteps.WhenUserCreateANewBatch() (7.8s)
+When User clicks on the Left Menu
+-> done: ScaleConfiguration.WhenUserClicksOnTheLeftMenu() (8.2s)
+Then menu should be displayed
+-> done: ScaleConfiguration.ThenMenuShouldBeDisplayed() (0.0s)
+When User enters Scale Configuration in the Search Box
+-> done: ScaleConfiguration.WhenUserEntersScaleConfigurationInTheSearchBox() (0.3s)
+Then Scale Configuration Item should be displayed on the Menu
+-> done: ScaleConfiguration.ThenScaleConfigurationItemShouldBeDisplayedOnTheMenu() (0.7s)
+When User Selects the Scale Configuration
+-> done: ScaleConfiguration.WhenUserSelectsTheScaleConfiguration() (0.0s)
+Then Scale Configuration Page should be displayed
+-> done: ScaleConfiguration.ThenScaleConfigurationPageShouldBeDisplayed() (0.0s)
+When User clicks on Tab Print Format
+-> done: ScaleConfiguration.WhenUserClicksOnTabPrintFormat() (1.7s)
+Then Click on the New Button
+-> done: ScaleConfiguration.ClickonNewButton() (0.5s)
+When user enter new PF code and name and Publish PF
+-> done: ScaleConfiguration.WhenUserEnterNewPFCodeAndNameAndPublishPF() (73.2s)
+And user search and select the printformat code
+-> done: ScaleConfiguration.WhenUserSearchAndSelectThePrintformatCode() (6.4s)
+Then user change the PF code and update the checkboxes
+-> done: ScaleConfiguration.ThenUserChangeThePFCodeAndUpdateTheCheckboxes() (0.2s)
+And verify Content Symbol is automatically checked on checking Content
+-> done: ScaleConfiguration.ThenVerifyContentSymbolIsAutomaticallyCheckedOnCheckingContent() (0.0s)
+And verify user can Change non nutritional section to the nutritional by adding a nutritional font and description
+-> done: ScaleConfiguration.ThenVerifyUserCanChangeNonNutritionalSectionToTheNutritionalByAddingANutritionalFontAndDescription() (16.0s)
+And Add another new nutritional Panel to another section
+-> done: ScaleConfiguration.ThenAddAnotherNewNutritionalPanelToAnotherSection() (9.2s)
+And Save and close the PF
+-> done: ScaleConfiguration.ThenSaveAndCloseThePF() (8.2s)
+Then select a scale item
+-> done: ScaleConfiguration.ThenSelectAScaleItem() (47.8s)
+And add the PF and ContentSymbol
+-> done: ScaleConfiguration.ThenAddThePFAndContentSymbol() (6.9s)
+And Save item
+-> done: ScaleConfiguration.ThenSaveItem() (0.3s)
+Then navigate to the configuration page to edit the content symbol assigned to item
+-> done: ScaleConfiguration.ThenNavigateToTheConfigurationPageToEditTheContentSymbolAssignedToItem() (43.8s)
+And Verify that the change is reflected in Item's scale tab
+-> done: ScaleConfiguration.ThenVerifyThatTheChangeIsReflectedInItemSScaleTab() (15.1s)
+And Delete the second panel added from the configuration page
+-> done: ScaleConfiguration.ThenDeleteTheSecondPanelAddedFromTheConfigurationPage() (15.8s)
+And Publish the PF to a second store where PF exists with same name
+-> done: ScaleConfiguration.ThenPublishThePFToASecondStoreWherePFExistsWithSameName() (27.8s)
+And user navigates to SR application
+-> done: HQLoginSteps.ThenUserNavigatesToSRApplication() (3.8s)
+When enter valid '<username>', '<hqpassword>'
+-> done: HQLoginSteps.WhenEnterValid("<username>", "<hqpassword>") (0.2s)
+And Clicks on Login button of SR app
+-> done: HQLoginSteps.WhenClicksOnLoginButtonOfSRApp() (20.2s)
+When User clicks on the Left Menu
+-> done: ScaleConfiguration.WhenUserClicksOnTheLeftMenu() (8.2s)
+Then menu should be displayed
+-> done: ScaleConfiguration.ThenMenuShouldBeDisplayed() (0.0s)
+When User enters Scale Configuration in the Search Box
+-> done: ScaleConfiguration.WhenUserEntersScaleConfigurationInTheSearchBox() (0.6s)
+Then Scale Configuration Item should be displayed on the Menu
+-> done: ScaleConfiguration.ThenScaleConfigurationItemShouldBeDisplayedOnTheMenu() (0.5s)
+When User Selects the Scale Configuration
+-> done: ScaleConfiguration.WhenUserSelectsTheScaleConfiguration() (0.0s)
+Then navigate to verify Tare '46' and 'FriedRicePowder'
+-> error: element not interactable
+  (Session info: chrome=105.0.5195.102) (29.8s)
+Then navigate to verify Content Symbol '18' and 'KGTest'
+-> skipped because of previous errors
+Then navigate to verify Preset Messages '47' and 'Contains fat'
+-> skipped because of previous errors
+Then navigate to verify Print Format '13' and 'Popcorn'
+-> skipped because of previous errors
+And navigate back to configuration page to change the contentSymbol back
+-> skipped because of previous errors
+When User clicks on Nutritional Panel New Button
+-> skipped because of previous errors
+When Enter CodeName and Nutritional Panel for second Testdata TwoZeroTwo
+-> skipped because of previous errors
+Then click on save button
+-> skipped because of previous errors
+When I search the second Nutrional Panel by Name Testdata TwoZeroTwo
+-> skipped because of previous errors
+Then Click on Edit Button NutritionalPanel TwoZeroOne
+-> skipped because of previous errors
+Then Click on the New NutritionalPanel Element Button
+-> skipped because of previous errors
+Then Click on second Nutritional Element dropdown Testdata TwoZeroTwo
+-> skipped because of previous errors
+When Enter the value in MeasurementsUnit g
+-> skipped because of previous errors
+Then Enter Value in second Mask Field
+-> skipped because of previous errors
+Then click on save and close button Nutritional Panel Element
+-> skipped because of previous errors
+And Navigate to PF tab
+-> skipped because of previous errors
+
+
+TestContext Messages:
+Given user navigates to HQ application
+-> done: HQLoginSteps.GivenUserNavigatesToHQApplication() (4.2s)
+When enter valid '<username>', '<hqpassword>'
+-> done: HQLoginSteps.WhenEnterValid("<username>", "<hqpassword>") (0.6s)
+And Clicks on Log In button
+-> done: HQLoginSteps.WhenClicksOnLogInButton() (16.3s)
+When user create a new batch
+-> done: NewItemCreationSteps.WhenUserCreateANewBatch() (7.8s)
+When User clicks on the Left Menu
+-> done: ScaleConfiguration.WhenUserClicksOnTheLeftMenu() (8.2s)
+Then menu should be displayed
+-> done: ScaleConfiguration.ThenMenuShouldBeDisplayed() (0.0s)
+When User enters Scale Configuration in the Search Box
+-> done: ScaleConfiguration.WhenUserEntersScaleConfigurationInTheSearchBox() (0.3s)
+Then Scale Configuration Item should be displayed on the Menu
+-> done: ScaleConfiguration.ThenScaleConfigurationItemShouldBeDisplayedOnTheMenu() (0.7s)
+When User Selects the Scale Configuration
+-> done: ScaleConfiguration.WhenUserSelectsTheScaleConfiguration() (0.0s)
+Then Scale Configuration Page should be displayed
+-> done: ScaleConfiguration.ThenScaleConfigurationPageShouldBeDisplayed() (0.0s)
+When User clicks on Tab Print Format
+-> done: ScaleConfiguration.WhenUserClicksOnTabPrintFormat() (1.7s)
+Then Click on the New Button
+-> done: ScaleConfiguration.ClickonNewButton() (0.5s)
+When user enter new PF code and name and Publish PF
+-> done: ScaleConfiguration.WhenUserEnterNewPFCodeAndNameAndPublishPF() (73.2s)
+And user search and select the printformat code
+-> done: ScaleConfiguration.WhenUserSearchAndSelectThePrintformatCode() (6.4s)
+Then user change the PF code and update the checkboxes
+-> done: ScaleConfiguration.ThenUserChangeThePFCodeAndUpdateTheCheckboxes() (0.2s)
+And verify Content Symbol is automatically checked on checking Content
+-> done: ScaleConfiguration.ThenVerifyContentSymbolIsAutomaticallyCheckedOnCheckingContent() (0.0s)
+And verify user can Change non nutritional section to the nutritional by adding a nutritional font and description
+-> done: ScaleConfiguration.ThenVerifyUserCanChangeNonNutritionalSectionToTheNutritionalByAddingANutritionalFontAndDescription() (16.0s)
+And Add another new nutritional Panel to another section
+-> done: ScaleConfiguration.ThenAddAnotherNewNutritionalPanelToAnotherSection() (9.2s)
+And Save and close the PF
+-> done: ScaleConfiguration.ThenSaveAndCloseThePF() (8.2s)
+Then select a scale item
+-> done: ScaleConfiguration.ThenSelectAScaleItem() (47.8s)
+And add the PF and ContentSymbol
+-> done: ScaleConfiguration.ThenAddThePFAndContentSymbol() (6.9s)
+And Save item
+-> done: ScaleConfiguration.ThenSaveItem() (0.3s)
+Then navigate to the configuration page to edit the content symbol assigned to item
+-> done: ScaleConfiguration.ThenNavigateToTheConfigurationPageToEditTheContentSymbolAssignedToItem() (43.8s)
+And Verify that the change is reflected in Item's scale tab
+-> done: ScaleConfiguration.ThenVerifyThatTheChangeIsReflectedInItemSScaleTab() (15.1s)
+And Delete the second panel added from the configuration page
+-> done: ScaleConfiguration.ThenDeleteTheSecondPanelAddedFromTheConfigurationPage() (15.8s)
+And Publish the PF to a second store where PF exists with same name
+-> done: ScaleConfiguration.ThenPublishThePFToASecondStoreWherePFExistsWithSameName() (27.8s)
+And user navigates to SR application
+-> done: HQLoginSteps.ThenUserNavigatesToSRApplication() (3.8s)
+When enter valid '<username>', '<hqpassword>'
+-> done: HQLoginSteps.WhenEnterValid("<username>", "<hqpassword>") (0.2s)
+And Clicks on Login button of SR app
+-> done: HQLoginSteps.WhenClicksOnLoginButtonOfSRApp() (20.2s)
+When User clicks on the Left Menu
+-> done: ScaleConfiguration.WhenUserClicksOnTheLeftMenu() (8.2s)
+Then menu should be displayed
+-> done: ScaleConfiguration.ThenMenuShouldBeDisplayed() (0.0s)
+When User enters Scale Configuration in the Search Box
+-> done: ScaleConfiguration.WhenUserEntersScaleConfigurationInTheSearchBox() (0.6s)
+Then Scale Configuration Item should be displayed on the Menu
+-> done: ScaleConfiguration.ThenScaleConfigurationItemShouldBeDisplayedOnTheMenu() (0.5s)
+When User Selects the Scale Configuration
+-> done: ScaleConfiguration.WhenUserSelectsTheScaleConfiguration() (0.0s)
+Then navigate to verify Tare '46' and 'FriedRicePowder'
+-> error: element not interactable
+  (Session info: chrome=105.0.5195.102) (29.8s)
+Then navigate to verify Content Symbol '18' and 'KGTest'
+-> skipped because of previous errors
+Then navigate to verify Preset Messages '47' and 'Contains fat'
+-> skipped because of previous errors
+Then navigate to verify Print Format '13' and 'Popcorn'
+-> skipped because of previous errors
+And navigate back to configuration page to change the contentSymbol back
+-> skipped because of previous errors
+When User clicks on Nutritional Panel New Button
+-> skipped because of previous errors
+When Enter CodeName and Nutritional Panel for second Testdata TwoZeroTwo
+-> skipped because of previous errors
+Then click on save button
+-> skipped because of previous errors
+When I search the second Nutrional Panel by Name Testdata TwoZeroTwo
+-> skipped because of previous errors
+Then Click on Edit Button NutritionalPanel TwoZeroOne
+-> skipped because of previous errors
+Then Click on the New NutritionalPanel Element Button
+-> skipped because of previous errors
+Then Click on second Nutritional Element dropdown Testdata TwoZeroTwo
+-> skipped because of previous errors
+When Enter the value in MeasurementsUnit g
+-> skipped because of previous errors
+Then Enter Value in second Mask Field
+-> skipped because of previous errors
+Then click on save and close button Nutritional Panel Element
+-> skipped because of previous errors
+And Navigate to PF tab
+-> skipped because of previous errors
