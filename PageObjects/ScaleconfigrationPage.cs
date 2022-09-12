@@ -85,7 +85,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement Support_Basic_Mode => Driver.FindElement(By.XPath("//input[@ng-model='section.hasBasicMode']"));
         IWebElement HeaderRows => Driver.FindElement(By.XPath("(//input[@ng-model='ctrl.ngModel'])[3]"));
         IWebElement TableRows => Driver.FindElement(By.XPath("(//input[@ng-model='ctrl.ngModel'])[4]"));
-        IWebElement SearchCode => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[17]"));
+        IWebElement SearchCode => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[20]"));
         IWebElement ChangeCode => Driver.FindElement(By.Id("printFormatCode"));
         IWebElement ClickEditNice => Driver.FindElement(By.XPath("(//*[contains(text(),'Popcorn')])[2]"));
         IWebElement PrintFormatName => Driver.FindElement(By.XPath("//*[@name='printFormatName']"));
