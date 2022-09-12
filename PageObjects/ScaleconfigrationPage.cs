@@ -15,7 +15,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         }
 
         IWebElement Searchbar => Driver.FindElement(By.XPath("//input[@id='search-text']"));
-        IWebElement NewItembutton => Driver.FindElement(By.XPath("(//span[text()='New'])[6]"));
+        IWebElement NewItembutton => Driver.FindElement(By.XPath("(//span[text()='New'])[7]"));
         IWebElement NewItem => Driver.FindElement(By.XPath("(//span[text()='New'])[7]"));
         IWebElement FontNewButton => Driver.FindElement(By.XPath("(//span[text()='New'])[1]"));
         IWebElement TareNewButton => Driver.FindElement(By.XPath("(//span[text()='New'])[5]"));
