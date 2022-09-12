@@ -11048,19 +11048,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rudra.prasad\\.nuget\\packages\\": {}
+    "C:\\Users\\vijay.bhaskar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Source\\GitCode\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
+      "projectUniqueName": "C:\\GCR56\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
       "projectName": "SpecFlow_MSTestFrameWork",
-      "projectPath": "C:\\Source\\GitCode\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
-      "packagesPath": "C:\\Users\\rudra.prasad\\.nuget\\packages\\",
-      "outputPath": "C:\\Source\\GitCode\\GCRFramework\\obj\\",
+      "projectPath": "C:\\GCR56\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
+      "packagesPath": "C:\\Users\\vijay.bhaskar\\.nuget\\packages\\",
+      "outputPath": "C:\\GCR56\\GCRFramework\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\rudra.prasad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vijay.bhaskar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11150,7 +11150,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

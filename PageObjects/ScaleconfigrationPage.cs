@@ -62,7 +62,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement SelectStore => Driver.FindElement(By.XPath("//*[@class='checkboxInput']"));
         IWebElement Deletebutton => Driver.FindElement(By.Id("submitButton"));
         IWebElement Clickok => Driver.FindElement(By.XPath("//*[text()='OK']"));
-        IWebElement Searchbox => Driver.FindElement(By.XPath("(//*[@class='dx-texteditor-input'])[16]"));
+        IWebElement Searchbox => Driver.FindElement(By.XPath("(//*[@class='dx-texteditor-input'])[19]"));
         IWebElement TabPrintFormat => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[2]"));
         IWebElement TabConfigration => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[1]"));
         IWebElement SRPrintFormat => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[7]"));
