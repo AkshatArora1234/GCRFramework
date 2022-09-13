@@ -64,7 +64,7 @@ Scenario: Verify Print Format with Existing same code as Store
 
      Examples: 
 	| searchcode | verifytext      | searchcodeCS| verifytextCS    | searchcodePM | verifytextPM     | searchcodeTare  | verifytextTare      |
-	| 12         | OpenSansBiscuits| 39          | ML              | 46           | DATE PACKED	     | 45	           | RicePowder	         |	
+	| 12         | Popcorn2        | 39          | ML              | 46           | Contains preservatives	| 45	   | RicePowder	         |	
     
 
 

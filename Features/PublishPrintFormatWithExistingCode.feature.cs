@@ -298,17 +298,17 @@ this.ScenarioInitialize(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("mytag")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "12")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:searchcode", "12")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:verifytext", "OpenSansBiscuits")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:verifytext", "Popcorn2")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:searchcodeCS", "39")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:verifytextCS", "ML")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:searchcodePM", "46")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:verifytextPM", "DATE PACKED")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:verifytextPM", "Contains preservatives")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:searchcodeTare", "45")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:verifytextTare", "RicePowder")]
         public virtual void VerifyPrintFormatWithExistingSameCodeAsStore_12()
         {
 #line 5
-this.VerifyPrintFormatWithExistingSameCodeAsStore("12", "OpenSansBiscuits", "39", "ML", "46", "DATE PACKED", "45", "RicePowder", ((string[])(null)));
+this.VerifyPrintFormatWithExistingSameCodeAsStore("12", "Popcorn2", "39", "ML", "46", "Contains preservatives", "45", "RicePowder", ((string[])(null)));
 #line hidden
         }
         
