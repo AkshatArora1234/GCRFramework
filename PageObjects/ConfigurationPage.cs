@@ -43,10 +43,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement FontSave => Driver.FindElement(By.XPath("(//span[text()='Save'])[1]"));
         IWebElement FontSaveYes => Driver.FindElement(By.Id("submitButton"));
 
-      //  IWebElement pfTare => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[7]"));
-
-
-
+      
         public void PageNavigationToScaleConfigPage() => ScaleConfigurationTab.Click();
         public void PageNavigationToConfigPage() => ConfigurationTab.Click();
         public void SearchFont(string text) => FontSearch.SendKeys(text);
@@ -55,10 +52,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         {
             ContentCodeSearch.Clear();
             Thread.Sleep(10000);
-            ContentCodeSearch.SendKeys(text);
-           /* Thread.Sleep(10000);
-            ContentCodeSearch.SendKeys(Keys.Enter);
-            Thread.Sleep(10000);*/
+            ContentCodeSearch.SendKeys(text);  
         }
 
         public void Printformat(string text)
@@ -73,21 +67,13 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         {
             SRTareCodeSearch.Clear();
             SRTareCodeSearch.SendKeys(text);
-            /*Thread.Sleep(7000);
-            pfTare.SendKeys(Keys.Enter);
-            Thread.Sleep(7000);*/
         }
         public void PM(string text)
         {
             SRPresetCodeSearch.Clear();
             Thread.Sleep(10000);
             SRPresetCodeSearch.SendKeys(text);
-           /* Thread.Sleep(10000);
-            SRPresetCodeSearch.SendKeys(Keys.Enter);
-            Thread.Sleep(10000);*/
         }
-
-
         public void EditContent(string text)
         {
             EditContentSymbol.Click();

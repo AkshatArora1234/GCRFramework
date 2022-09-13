@@ -65,9 +65,7 @@ namespace SpecFlow_MSTestFrameWork.StepDefinitions
         public void WhenEnterValid(string username, string hqpassword)
         {
             hQLoginPage.EnterCredentials(username, hqpassword);
-        }
-
-        
+        }   
 
         /// <summary>
         /// Click on button Login in HQ Appliation. Common for all tests
@@ -76,9 +74,8 @@ namespace SpecFlow_MSTestFrameWork.StepDefinitions
         public void WhenClicksOnLogInButton()
         {
             hQLoginPage.ClickBtnSignIn();
-            Thread.Sleep(8000);
-            hQLoginPage.UserLoginAvailable();
-         
+            Thread.Sleep(1000);
+            hQLoginPage.UserLoginAvailable(); 
         }
 
         /// <summary>
