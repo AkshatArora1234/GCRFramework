@@ -19,7 +19,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             homePage = new HomePage(driver);
         }
 
-        IWebElement ShowColumnChooser => Driver.FindElement(By.XPath("(//div[@aria-label='Show Column Chooser'])[7]"));
+        IWebElement ShowColumnChooser => Driver.FindElement(By.XPath("(//div[@aria-label='Show Column Chooser'])[8]"));
         IWebElement Search => Driver.FindElement(By.XPath("//input[@aria-label='Search']"));
         IWebElement DDFrom => Driver.FindElement(By.XPath("//div[text()='Scale Item']"));
         IWebElement DDTo => Driver.FindElement(By.XPath("//*[@id='gridITEMHQ']/div/div[5]/div/table/tbody/tr[1]"));

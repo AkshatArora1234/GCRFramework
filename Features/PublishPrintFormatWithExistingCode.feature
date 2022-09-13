@@ -165,7 +165,7 @@ Scenario Outline: Publish PF existing with same name as in store
 	And verify user can Change non nutritional section to the nutritional by adding a nutritional font and description
 	And Add another new nutritional Panel to another section
 	And Save and close the PF
-   Then select a scale item
+    Then select a scale item
 	And add the PF and ContentSymbol 
 	And Save item
 	Then navigate to the configuration page to edit the content symbol assigned to item
@@ -200,7 +200,7 @@ Scenario Outline: Publish PF existing with same name as in store
 
      Examples: 
 	| searchcode | verifytext      | searchcodeCS| verifytextCS    | searchcodePM | verifytextPM     | searchcodeTare  | verifytextTare      |
-	| 13         | Popcorn         | 18          | KGTest          | 47           | Contains fat     | 46              | FriedRicePowder     |	
+	| 21         | Popcorn         | 18          | KGTest          | 47           | Contains fat     | 46              | FriedRicePowder     |	
     
 
 
