@@ -291,7 +291,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [Then(@"Publish the PF")]
         public void PublishthePF()
         {
-            // scaleConfigurationPage.PublishPrint();
+             scaleConfigurationPage.PublishPrint();
             Thread.Sleep(5000);
         }
 
@@ -302,7 +302,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [Then(@"Select the Store")]
         public void SelectStore()
         {
-            //  scaleConfigurationPage.SelectStoreLatest();
+            scaleConfigurationPage.SelectStoreLatest();
             Thread.Sleep(3000);
         }
 
