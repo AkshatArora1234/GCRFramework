@@ -15,12 +15,12 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         }
 
         IWebElement Searchbar => Driver.FindElement(By.XPath("//input[@id='search-text']"));
-        IWebElement NewItembutton => Driver.FindElement(By.XPath("(//span[text()='New'])[7]"));
+        IWebElement NewItembutton => Driver.FindElement(By.XPath("//a[@ng-click='ctrl.addPrintFormat()']"));
         IWebElement NewItem => Driver.FindElement(By.XPath("//button[@ng-click='ctrl.addNutritionalElement()']"));
-        IWebElement FontNewButton => Driver.FindElement(By.XPath("(//span[text()='New'])[1]"));
+        IWebElement FontNewButton => Driver.FindElement(By.XPath("//a[@ng-click='ctrl.createScaleFont()']"));
         IWebElement TareNewButton => Driver.FindElement(By.XPath("//a[@ng-click='ctrl.createTare()']"));
-        IWebElement PresetNewButton => Driver.FindElement(By.XPath("(//span[text()='New'])[4]"));
-        IWebElement ContentNewButton => Driver.FindElement(By.XPath("(//span[text()='New'])[2]"));
+        IWebElement PresetNewButton => Driver.FindElement(By.XPath("//a[@ng-click='ctrl.createPresetMessage()']"));
+        IWebElement ContentNewButton => Driver.FindElement(By.XPath("//a[@ng-click='ctrl.createContentSymbol()']"));
         IWebElement NutritionalPanel => Driver.FindElement(By.XPath("//a[@ng-click='ctrl.createNutritionalPanel()']"));
         IWebElement LeftMenu => Driver.FindElement(By.XPath("//*[@class='SideMenuWrapper SideMenuWrapperSmall']//*[@class='fa fa-bars N_P_A']"));
         IWebElement ScaleConfigurationMenu => Driver.FindElement(By.XPath("//span/strong[text()='Scale Configuration']"));
@@ -70,17 +70,17 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement SRContentSymbol => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[3]"));
         IWebElement SRPresetMsg => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[5]"));
         IWebElement ClickEditNEWPF => Driver.FindElement(By.XPath("(//*[contains(text(),'OpenSansBiscuits1')])"));
-        IWebElement ClickEditNutritionalPanel => Driver.FindElement(By.XPath("(//*[contains(text(),'ChocoCream')])"));   
+        IWebElement ClickEditNutritionalPanel => Driver.FindElement(By.XPath("(//*[contains(text(),'ChocoCream')])"));
         IWebElement ClickEditNutritionalPanelTwoZeroOne => Driver.FindElement(By.XPath("//*[@id='gridSCALENP']/div/div[6]/div/div/div[1]/div/table/tbody/tr[last()-1]/td[2]"));
         IWebElement Manadatory => Driver.FindElement(By.XPath("(//input[@ng-model='section.isMandatory'])[1]"));
         IWebElement FixedWidth => Driver.FindElement(By.XPath("(//input[@ng-model='section.isFixedWidth'])[1]"));
-        IWebElement Row => Driver.FindElement(By.XPath("//input[@name='rows--14']"));
-        IWebElement Characters => Driver.FindElement(By.XPath("//input[@name='characters--14']"));
         IWebElement Manadatory2 => Driver.FindElement(By.XPath("(//input[@ng-model='section.isMandatory'])[2]"));
         IWebElement FixedWidth2 => Driver.FindElement(By.XPath("(//input[@ng-model='section.isFixedWidth'])[2]"));
-        IWebElement AddDesc2 => Driver.FindElement(By.XPath("(//input[@ng-model='section.sectionDescription'])[2]"));
+        IWebElement Row => Driver.FindElement(By.XPath("//input[@name='rows--14']"));
+        IWebElement Characters => Driver.FindElement(By.XPath("//input[@name='characters--14']"));
         IWebElement Row_Font => Driver.FindElement(By.XPath("//input[@name='rows--3']"));
         IWebElement Characters_Font => Driver.FindElement(By.XPath("//input[@name='characters--3']"));
+        IWebElement AddDesc2 => Driver.FindElement(By.XPath("(//input[@ng-model='section.sectionDescription'])[2]"));
         private CustomControls EnterNutritionalFontValue => new CustomControls(Driver, By.XPath("(//select[@ng-model='section.scaleFontId'])[2]"));
         IWebElement Support_Basic_Mode => Driver.FindElement(By.XPath("//input[@ng-model='section.hasBasicMode']"));
         IWebElement HeaderRows => Driver.FindElement(By.XPath("(//input[@ng-model='ctrl.ngModel'])[3]"));
@@ -95,13 +95,13 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement ButtonSave => Driver.FindElement(By.XPath("//*[@class='button-save ng-scope']"));
         IWebElement TabScaleConfiguration => Driver.FindElement(By.XPath("(//*[@class='ng-binding' and contains(text(),'Scale Configuration')])[2]"));
         IWebElement ClickList => Driver.FindElement(By.XPath("//*[@ng-click='toggleDropdown()']"));
-        IWebElement Option4 => Driver.FindElement(By.XPath("(//*[@ng-keydown='option.disabled || keyDownLink($event)'])[4]"));
-        IWebElement Option5 => Driver.FindElement(By.XPath("(//*[@ng-keydown='option.disabled || keyDownLink($event)'])[5]"));
+        IWebElement PresetOption4 => Driver.FindElement(By.XPath("(//*[@ng-keydown='option.disabled || keyDownLink($event)'])[4]"));
+        IWebElement PresetOption5 => Driver.FindElement(By.XPath("(//*[@ng-keydown='option.disabled || keyDownLink($event)'])[5]"));
         IWebElement SaveAndCloseNutriPanel => Driver.FindElement(By.XPath("//button[@class='button-saveandclose']"));
         IWebElement Fontname => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[2]"));
         IWebElement VerifyFontmessage => Driver.FindElement(By.XPath("//p[@class='ng-binding']"));
         IWebElement Okbutton => Driver.FindElement(By.XPath("(//*[text()='OK'])[1]"));
-        IWebElement DeleteFont1 => Driver.FindElement(By.XPath("(//i[@ng-click='ctrl.actions.deleteFont(row.data)'])[1]"));
+        IWebElement DeleteFont1 => Driver.FindElement(By.XPath("//i[@ng-click='ctrl.actions.deleteFont(row.data)']"));
         IWebElement CloseSR => Driver.FindElement(By.XPath("//button[@ng-click='ctrl.cancelClicked()']"));
 
         public void ButtonSaveClick() => ButtonSave.Click();
@@ -198,8 +198,8 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         public void EnterPresetListValue()
         {
             ClickList.Click();
-            Option4.Click();
-            Option5.Click();
+            PresetOption4.Click();
+            PresetOption5.Click();
         }
         public void EnterNutritionalCodeandName(string code, string name)
         {

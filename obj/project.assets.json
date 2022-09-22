@@ -27,18 +27,6 @@
           "build/_._": {}
         }
       },
-      "Cucumber.Messages/6.0.1": {
-        "type": "package",
-        "dependencies": {
-          "Google.Protobuf": "3.7.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Cucumber.Messages.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Cucumber.Messages.dll": {}
-        }
-      },
       "DnsClient/1.2.0": {
         "type": "package",
         "dependencies": {
@@ -87,18 +75,6 @@
         },
         "runtime": {
           "lib/netstandard2.0/Gherkin.dll": {}
-        }
-      },
-      "Google.Protobuf/3.7.0": {
-        "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1"
-        },
-        "compile": {
-          "lib/netstandard1.0/Google.Protobuf.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/Google.Protobuf.dll": {}
         }
       },
       "Microsoft.AspNetCore/2.2.0": {
@@ -1412,7 +1388,7 @@
           "build/_._": {}
         }
       },
-      "MSTest.TestAdapter/2.2.7": {
+      "MSTest.TestAdapter/2.2.10": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.1",
@@ -1422,7 +1398,7 @@
           "build/netcoreapp1.0/MSTest.TestAdapter.props": {}
         }
       },
-      "MSTest.TestFramework/2.2.7": {
+      "MSTest.TestFramework/2.2.10": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.1",
@@ -1730,7 +1706,7 @@
           "lib/netstandard2.1/WebDriver.dll": {}
         }
       },
-      "Selenium.WebDriver.ChromeDriver/104.0.5112.7900": {
+      "Selenium.WebDriver.ChromeDriver/105.0.5195.5200": {
         "type": "package",
         "build": {
           "build/Selenium.WebDriver.ChromeDriver.targets": {}
@@ -1757,11 +1733,10 @@
           "lib/netstandard2.1/ICSharpCode.SharpZipLib.dll": {}
         }
       },
-      "SpecFlow/3.9.22": {
+      "SpecFlow/3.9.74": {
         "type": "package",
         "dependencies": {
           "BoDi": "1.5.0",
-          "Cucumber.Messages": "[6.0.1, 7.0.0)",
           "Gherkin": "19.0.3",
           "Microsoft.Extensions.DependencyModel": "1.0.3",
           "SpecFlow.Internal.Json": "1.0.8",
@@ -1788,12 +1763,12 @@
           "lib/netstandard2.0/SpecFlow.Internal.Json.dll": {}
         }
       },
-      "SpecFlow.MsTest/3.9.22": {
+      "SpecFlow.MsTest/3.9.74": {
         "type": "package",
         "dependencies": {
           "MSTest.TestFramework": "2.1.2",
-          "SpecFlow": "[3.9.22]",
-          "SpecFlow.Tools.MsBuild.Generation": "[3.9.22]"
+          "SpecFlow": "[3.9.74]",
+          "SpecFlow.Tools.MsBuild.Generation": "[3.9.74]"
         },
         "compile": {
           "lib/netstandard2.0/TechTalk.SpecFlow.MSTest.SpecFlowPlugin.dll": {}
@@ -1826,10 +1801,10 @@
           "build/SpecFlow.Plus.LivingDocPlugin.targets": {}
         }
       },
-      "SpecFlow.Tools.MsBuild.Generation/3.9.22": {
+      "SpecFlow.Tools.MsBuild.Generation/3.9.74": {
         "type": "package",
         "dependencies": {
-          "SpecFlow": "[3.9.22]"
+          "SpecFlow": "[3.9.74]"
         },
         "build": {
           "build/SpecFlow.Tools.MsBuild.Generation.props": {},
@@ -3539,19 +3514,6 @@
         "tools/_._"
       ]
     },
-    "Cucumber.Messages/6.0.1": {
-      "sha512": "R/2XAU6Zwdnlgga/YLYxwbKf4ai0JYyeX25l85t0nNgagR2aP8hnqrLtJjgswuXVa2WlQdjXUfJqUX8YTjzlXw==",
-      "type": "package",
-      "path": "cucumber.messages/6.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "cucumber.messages.6.0.1.nupkg.sha512",
-        "cucumber.messages.nuspec",
-        "lib/net45/Cucumber.Messages.dll",
-        "lib/netstandard2.0/Cucumber.Messages.dll"
-      ]
-    },
     "DnsClient/1.2.0": {
       "sha512": "P34wUkeqU4FoQiOMV8OjpdeDZKs4d3r+VlHuKJ6eO5feiZgna3+9MF5orHRUn3DAv1g/HPE5hlkGucmxmsFfBw==",
       "type": "package",
@@ -3624,23 +3586,6 @@
         "lib/net45/Gherkin.xml",
         "lib/netstandard2.0/Gherkin.dll",
         "lib/netstandard2.0/Gherkin.xml"
-      ]
-    },
-    "Google.Protobuf/3.7.0": {
-      "sha512": "OvssyqQTrpJgdH4fjztsCV9AhUo9jgGpDbZ5XAAqC+X6MIUsifHk8Woeom1HXlHdqo/XebiEMpYySE9AxybJ9g==",
-      "type": "package",
-      "path": "google.protobuf/3.7.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "google.protobuf.3.7.0.nupkg.sha512",
-        "google.protobuf.nuspec",
-        "lib/net45/Google.Protobuf.dll",
-        "lib/net45/Google.Protobuf.pdb",
-        "lib/net45/Google.Protobuf.xml",
-        "lib/netstandard1.0/Google.Protobuf.dll",
-        "lib/netstandard1.0/Google.Protobuf.pdb",
-        "lib/netstandard1.0/Google.Protobuf.xml"
       ]
     },
     "Microsoft.AspNetCore/2.2.0": {
@@ -5321,10 +5266,10 @@
         "x64/native/windows/mongocrypt.dll"
       ]
     },
-    "MSTest.TestAdapter/2.2.7": {
-      "sha512": "E8seWhOKGEz4Aq6IaX6dUZGRSVYwLVy+6ZI9nq0TyHRuv54Id4Y7y/CB0KGiOUrqtygfooQm5wmpnDOW28N9Ug==",
+    "MSTest.TestAdapter/2.2.10": {
+      "sha512": "KOc7XVNM0Q5GrTAx4RhxTgwdt9O5gOqSzmLpUMyl9ywa6vvUNFVQ9nCjtEE7qDQW54MZdc82e287PzZDc7yQtA==",
       "type": "package",
-      "path": "mstest.testadapter/2.2.7",
+      "path": "mstest.testadapter/2.2.10",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5428,23 +5373,41 @@
         "build/net45/tr/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
         "build/net45/zh-Hans/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
         "build/net45/zh-Hant/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net5.0-windows10.0.18362.0/MSTest.TestAdapter.props",
-        "build/net5.0-windows10.0.18362.0/MSTest.TestAdapter.targets",
-        "build/net5.0-windows10.0.18362.0/Microsoft.TestPlatform.AdapterUtilities.dll",
-        "build/net5.0-windows10.0.18362.0/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll",
-        "build/net5.0-windows10.0.18362.0/cs/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net5.0-windows10.0.18362.0/de/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net5.0-windows10.0.18362.0/es/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net5.0-windows10.0.18362.0/fr/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net5.0-windows10.0.18362.0/it/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net5.0-windows10.0.18362.0/ja/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net5.0-windows10.0.18362.0/ko/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net5.0-windows10.0.18362.0/pl/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net5.0-windows10.0.18362.0/pt-BR/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net5.0-windows10.0.18362.0/ru/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net5.0-windows10.0.18362.0/tr/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net5.0-windows10.0.18362.0/zh-Hans/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net5.0-windows10.0.18362.0/zh-Hant/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
+        "build/net46/MSTest.TestAdapter.props",
+        "build/net46/MSTest.TestAdapter.targets",
+        "build/net46/Microsoft.TestPlatform.AdapterUtilities.dll",
+        "build/net46/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll",
+        "build/net46/cs/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
+        "build/net46/de/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
+        "build/net46/es/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
+        "build/net46/fr/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
+        "build/net46/it/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
+        "build/net46/ja/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
+        "build/net46/ko/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
+        "build/net46/pl/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
+        "build/net46/pt-BR/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
+        "build/net46/ru/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
+        "build/net46/tr/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
+        "build/net46/zh-Hans/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
+        "build/net46/zh-Hant/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
+        "build/net5.0/MSTest.TestAdapter.props",
+        "build/net5.0/MSTest.TestAdapter.targets",
+        "build/net5.0/Microsoft.TestPlatform.AdapterUtilities.dll",
+        "build/net5.0/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll",
+        "build/net5.0/cs/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
+        "build/net5.0/de/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
+        "build/net5.0/es/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
+        "build/net5.0/fr/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
+        "build/net5.0/it/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
+        "build/net5.0/ja/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
+        "build/net5.0/ko/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
+        "build/net5.0/pl/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
+        "build/net5.0/pt-BR/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
+        "build/net5.0/ru/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
+        "build/net5.0/tr/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
+        "build/net5.0/winui/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll",
+        "build/net5.0/zh-Hans/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
+        "build/net5.0/zh-Hant/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
         "build/netcoreapp1.0/MSTest.TestAdapter.props",
         "build/netcoreapp1.0/Microsoft.TestPlatform.AdapterUtilities.dll",
         "build/netcoreapp1.0/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll",
@@ -5494,18 +5457,36 @@
         "build/uap10.0/tr/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
         "build/uap10.0/zh-Hans/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
         "build/uap10.0/zh-Hant/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "mstest.testadapter.2.2.7.nupkg.sha512",
+        "mstest.testadapter.2.2.10.nupkg.sha512",
         "mstest.testadapter.nuspec"
       ]
     },
-    "MSTest.TestFramework/2.2.7": {
-      "sha512": "qroVMzabIcbqwxtlDZriZflqs3nKpmqSVoM/Nfw9fg+F6885rrgo9R4gwmK7xxPPd8gpDrmNqqwpnyh6GMoN9g==",
+    "MSTest.TestFramework/2.2.10": {
+      "sha512": "JZRVXKq19uRhkj8MuzsU8zJhPV2JV3ZToFPAIg+BU53L1L9mNDfm9jXerdRfbrE4HBcf2M54Ij80zPOdlha3+Q==",
       "type": "package",
-      "path": "mstest.testframework/2.2.7",
+      "path": "mstest.testframework/2.2.10",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+        "build/net5.0/MSTest.TestFramework.targets",
+        "build/net5.0/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.XML",
+        "build/net5.0/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll",
+        "build/net5.0/cs/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml",
+        "build/net5.0/de/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml",
+        "build/net5.0/es/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml",
+        "build/net5.0/fr/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml",
+        "build/net5.0/it/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml",
+        "build/net5.0/ja/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml",
+        "build/net5.0/ko/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml",
+        "build/net5.0/pl/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml",
+        "build/net5.0/pt-BR/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml",
+        "build/net5.0/ru/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml",
+        "build/net5.0/tr/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml",
+        "build/net5.0/winui/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.XML",
+        "build/net5.0/winui/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll",
+        "build/net5.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml",
+        "build/net5.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml",
         "lib/net45/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.XML",
         "lib/net45/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll",
         "lib/net45/Microsoft.VisualStudio.TestPlatform.TestFramework.XML",
@@ -5536,23 +5517,21 @@
         "lib/net45/zh-Hans/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
         "lib/net45/zh-Hant/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml",
         "lib/net45/zh-Hant/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
-        "lib/net5.0-windows10.0.18362.0/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.XML",
-        "lib/net5.0-windows10.0.18362.0/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll",
-        "lib/net5.0-windows10.0.18362.0/Microsoft.VisualStudio.TestPlatform.TestFramework.XML",
-        "lib/net5.0-windows10.0.18362.0/Microsoft.VisualStudio.TestPlatform.TestFramework.dll",
-        "lib/net5.0-windows10.0.18362.0/cs/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
-        "lib/net5.0-windows10.0.18362.0/de/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
-        "lib/net5.0-windows10.0.18362.0/es/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
-        "lib/net5.0-windows10.0.18362.0/fr/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
-        "lib/net5.0-windows10.0.18362.0/it/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
-        "lib/net5.0-windows10.0.18362.0/ja/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
-        "lib/net5.0-windows10.0.18362.0/ko/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
-        "lib/net5.0-windows10.0.18362.0/pl/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
-        "lib/net5.0-windows10.0.18362.0/pt-BR/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
-        "lib/net5.0-windows10.0.18362.0/ru/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
-        "lib/net5.0-windows10.0.18362.0/tr/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
-        "lib/net5.0-windows10.0.18362.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
-        "lib/net5.0-windows10.0.18362.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
+        "lib/net5.0/Microsoft.VisualStudio.TestPlatform.TestFramework.XML",
+        "lib/net5.0/Microsoft.VisualStudio.TestPlatform.TestFramework.dll",
+        "lib/net5.0/cs/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
+        "lib/net5.0/de/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
+        "lib/net5.0/es/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
+        "lib/net5.0/fr/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
+        "lib/net5.0/it/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
+        "lib/net5.0/ja/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
+        "lib/net5.0/ko/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
+        "lib/net5.0/pl/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
+        "lib/net5.0/pt-BR/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
+        "lib/net5.0/ru/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
+        "lib/net5.0/tr/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
+        "lib/net5.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
+        "lib/net5.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
         "lib/netstandard1.0/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.XML",
         "lib/netstandard1.0/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll",
         "lib/netstandard1.0/Microsoft.VisualStudio.TestPlatform.TestFramework.XML",
@@ -5613,7 +5592,7 @@
         "lib/uap10.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
         "lib/uap10.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml",
         "lib/uap10.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
-        "mstest.testframework.2.2.7.nupkg.sha512",
+        "mstest.testframework.2.2.10.nupkg.sha512",
         "mstest.testframework.nuspec"
       ]
     },
@@ -5969,10 +5948,10 @@
         "selenium.webdriver.nuspec"
       ]
     },
-    "Selenium.WebDriver.ChromeDriver/104.0.5112.7900": {
-      "sha512": "vDH+7FqF4APZtvqyqtJ8XYTTh523EsUV88CpqW4d2xjxKjUp6ifpeLi9rDhnSuruDIoQDLJvRBZPI7UlcMTXOw==",
+    "Selenium.WebDriver.ChromeDriver/105.0.5195.5200": {
+      "sha512": "/OV++ThfRp7YcWilvbbfeZQDwtlQr0Gbkczxg+ll1EvTfxI02yjK52DSNyy39NkgsD4/643PZ2icAdTBSylzAw==",
       "type": "package",
-      "path": "selenium.webdriver.chromedriver/104.0.5112.7900",
+      "path": "selenium.webdriver.chromedriver/105.0.5195.5200",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5984,7 +5963,7 @@
         "driver/mac64arm/chromedriver",
         "driver/win32/chromedriver.exe",
         "nupkg-icon.png",
-        "selenium.webdriver.chromedriver.104.0.5112.7900.nupkg.sha512",
+        "selenium.webdriver.chromedriver.105.0.5195.5200.nupkg.sha512",
         "selenium.webdriver.chromedriver.nuspec"
       ]
     },
@@ -6025,10 +6004,10 @@
         "sharpziplib.nuspec"
       ]
     },
-    "SpecFlow/3.9.22": {
-      "sha512": "A3wZUoJaJjkll/Qvun8SJo7W869kO+1hm/FNkidNdnfbmOJA4Q8f0J80pr5wqIkKaYMQTRVvt18Y6HisgEZbUw==",
+    "SpecFlow/3.9.74": {
+      "sha512": "n6kcg9ZeQWxqJFoT23SsFT89U1QQNwvcN9pAX5alB6ZPr6K0p5D5nGIJ1PZsSaFaRFutiwQ+DicmxBCPAZVYIA==",
       "type": "package",
-      "path": "specflow/3.9.22",
+      "path": "specflow/3.9.74",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6047,7 +6026,7 @@
         "lib/netstandard2.0/TechTalk.SpecFlow.dll",
         "lib/netstandard2.0/TechTalk.SpecFlow.pdb",
         "lib/netstandard2.0/TechTalk.SpecFlow.xml",
-        "specflow.3.9.22.nupkg.sha512",
+        "specflow.3.9.74.nupkg.sha512",
         "specflow.nuspec"
       ]
     },
@@ -6065,10 +6044,10 @@
         "specflow.internal.json.nuspec"
       ]
     },
-    "SpecFlow.MsTest/3.9.22": {
-      "sha512": "vghE/tzdjDzsfIPLs2zdzkpRWvtDtSB2N6XTfCGhEME73sydgX5pkh5pFeQn+SFAlQFKUpTbyzf4gYU20NYVow==",
+    "SpecFlow.MsTest/3.9.74": {
+      "sha512": "HRRPSZOOBNHtOG9bWhmYGp8trRr715rVTr0bJlq6qYhgi/xqfnx0OEC9H68u3gshGbCni7TBbg3sPhKlNaxpgQ==",
       "type": "package",
-      "path": "specflow.mstest/3.9.22",
+      "path": "specflow.mstest/3.9.74",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6082,6 +6061,9 @@
         "build/net5.0/TechTalk.SpecFlow.MSTest.Generator.SpecFlowPlugin.deps.json",
         "build/net5.0/TechTalk.SpecFlow.MSTest.Generator.SpecFlowPlugin.dll",
         "build/net5.0/TechTalk.SpecFlow.MSTest.Generator.SpecFlowPlugin.pdb",
+        "build/net6.0/TechTalk.SpecFlow.MSTest.Generator.SpecFlowPlugin.deps.json",
+        "build/net6.0/TechTalk.SpecFlow.MSTest.Generator.SpecFlowPlugin.dll",
+        "build/net6.0/TechTalk.SpecFlow.MSTest.Generator.SpecFlowPlugin.pdb",
         "build/netcoreapp2.1/TechTalk.SpecFlow.MSTest.Generator.SpecFlowPlugin.dll",
         "build/netcoreapp2.1/TechTalk.SpecFlow.MSTest.Generator.SpecFlowPlugin.pdb",
         "images/specflow-icon.png",
@@ -6089,9 +6071,11 @@
         "lib/net461/TechTalk.SpecFlow.MSTest.SpecFlowPlugin.pdb",
         "lib/net5.0/TechTalk.SpecFlow.MSTest.SpecFlowPlugin.dll",
         "lib/net5.0/TechTalk.SpecFlow.MSTest.SpecFlowPlugin.pdb",
+        "lib/net6.0/TechTalk.SpecFlow.MSTest.SpecFlowPlugin.dll",
+        "lib/net6.0/TechTalk.SpecFlow.MSTest.SpecFlowPlugin.pdb",
         "lib/netstandard2.0/TechTalk.SpecFlow.MSTest.SpecFlowPlugin.dll",
         "lib/netstandard2.0/TechTalk.SpecFlow.MSTest.SpecFlowPlugin.pdb",
-        "specflow.mstest.3.9.22.nupkg.sha512",
+        "specflow.mstest.3.9.74.nupkg.sha512",
         "specflow.mstest.nuspec"
       ]
     },
@@ -6113,10 +6097,10 @@
         "specflow.plus.livingdocplugin.nuspec"
       ]
     },
-    "SpecFlow.Tools.MsBuild.Generation/3.9.22": {
-      "sha512": "JrX8QY9mN+X5RUsjS2GY6l+eOAZ6S/sWiS6yi2+RxyyrvPmskQH7TYCm69dcNDefncXg/wZk3g/SE3VtjfdcVg==",
+    "SpecFlow.Tools.MsBuild.Generation/3.9.74": {
+      "sha512": "I/9OvmKOohJqIUNJ0xGYJCWfL6WKDaes8OoOAD/2yhGX+tzC5ofs9yqkP9Cu/xfnIx+11IR3pZs7YhBhGAcgWQ==",
       "type": "package",
-      "path": "specflow.tools.msbuild.generation/3.9.22",
+      "path": "specflow.tools.msbuild.generation/3.9.74",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6133,12 +6117,10 @@
         "licenses/Gherkin-LICENSE-MIT.txt",
         "licenses/Newtonsoft.Json-LICENSE-MIT.md",
         "licenses/System.ValueTuple-LICENSE-MIT.txt",
-        "specflow.tools.msbuild.generation.3.9.22.nupkg.sha512",
+        "specflow.tools.msbuild.generation.3.9.74.nupkg.sha512",
         "specflow.tools.msbuild.generation.nuspec",
         "tasks/net461/BoDi.dll",
-        "tasks/net461/Cucumber.Messages.dll",
         "tasks/net461/Gherkin.dll",
-        "tasks/net461/Google.Protobuf.dll",
         "tasks/net461/Microsoft.Build.Framework.dll",
         "tasks/net461/Microsoft.Build.Tasks.Core.dll",
         "tasks/net461/Microsoft.Build.Utilities.Core.dll",
@@ -6263,9 +6245,7 @@
         "tasks/net461/TechTalk.SpecFlow.dll",
         "tasks/net461/netstandard.dll",
         "tasks/net5.0/BoDi.dll",
-        "tasks/net5.0/Cucumber.Messages.dll",
         "tasks/net5.0/Gherkin.dll",
-        "tasks/net5.0/Google.Protobuf.dll",
         "tasks/net5.0/Microsoft.Build.Framework.dll",
         "tasks/net5.0/Microsoft.Build.Tasks.Core.dll",
         "tasks/net5.0/Microsoft.Build.Utilities.Core.dll",
@@ -6294,10 +6274,38 @@
         "tasks/net5.0/TechTalk.SpecFlow.Parser.dll",
         "tasks/net5.0/TechTalk.SpecFlow.Utils.dll",
         "tasks/net5.0/TechTalk.SpecFlow.dll",
+        "tasks/net6.0/BoDi.dll",
+        "tasks/net6.0/Gherkin.dll",
+        "tasks/net6.0/Microsoft.Build.Framework.dll",
+        "tasks/net6.0/Microsoft.Build.Tasks.Core.dll",
+        "tasks/net6.0/Microsoft.Build.Utilities.Core.dll",
+        "tasks/net6.0/Microsoft.Build.dll",
+        "tasks/net6.0/Microsoft.DotNet.PlatformAbstractions.dll",
+        "tasks/net6.0/Microsoft.Extensions.DependencyModel.dll",
+        "tasks/net6.0/Microsoft.VisualStudio.Composition.NetFxAttributes.dll",
+        "tasks/net6.0/Microsoft.VisualStudio.Composition.dll",
+        "tasks/net6.0/Microsoft.VisualStudio.Threading.dll",
+        "tasks/net6.0/Microsoft.VisualStudio.Validation.dll",
+        "tasks/net6.0/Newtonsoft.Json.dll",
+        "tasks/net6.0/SpecFlow.Internal.Json.dll",
+        "tasks/net6.0/SpecFlow.Tools.MsBuild.Generation.deps.json",
+        "tasks/net6.0/SpecFlow.Tools.MsBuild.Generation.dll",
+        "tasks/net6.0/System.CodeDom.dll",
+        "tasks/net6.0/System.ComponentModel.Composition.dll",
+        "tasks/net6.0/System.Composition.AttributedModel.dll",
+        "tasks/net6.0/System.Composition.Convention.dll",
+        "tasks/net6.0/System.Composition.Hosting.dll",
+        "tasks/net6.0/System.Composition.Runtime.dll",
+        "tasks/net6.0/System.Composition.TypedParts.dll",
+        "tasks/net6.0/System.Configuration.ConfigurationManager.dll",
+        "tasks/net6.0/System.Security.Cryptography.ProtectedData.dll",
+        "tasks/net6.0/System.Security.Permissions.dll",
+        "tasks/net6.0/TechTalk.SpecFlow.Generator.dll",
+        "tasks/net6.0/TechTalk.SpecFlow.Parser.dll",
+        "tasks/net6.0/TechTalk.SpecFlow.Utils.dll",
+        "tasks/net6.0/TechTalk.SpecFlow.dll",
         "tasks/netcoreapp2.1/BoDi.dll",
-        "tasks/netcoreapp2.1/Cucumber.Messages.dll",
         "tasks/netcoreapp2.1/Gherkin.dll",
-        "tasks/netcoreapp2.1/Google.Protobuf.dll",
         "tasks/netcoreapp2.1/Microsoft.Build.Framework.dll",
         "tasks/netcoreapp2.1/Microsoft.Build.Tasks.Core.dll",
         "tasks/netcoreapp2.1/Microsoft.Build.Utilities.Core.dll",
@@ -11035,37 +11043,32 @@
     ".NETCoreApp,Version=v3.1": [
       "ExtentReports >= 4.1.0",
       "FluentAssertions >= 6.2.0",
-      "MSTest.TestAdapter >= 2.2.7",
-      "MSTest.TestFramework >= 2.2.7",
+      "MSTest.TestAdapter >= 2.2.10",
+      "MSTest.TestFramework >= 2.2.10",
       "Microsoft.NET.Test.Sdk >= 17.0.0",
       "Microsoft.SharePointOnline.CSOM >= 16.1.22518.12000",
       "Selenium.Support >= 4.3.0",
       "Selenium.WebDriver >= 4.3.0",
-      "Selenium.WebDriver.ChromeDriver >= 104.0.5112.7900",
-      "SpecFlow.MsTest >= 3.9.22",
+      "Selenium.WebDriver.ChromeDriver >= 105.0.5195.5200",
+      "SpecFlow.MsTest >= 3.9.74",
       "SpecFlow.Plus.LivingDocPlugin >= 3.9.57",
       "WebDriverManager >= 2.14.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\akshat.arora\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\rudra.prasad\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\workspace\\14SeptGCR\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
+      "projectUniqueName": "C:\\Source\\GitCode\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
       "projectName": "SpecFlow_MSTestFrameWork",
-      "projectPath": "C:\\workspace\\14SeptGCR\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
-      "packagesPath": "C:\\Users\\akshat.arora\\.nuget\\packages\\",
-      "outputPath": "C:\\workspace\\14SeptGCR\\GCRFramework\\obj\\",
+      "projectPath": "C:\\Source\\GitCode\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
+      "packagesPath": "C:\\Users\\rudra.prasad\\.nuget\\packages\\",
+      "outputPath": "C:\\Source\\GitCode\\GCRFramework\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\akshat.arora\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\rudra.prasad\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11101,11 +11104,11 @@
           },
           "MSTest.TestAdapter": {
             "target": "Package",
-            "version": "[2.2.7, )"
+            "version": "[2.2.10, )"
           },
           "MSTest.TestFramework": {
             "target": "Package",
-            "version": "[2.2.7, )"
+            "version": "[2.2.10, )"
           },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
@@ -11125,11 +11128,11 @@
           },
           "Selenium.WebDriver.ChromeDriver": {
             "target": "Package",
-            "version": "[104.0.5112.7900, )"
+            "version": "[105.0.5195.5200, )"
           },
           "SpecFlow.MsTest": {
             "target": "Package",
-            "version": "[3.9.22, )"
+            "version": "[3.9.74, )"
           },
           "SpecFlow.Plus.LivingDocPlugin": {
             "target": "Package",
@@ -11155,7 +11158,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.409\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\workspace\\14SeptGCR\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj": {}
+    "C:\\Source\\GitCode\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj": {}
   },
   "projects": {
-    "C:\\workspace\\14SeptGCR\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj": {
+    "C:\\Source\\GitCode\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\workspace\\14SeptGCR\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
+        "projectUniqueName": "C:\\Source\\GitCode\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
         "projectName": "SpecFlow_MSTestFrameWork",
-        "projectPath": "C:\\workspace\\14SeptGCR\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
-        "packagesPath": "C:\\Users\\akshat.arora\\.nuget\\packages\\",
-        "outputPath": "C:\\workspace\\14SeptGCR\\GCRFramework\\obj\\",
+        "projectPath": "C:\\Source\\GitCode\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
+        "packagesPath": "C:\\Users\\rudra.prasad\\.nuget\\packages\\",
+        "outputPath": "C:\\Source\\GitCode\\GCRFramework\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\akshat.arora\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\rudra.prasad\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,11 +50,11 @@
             },
             "MSTest.TestAdapter": {
               "target": "Package",
-              "version": "[2.2.7, )"
+              "version": "[2.2.10, )"
             },
             "MSTest.TestFramework": {
               "target": "Package",
-              "version": "[2.2.7, )"
+              "version": "[2.2.10, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
@@ -78,11 +74,11 @@
             },
             "Selenium.WebDriver.ChromeDriver": {
               "target": "Package",
-              "version": "[104.0.5112.7900, )"
+              "version": "[105.0.5195.5200, )"
             },
             "SpecFlow.MsTest": {
               "target": "Package",
-              "version": "[3.9.22, )"
+              "version": "[3.9.74, )"
             },
             "SpecFlow.Plus.LivingDocPlugin": {
               "target": "Package",
@@ -108,7 +104,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.409\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     }

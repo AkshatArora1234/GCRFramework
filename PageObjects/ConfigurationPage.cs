@@ -30,7 +30,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement NewContentSymbolName => Driver.FindElement(By.XPath("//*[@id='gridCONTSYM']/div/div[6]/div/div/div[1]/div/table/tbody/tr[1]/td[2]"));
         IWebElement ClearContentSymbolName => Driver.FindElement(By.XPath("//*[@id='gridCONTSYM']/div/div[6]/div/div/div[1]/div/table/tbody/tr[1]/td[2]/div/div/div[1]/input"));
         private CustomControls NewContentSymbolNameEdit => new CustomControls(Driver, By.XPath("//*[@id='gridCONTSYM']/div/div[6]/div/div/div[1]/div/table/tbody/tr[1]/td[2]/div/div/div[1]/input"));
-        IWebElement ContentSymbolSave => Driver.FindElement(By.XPath("(//span[text()='Save'])[1]"));
+        IWebElement ContentSymbolSave => Driver.FindElement(By.XPath("//a[@ng-click='ctrl.saveButtonAction()']"));
         IWebElement ContentSymbolSaveYes => Driver.FindElement(By.Id("submitButton"));
         IWebElement NutriSearch => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[17]"));
         IWebElement DeleteNutriPanel => Driver.FindElement(By.XPath("//*[@id='gridSCALENP']/div/div[6]/div[1]/div/div/div/table/tbody/tr[1]/td/div/div/div[@class='action-delete ng-scope']"));
@@ -39,10 +39,10 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement LinkNutriNo => Driver.FindElement(By.XPath("//button[@ng-click='ctrl.deleteWithoutLinking()']"));
         IWebElement SelectNutriClick => Driver.FindElement(By.XPath("//*[@id='gridSCALEFONT']/div/div[6]/div/div/div[1]/div/table/tbody/tr[1]/td[3]"));
         IWebElement FontCheckbox => Driver.FindElement(By.XPath("//*[@id='gridSCALEFONT']/div/div[6]/div/div/div[1]/div/table/tbody/tr[1]/td[3]/div/div/span"));
-        IWebElement FontSave => Driver.FindElement(By.XPath("(//span[text()='Save'])[1]"));
+        IWebElement FontSave => Driver.FindElement(By.XPath("//a[@ng-click='ctrl.saveButtonAction()']"));
         IWebElement FontSaveYes => Driver.FindElement(By.Id("submitButton"));
 
-      
+
         public void PageNavigationToScaleConfigPage() => ScaleConfigurationTab.Click();
         public void PageNavigationToConfigPage() => ConfigurationTab.Click();
         public void SearchFont(string text) => FontSearch.SendKeys(text);
