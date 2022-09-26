@@ -51,7 +51,7 @@ namespace SpecFlow_MSTestFrameWork.StepDefinitions
         {
             Thread.Sleep(4000);
             hQLoginPage.ClickSRBtnSignIn();
-            Thread.Sleep(8000);
+            Thread.Sleep(1000);
             hQLoginPage.UserLoginAvailable();
         }
 

@@ -1712,6 +1712,18 @@
           "build/Selenium.WebDriver.ChromeDriver.targets": {}
         }
       },
+      "SeleniumExtras.WaitHelpers/1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Selenium.WebDriver": "4.0.0-beta2"
+        },
+        "compile": {
+          "lib/netstandard2.1/SeleniumExtras.WaitHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/SeleniumExtras.WaitHelpers.dll": {}
+        }
+      },
       "SharpCompress/0.23.0": {
         "type": "package",
         "dependencies": {
@@ -5965,6 +5977,19 @@
         "nupkg-icon.png",
         "selenium.webdriver.chromedriver.105.0.5195.5200.nupkg.sha512",
         "selenium.webdriver.chromedriver.nuspec"
+      ]
+    },
+    "SeleniumExtras.WaitHelpers/1.0.2": {
+      "sha512": "de7m30nkZZLkfCncYBdluUpM27AR/Vkk4kiA4HRQbV+fZI3ps4qGIeJCuj8TAMXdMfQik5Rno8xPnFBIod+ebg==",
+      "type": "package",
+      "path": "seleniumextras.waithelpers/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/netstandard2.1/SeleniumExtras.WaitHelpers.dll",
+        "seleniumextras.waithelpers.1.0.2.nupkg.sha512",
+        "seleniumextras.waithelpers.nuspec"
       ]
     },
     "SharpCompress/0.23.0": {
@@ -11050,25 +11075,26 @@
       "Selenium.Support >= 4.3.0",
       "Selenium.WebDriver >= 4.3.0",
       "Selenium.WebDriver.ChromeDriver >= 105.0.5195.5200",
+      "SeleniumExtras.WaitHelpers >= 1.0.2",
       "SpecFlow.MsTest >= 3.9.74",
       "SpecFlow.Plus.LivingDocPlugin >= 3.9.57",
       "WebDriverManager >= 2.14.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rudra.prasad\\.nuget\\packages\\": {}
+    "C:\\Users\\jesni.as\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Source\\GitCode\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
+      "projectUniqueName": "C:\\Users\\jesni.as\\source\\Git\\Latest\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
       "projectName": "SpecFlow_MSTestFrameWork",
-      "projectPath": "C:\\Source\\GitCode\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
-      "packagesPath": "C:\\Users\\rudra.prasad\\.nuget\\packages\\",
-      "outputPath": "C:\\Source\\GitCode\\GCRFramework\\obj\\",
+      "projectPath": "C:\\Users\\jesni.as\\source\\Git\\Latest\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
+      "packagesPath": "C:\\Users\\jesni.as\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jesni.as\\source\\Git\\Latest\\GCRFramework\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\rudra.prasad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jesni.as\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11130,6 +11156,10 @@
             "target": "Package",
             "version": "[105.0.5195.5200, )"
           },
+          "SeleniumExtras.WaitHelpers": {
+            "target": "Package",
+            "version": "[1.0.2, )"
+          },
           "SpecFlow.MsTest": {
             "target": "Package",
             "version": "[3.9.74, )"
@@ -11158,7 +11188,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
