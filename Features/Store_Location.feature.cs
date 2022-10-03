@@ -134,7 +134,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("user click the StoreLocation tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 14
- testRunner.And("Add new location", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Add new location for FourZeroZero \'<locationcode>\',\'<locationname>\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -90,6 +90,11 @@
   "b": "15",
   "PFName": "21",
   "HRows": "4",
-  "TRows": "6"
+  "TRows": "6",
 
+  //TestData - Scale Automation Sheet 1
+  "PfCode.4.0.0": "53",
+  "PFName.4.0.0": "Almond",
+  "LocationCode.4.0.0": "93",
+  "LocationName.4.0.0": "Butterhoney"
 }

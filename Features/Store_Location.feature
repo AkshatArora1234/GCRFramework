@@ -11,5 +11,5 @@ Scenario: Publish location and verify at the store
 	When User enters Scale Configuration in the Search Box
 	Then User click on Scale Configuration Item should be displayed on the Menu
 	When user click the StoreLocation tab
-	And Add new location
+	And Add new location for FourZeroZero '<locationcode>','<locationname>'
 
