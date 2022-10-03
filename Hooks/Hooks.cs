@@ -109,13 +109,13 @@ namespace SpecFlow_MSTestFrameWork.Hooks
     [BeforeScenario]
         public void BeforeScenario()
         {
-            testinitialize(browsername);
+            Testinitialize(browsername);
 
             //create dynamic feature and scenario name for Extent Report
             featureName = extent.CreateTest<Feature>(_featureContext.FeatureInfo.Title);
             _currentScenarioName = featureName.CreateNode<Scenario>(_scenarioContext.ScenarioInfo.Title);
         }
-        public void setup(string browsername)
+        public void Setup(string browsername)
         {
             string browser = "Chrome";
             switch (browser)
@@ -152,9 +152,9 @@ namespace SpecFlow_MSTestFrameWork.Hooks
             extent.Flush();
         }
 
-        public void testinitialize(string browsername)
+        public void Testinitialize(string browsername)
         {
-            setup(browsername);    
+            Setup(browsername);    
         }
 
         IWebElement DeletePF => _driverHelper.driver.FindElement(By.XPath("(//i[@ng-click='ctrl.actions.deletePrintFormat(row.data)'])[1]"));

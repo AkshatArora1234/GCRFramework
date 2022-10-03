@@ -18,7 +18,6 @@
 
 
   //TestData 2.0.0
-
   "FontCode2.0": "35",
   "Fontname2.0": "BreadCheese",
   "NutritionalCode2.0": "41",
@@ -62,7 +61,6 @@
   "Fontname2.0.2": "T Popcorn",
   "SecondFontCode2.0.2": "12",
   "SecondFontname2.0.2": "KitKat Cake",
-
   "NutritionalCode2.0.2": "39",
   "NutritionalName2.0.2": "French fries",
   "SecondNutritionalCode2.0.2": "27",
@@ -74,7 +72,6 @@
   "ContentSymbolCode2.0.2": "18",
   "ContentSymbol2.0.2": "KG",
   "ContentSymbolDescrition2.0.2": "KiloGrams",
-
   "NewContentSymbol2.0.2": "KGTest",
 
   "TareCode2.0.2": "46",
