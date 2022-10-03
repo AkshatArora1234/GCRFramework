@@ -37,6 +37,7 @@ namespace SpecFlow_MSTestFrameWork.Features
             string locationCode = homePage.getConfiguration("TestData.json", "LocationCode.4.0.0");
             string locationName = homePage.getConfiguration("TestData.json", "LocationName.4.0.0");
             store_Location.AddNewStoreLocation();
+
             store_Location.CreateNewLocation(locationCode, locationName);
         }
 
