@@ -20,19 +20,25 @@ namespace SpecFlow_MSTestFrameWork.Features
             homePage = new HomePage(_driverHelper.driver);
             columnChooser = new ColumnChooser(_driverHelper.driver);
         }
-
-    [When(@"user click the StoreLocation tab")]
+        /// <summary>
+        /// navigate to store location tab
+        /// </summary>
+        [When(@"user click the StoreLocation tab")]
         public void WhenUserClickTheStoreLocationTab()
         {
             store_Location.TabStore_LocationClick();
         }
-        
+        /// <summary>
+        /// Add new location button click
+        /// </summary>
         [When(@"Add new location")]
         public void WhenAddNewLocation()
         {
             store_Location.AddNewStoreLocation();
         }
-
+        /// <summary>
+        /// Add new location with test data 4.0.0
+        /// </summary>
         [When(@"Add new location for FourZeroZero '(.*)','(.*)'")]
         public void WhenAddNewLocationForFourZeroZero(string locationcode, string locationname)
         {
@@ -41,7 +47,9 @@ namespace SpecFlow_MSTestFrameWork.Features
             store_Location.AddNewStoreLocation();
             store_Location.CreateNewLocation(locationCode, locationName);
         }
-
+        /// <summary>
+        /// Add new location with test data 4.0.5 location 1
+        /// </summary>
         [When(@"Add new location for FourZeroFiveA")]
         public void WhenAddNewLocationForFourZeroFiveA()
         {
@@ -50,7 +58,9 @@ namespace SpecFlow_MSTestFrameWork.Features
             store_Location.AddNewStoreLocation();
             store_Location.CreateNewLocation(locationCode, locationName);
         }
-
+        /// <summary>
+        /// Add new location with test data 4.0.5 location 2
+        /// </summary>
         [When(@"Add new location for FourZeroFiveB")]
         public void WhenAddNewLocationForFourZeroFiveB()
         {
@@ -59,7 +69,9 @@ namespace SpecFlow_MSTestFrameWork.Features
             store_Location.AddNewStoreLocation();
             store_Location.CreateNewLocation(locationCode, locationName);
         }
-
+        /// <summary>
+        /// Add new location with test data 4.0.5 location 3
+        /// </summary>
         [When(@"Add new location for FourZeroFiveC")]
         public void WhenAddNewLocationForFourZeroFiveC()
         {
@@ -68,7 +80,9 @@ namespace SpecFlow_MSTestFrameWork.Features
             store_Location.AddNewStoreLocation();
             store_Location.CreateNewLocation(locationCode, locationName);
         }
-
+        /// <summary>
+        /// Add new location with test data 4.0.5 location 4
+        /// </summary>
         [When(@"Add new location for FourZeroFiveD")]
         public void WhenAddNewLocationForFourZeroFiveD()
         {
@@ -77,6 +91,9 @@ namespace SpecFlow_MSTestFrameWork.Features
             store_Location.AddNewStoreLocation();
             store_Location.CreateNewLocation(locationCode, locationName);            
         }
+        /// <summary>
+        /// method to drag and drop column from column chooser
+        /// </summary>
         [Then(@"select column chooser for column name '(.*)'")]
         public void ThenSelectColumChooserForColumName(string column)
         {
