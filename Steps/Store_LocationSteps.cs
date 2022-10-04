@@ -11,12 +11,14 @@ namespace SpecFlow_MSTestFrameWork.Features
         private readonly DriverHelper _driverHelper;
         Store_Location store_Location;
         HomePage homePage;
+        ColumnChooser columnChooser;
 
         public Store_LocationSteps(DriverHelper driverHelper)
         {
             _driverHelper = driverHelper;
             store_Location = new Store_Location(_driverHelper.driver);
             homePage = new HomePage(_driverHelper.driver);
+            columnChooser = new ColumnChooser(_driverHelper.driver);
         }
 
     [When(@"user click the StoreLocation tab")]
@@ -37,9 +39,51 @@ namespace SpecFlow_MSTestFrameWork.Features
             string locationCode = homePage.getConfiguration("TestData.json", "LocationCode.4.0.0");
             string locationName = homePage.getConfiguration("TestData.json", "LocationName.4.0.0");
             store_Location.AddNewStoreLocation();
-
             store_Location.CreateNewLocation(locationCode, locationName);
         }
+
+        [When(@"Add new location for FourZeroFiveA")]
+        public void WhenAddNewLocationForFourZeroFiveA()
+        {
+            string locationCode = homePage.getConfiguration("TestData.json", "LocationCode.4.0.5.1");
+            string locationName = homePage.getConfiguration("TestData.json", "LocationName.4.0.5.1");
+            store_Location.AddNewStoreLocation();
+            store_Location.CreateNewLocation(locationCode, locationName);
+        }
+
+        [When(@"Add new location for FourZeroFiveB")]
+        public void WhenAddNewLocationForFourZeroFiveB()
+        {
+            string locationCode = homePage.getConfiguration("TestData.json", "LocationCode.4.0.5.2");
+            string locationName = homePage.getConfiguration("TestData.json", "LocationName.4.0.5.2");
+            store_Location.AddNewStoreLocation();
+            store_Location.CreateNewLocation(locationCode, locationName);
+        }
+
+        [When(@"Add new location for FourZeroFiveC")]
+        public void WhenAddNewLocationForFourZeroFiveC()
+        {
+            string locationCode = homePage.getConfiguration("TestData.json", "LocationCode.4.0.5.3");
+            string locationName = homePage.getConfiguration("TestData.json", "LocationName.4.0.5.3");
+            store_Location.AddNewStoreLocation();
+            store_Location.CreateNewLocation(locationCode, locationName);
+        }
+
+        [When(@"Add new location for FourZeroFiveD")]
+        public void WhenAddNewLocationForFourZeroFiveD()
+        {
+            string locationCode = homePage.getConfiguration("TestData.json", "LocationCode.4.0.5.4");
+            string locationName = homePage.getConfiguration("TestData.json", "LocationName.4.0.5.4");
+            store_Location.AddNewStoreLocation();
+            store_Location.CreateNewLocation(locationCode, locationName);            
+        }
+        [Then(@"select column chooser for column name '(.*)'")]
+        public void ThenSelectColumChooserForColumName(string column)
+        {
+            store_Location.ChooseAColumn(column);
+        }
+
+
 
     }
 }

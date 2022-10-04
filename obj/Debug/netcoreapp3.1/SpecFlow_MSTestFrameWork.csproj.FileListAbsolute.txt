@@ -6462,7 +6462,6 @@ C:\Users\catherine.aa\source\repos\GCRFramework\bin\Debug\netcoreapp3.1\runtimes
 C:\Users\catherine.aa\source\repos\GCRFramework\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Users\catherine.aa\source\repos\GCRFramework\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Users\catherine.aa\source\repos\GCRFramework\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Text.Encoding.CodePages.dll
-C:\Users\catherine.aa\source\repos\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.csproj.AssemblyReference.cache
 C:\Users\catherine.aa\source\repos\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\catherine.aa\source\repos\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.AssemblyInfoInputs.cache
 C:\Users\catherine.aa\source\repos\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.AssemblyInfo.cs
@@ -6471,3 +6470,4 @@ C:\Users\catherine.aa\source\repos\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow
 C:\Users\catherine.aa\source\repos\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.dll
 C:\Users\catherine.aa\source\repos\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.pdb
 C:\Users\catherine.aa\source\repos\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.genruntimeconfig.cache
+C:\Users\catherine.aa\source\repos\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.csproj.AssemblyReference.cache

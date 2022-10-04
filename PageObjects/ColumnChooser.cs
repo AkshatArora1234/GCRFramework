@@ -46,7 +46,6 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             actions.DragAndDrop(DDFrom, DDTo).Perform();
             actions.Release();
         }
-        
 
         public void SelectScaleValue()
         {
