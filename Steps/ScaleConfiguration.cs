@@ -22,8 +22,9 @@ namespace SpecFlow_MSTestFrameWork.Steps
         ColumnChooser columnChooser;
         NewBatch newBatch;
         ConfigurationPage configurationPage;
+        Store_Location storeLocation;
         SRConfigurationPage sRConfigurationPage;
-
+                       
         public ScaleConfiguration(DriverHelper driverHelper)
         {
             _driverHelper = driverHelper;
@@ -35,6 +36,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
             newBatch = new NewBatch(_driverHelper.driver);
             configurationPage = new ConfigurationPage(_driverHelper.driver);
             sRConfigurationPage = new SRConfigurationPage(_driverHelper.driver);
+            storeLocation = new Store_Location(_driverHelper.driver);
         }
 
 
@@ -166,6 +168,61 @@ namespace SpecFlow_MSTestFrameWork.Steps
         public void ClickonNewButton()
         {
             scaleConfigurationPage.ClickNewButton();
+        }
+        [Then(@"Enter '(.*)' and '(.*)'")]
+        public void ThenEnterAnd(string code, string PFname)
+        {
+            scaleConfigurationPage.EnterCodeandName(code, PFname);
+            Thread.Sleep(1000);
+        }
+
+        [Then(@"Add the PF to location '(.*)','(.*)")]
+        public void ThenAddThePFToLocation(string LocCode,string PFname)
+        {
+            scaleConfigurationPage.AddPFToLocation(LocCode,PFname);
+        }
+        [When(@"User click on left menu and select the item maintenance")]
+        public void WhenUserClickOnLeftMenuAndSelectTheItemMaintenance()
+        {
+            newItemCreation.SearchForKeyword();
+            Thread.Sleep(8000);
+
+        }
+        [Then(@"user should select an item and add PF & location '(.*)' ,'(.*)")]
+        public void ThenUserShouldSelectAnItemAndAddPFLocation(string PFname, string locName)
+        {
+            columnChooser.SelectScaleColumn();
+            columnChooser.SelectScale();
+            Thread.Sleep(5000);
+            columnChooser.SelectFirstScaleRecord();
+            Thread.Sleep(10000);
+            columnChooser.ClickScaleTabInItems();
+            storeLocation.ClickItemStoreLocation();
+            storeLocation.AddPFAndLocationFromItem(locName, PFname);
+            
+        }
+
+        [Then(@"User should navigate to config page and delete the location '(.*)'")]
+        public void ThenUserShouldNavigateToConfigPageAndDeleteTheLocation(string locCode)
+        {
+            storeLocation.DeleteLocation(locCode);
+        }
+
+        [Then(@"Go to item location and publish '(.*)'")]
+        public void ThenGoToItemLocationAndPublish(string LocName)
+        {
+            storeLocation.PublishLocFromItem(LocName);
+        }
+
+
+        [Then(@"User should click on PF edit '(.*)' ,'(.*)'and set the Print Format fields")]
+        public void ThenUserShouldClickOnPFEditAndSetThePrintFormatFields(string PFname, string PFcode)
+        {
+            scaleConfigurationPage.SearchPFName(PFname,PFcode);
+            scaleConfigurationPage.EditPF(PFname);
+            scaleConfigurationPage.ClickCheckboxes();
+            scaleConfigurationPage.SaveAndClosePF();
+            Thread.Sleep(2000);
         }
 
         /// <summary>

@@ -20,10 +20,12 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         }
 
         IWebElement ShowColumnChooser => Driver.FindElement(By.XPath("(//div[@aria-label='Show Column Chooser'])[8]"));
+        IWebElement ClickColumnChooser => Driver.FindElement(By.XPath("(//div[@aria-label='Show Column Chooser'])[9]"));
         IWebElement Search => Driver.FindElement(By.XPath("//input[@aria-label='Search']"));
         IWebElement DDFrom => Driver.FindElement(By.XPath("//div[text()='Scale Item']"));
         IWebElement DDTo => Driver.FindElement(By.XPath("//*[@id='gridITEMHQ']/div/div[5]/div/table/tbody/tr[1]"));
         IWebElement ScaleItemDropDown => Driver.FindElement(By.XPath("(//div[@class='dx-dropdowneditor-icon'])[5]"));
+        IWebElement ScaleDropDown => Driver.FindElement(By.XPath("(//div[@class='dx-dropdowneditor-icon'])[6]"));
         IWebElement FirstScaleElement => Driver.FindElement(By.XPath("//*[@id='gridITEMHQ']/div/div[6]/div/div/div[1]/div/table/tbody/tr[1]/td[1]"));
         IWebElement ClickScaleTab => Driver.FindElement(By.XPath("(//a[@ng-click='select($event)'])[11]"));
         IWebElement SaveItem => Driver.FindElement(By.XPath("//button[@ng-click='ctrl.savePFChanges()']"));
@@ -46,12 +48,39 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             actions.DragAndDrop(DDFrom, DDTo).Perform();
             actions.Release();
         }
-
+        public void ChooseScaleColumn()
+        {
+            Actions actions = new Actions(Driver);
+            Thread.Sleep(3000);
+            ShowColumnChooser.Click();
+            Search.SendKeys("Scale");
+            actions.DragAndDrop(DDFrom, DDTo).Perform();
+            Thread.Sleep(3000);
+            actions.DragAndDrop(DDFrom, DDTo).Perform();
+            actions.Release();
+        }
+        public void SelectScaleColumn()
+        {
+            Actions actions = new Actions(Driver);
+            Thread.Sleep(3000);
+            ClickColumnChooser.Click();
+            Search.SendKeys("Scale");
+            actions.DragAndDrop(DDFrom, DDTo).Perform();
+            Thread.Sleep(3000);
+            actions.DragAndDrop(DDFrom, DDTo).Perform();
+            actions.Release();
+        }
         public void SelectScaleValue()
         {
             Actions actions = new Actions(Driver);
             ScaleItemDropDown.Click();
             actions.SendKeys(Keys.Down).SendKeys(Keys.Down).SendKeys(Keys.Enter).Build().Perform();     
+        }
+        public void SelectScale()
+        {
+            Actions actions = new Actions(Driver);
+            ScaleDropDown.Click();
+            actions.SendKeys(Keys.Down).SendKeys(Keys.Down).SendKeys(Keys.Enter).Build().Perform();
         }
 
         public void SelectFirstScaleRecord()

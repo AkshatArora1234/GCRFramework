@@ -36,6 +36,11 @@ namespace SpecFlow_MSTestFrameWork.Features
         {
             store_Location.AddNewStoreLocation();
         }
+        [When(@"Create New Scale Location '(.*)' and '(.*)'")]
+        public void WhenCreateNewScaleLocationAnd(string locCode, string locName)
+        {
+            store_Location.CreateLocation(locCode, locName);
+        }
         /// <summary>
         /// Add new location with test data 4.0.0
         /// </summary>

@@ -33,3 +33,38 @@ Scenario: Publish location and verify queue messages
 	| Send Department/Commodity       | 
 
 
+	Scenario: Create location and verify that deleted location is not published
+    Given user navigates to HQ application
+	When enter valid '<username>', '<hqpassword>'
+	And Clicks on Log In button
+	When User clicks on the Left Menu
+	Then menu should be displayed
+	When User enters Scale Configuration in the Search Box
+	Then User click on Scale Configuration Item should be displayed on the Menu
+	When user click the StoreLocation tab
+	And Add new location
+	And Create New Scale Location '<LocationCode>' and '<LocationName>'
+	When User clicks on Tab Print Format
+	Then Click on the New Button
+	And Enter '<code>' and '<PFname>'
+	Then User should click on PF edit '<PFname>' ,'<code>'and set the Print Format fields
+	Then Add the PF to location '<LocationCode>','<PFname>'
+	When User click on left menu and select the item maintenance 
+	Then user should select an item and add PF & location '<PFname>' ,'<LocationName>
+	And User should navigate to config page and delete the location '<LocationCode>'
+	Then Go to item location and publish '<LocationName>' 
+#	And user navigates to SR application
+#	When enter valid '<username>', '<hqpassword>'
+#	And Clicks on Login button of SR app
+#	When User clicks on the Left Menu
+#	Then menu should be displayed
+#	When User enters Scale Configuration in the Search Box
+#	Then Scale Configuration Item should be displayed on the Menu
+#	When User Selects the Scale Configuration
+#	And Verify that deleted location in HQ is not published and other item locations are published '<LocationName>'
+	
+	
+
+	Examples:
+    | LocationCode | LocationName     | code | PFname           |
+    | 96           | Butter           | 14   | Organic butter   |

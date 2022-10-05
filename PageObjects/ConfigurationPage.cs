@@ -41,7 +41,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement FontCheckbox => Driver.FindElement(By.XPath("//*[@id='gridSCALEFONT']/div/div[6]/div/div/div[1]/div/table/tbody/tr[1]/td[3]/div/div/span"));
         IWebElement FontSave => Driver.FindElement(By.XPath("//a[@ng-click='ctrl.saveButtonAction()']"));
         IWebElement FontSaveYes => Driver.FindElement(By.Id("submitButton"));
-
+        
 
         public void PageNavigationToScaleConfigPage() => ScaleConfigurationTab.Click();
         public void PageNavigationToConfigPage() => ConfigurationTab.Click();
@@ -54,6 +54,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             ContentCodeSearch.SendKeys(text);  
         }
 
+       
         public void Printformat(string text)
         {
             Thread.Sleep(5000);

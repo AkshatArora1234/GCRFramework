@@ -9,6 +9,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
     {
 
         private IWebDriver Driver;
+        string PFName;
         public Scaleconfig(IWebDriver driver)
         {
             Driver = driver;
@@ -42,10 +43,15 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement Save => Driver.FindElement(By.XPath("//button[@class='button-save ng-scope']"));
         IWebElement Savenew => Driver.FindElement(By.XPath("//*[@class='button-save']"));
         IWebElement Close => Driver.FindElement(By.XPath("//button[@ng-click='ctrl.onCancel()']"));
+        IWebElement SaveNClose => Driver.FindElement(By.XPath("//span[text()='Save & Close']"));
         IWebElement ClickEdit => Driver.FindElement(By.XPath("(//*[contains(text(),'OpenSansBiscuits')])[1]"));
+        IWebElement ClickEditPF => Driver.FindElement(By.XPath($"//td[text()='{PFName}']"));
         IWebElement CheckProductlife => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasProductLife']"));
         IWebElement CheckTare => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasTare']"));
         IWebElement CheckContent => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasContent']"));
+        IWebElement ContentSymbol => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasContentSymbol']"));
+        IWebElement CookingTime => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasCookingTime']"));
+        IWebElement SellBy => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasSellBuy']"));
         IWebElement CheckPresetmessages => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasPresetMessage']"));
         IWebElement CheckPrintdateformat => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasPackedTime']"));
         IWebElement CheckHasContentSymbol => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasContentSymbol']"));
@@ -63,6 +69,8 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement Deletebutton => Driver.FindElement(By.Id("submitButton"));
         IWebElement Clickok => Driver.FindElement(By.XPath("//*[text()='OK']"));
         IWebElement Searchbox => Driver.FindElement(By.XPath("(//*[@class='dx-texteditor-input'])[19]"));
+        IWebElement PFNameSearchbox => Driver.FindElement(By.XPath("(//*[@class='dx-texteditor-input'])[16]"));
+        IWebElement PFCodeSearchbox => Driver.FindElement(By.XPath("(//*[@class='dx-texteditor-input'])[17]"));
         IWebElement TabPrintFormat => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[2]"));
         IWebElement TabConfigration => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[1]"));
         IWebElement SRPrintFormat => Driver.FindElement(By.XPath("(//a[@class='nav-link ng-binding'])[7]"));
@@ -103,7 +111,16 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement Okbutton => Driver.FindElement(By.XPath("(//*[text()='OK'])[1]"));
         IWebElement DeleteFont1 => Driver.FindElement(By.XPath("//i[@ng-click='ctrl.actions.deleteFont(row.data)']"));
         IWebElement CloseSR => Driver.FindElement(By.XPath("//button[@ng-click='ctrl.cancelClicked()']"));
+        IWebElement EnterLocationCode => Driver.FindElement(By.XPath("(//input[@role='spinbutton'])[4]"));
+        IWebElement StoreEdit => Driver.FindElement(By.XPath("(//i[@class='fa fa-pencil-square-o'])[5]"));
+        IWebElement ClickDropdown => Driver.FindElement(By.XPath("(//div[@class='dx-dropdowneditor-icon'])[6]"));
+        IWebElement PFTextBox => Driver.FindElement(By.XPath("//td[@aria-colindex='4'and @class='inline_edit_enabled_cell']"));
+        IWebElement SelectPF => Driver.FindElement(By.XPath($"//div[text()='{PFName}]"));
 
+        IWebElement SavePF => Driver.FindElement(By.XPath("//span[text()='Save']"));
+        IWebElement SaveChanges => Driver.FindElement(By.XPath("//button[@id='submitButton']"));
+        IWebElement StoreLocation => Driver.FindElement(By.XPath("//uib-tab-heading[text()='Stores / Locations']"));
+        IWebElement LocationName => Driver.FindElement(By.XPath("//div[text()='Location Name']"));
         public void ButtonSaveClick() => ButtonSave.Click();
         public void CheckProductLife() => CheckProductlife.Click();
         public void ScalConfigurationClick() => TabScaleConfiguration.Click();
@@ -170,6 +187,29 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Save.Click();
         }
 
+        public void AddPFToLocation(string LocCode,string PFname)
+        {
+            PFName = PFname;
+            Thread.Sleep(1000);
+            StoreLocation.Click();
+            Thread.Sleep(3000);
+            LocationName.Click();
+            StoreEdit.Click();
+            Thread.Sleep(2000);
+            EnterLocationCode.SendKeys(LocCode);
+            Thread.Sleep(2000);
+            PFTextBox.Click();
+            Thread.Sleep(2000);
+            ClickDropdown.Click();
+            Thread.Sleep(8000);
+            SelectPF.Click();
+            LocationName.Click();
+            Thread.Sleep(2000);
+            SavePF.Click();
+            Thread.Sleep(1000);
+            SaveChanges.Click();
+
+        }
         public void EnterFontCodeandName(string code, string name)
         {
             EnterFontCode.SendKeys(code);
@@ -221,12 +261,33 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Actions actions = new Actions(Driver);
             actions.DoubleClick(ClickEdit).Perform();
         }
+
+        public void EditPF(string pfname)
+        {
+            PFName = pfname;
+            Actions actions = new Actions(Driver);
+            actions.DoubleClick(ClickEditPF).Perform();
+        }
         public void EditCode3()
         {
             Actions actions = new Actions(Driver);
             actions.DoubleClick(ElementSelectFromTable).Perform();
         }
 
+        public void ClickCheckboxes()
+        {
+            Thread.Sleep(1000);
+            CheckProductlife.Click();
+            Thread.Sleep(2000);
+            CheckTare.Click();
+            CheckContent.Click();
+            Thread.Sleep(2000);
+            SellBy.Click();
+            CheckPresetmessages.Click();
+            CookingTime.Click();
+            Thread.Sleep(2000);
+
+        }
         public void Checkboxes()
         {
             CheckProductlife.Click();
@@ -270,6 +331,8 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         public void SavetheFontwithData() => Save.Click();
 
         public void ClosePF() => Close.Click();
+        public void SaveAndClosePF() => SaveNClose.Click();
+
 
 
         public void PublishPrint()
@@ -299,6 +362,12 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         }
 
         public void SeachPFname(string code) => Searchbox.SendKeys(code);
+        public void SearchPFName(string name, string code)
+        {
+            PFNameSearchbox.SendKeys(name);
+            PFCodeSearchbox.SendKeys(code);
+
+        }
 
         public void EditRow()
         {

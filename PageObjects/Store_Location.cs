@@ -9,17 +9,18 @@ using System.Threading;
 
 namespace SpecFlow_MSTestFrameWork.PageObjects
 {
-    class Store_Location
+ public class Store_Location
     {
         private IWebDriver Driver;
         HomePage homePage;
-       
-     
+        string LocSearch;
+        string PFName;
+        
         public Store_Location(IWebDriver driver)
         {
             Driver = driver;
             homePage = new HomePage(Driver);
-         
+            
         }
   
        
@@ -47,6 +48,23 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement DDFrom => Driver.FindElement(By.XPath("//div[text()='Send Department/Commodity']"));
         IWebElement DDTo => Driver.FindElement(By.XPath("(//div[text()='Location Code']/ancestor::div[@class='item-list-table clearfix']//table[@class='dx-datagrid-table dx-datagrid-table-fixed'])[1]"));
         IWebElement columnChooserClosebtn => Driver.FindElement(By.XPath("//i[@class='dx-icon dx-icon-close']"));
+        IWebElement StoreLocation => Driver.FindElement(By.XPath("(//uib-tab-heading[text()='Stores / Locations'])[2]"));
+        IWebElement Scale_Store => Driver.FindElement(By.XPath("(//uib-tab-heading[text()='Stores / Locations'])[1]"));
+        IWebElement EnterLocationCode => Driver.FindElement(By.XPath("(//input[@role='spinbutton'])[4]"));
+        IWebElement LocationName => Driver.FindElement(By.XPath("//div[text()='Location Name']"));
+        IWebElement Locationsearchbox => Driver.FindElement(By.XPath("(//div[@class='dx-show-invalid-badge dx-textbox dx-texteditor dx-editor-outlined dx-widget'])[3]"));
+        IWebElement LocationSelect => Driver.FindElement(By.XPath($"(//td[text()='{LocSearch}'])[2]"));
+        IWebElement EditItem => Driver.FindElement(By.XPath("(//i[@uib-tooltip='Enable Editing'])[6]"));
+        IWebElement StoreItemDropDown => Driver.FindElement(By.XPath("//div[@class='dx-show-invalid-badge dx-selectbox dx-textbox dx-texteditor dx-dropdowneditor-button-visible dx-editor-outlined dx-texteditor-empty dx-widget dx-dropdowneditor dx-dropdowneditor-field-clickable']"));
+        IWebElement SelectPF => Driver.FindElement(By.XPath($"(//div[text()='{PFName}'])[2]"));
+        IWebElement PFTab => Driver.FindElement(By.XPath("(//div[text()='Print Formats'])[2]"));
+        IWebElement SaveItem => Driver.FindElement(By.XPath("(//button[@class='button-save ng-scope'])[2]"));
+        IWebElement ScaleConfigTab => Driver.FindElement(By.XPath("(//span[text()='Scale Configuration'])[2]"));
+        IWebElement DeleteLoc => Driver.FindElement(By.XPath("(//i[@ng-click='ctrl.actions.deleteData(row.data)'])[63]"));
+        IWebElement ConfirmDelete => Driver.FindElement(By.XPath("//button[@id='submitButton']"));
+        IWebElement ItemTab => Driver.FindElement(By.XPath("//span[@uib-tooltip='Item (HQ): LADOTYRI MITILINIS']"));
+        IWebElement PublishItem => Driver.FindElement(By.XPath("(//i[@uib-tooltip='Publish'])[3]"));
+
 
         public void TabStore_LocationClick() => TabStore_Location.Click();
         public void AddNewStoreLocation() => NewLocation.Click();
@@ -60,7 +78,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         public void SavePFAndClose() => SaveAndClosePF.Click();
 
 
-
+        public void ClickItemStoreLocation() => StoreLocation.Click();
         public void CreateNewLocation(string code, string name)
         {
             Thread.Sleep(2000);
@@ -71,6 +89,17 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Thread.Sleep(1000);
             SaveLocation.Click();
             Thread.Sleep(2000);
+        }
+        public void CreateLocation(string code, string name)
+        {
+            Thread.Sleep(2000);
+            // StoreNameClick.Click();
+            Storename.Click();
+            locCode.SendKeys(code);
+            locName.SendKeys(name);
+            Thread.Sleep(1000);
+            locName.SendKeys(Keys.Enter);
+            Thread.Sleep(1000);
         }
 
         public void ChooseAColumn(string columnName)
@@ -94,6 +123,49 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         {
             storeLocationCodeTxtbx.SendKeys(locCode);
             Thread.Sleep(1000);
+        }
+        public void DeleteLocation(string locCode)
+        {
+            Thread.Sleep(1000);
+            ScaleConfigTab.Click();
+            Thread.Sleep(2000);
+            Scale_Store.Click();
+            Thread.Sleep(3000);
+            LocationName.Click();
+            Thread.Sleep(2000);
+            EnterLocationCode.SendKeys(locCode);
+            Thread.Sleep(1000);
+            DeleteLoc.Click();
+            Thread.Sleep(1000);
+            ConfirmDelete.Click();
+            Thread.Sleep(1000);
+
+        }
+        public void PublishLocFromItem(string LocName)
+        {
+            LocSearch = LocName;
+            ItemTab.Click();
+            StoreLocation.Click();
+            //Locationsearchbox.SendKeys(LocName);
+            //LocationSelect.Click();
+            PublishItem.Click();
+
+        }
+
+        public void AddPFAndLocationFromItem(string locname, string PFname)
+        {
+            Actions actions = new Actions(Driver);
+            LocSearch = locname;
+            PFName = PFname;
+            EditItem.Click();
+            Locationsearchbox.Click();
+            LocationSelect.Click();
+            actions.DoubleClick(StoreItemDropDown).Perform();
+            SelectPF.Click();
+            PFTab.Click();
+            SaveItem.Click();
+            Thread.Sleep(2000);
+
         }
         public void storeLocationRowOneSelect()
         {
