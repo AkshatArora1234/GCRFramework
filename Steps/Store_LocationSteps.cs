@@ -36,6 +36,11 @@ namespace SpecFlow_MSTestFrameWork.Features
         {
             store_Location.AddNewStoreLocation();
         }
+        /// <summary>
+        /// Create New Scale Location using enter key
+        /// </summary>
+        /// <param name="locCode"></param>
+        /// <param name="locName"></param>
         [When(@"Create New Scale Location '(.*)' and '(.*)'")]
         public void WhenCreateNewScaleLocationAnd(string locCode, string locName)
         {

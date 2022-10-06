@@ -169,13 +169,22 @@ namespace SpecFlow_MSTestFrameWork.Steps
         {
             scaleConfigurationPage.ClickNewButton();
         }
+        /// <summary>
+        /// User enter the PF name and code from feature file
+        /// </summary>
+        /// <param name="code"></param>
+        /// <param name="PFname"></param>
         [Then(@"Enter '(.*)' and '(.*)'")]
         public void ThenEnterAnd(string code, string PFname)
         {
             scaleConfigurationPage.EnterCodeandName(code, PFname);
             Thread.Sleep(1000);
         }
-
+        /// <summary>
+        /// Adding PF to location common function
+        /// </summary>
+        /// <param name="LocCode"></param>
+        /// <param name="PFname"></param>
         [Then(@"Add the PF to location '(.*)','(.*)")]
         public void ThenAddThePFToLocation(string LocCode,string PFname)
         {
@@ -193,10 +202,11 @@ namespace SpecFlow_MSTestFrameWork.Steps
         {
             columnChooser.SelectScaleColumn();
             columnChooser.SelectScale();
-            Thread.Sleep(5000);
+            Thread.Sleep(3000);
             columnChooser.SelectFirstScaleRecord();
-            Thread.Sleep(10000);
+            Thread.Sleep(3000);
             columnChooser.ClickScaleTabInItems();
+            Thread.Sleep(2000);
             storeLocation.ClickItemStoreLocation();
             storeLocation.AddPFAndLocationFromItem(locName, PFname);
             
@@ -213,7 +223,11 @@ namespace SpecFlow_MSTestFrameWork.Steps
         {
             storeLocation.PublishLocFromItem(LocName);
         }
-
+        /// <summary>
+        /// Setting PF values common function
+        /// </summary>
+        /// <param name="PFname"></param>
+        /// <param name="PFcode"></param>
 
         [Then(@"User should click on PF edit '(.*)' ,'(.*)'and set the Print Format fields")]
         public void ThenUserShouldClickOnPFEditAndSetThePrintFormatFields(string PFname, string PFcode)
