@@ -6470,4 +6470,3 @@ C:\Users\catherine.aa\source\repos\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow
 C:\Users\catherine.aa\source\repos\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.dll
 C:\Users\catherine.aa\source\repos\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.pdb
 C:\Users\catherine.aa\source\repos\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.genruntimeconfig.cache
-C:\Users\catherine.aa\source\repos\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.csproj.AssemblyReference.cache

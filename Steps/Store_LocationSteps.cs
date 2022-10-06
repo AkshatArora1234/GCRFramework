@@ -96,6 +96,12 @@ namespace SpecFlow_MSTestFrameWork.Features
             store_Location.AddNewStoreLocation();
             store_Location.CreateNewLocation(locationCode, locationName);            
         }
+        [Then(@"search for location code '(.*)'")]
+        public void ThenSearchForLocationCode(string locCode)
+        {
+            store_Location.searchLocation(locCode);
+        }
+
         /// <summary>
         /// method to drag and drop column from column chooser
         /// </summary>
@@ -103,6 +109,13 @@ namespace SpecFlow_MSTestFrameWork.Features
         public void ThenSelectColumChooserForColumName(string column)
         {
             store_Location.ChooseAColumn(column);
+        }
+        [Then(@"Edit '(.*)' to Yes")]
+        public void ThenEditToYes(string column)
+        {
+            store_Location.EditStoreLocationClick();
+            if (column== "Send Department/Commodity")
+                store_Location.EditCommodityFlagToYes();
         }
 
 

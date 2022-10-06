@@ -26,11 +26,13 @@ Scenario: Publish location and verify queue messages
 	And Add new location for FourZeroFiveB
 	And Add new location for FourZeroFiveC
 	And Add new location for FourZeroFiveD
+	Then search for location code '<locationCodeD>'
 	Then select column chooser for column name '<columnChoosed>'
+	And Edit '<columnChoosed>' to Yes
 
 	  Examples: 
-	| columnChoosed                   | 
-	| Send Department/Commodity       | 
+	| columnChoosed             | locationCodeD |
+	| Send Department/Commodity | 51            |
 
 
 	Scenario: Create location and verify that deleted location is not published
