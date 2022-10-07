@@ -766,54 +766,6 @@ namespace SpecFlow_MSTestFrameWork.Steps
             SelectStore();
         }
 
-        /*/// <summary>
-        /// Verifying the Tares, Content Symbols and Preset messages in SR is as that in HQ 
-        /// </summary>
-        [Then(@"navigate to verify Tare '(.*)' and '(.*)'")]
-        public void ThenNavigateToVerifyTareAnd(string searchcode, string verifytext)
-        {
-            Thread.Sleep(3000);
-            scaleConfigurationPage.srTare();
-            sRConfigurationPage.CompareTare(searchcode, verifytext);
-            Thread.Sleep(3000);
-            _driverHelper.driver.SwitchTo().Window(_driverHelper.driver.WindowHandles[0]);
-        }
-
-        [Then(@"navigate to verify Content Symbol '(.*)' , '(.*)'and '(.*)'")]
-        public void ThenNavigateToVerifyContentSymbolAnd(string searchcode, string verifytext,string contentsymbolvalues)
-        {
-            Thread.Sleep(3000);
-            scaleConfigurationPage.srContentSymbol();
-            sRConfigurationPage.CompareContentSymbol(searchcode, verifytext, contentsymbolvalues);
-            Thread.Sleep(3000);
-        //    _driverHelper.driver.SwitchTo().Window(_driverHelper.driver.WindowHandles[0]);
-        }
-
-        /// <summary>
-        /// Verifying the Tare
-        /// </summary>
-        [Then(@"navigate to Tare '(.*)' ,'(.*)' and '(.*)'")]
-        public void NavigardVerifyTare(string searchcode, string verifytext, string tarevaluesg)
-        {
-
-            Thread.Sleep(3000);
-            scaleConfigurationPage.srTare();
-            sRConfigurationPage.CompareTare(searchcode, verifytext, tarevaluesg);
-            Thread.Sleep(3000);
-
-            // _driverHelper.driver.SwitchTo().Window(_driverHelper.driver.WindowHandles[0]);
-        }
-
-        [Then(@"navigate to verify Preset Messages '(.*)' and '(.*)'")]
-        public void ThenNavigateToVerifyPresetMessagesAnd(string searchcode, string verifytext)
-        {
-            Thread.Sleep(3000);
-            scaleConfigurationPage.srPresetMessage();
-            sRConfigurationPage.ComparePresetMsg(searchcode, verifytext);
-            Thread.Sleep(7000);
-            _driverHelper.driver.SwitchTo().Window(_driverHelper.driver.WindowHandles[0]);
-        }*/
-
         /// <summary>
         /// Verifying the Tares, Content Symbols and Preset messages in SR is as that in HQ 
         /// </summary>
@@ -854,7 +806,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         {
 
             Thread.Sleep(3000);
-            scaleConfigurationPage.srPrintFormat1();
+            scaleConfigurationPage.srPrintFormat();
             sRConfigurationPage.ComparePrintFormat(searchcode, verifytext);
             Thread.Sleep(3000);
             _driverHelper.driver.SwitchTo().Window(_driverHelper.driver.WindowHandles[0]);

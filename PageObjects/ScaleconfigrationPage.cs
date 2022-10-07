@@ -134,7 +134,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         public void MenuScaleConfigurationClick() => ScaleConfigurationMenu.Click();
         public void TabPrintFormatClick() => TabPrintFormat.Click();
         public void TabConfiGrationClick() => TabConfigration.Click();
-        public void srPrintFormat1() => SRPrintFormat.Click();
+        public void srPrintFormat() => SRPrintFormat.Click();
         public void srTare() => SRTare.Click();
         public void srContentSymbol() => SRContentSymbol.Click();
         public void srPresetMessage() => SRPresetMsg.Click();

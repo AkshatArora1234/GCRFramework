@@ -11075,19 +11075,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\catherine.aa\\.nuget\\packages\\": {}
+    "C:\\Users\\rudra.prasad\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\catherine.aa\\source\\repos\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
+      "projectUniqueName": "C:\\Source\\GitCode\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
       "projectName": "SpecFlow_MSTestFrameWork",
-      "projectPath": "C:\\Users\\catherine.aa\\source\\repos\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
-      "packagesPath": "C:\\Users\\catherine.aa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\catherine.aa\\source\\repos\\GCRFramework\\obj\\",
+      "projectPath": "C:\\Source\\GitCode\\GCRFramework\\SpecFlow_MSTestFrameWork.csproj",
+      "packagesPath": "C:\\Users\\rudra.prasad\\.nuget\\packages\\",
+      "outputPath": "C:\\Source\\GitCode\\GCRFramework\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\catherine.aa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rudra.prasad\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

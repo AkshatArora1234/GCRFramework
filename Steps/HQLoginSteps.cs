@@ -41,7 +41,18 @@ namespace SpecFlow_MSTestFrameWork.StepDefinitions
         ((IJavaScriptExecutor)_driverHelper.driver).ExecuteScript("window.open();");
         _driverHelper.driver.SwitchTo().Window(_driverHelper.driver.WindowHandles.Last());
         _driverHelper.driver.Navigate().GoToUrl(initialurl);
-    }
+        }
+
+    [Given(@"user navigates to SR application")]
+    public void GivenUserNavigatesToSRApplication()
+    {
+            var config = new ConfigurationBuilder().AddJsonFile("appsetting.json").Build();
+            var initialurl = config["srappUrl"];
+           _driverHelper.driver.Navigate().GoToUrl(initialurl);
+     }
+
+   
+
         /// <summary>
         /// Click on Login Buuton in SR App. Common for tests requireng verification in SR
         /// </summary>

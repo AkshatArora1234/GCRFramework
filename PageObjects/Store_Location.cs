@@ -84,6 +84,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         public void CheckTare() => Tare.Click();
         public void CheckPresetmessages() => Presetmessages.Click();
         public void CheckPrintdateformat() => Printdateformat.Click();
+        public void CheckContent() => Content.Click();
         public void CheckCookingTime() => CookingTime.Click();
         public void CheckPerKG() => PerKG.Click();
         public void SavePFAndClose() => SaveAndClosePF.Click();
