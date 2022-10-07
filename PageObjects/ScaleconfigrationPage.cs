@@ -391,6 +391,8 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         public void SeachPFname(string code) => Searchbox.SendKeys(code);
         public void SearchPFName(string name, string code)
         {
+            PFNameSearchbox.Clear();
+            PFCodeSearchbox.Clear();
             PFNameSearchbox.SendKeys(name);
             PFCodeSearchbox.SendKeys(code);
 

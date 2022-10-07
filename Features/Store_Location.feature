@@ -74,14 +74,14 @@ Scenario: Publish location and verify queue messages
 	Then Add the PF to location '<LocationCodeC>','<PFnameC>' 
 	Then Add new location for FourZeroFiveD
 	Then search for location code for '<LocationCodeD>'
-#	Then select column chooser for column name '<columnChoosed>'
-#	And Edit '<columnChoosed>' to Yes
-#	Then remove '<columnChoosed>' from table
-#	When User clicks on Tab Print Format
-#	Then Click on the New Button
-#	And Enter '<codeD>' and '<PFnameD>'
-#	Then User should click on PF edit '<PFnameD>' ,'<codeD>'and set the Print Format fields  for FourZeroFiveD
-#	Then Add the PF to location '<LocationCodeD>','<PFnameD>'
+	Then select column chooser for column name '<columnChoosed>'
+	And Edit '<columnChoosed>' to Yes
+	Then remove '<columnChoosed>' from table
+	When User clicks on Tab Print Format
+	Then Click on the New Button
+	And Enter '<codeD>' and '<PFnameD>'
+	Then User should click on PF edit '<PFnameD>' ,'<codeD>'and set the Print Format fields  for FourZeroFiveD
+	Then Add the PF to location '<LocationCodeD>','<PFnameD>'
 
 	  Examples: 
 	| columnChoosed             | LocationCodeC | codeC | PFnameC | LocationCodeD | codeD | PFnameD |

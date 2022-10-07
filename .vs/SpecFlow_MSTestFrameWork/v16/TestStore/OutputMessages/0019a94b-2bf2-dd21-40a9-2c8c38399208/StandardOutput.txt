@@ -1,0 +1,128 @@
+-> Loading plugin C:\Users\catherine.aa\source\repos\GCRFramework\bin\Debug\netcoreapp3.1\LivingDoc.SpecFlowPlugin.dll
+-> Loading plugin C:\Users\catherine.aa\source\repos\GCRFramework\bin\Debug\netcoreapp3.1\TechTalk.SpecFlow.MSTest.SpecFlowPlugin.dll
+-> Loading plugin C:\Users\catherine.aa\source\repos\GCRFramework\bin\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.dll
+-> Using default config
+Setup
+Given user navigates to HQ application
+-> done: HQLoginSteps.GivenUserNavigatesToHQApplication() (6.2s)
+When enter valid '<username>', '<hqpassword>'
+-> done: HQLoginSteps.WhenEnterValid("<username>", "<hqpassword>") (0.5s)
+And Clicks on Log In button
+-> done: HQLoginSteps.WhenClicksOnLogInButton() (1.4s)
+When User clicks on the Left Menu
+-> done: ScaleConfiguration.WhenUserClicksOnTheLeftMenu() (8.2s)
+Then menu should be displayed
+-> done: ScaleConfiguration.ThenMenuShouldBeDisplayed() (0.0s)
+When User enters Scale Configuration in the Search Box
+-> done: ScaleConfiguration.WhenUserEntersScaleConfigurationInTheSearchBox() (0.3s)
+Then User click on Scale Configuration Item should be displayed on the Menu
+-> done: PreRequisite.ThenUserClickOnScaleConfigurationItemShouldBeDisplayedOnTheMenu() (0.8s)
+When user click the StoreLocation tab
+-> done: Store_LocationSteps.WhenUserClickTheStoreLocationTab() (1.4s)
+Then Add new location for FourZeroFiveA
+-> done: Store_LocationSteps.ThenAddNewLocationForFourZeroFiveA() (7.2s)
+Then Add new location for FourZeroFiveB
+-> done: Store_LocationSteps.ThenAddNewLocationForFourZeroFiveB() (6.2s)
+Then Add new location for FourZeroFiveC
+-> done: Store_LocationSteps.ThenAddNewLocationForFourZeroFiveC() (6.2s)
+Then search for location code '51'
+-> done: Store_LocationSteps.ThenSearchForLocationCode("51") (10.9s)
+Then select column chooser for column name 'Send Department/Commodity'
+-> done: Store_LocationSteps.ThenSelectColumChooserForColumName("Send Department/C...") (13.4s)
+And Edit 'Send Department/Commodity' to Yes
+-> done: Store_LocationSteps.ThenEditToYes("Send Department/C...") (6.9s)
+Then remove 'Send Department/Commodity' from table
+-> done: Store_LocationSteps.ThenRemoveFromTable("Send Department/C...") (12.3s)
+When User clicks on Tab Print Format
+-> done: ScaleConfiguration.WhenUserClicksOnTabPrintFormat() (0.3s)
+Then Click on the New Button
+-> done: ScaleConfiguration.ClickonNewButton() (0.4s)
+And Enter '60' and 'Cashew'
+-> done: ScaleConfiguration.ThenEnterAnd("60", "Cashew") (1.8s)
+Then User should click on PF edit 'Cashew' ,'60'and set the Print Format fields  for FourZeroFiveC
+-> done: ScaleConfiguration.ThenUserShouldClickOnPFEditAndSetThePrintFormatFieldsForFourZeroFiveC("Cashew", "60") (11.7s)
+Then Add the PF to location '51','Cashew'
+-> done: ScaleConfiguration.ThenAddThePFToLocation("51", "Cashew'") (24.7s)
+Then Add new location for FourZeroFiveD
+-> done: Store_LocationSteps.ThenAddNewLocationForFourZeroFiveD() (7.6s)
+Then search for location code for '66'
+-> done: Store_LocationSteps.ThenSearchForLocationCodeFor("66") (10.8s)
+Then select column chooser for column name 'Send Department/Commodity'
+-> done: Store_LocationSteps.ThenSelectColumChooserForColumName("Send Department/C...") (13.2s)
+And Edit 'Send Department/Commodity' to Yes
+-> done: Store_LocationSteps.ThenEditToYes("Send Department/C...") (6.6s)
+Then remove 'Send Department/Commodity' from table
+-> done: Store_LocationSteps.ThenRemoveFromTable("Send Department/C...") (12.3s)
+When User clicks on Tab Print Format
+-> done: ScaleConfiguration.WhenUserClicksOnTabPrintFormat() (0.2s)
+Then Click on the New Button
+-> done: ScaleConfiguration.ClickonNewButton() (0.3s)
+And Enter '53' and 'Almond'
+-> done: ScaleConfiguration.ThenEnterAnd("53", "Almond") (1.8s)
+Then User should click on PF edit 'Almond' ,'53'and set the Print Format fields  for FourZeroFiveD
+-> done: ScaleConfiguration.ThenUserShouldClickOnPFEditAndSetThePrintFormatFieldsForFourZeroFiveD("Almond", "53") (12.1s)
+Then Add the PF to location '66','Almond'
+-> done: ScaleConfiguration.ThenAddThePFToLocation("66", "Almond'") (24.9s)
+
+
+TestContext Messages:
+Given user navigates to HQ application
+-> done: HQLoginSteps.GivenUserNavigatesToHQApplication() (6.2s)
+When enter valid '<username>', '<hqpassword>'
+-> done: HQLoginSteps.WhenEnterValid("<username>", "<hqpassword>") (0.5s)
+And Clicks on Log In button
+-> done: HQLoginSteps.WhenClicksOnLogInButton() (1.4s)
+When User clicks on the Left Menu
+-> done: ScaleConfiguration.WhenUserClicksOnTheLeftMenu() (8.2s)
+Then menu should be displayed
+-> done: ScaleConfiguration.ThenMenuShouldBeDisplayed() (0.0s)
+When User enters Scale Configuration in the Search Box
+-> done: ScaleConfiguration.WhenUserEntersScaleConfigurationInTheSearchBox() (0.3s)
+Then User click on Scale Configuration Item should be displayed on the Menu
+-> done: PreRequisite.ThenUserClickOnScaleConfigurationItemShouldBeDisplayedOnTheMenu() (0.8s)
+When user click the StoreLocation tab
+-> done: Store_LocationSteps.WhenUserClickTheStoreLocationTab() (1.4s)
+Then Add new location for FourZeroFiveA
+-> done: Store_LocationSteps.ThenAddNewLocationForFourZeroFiveA() (7.2s)
+Then Add new location for FourZeroFiveB
+-> done: Store_LocationSteps.ThenAddNewLocationForFourZeroFiveB() (6.2s)
+Then Add new location for FourZeroFiveC
+-> done: Store_LocationSteps.ThenAddNewLocationForFourZeroFiveC() (6.2s)
+Then search for location code '51'
+-> done: Store_LocationSteps.ThenSearchForLocationCode("51") (10.9s)
+Then select column chooser for column name 'Send Department/Commodity'
+-> done: Store_LocationSteps.ThenSelectColumChooserForColumName("Send Department/C...") (13.4s)
+And Edit 'Send Department/Commodity' to Yes
+-> done: Store_LocationSteps.ThenEditToYes("Send Department/C...") (6.9s)
+Then remove 'Send Department/Commodity' from table
+-> done: Store_LocationSteps.ThenRemoveFromTable("Send Department/C...") (12.3s)
+When User clicks on Tab Print Format
+-> done: ScaleConfiguration.WhenUserClicksOnTabPrintFormat() (0.3s)
+Then Click on the New Button
+-> done: ScaleConfiguration.ClickonNewButton() (0.4s)
+And Enter '60' and 'Cashew'
+-> done: ScaleConfiguration.ThenEnterAnd("60", "Cashew") (1.8s)
+Then User should click on PF edit 'Cashew' ,'60'and set the Print Format fields  for FourZeroFiveC
+-> done: ScaleConfiguration.ThenUserShouldClickOnPFEditAndSetThePrintFormatFieldsForFourZeroFiveC("Cashew", "60") (11.7s)
+Then Add the PF to location '51','Cashew'
+-> done: ScaleConfiguration.ThenAddThePFToLocation("51", "Cashew'") (24.7s)
+Then Add new location for FourZeroFiveD
+-> done: Store_LocationSteps.ThenAddNewLocationForFourZeroFiveD() (7.6s)
+Then search for location code for '66'
+-> done: Store_LocationSteps.ThenSearchForLocationCodeFor("66") (10.8s)
+Then select column chooser for column name 'Send Department/Commodity'
+-> done: Store_LocationSteps.ThenSelectColumChooserForColumName("Send Department/C...") (13.2s)
+And Edit 'Send Department/Commodity' to Yes
+-> done: Store_LocationSteps.ThenEditToYes("Send Department/C...") (6.6s)
+Then remove 'Send Department/Commodity' from table
+-> done: Store_LocationSteps.ThenRemoveFromTable("Send Department/C...") (12.3s)
+When User clicks on Tab Print Format
+-> done: ScaleConfiguration.WhenUserClicksOnTabPrintFormat() (0.2s)
+Then Click on the New Button
+-> done: ScaleConfiguration.ClickonNewButton() (0.3s)
+And Enter '53' and 'Almond'
+-> done: ScaleConfiguration.ThenEnterAnd("53", "Almond") (1.8s)
+Then User should click on PF edit 'Almond' ,'53'and set the Print Format fields  for FourZeroFiveD
+-> done: ScaleConfiguration.ThenUserShouldClickOnPFEditAndSetThePrintFormatFieldsForFourZeroFiveD("Almond", "53") (12.1s)
+Then Add the PF to location '66','Almond'
+-> done: ScaleConfiguration.ThenAddThePFToLocation("66", "Almond'") (24.9s)
