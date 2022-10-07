@@ -208,7 +208,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             SavePF.Click();
             Thread.Sleep(1000);
             SaveChanges.Click();
-
+            Thread.Sleep(1000);
         }
         public void EnterFontCodeandName(string code, string name)
         {
@@ -287,6 +287,33 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             CookingTime.Click();
             Thread.Sleep(2000);
 
+        }
+        public void ClickCheckboxes_4_0_5_loc3()
+        {
+            Thread.Sleep(1000);
+            CheckProductlife.Click();
+            Thread.Sleep(2000);
+            CheckTare.Click();
+            CheckContent.Click();
+            Thread.Sleep(2000);
+            CheckPresetmessages.Click();
+            CheckPrintdateformat.Click();
+            CookingTime.Click();
+            Thread.Sleep(2000);
+        }
+        public void ClickCheckboxes_4_0_5_loc4()
+        {
+            Thread.Sleep(1000);
+            CheckProductlife.Click();
+            Thread.Sleep(2000);
+            CheckTare.Click();
+            CheckContent.Click();
+            Thread.Sleep(2000);
+            SellBy.Click();
+            CheckPresetmessages.Click();
+            CheckPrintdateformat.Click();
+            CookingTime.Click();
+            Thread.Sleep(2000);
         }
         public void Checkboxes()
         {

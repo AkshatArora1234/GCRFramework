@@ -22,17 +22,32 @@ Scenario: Publish location and verify queue messages
 	When User enters Scale Configuration in the Search Box
 	Then User click on Scale Configuration Item should be displayed on the Menu
 	When user click the StoreLocation tab
-	And Add new location for FourZeroFiveA
-	And Add new location for FourZeroFiveB
-	And Add new location for FourZeroFiveC
-	And Add new location for FourZeroFiveD
-	Then search for location code '<locationCodeD>'
+	Then Add new location for FourZeroFiveA
+	Then Add new location for FourZeroFiveB
+	Then Add new location for FourZeroFiveC	
+	Then search for location code '<LocationCodeC>'
 	Then select column chooser for column name '<columnChoosed>'
 	And Edit '<columnChoosed>' to Yes
+	Then remove '<columnChoosed>' from table
+	When User clicks on Tab Print Format
+	Then Click on the New Button
+	And Enter '<codeC>' and '<PFnameC>'
+	Then User should click on PF edit '<PFnameC>' ,'<codeC>'and set the Print Format fields  for FourZeroFiveC
+	Then Add the PF to location '<LocationCodeC>','<PFnameC>' 
+	Then Add new location for FourZeroFiveD
+	Then search for location code for '<LocationCodeD>'
+#	Then select column chooser for column name '<columnChoosed>'
+#	And Edit '<columnChoosed>' to Yes
+#	Then remove '<columnChoosed>' from table
+#	When User clicks on Tab Print Format
+#	Then Click on the New Button
+#	And Enter '<codeD>' and '<PFnameD>'
+#	Then User should click on PF edit '<PFnameD>' ,'<codeD>'and set the Print Format fields  for FourZeroFiveD
+#	Then Add the PF to location '<LocationCodeD>','<PFnameD>'
 
 	  Examples: 
-	| columnChoosed             | locationCodeD |
-	| Send Department/Commodity | 51            |
+	| columnChoosed             | LocationCodeC | codeC | PFnameC | LocationCodeD | codeD | PFnameD |
+	| Send Department/Commodity | 51            | 60    | Cashew  | 66            | 53    | Almond  |
 
 
 	Scenario: Create location and verify that deleted location is not published

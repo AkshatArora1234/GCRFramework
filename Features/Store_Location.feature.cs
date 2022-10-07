@@ -140,12 +140,17 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        public virtual void PublishLocationAndVerifyQueueMessages(string columnChoosed, string locationCodeD, string[] exampleTags)
+        public virtual void PublishLocationAndVerifyQueueMessages(string columnChoosed, string locationCodeC, string codeC, string pFnameC, string locationCodeD, string codeD, string pFnameD, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("columnChoosed", columnChoosed);
-            argumentsOfScenario.Add("locationCodeD", locationCodeD);
+            argumentsOfScenario.Add("LocationCodeC", locationCodeC);
+            argumentsOfScenario.Add("codeC", codeC);
+            argumentsOfScenario.Add("PFnameC", pFnameC);
+            argumentsOfScenario.Add("LocationCodeD", locationCodeD);
+            argumentsOfScenario.Add("codeD", codeD);
+            argumentsOfScenario.Add("PFnameD", pFnameD);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Publish location and verify queue messages", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 16
 this.ScenarioInitialize(scenarioInfo);
@@ -182,25 +187,47 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("user click the StoreLocation tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 25
- testRunner.And("Add new location for FourZeroFiveA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("Add new location for FourZeroFiveA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 26
- testRunner.And("Add new location for FourZeroFiveB", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("Add new location for FourZeroFiveB", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 27
- testRunner.And("Add new location for FourZeroFiveC", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("Add new location for FourZeroFiveC", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 28
- testRunner.And("Add new location for FourZeroFiveD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then(string.Format("search for location code \'{0}\'", locationCodeC), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 29
- testRunner.Then(string.Format("search for location code \'{0}\'", locationCodeD), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 30
  testRunner.Then(string.Format("select column chooser for column name \'{0}\'", columnChoosed), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 31
+#line 30
  testRunner.And(string.Format("Edit \'{0}\' to Yes", columnChoosed), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 31
+ testRunner.Then(string.Format("remove \'{0}\' from table", columnChoosed), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 32
+ testRunner.When("User clicks on Tab Print Format", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 33
+ testRunner.Then("Click on the New Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 34
+ testRunner.And(string.Format("Enter \'{0}\' and \'{1}\'", codeC, pFnameC), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 35
+ testRunner.Then(string.Format("User should click on PF edit \'{0}\' ,\'{1}\'and set the Print Format fields  for Fou" +
+                            "rZeroFiveC", pFnameC, codeC), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 36
+ testRunner.Then(string.Format("Add the PF to location \'{0}\',\'{1}\'", locationCodeC, pFnameC), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 37
+ testRunner.Then("Add new location for FourZeroFiveD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 38
+ testRunner.Then(string.Format("search for location code for \'{0}\'", locationCodeD), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -211,11 +238,16 @@ this.ScenarioInitialize(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Store_Location")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Send Department/Commodity")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:columnChoosed", "Send Department/Commodity")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:locationCodeD", "51")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:LocationCodeC", "51")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:codeC", "60")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:PFnameC", "Cashew")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:LocationCodeD", "66")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:codeD", "53")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:PFnameD", "Almond")]
         public void PublishLocationAndVerifyQueueMessages_SendDepartmentCommodity()
         {
 #line 16
-this.PublishLocationAndVerifyQueueMessages("Send Department/Commodity", "51", ((string[])(null)));
+this.PublishLocationAndVerifyQueueMessages("Send Department/Commodity", "51", "60", "Cashew", "66", "53", "Almond", ((string[])(null)));
 #line hidden
         }
         
@@ -228,7 +260,7 @@ this.PublishLocationAndVerifyQueueMessages("Send Department/Commodity", "51", ((
             argumentsOfScenario.Add("code", code);
             argumentsOfScenario.Add("PFname", pFname);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create location and verify that deleted location is not published", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 38
+#line 53
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -238,61 +270,61 @@ this.PublishLocationAndVerifyQueueMessages("Send Department/Commodity", "51", ((
             else
             {
                 this.ScenarioStart();
-#line 39
+#line 54
     testRunner.Given("user navigates to HQ application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 40
+#line 55
  testRunner.When("enter valid \'<username>\', \'<hqpassword>\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 41
+#line 56
  testRunner.And("Clicks on Log In button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 42
+#line 57
  testRunner.When("User clicks on the Left Menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 43
+#line 58
  testRunner.Then("menu should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 44
+#line 59
  testRunner.When("User enters Scale Configuration in the Search Box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 45
+#line 60
  testRunner.Then("User click on Scale Configuration Item should be displayed on the Menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 46
+#line 61
  testRunner.When("user click the StoreLocation tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 47
+#line 62
  testRunner.And("Add new location", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 48
+#line 63
  testRunner.And(string.Format("Create New Scale Location \'{0}\' and \'{1}\'", locationCode, locationName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 49
+#line 64
  testRunner.When("User clicks on Tab Print Format", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 50
+#line 65
  testRunner.Then("Click on the New Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 51
+#line 66
  testRunner.And(string.Format("Enter \'{0}\' and \'{1}\'", code, pFname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 52
+#line 67
  testRunner.Then(string.Format("User should click on PF edit \'{0}\' ,\'{1}\'and set the Print Format fields", pFname, code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 53
+#line 68
  testRunner.Then(string.Format("Add the PF to location \'{0}\',\'{1}\'", locationCode, pFname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 54
+#line 69
  testRunner.When("User click on left menu and select the item maintenance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 55
+#line 70
  testRunner.Then(string.Format("user should select an item and add PF & location \'{0}\' ,\'{1}", pFname, locationName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 56
+#line 71
  testRunner.And(string.Format("User should navigate to config page and delete the location \'{0}\'", locationCode), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 57
+#line 72
  testRunner.Then(string.Format("Go to item location and publish \'{0}\'", locationName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -309,7 +341,7 @@ this.PublishLocationAndVerifyQueueMessages("Send Department/Commodity", "51", ((
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:PFname", "Organic butter")]
         public void CreateLocationAndVerifyThatDeletedLocationIsNotPublished_96()
         {
-#line 38
+#line 53
  this.CreateLocationAndVerifyThatDeletedLocationIsNotPublished("96", "Butter", "14", "Organic butter", ((string[])(null)));
 #line hidden
         }

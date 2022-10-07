@@ -238,6 +238,24 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.SaveAndClosePF();
             Thread.Sleep(2000);
         }
+        [Then(@"User should click on PF edit '(.*)' ,'(.*)'and set the Print Format fields  for FourZeroFiveC")]
+        public void ThenUserShouldClickOnPFEditAndSetThePrintFormatFieldsForFourZeroFiveC(string PFname, string PFcode)
+        {
+            scaleConfigurationPage.SearchPFName(PFname, PFcode);
+            scaleConfigurationPage.EditPF(PFname);
+            scaleConfigurationPage.ClickCheckboxes_4_0_5_loc3();
+            scaleConfigurationPage.SaveAndClosePF();
+            Thread.Sleep(2000);
+        }
+        [Then(@"User should click on PF edit '(.*)' ,'(.*)'and set the Print Format fields  for FourZeroFiveD")]
+        public void ThenUserShouldClickOnPFEditAndSetThePrintFormatFieldsForFourZeroFiveD(string PFname, string PFcode)
+        {
+            scaleConfigurationPage.SearchPFName(PFname, PFcode);
+            scaleConfigurationPage.EditPF(PFname);
+            scaleConfigurationPage.ClickCheckboxes_4_0_5_loc4();
+            scaleConfigurationPage.SaveAndClosePF();
+            Thread.Sleep(2000);
+        }
 
         /// <summary>
         /// Common Function for Scale Configuration tests, For enering PF COde and Name

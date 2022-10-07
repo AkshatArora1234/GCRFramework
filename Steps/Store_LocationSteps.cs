@@ -60,8 +60,8 @@ namespace SpecFlow_MSTestFrameWork.Features
         /// <summary>
         /// Add new location with test data 4.0.5 location 1
         /// </summary>
-        [When(@"Add new location for FourZeroFiveA")]
-        public void WhenAddNewLocationForFourZeroFiveA()
+        [Then(@"Add new location for FourZeroFiveA")]
+        public void ThenAddNewLocationForFourZeroFiveA()
         {
             string locationCode = homePage.getConfiguration("TestData.json", "LocationCode.4.0.5.1");
             string locationName = homePage.getConfiguration("TestData.json", "LocationName.4.0.5.1");
@@ -71,8 +71,8 @@ namespace SpecFlow_MSTestFrameWork.Features
         /// <summary>
         /// Add new location with test data 4.0.5 location 2
         /// </summary>
-        [When(@"Add new location for FourZeroFiveB")]
-        public void WhenAddNewLocationForFourZeroFiveB()
+        [Then(@"Add new location for FourZeroFiveB")]
+        public void ThenAddNewLocationForFourZeroFiveB()
         {
             string locationCode = homePage.getConfiguration("TestData.json", "LocationCode.4.0.5.2");
             string locationName = homePage.getConfiguration("TestData.json", "LocationName.4.0.5.2");
@@ -82,8 +82,8 @@ namespace SpecFlow_MSTestFrameWork.Features
         /// <summary>
         /// Add new location with test data 4.0.5 location 3
         /// </summary>
-        [When(@"Add new location for FourZeroFiveC")]
-        public void WhenAddNewLocationForFourZeroFiveC()
+        [Then(@"Add new location for FourZeroFiveC")]
+        public void ThenAddNewLocationForFourZeroFiveC()
         {
             string locationCode = homePage.getConfiguration("TestData.json", "LocationCode.4.0.5.3");
             string locationName = homePage.getConfiguration("TestData.json", "LocationName.4.0.5.3");
@@ -93,8 +93,8 @@ namespace SpecFlow_MSTestFrameWork.Features
         /// <summary>
         /// Add new location with test data 4.0.5 location 4
         /// </summary>
-        [When(@"Add new location for FourZeroFiveD")]
-        public void WhenAddNewLocationForFourZeroFiveD()
+        [Then(@"Add new location for FourZeroFiveD")]
+        public void ThenAddNewLocationForFourZeroFiveD()
         {
             string locationCode = homePage.getConfiguration("TestData.json", "LocationCode.4.0.5.4");
             string locationName = homePage.getConfiguration("TestData.json", "LocationName.4.0.5.4");
@@ -103,6 +103,11 @@ namespace SpecFlow_MSTestFrameWork.Features
         }
         [Then(@"search for location code '(.*)'")]
         public void ThenSearchForLocationCode(string locCode)
+        {
+            store_Location.searchLocation2(locCode);
+        }
+        [Then(@"search for location code for '(.*)'")]
+        public void ThenSearchForLocationCodeFor(string locCode)
         {
             store_Location.searchLocation(locCode);
         }
@@ -123,6 +128,11 @@ namespace SpecFlow_MSTestFrameWork.Features
                 store_Location.EditCommodityFlagToYes();
         }
 
+        [Then(@"remove '(.*)' from table")]
+        public void ThenRemoveFromTable(string column)
+        {
+            store_Location.RemoveChoosedColumn(column);
+        }
 
 
     }
