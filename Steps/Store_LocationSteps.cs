@@ -256,6 +256,8 @@ namespace SpecFlow_MSTestFrameWork.Features
         /// <summary>
         /// Add new location with test data 4.0.0
         /// </summary>
+        /// <param name="locationcode"></param>
+        /// <param name="locationname"></param>
         [When(@"Add new location for FourZeroZero '(.*)','(.*)'")]
         public void WhenAddNewLocationForFourZeroZero(string locationcode, string locationname)
         {
@@ -308,13 +310,12 @@ namespace SpecFlow_MSTestFrameWork.Features
             store_Location.AddNewStoreLocation();
             store_Location.CreateNewLocation(locationCode, locationName);            
         }
+        /// <summary>
+        /// search for a location code in store/location tab
+        /// </summary>
+        /// <param name="locCode"></param>
         [Then(@"search for location code '(.*)'")]
         public void ThenSearchForLocationCode(string locCode)
-        {
-            store_Location.searchLocation2(locCode);
-        }
-        [Then(@"search for location code for '(.*)'")]
-        public void ThenSearchForLocationCodeFor(string locCode)
         {
             store_Location.searchLocation(locCode);
         }
@@ -322,11 +323,16 @@ namespace SpecFlow_MSTestFrameWork.Features
         /// <summary>
         /// method to drag and drop column from column chooser
         /// </summary>
+        /// <param name="column"></param>
         [Then(@"select column chooser for column name '(.*)'")]
         public void ThenSelectColumChooserForColumName(string column)
         {
             store_Location.ChooseAColumn(column);
         }
+        /// <summary>
+        /// Edit column value to yes
+        /// </summary>
+        /// <param name="column"></param>
         [Then(@"Edit '(.*)' to Yes")]
         public void ThenEditToYes(string column)
         {
@@ -334,7 +340,10 @@ namespace SpecFlow_MSTestFrameWork.Features
             if (column== "Send Department/Commodity")
                 store_Location.EditCommodityFlagToYes();
         }
-
+        /// <summary>
+        /// Remve column from store locations table
+        /// </summary>
+        /// <param name="column"></param>
         [Then(@"remove '(.*)' from table")]
         public void ThenRemoveFromTable(string column)
         {

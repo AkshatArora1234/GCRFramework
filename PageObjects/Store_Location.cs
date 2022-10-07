@@ -193,18 +193,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         {
             return CommodityFlagValue.GetAttribute("value");
         }
-        public void searchLocation2(string locCode)
-        {
-            Thread.Sleep(1000);
-            ScaleConfigTab.Click();
-            Thread.Sleep(2000);
-            Scale_Store.Click();;
-            Thread.Sleep(3000);
-            LocationName.Click();
-            Thread.Sleep(3000);
-            EnterLocationCode.SendKeys(locCode);
-            Thread.Sleep(1000);
-        }
+       
         public void searchLocation(string locCode)
         {
             Thread.Sleep(1000);

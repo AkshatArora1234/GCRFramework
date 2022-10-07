@@ -13,8 +13,8 @@ Scenario: Publish location and verify at the store
 	When User Selects the Scale Configuration
 	Then Click on PF tab in SR
 	And Click on add new PF button in SR
-	Then Enter the new PF in SR '<SRcode>' and '<SRPFname>'
-	When user search for the PF in SR'<SRcode>'
+	Then Enter the new PF in SR '<SRCode>' and '<SRPFname>'
+	When user search for the PF in SR'<SRCode>'
 	And Open PF in edit page as per TD FourZeroZero
 	And Save and close PF in SR
 	And User navigate to Location tab
@@ -73,7 +73,7 @@ Scenario: Publish location and verify queue messages
 	Then User should click on PF edit '<PFnameC>' ,'<codeC>'and set the Print Format fields  for FourZeroFiveC
 	Then Add the PF to location '<LocationCodeC>','<PFnameC>' 
 	Then Add new location for FourZeroFiveD
-	Then search for location code for '<LocationCodeD>'
+	Then search for location code '<LocationCodeD>'
 	Then select column chooser for column name '<columnChoosed>'
 	And Edit '<columnChoosed>' to Yes
 	Then remove '<columnChoosed>' from table

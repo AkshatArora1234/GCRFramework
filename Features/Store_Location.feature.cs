@@ -145,10 +145,10 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("Click on add new PF button in SR", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 16
- testRunner.Then(string.Format("Enter the new PF in SR \'<SRcode>\' and \'{0}\'", sRPFname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("Enter the new PF in SR \'{0}\' and \'{1}\'", sRCode, sRPFname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 17
- testRunner.When("user search for the PF in SR\'<SRcode>\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("user search for the PF in SR\'{0}\'", sRCode), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 18
  testRunner.And("Open PF in edit page as per TD FourZeroZero", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
