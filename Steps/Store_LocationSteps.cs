@@ -100,11 +100,11 @@ namespace SpecFlow_MSTestFrameWork.Features
         public void WhenOpenPFInEditPageAsPerTDFourZeroZero()
         {
             store_Location_SR.EditPFinSR();
-            store_Location.CheckProductlife();
-            store_Location.CheckTare();
-            store_Location.CheckPresetmessages();
-            store_Location.CheckCookingTime();
-            store_Location.CheckContent();
+            store_Location.CheckProductlifeSR();
+            store_Location.CheckTareSR();
+            store_Location.CheckPresetmessagesSR();
+            store_Location.CheckCookingTimeSR();
+            store_Location.CheckContentSR();
         }
         /// <summary>
         /// Save the PF in SR and close

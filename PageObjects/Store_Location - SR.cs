@@ -13,8 +13,8 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
     {
         private IWebDriver Driver;
         HomePage homePage;
-        
-        
+        String PFname;
+
         public Store_Location_SR(IWebDriver driver)
         {
             Driver = driver;
@@ -35,27 +35,46 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement ElementSelectFromPFTable => Driver.FindElement(By.XPath("//*[@id='gridSCLPRINTFT']/div/div[6]/div/div/div[1]/div/table/tbody/tr[last()-1]/td[1]"));
         IWebElement ElementSelectFromLocationTable => Driver.FindElement(By.XPath("//*[@id='gridSCALELOC']/div/div[6]/div/div/div[1]/div/table/tbody/tr[last()-1]/td[1]"));
         IWebElement SaveClosePF => Driver.FindElement(By.XPath("//button[@ng-click='ctrl.submit(ctrl.editPrintFormatForm,1)']"));
-        IWebElement LocSearchbox => Driver.FindElement(By.XPath("//button[@ng-click='ctrl.submit(ctrl.editPrintFormatForm,1)']"));
-        private CustomControls VendorSelection => new CustomControls(Driver, By.XPath("//div[@class='selectize-input items not-full ng-valid ng-pristine has-options']"));
-        private CustomControls PFSelection => new CustomControls(Driver, By.XPath("//button[@ng-click='toggleDropdown()']"));
+        IWebElement LocSearchbox => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[9]"));
+        private CustomControls VendorSelection => new CustomControls(Driver, By.XPath("//div[@class='selectize-control ng-pristine ng-untouched ng-valid ng-scope ng-isolate-scope single']"));
+        IWebElement PFSelection => Driver.FindElement(By.XPath("//button[@ng-click='toggleDropdown()']"));
+        IWebElement SelectPF => Driver.FindElement(By.XPath($"//*[text()='{PFname}']"));
         IWebElement SaveCloseLoc => Driver.FindElement(By.XPath("//button[@ng-click='ctrl.submit(1)']"));
 
 
 
-        public void NavigateToLocationTab() => LocationTab.Click();
         public void AddNewSRLocation() => NewLocation.Click();
-        public void SearchPFInSR(string pfcode) => PFSearchbox.SendKeys(pfcode);
-        public void SearchLocationInSR(string locCode) => LocSearchbox.SendKeys(locCode);
         public void SaveandClosePFinSR() => SaveClosePF.Click();
         public void NewSRPFbuttonClick() => NewPF.Click();
-        public void AddVendorinLoc() => VendorSelection.SelectByText("Wedderburn");
-        public void LinkPFinLoc(string pfname) => PFSelection.SelectByText(pfname);
+        public void AddVendorinLoc() => VendorSelection.SelectType("Wedderburn");
+        public void LinkPFinLoc(string pfname)
+        {
+            PFname = pfname;
+            PFSelection.Click();
+            SelectPF.Click();
+        }
         public void SaveandCloseLocinSR() => SaveCloseLoc.Click();
+        public void NavigateToLocationTab()
+        {
+            Thread.Sleep(4000);
+            LocationTab.Click();
+        }
+        public void SearchLocationInSR(string locCode)
+        {
+            LocSearchbox.SendKeys(locCode);
+            Thread.Sleep(5000);
+        }
+        public void SearchPFInSR(string pfcode)
+        {
+           PFSearchbox.SendKeys(pfcode);
+           Thread.Sleep(5000);
+        }
         public void SRLocationCreation(string code, string name)
         {
             locCode.SendKeys(code);
             locName.SendKeys(name);
             Save.Click();
+            Thread.Sleep(2000);
         }
 
         public void SRPFCreation(string code, string name)
@@ -63,18 +82,21 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             EnterPFCode.SendKeys(code);
             EnterPFName.SendKeys(name);
             Save.Click();
+            Thread.Sleep(2000);
         }
 
         public void EditPFinSR()
         {
             Actions actions = new Actions(Driver);
             actions.DoubleClick(ElementSelectFromPFTable).Perform();
+            Thread.Sleep(3000);
         }
 
         public void EditLocationinSR()
         {
             Actions actions = new Actions(Driver);
             actions.DoubleClick(ElementSelectFromLocationTable).Perform();
+            Thread.Sleep(3000);
         }       
 
     }

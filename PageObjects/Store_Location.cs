@@ -36,6 +36,14 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement Printdateformat => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasPackedTime']"));
         IWebElement CookingTime => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasSellBuy']"));
         IWebElement PerKG => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasSellBuy']"));
+        IWebElement ProductlifeSR => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.isProductLife']"));
+        IWebElement SellBySR => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.isSellBy']"));
+        IWebElement TareSR => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.isTare']"));
+        IWebElement ContentSR => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.isContent']"));
+        IWebElement PresetmessagesSR => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.isPresetMessages']"));
+        IWebElement PrintdateformatSR => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.isPackedOn']"));
+        IWebElement CookingTimeSR => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.isCookingTime']"));
+        IWebElement PerKGSR => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.isPerKG']"));
         IWebElement SaveAndClosePF => Driver.FindElement(By.XPath("//button[@ng-click='ctrl.submit(ctrl.editPrintFormatForm,1)']"));
         IWebElement storeNameTxtBox => Driver.FindElement(By.XPath("(//div [contains (@class ,'selectize-input')])[1]"));
         IWebElement Storename => Driver.FindElement(By.XPath("//div[text()='Kingston (1500)']"));
@@ -88,6 +96,14 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         public void CheckContent() => Content.Click();
         public void CheckCookingTime() => CookingTime.Click();
         public void CheckPerKG() => PerKG.Click();
+        public void CheckProductlifeSR() => ProductlifeSR.Click();
+        public void CheckSellBySR() => SellBySR.Click();
+        public void CheckTareSR() => TareSR.Click();
+        public void CheckPresetmessagesSR() => PresetmessagesSR.Click();
+        public void CheckPrintdateformatSR() => PrintdateformatSR.Click();
+        public void CheckContentSR() => ContentSR.Click();
+        public void CheckCookingTimeSR() => CookingTimeSR.Click();
+        public void CheckPerKGSR() => PerKGSR.Click();
         public void SavePFAndClose() => SaveAndClosePF.Click();
 
 

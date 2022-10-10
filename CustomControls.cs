@@ -86,19 +86,16 @@ namespace SpecFlow_MSTestFrameWork
         public void RightClick(IWebElement webElement)
         {
             Actions actions = new Actions(Driver);
-
             actions.ContextClick(webElement).Perform();
         }
         public void Double_Click(IWebElement webElement)
         {
             Actions actions = new Actions(Driver);
-
             actions.DoubleClick(webElement).Perform();
         }
         public void MoveToAElement(IWebElement webElement)
         {
             Actions actions = new Actions(Driver);
-
             actions.MoveToElement(webElement).Perform();
         }
         public static IWebElement IsELementLoaded(IWebDriver driver, IWebElement elementtobeloaded, TimeSpan Time)
