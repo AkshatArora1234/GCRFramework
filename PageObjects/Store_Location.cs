@@ -34,7 +34,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement Content => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasContent']"));
         IWebElement Presetmessages => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasPresetMessage']"));
         IWebElement Printdateformat => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasPackedTime']"));
-        IWebElement CookingTime => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasSellBuy']"));
+        IWebElement CookingTime => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasCookingTime']"));
         IWebElement PerKG => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasSellBuy']"));
         IWebElement ProductlifeSR => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.isProductLife']"));
         IWebElement SellBySR => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.isSellBy']"));

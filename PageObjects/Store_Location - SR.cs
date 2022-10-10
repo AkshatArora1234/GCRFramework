@@ -38,7 +38,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement LocSearchbox => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[9]"));
         private CustomControls VendorSelection => new CustomControls(Driver, By.XPath("//div[@class='selectize-control ng-pristine ng-untouched ng-valid ng-scope ng-isolate-scope single']"));
         IWebElement PFSelection => Driver.FindElement(By.XPath("//button[@ng-click='toggleDropdown()']"));
-        IWebElement SelectPF => Driver.FindElement(By.XPath($"//*[text()='{PFname}']"));
+        IWebElement SelectPF => Driver.FindElement(By.XPath($"//span[text()='{PFname}']"));
         IWebElement SaveCloseLoc => Driver.FindElement(By.XPath("//button[@ng-click='ctrl.submit(1)']"));
 
 

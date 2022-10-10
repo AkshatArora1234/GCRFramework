@@ -93,7 +93,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement Support_Basic_Mode => Driver.FindElement(By.XPath("//input[@ng-model='section.hasBasicMode']"));
         IWebElement HeaderRows => Driver.FindElement(By.XPath("(//input[@ng-model='ctrl.ngModel'])[3]"));
         IWebElement TableRows => Driver.FindElement(By.XPath("(//input[@ng-model='ctrl.ngModel'])[4]"));
-        IWebElement SearchCode => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[20]"));
+        IWebElement SearchCode => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[17]"));
         IWebElement ChangeCode => Driver.FindElement(By.Id("printFormatCode"));
         IWebElement ClickEditNice => Driver.FindElement(By.XPath("(//*[contains(text(),'Popcorn')])[2]"));
         IWebElement PrintFormatName => Driver.FindElement(By.XPath("//*[@name='printFormatName']"));
@@ -116,11 +116,13 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement ClickDropdown => Driver.FindElement(By.XPath("(//div[@class='dx-dropdowneditor-icon'])[6]"));
         IWebElement PFTextBox => Driver.FindElement(By.XPath("//td[@aria-colindex='4'and @class='inline_edit_enabled_cell']"));
         IWebElement SelectPF => Driver.FindElement(By.XPath($"//div[text()='{PFName}]"));
-
         IWebElement SavePF => Driver.FindElement(By.XPath("//span[text()='Save']"));
         IWebElement SaveChanges => Driver.FindElement(By.XPath("//button[@id='submitButton']"));
         IWebElement StoreLocation => Driver.FindElement(By.XPath("//uib-tab-heading[text()='Stores / Locations']"));
         IWebElement LocationName => Driver.FindElement(By.XPath("//div[text()='Location Name']"));
+
+
+
         public void ButtonSaveClick() => ButtonSave.Click();
         public void CheckProductLife() => CheckProductlife.Click();
         public void ScalConfigurationClick() => TabScaleConfiguration.Click();
