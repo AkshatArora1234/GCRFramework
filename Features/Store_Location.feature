@@ -43,13 +43,14 @@ Scenario: Publish location and verify at the store
 	When user click the StoreLocation tab
 	And Add new location
 	And Create New Scale Location '<LocationCode>' and '<LocationName>'
-	Then search for location code '<locationCodeD>'
-	And click to edit location
 	Then Add the PF to location '<LocationCode>','<PFname>'
+	Then publish the location to store '<LocationCode>'
 
 	 Examples: 
 	  | SRCode | SRPFname | SRLocationCode | SRLocationName | LocationCode | LocationName  | code | PFname |
 	  |    53  |  Almond  | 93             | Butterhoney    | 93           | Butterhoney   | 53   | Almond |
+
+
 
 Scenario: Publish location and verify queue messages
     Given user navigates to HQ application

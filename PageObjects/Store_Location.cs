@@ -9,24 +9,25 @@ using System.Threading;
 
 namespace SpecFlow_MSTestFrameWork.PageObjects
 {
- public class Store_Location
+    public class Store_Location
     {
         private IWebDriver Driver;
         HomePage homePage;
         string LocSearch;
         string PFName;
         string columChoosed;
-        
+
         public Store_Location(IWebDriver driver)
         {
             Driver = driver;
             homePage = new HomePage(Driver);
-            
+
         }
-  
-       
+
+
 
         IWebElement TabStore_Location => Driver.FindElement(By.XPath("//a[@ng-click='select($event)']//uib-tab-heading[text()='Stores / Locations']"));
+        IWebElement TabPF => Driver.FindElement(By.XPath("//a[@ng-click='select($event)']//uib-tab-heading[text()='Print Format']"));
         IWebElement NewLocation => Driver.FindElement(By.XPath("//a[@ng-click='ctrl.createStoreLocation()']"));
         IWebElement Productlife => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasProductLife']"));
         IWebElement SellBy => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasSellBuy']"));
@@ -49,7 +50,8 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement Storename => Driver.FindElement(By.XPath("//div[text()='Kingston (1500)']"));
         IWebElement locCode => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.locationCode']"));
         IWebElement locName => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.locationName']"));
-        IWebElement SaveLocation => Driver.FindElement(By.XPath("//span[text()='Save']"));
+        IWebElement SaveLocation => Driver.FindElement(By.XPath("//a[@ng-click='ctrl.saveButtonAction()']"));
+        IWebElement SaveLocationYes => Driver.FindElement(By.XPath("//button[@id='submitButton']"));
         IWebElement storeLocationRowOne => Driver.FindElement(By.XPath("(//div[text()='Location Name']/ancestor::div[@class='item-list-table clearfix']//table[@class='dx-datagrid-table dx-datagrid-table-fixed'])[2]//tr[1]"));
         //IWebElement ShowColumnChooser => Driver.FindElement(By.XPath("(//div[@aria-label='Show Column Chooser'])[6]"));
         IWebElement ShowColumnChooser => Driver.FindElement(By.XPath("//gm-grid[@grid-id=\"'scaleStoreLocationGrid'\"]//div[@aria-label='Show Column Chooser']"));
@@ -63,19 +65,15 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement StoreLocation => Driver.FindElement(By.XPath("(//uib-tab-heading[text()='Stores / Locations'])[2]"));
         IWebElement Scale_Store => Driver.FindElement(By.XPath("(//uib-tab-heading[text()='Stores / Locations'])[1]"));
         IWebElement EnterLocationCode => Driver.FindElement(By.XPath("//gm-grid[@grid-id=\"'scaleStoreLocationGrid'\"]//input[@role='spinbutton']"));
-
         IWebElement LocationName => Driver.FindElement(By.XPath("//div[text()='Location Name']"));
-        IWebElement LocationSelect => Driver.FindElement(By.XPath($"(//td[text()='{LocSearch}'])[2]"));
         IWebElement EditItem => Driver.FindElement(By.XPath("(//i[@uib-tooltip='Enable Editing'])[6]"));
-        IWebElement SelectPF => Driver.FindElement(By.XPath($"(//div[text()='{PFName}'])[2]"));
+        IWebElement SelectPF => Driver.FindElement(By.XPath($"//div[text()='{PFName}']"));
         IWebElement PFTab => Driver.FindElement(By.XPath("(//div[text()='Print Formats'])[2]"));
-        IWebElement SaveItem => Driver.FindElement(By.XPath("(//button[@class='button-save ng-scope'])[2]"));
         IWebElement ScaleConfigTab => Driver.FindElement(By.XPath("(//span[text()='Scale Configuration'])[2]"));
         IWebElement Confirm => Driver.FindElement(By.XPath("//button[@id='submitButton']"));
         IWebElement ItemTab => Driver.FindElement(By.XPath("//span[@uib-tooltip='Item (HQ): LADOTYRI MITILINIS']"));
         IWebElement PublishItem => Driver.FindElement(By.XPath("(//i[@uib-tooltip='Publish'])[3]"));
         IWebElement EditStoreLocation => Driver.FindElement(By.XPath("(//i[@uib-tooltip='Enable Editing'])[5]"));
-        IWebElement LocNameCell => Driver.FindElement(By.XPath("(//td[contains(@class,'inline_edit_enabled_cell')])[3]"));
         IWebElement CommodityFlagCell => Driver.FindElement(By.XPath("(//td[@class='inline_edit_enabled_cell'])[3]"));
         IWebElement CommodityFlagChkbx => Driver.FindElement(By.XPath("//span[@class='dx-checkbox-icon']"));
         IWebElement CommodityFlagValue => Driver.FindElement(By.XPath("//span[@class='dx-checkbox-icon']/ancestor::div/input"));
@@ -85,8 +83,11 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement Locationsearchbox => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[106]"));
         IWebElement StoreItemDropDown => Driver.FindElement(By.XPath("(//td[@class='inline_edit_enabled_cell'])[31]"));
         IWebElement DeleteLoc => Driver.FindElement(By.XPath("(//i[@class='fa fa-trash-o ng-scope'])[73]"));
+        IWebElement LocCodeSearch => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[17]"));
+        IWebElement PublishIcon => Driver.FindElement(By.XPath("//i[@ng-click='ctrl.actions.publishSLToStore(row.data)']"));
 
-        public void TabStore_LocationClick() => TabStore_Location.Click();
+
+
         public void AddNewStoreLocation() => NewLocation.Click();
         public void CheckProductlife() => Productlife.Click();
         public void CheckSellBy() => SellBy.Click();
@@ -105,9 +106,12 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         public void CheckCookingTimeSR() => CookingTimeSR.Click();
         public void CheckPerKGSR() => PerKGSR.Click();
         public void SavePFAndClose() => SaveAndClosePF.Click();
-
-
         public void ClickItemStoreLocation() => StoreLocation.Click();
+        public void TabStore_LocationClick()
+        {
+            Thread.Sleep(4000);
+            TabStore_Location.Click();
+        }
         public void CreateNewLocation(string code, string name)
         {
             Thread.Sleep(2000);
@@ -175,7 +179,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Thread.Sleep(1000);
             actions.DragAndDrop(DDFrom2, DDTo2).Perform();
             Thread.Sleep(3000);
-           // actions.DragAndDrop(DDFrom, DDTo2).Perform();
+            // actions.DragAndDrop(DDFrom, DDTo2).Perform();
             actions.Release();
             Thread.Sleep(1000);
             ClearSearch.Click();
@@ -194,8 +198,8 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         {
             Thread.Sleep(1000);
             CommodityFlagCell.Click();
-            if (GetCommodityFlagValue()== "false")
-            CommodityFlagChkbx.Click();
+            if (GetCommodityFlagValue() == "false")
+                CommodityFlagChkbx.Click();
             Thread.Sleep(1000);
             //LocNameCell.Click();
             EnterLocationCode.Click();
@@ -209,7 +213,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         {
             return CommodityFlagValue.GetAttribute("value");
         }
-       
+
         public void searchLocation(string locCode)
         {
             Thread.Sleep(1000);
@@ -242,7 +246,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Thread.Sleep(1000);
 
         }
-        
+
         public void PublishLocFromItem(string LocName)
         {
             LocSearch = LocName;
@@ -278,5 +282,12 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             storeLocationRowOne.Click();
         }
 
+        public void PublishLocation(string locCode)
+        {
+            LocCodeSearch.SendKeys(locCode);
+            Thread.Sleep(3000);
+            PublishIcon.Click();
+            SaveLocationYes.Click();
+        }
     }
 }

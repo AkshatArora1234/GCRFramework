@@ -234,12 +234,13 @@ namespace SpecFlow_MSTestFrameWork.Features
             store_Location.CreateLocation(locCode, locName);
         }
 
+        
         /// <summary>
-        /// Search for Scale Location using enter key
+        /// search for a location code in store/location tab
         /// </summary>
         /// <param name="locCode"></param>
-        [Then(@"search for location in HQ '(.*)'")]
-        public void ThenSearchForLocationInHQ(string locCode)
+        [Then(@"search for location code '(.*)'")]
+        public void ThenSearchForLocationCode(string locCode)
         {
             store_Location.searchLocation(locCode);
         }
@@ -252,6 +253,17 @@ namespace SpecFlow_MSTestFrameWork.Features
         {
             store_Location.EditStoreLocationClick();
         }
+
+        /// <summary>
+        /// Publishing the location
+        /// </summary>
+        [Then(@"publish the location to store '(.*)'")]
+        public void ThenPublishTheLocationToStore(string locCode)
+        {
+            store_Location.PublishLocation(locCode);
+        }
+
+
 
         /// <summary>
         /// Add new location with test data 4.0.0
@@ -310,15 +322,7 @@ namespace SpecFlow_MSTestFrameWork.Features
             store_Location.AddNewStoreLocation();
             store_Location.CreateNewLocation(locationCode, locationName);            
         }
-        /// <summary>
-        /// search for a location code in store/location tab
-        /// </summary>
-        /// <param name="locCode"></param>
-        [Then(@"search for location code '(.*)'")]
-        public void ThenSearchForLocationCode(string locCode)
-        {
-            store_Location.searchLocation(locCode);
-        }
+        
 
         /// <summary>
         /// method to drag and drop column from column chooser
