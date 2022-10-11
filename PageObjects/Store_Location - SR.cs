@@ -61,13 +61,17 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         }
         public void SearchLocationInSR(string locCode)
         {
+            LocSearchbox.Clear();
+            Thread.Sleep(1000);
             LocSearchbox.SendKeys(locCode);
             Thread.Sleep(5000);
         }
         public void SearchPFInSR(string pfcode)
         {
-           PFSearchbox.SendKeys(pfcode);
-           Thread.Sleep(5000);
+            PFSearchbox.Clear();
+            Thread.Sleep(1000);
+            PFSearchbox.SendKeys(pfcode);
+            Thread.Sleep(5000);
         }
         public void SRLocationCreation(string code, string name)
         {

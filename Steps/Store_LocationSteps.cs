@@ -107,6 +107,45 @@ namespace SpecFlow_MSTestFrameWork.Features
             store_Location.CheckContentSR();
         }
         /// <summary>
+        /// Open the PF edit page for FourZeroFiveC
+        /// </summary>
+        [When(@"Open PF in edit page as per TD FourZeroFiveC")]
+        public void WhenOpenPFInEditPageAsPerTDFourZeroFiveC()
+        {
+            store_Location_SR.EditPFinSR();
+            store_Location.CheckProductlifeSR();
+            store_Location.CheckSellBySR();
+            store_Location.CheckPrintdateformatSR();
+            store_Location.CheckTareSR();
+            store_Location.CheckPresetmessagesSR();
+            store_Location.CheckCookingTimeSR();
+            store_Location.CheckContentSR();
+        }
+        /// <summary>
+        /// Open the PF edit page for FourZeroFiveD
+        /// </summary>
+        [When(@"Open PF in edit page as per TD FourZeroFiveD")]
+        public void WhenOpenPFInEditPageAsPerTDFourZeroFiveD()
+        {
+            store_Location_SR.EditPFinSR();
+            store_Location.CheckProductlifeSR();
+            store_Location.CheckTareSR();
+            store_Location.CheckPresetmessagesSR();
+            store_Location.CheckCookingTimeSR();
+            store_Location.CheckContentSR();
+        }
+        /// <summary>
+        /// choose colum choser SR 
+        /// </summary>
+        /// <param name="column">
+        /// </param>
+        [Then(@"select column chooser in SR for column name '(.*)'")]
+        public void ThenSelectColumnChooserInSRForColumnName(string column)
+        {
+            // in progress
+        }
+
+        /// <summary>
         /// Save the PF in SR and close
         /// </summary>
         [When(@"Save and close PF in SR")]

@@ -70,8 +70,8 @@ Scenario: Publish location and verify queue messages
     And Click on add new PF button in SR
     Then Enter the new PF in SR '<SRPFCode3>' and '<SRPFname3>'
     When user search for the PF in SR'<SRPFCode3>'
-#    And Open PF in edit page as per TD FourZeroFiveC
-#    And Save and close PF in SR
+    And Open PF in edit page as per TD FourZeroFiveC
+    And Save and close PF in SR
     And User navigate to Location tab
     Then search for a location '<SRLocationCode3>'
     And Open location in edit page
@@ -81,12 +81,20 @@ Scenario: Publish location and verify queue messages
     When User navigate to Location tab
     And Click new location button
     Then Add new location in SR application '<SRLocationCode4>' and '<SRLocationName4>'
+
+#    Then search for a location '<SRLocationCode3>'
+#   Then select column chooser in SR for column name '<columnChoosed>'
+
+#    Then select column chooser for column name '<columnChoosed>'
+#    And Edit '<columnChoosed>' to Yes
+#    Then remove '<columnChoosed>' from table
+
     Then Click on PF tab in SR
     And Click on add new PF button in SR
     Then Enter the new PF in SR '<SRPFCode4>' and '<SRPFname4>'
     When user search for the PF in SR'<SRPFCode4>'
-#    And Open PF in edit page as per TD FourZeroFiveD
-#    And Save and close PF in SR
+    And Open PF in edit page as per TD FourZeroFiveD
+    And Save and close PF in SR
     And User navigate to Location tab
     Then search for a location '<SRLocationCode4>'
     And Open location in edit page
