@@ -53,7 +53,7 @@ Scenario: Publish location and verify at the store
 
 
 Scenario: Publish location and verify queue messages
-       Given user navigates to SR application
+    Given user navigates to SR application
     When enter valid '<username>', '<hqpassword>'
     And Clicks on Login button of SR app
     When User clicks on the Left Menu
@@ -81,14 +81,6 @@ Scenario: Publish location and verify queue messages
     When User navigate to Location tab
     And Click new location button
     Then Add new location in SR application '<SRLocationCode4>' and '<SRLocationName4>'
-
-#    Then search for a location '<SRLocationCode3>'
-#   Then select column chooser in SR for column name '<columnChoosed>'
-
-#    Then select column chooser for column name '<columnChoosed>'
-#    And Edit '<columnChoosed>' to Yes
-#    Then remove '<columnChoosed>' from table
-
     Then Click on PF tab in SR
     And Click on add new PF button in SR
     Then Enter the new PF in SR '<SRPFCode4>' and '<SRPFname4>'
@@ -98,6 +90,7 @@ Scenario: Publish location and verify queue messages
     And User navigate to Location tab
     Then search for a location '<SRLocationCode4>'
     And Open location in edit page
+    Then choose '<columnChoosed>' to yes
     Then add Vendor to location
     And Link PF to Lcation <SRPFname4>'
     Then Save and close location in SR
@@ -132,12 +125,15 @@ Scenario: Publish location and verify queue messages
     And Enter '<codeD>' and '<PFnameD>'
     Then User should click on PF edit '<PFnameD>' ,'<codeD>'and set the Print Format fields  for FourZeroFiveD
     Then Add the PF to location '<LocationCodeD>','<PFnameD>'
-
+    Then publish the location to store '<LocationCodeA>'
+    Then publish the location to store '<LocationCodeB>'
+    Then publish the location to store '<LocationCodeC>'
+    Then publish the location to store '<LocationCodeD>'
 
 
      Examples:
-    | SRLocationCode1 | SRLocationName1 | SRLocationCode3 | SRLocationName3 | SRPFCode3 | SRPFname3 | SRPFCode4 | SRPFname4 | SRLocationCode4 | SRLocationName4 | columnChoosed                | LocationCodeC | codeC | PFnameC | LocationCodeD | codeD | PFnameD |
-    | 59              | Plum Cakes      | 51              | Burgers         | 60        | Cashew    | 53        | Almond    | 66              | Rainbow cake    | Send Department/Commodity    | 51            | 60    | Cashew  | 66            | 53    | Almond  |
+    | SRLocationCode1 | SRLocationName1 | SRLocationCode3 | SRLocationName3 | SRPFCode3 | SRPFname3 | SRPFCode4 | SRPFname4 | SRLocationCode4 | SRLocationName4 | columnChoosed             | LocationCodeA | LocationCodeB | LocationCodeC | codeC | PFnameC | LocationCodeD | codeD | PFnameD |
+    | 59              | Plum Cakes      | 51              | Burgers         | 60        | Cashew    | 53        | Almond    | 66              | Rainbow cake    | Send Department/Commodity | 59            | 93            | 51            | 60    | Cashew  | 66            | 53    | Almond  |
 
 
 	 

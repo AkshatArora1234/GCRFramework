@@ -14,6 +14,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         private IWebDriver Driver;
         HomePage homePage;
         String PFname;
+        string columChoosed;
 
         public Store_Location_SR(IWebDriver driver)
         {
@@ -40,7 +41,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement PFSelection => Driver.FindElement(By.XPath("//button[@ng-click='toggleDropdown()']"));
         IWebElement SelectPF => Driver.FindElement(By.XPath($"//span[text()='{PFname}']"));
         IWebElement SaveCloseLoc => Driver.FindElement(By.XPath("//button[@ng-click='ctrl.submit(1)']"));
-
+        IWebElement flagCheckbox => Driver.FindElement(By.XPath($"//span[text()='{columChoosed}']/ancestor::div/input[@type='checkbox']"));
 
 
         public void AddNewSRLocation() => NewLocation.Click();
@@ -101,7 +102,11 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Actions actions = new Actions(Driver);
             actions.DoubleClick(ElementSelectFromLocationTable).Perform();
             Thread.Sleep(3000);
-        }       
-
+        }  
+        public void setFlagToTrue(string column)
+        {
+            columChoosed = column;
+            flagCheckbox.Click();
+        }
     }
 }

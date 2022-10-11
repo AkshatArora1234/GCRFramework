@@ -135,17 +135,6 @@ namespace SpecFlow_MSTestFrameWork.Features
             store_Location.CheckContentSR();
         }
         /// <summary>
-        /// choose colum choser SR 
-        /// </summary>
-        /// <param name="column">
-        /// </param>
-        [Then(@"select column chooser in SR for column name '(.*)'")]
-        public void ThenSelectColumnChooserInSRForColumnName(string column)
-        {
-            // in progress
-        }
-
-        /// <summary>
         /// Save the PF in SR and close
         /// </summary>
         [When(@"Save and close PF in SR")]
@@ -392,7 +381,15 @@ namespace SpecFlow_MSTestFrameWork.Features
         {
             store_Location.RemoveChoosedColumn(column);
         }
-
+        /// <summary>
+        /// set the column to yes
+        /// </summary>
+        /// <param name="column"></param>
+        [Then(@"choose '(.*)' to yes")]
+        public void ThenChooseToYes(string column)
+        {
+            store_Location_SR.setFlagToTrue(column);
+        }
 
     }
 }
