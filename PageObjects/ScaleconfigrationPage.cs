@@ -203,7 +203,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             PFTextBox.Click();
             Thread.Sleep(2000);
             ClickDropdown.Click();
-            Thread.Sleep(8000);
+            Thread.Sleep(7000);
             SelectPF.Click();
             LocationName.Click();
             Thread.Sleep(2000);
@@ -278,17 +278,13 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         public void ClickCheckboxes()
         {
-            Thread.Sleep(1000);
-            CheckProductlife.Click();
             Thread.Sleep(2000);
+            CheckProductlife.Click();
             CheckTare.Click();
             CheckContent.Click();
-            Thread.Sleep(2000);
             SellBy.Click();
             CheckPresetmessages.Click();
             CookingTime.Click();
-            Thread.Sleep(2000);
-
         }
         public void ClickCheckboxes_4_0_5_loc3()
         {

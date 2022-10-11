@@ -202,14 +202,15 @@ namespace SpecFlow_MSTestFrameWork.Steps
         {
             columnChooser.SelectScaleColumn();
             columnChooser.SelectScale();
-            Thread.Sleep(3000);
+            Thread.Sleep(500);
             columnChooser.SelectFirstScaleRecord();
-            Thread.Sleep(3000);
+            Thread.Sleep(1000);
             columnChooser.ClickScaleTabInItems();
-            Thread.Sleep(2000);
+            Thread.Sleep(1000);
+            storeLocation.ChangePFValue(PFname);
             storeLocation.ClickItemStoreLocation();
             storeLocation.AddPFAndLocationFromItem(locName, PFname);
-            
+
         }
 
         [Then(@"User should navigate to config page and delete the location '(.*)'")]

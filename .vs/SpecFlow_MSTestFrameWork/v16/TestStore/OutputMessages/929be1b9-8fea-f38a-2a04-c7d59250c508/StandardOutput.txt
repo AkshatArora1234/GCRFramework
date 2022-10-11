@@ -1,0 +1,86 @@
+-> Loading plugin C:\Users\jesni.as\source\Git\LatestPush\GCRFramework\bin\Debug\netcoreapp3.1\LivingDoc.SpecFlowPlugin.dll
+-> Loading plugin C:\Users\jesni.as\source\Git\LatestPush\GCRFramework\bin\Debug\netcoreapp3.1\TechTalk.SpecFlow.MSTest.SpecFlowPlugin.dll
+-> Loading plugin C:\Users\jesni.as\source\Git\LatestPush\GCRFramework\bin\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.dll
+-> Using default config
+Setup
+Given user navigates to HQ application
+-> done: HQLoginSteps.GivenUserNavigatesToHQApplication() (3.8s)
+When enter valid '<username>', '<hqpassword>'
+-> done: HQLoginSteps.WhenEnterValid("<username>", "<hqpassword>") (0.3s)
+And Clicks on Log In button
+-> done: HQLoginSteps.WhenClicksOnLogInButton() (9.1s)
+When User clicks on the Left Menu
+-> done: ScaleConfiguration.WhenUserClicksOnTheLeftMenu() (8.1s)
+Then menu should be displayed
+-> done: ScaleConfiguration.ThenMenuShouldBeDisplayed() (0.0s)
+When User enters Scale Configuration in the Search Box
+-> done: ScaleConfiguration.WhenUserEntersScaleConfigurationInTheSearchBox() (0.3s)
+Then User click on Scale Configuration Item should be displayed on the Menu
+-> done: PreRequisite.ThenUserClickOnScaleConfigurationItemShouldBeDisplayedOnTheMenu() (0.6s)
+When user click the StoreLocation tab
+-> done: Store_LocationSteps.WhenUserClickTheStoreLocationTab() (4.2s)
+And Add new location
+-> done: Store_LocationSteps.WhenAddNewLocation() (0.5s)
+And Create New Scale Location '96' and 'Butter'
+-> done: Store_LocationSteps.WhenCreateNewScaleLocationAnd("96", "Butter") (4.4s)
+When User clicks on Tab Print Format
+-> done: ScaleConfiguration.WhenUserClicksOnTabPrintFormat() (0.1s)
+Then Click on the New Button
+-> done: ScaleConfiguration.ClickonNewButton() (0.3s)
+And Enter '16' and 'Organic butter'
+-> done: ScaleConfiguration.ThenEnterAnd("16", "Organic butter") (1.5s)
+Then User should click on PF edit 'Organic butter' ,'16'and set the Print Format fields
+-> done: ScaleConfiguration.ThenUserShouldClickOnPFEditAndSetThePrintFormatFields("Organic butter", "16") (5.2s)
+Then Add the PF to location '96','Organic butter'
+-> done: ScaleConfiguration.ThenAddThePFToLocation("96", "Organic butter'") (22.4s)
+When User click on left menu and select the item maintenance
+-> done: ScaleConfiguration.WhenUserClickOnLeftMenuAndSelectTheItemMaintenance() (17.0s)
+Then user should select an item and add PF & location 'Organic butter' ,'Butter
+-> done: ScaleConfiguration.ThenUserShouldSelectAnItemAndAddPFLocation("Organic butter", "Butter") (18.8s)
+And User should navigate to config page and delete the location '96'
+-> error: no such element: Unable to locate element: {"method":"xpath","selector":"(//td[text()=''])[1]"}
+  (Session info: chrome=106.0.5249.103) (31.0s)
+Then Go to item location and publish 'Butter'
+-> skipped because of previous errors
+
+
+TestContext Messages:
+Given user navigates to HQ application
+-> done: HQLoginSteps.GivenUserNavigatesToHQApplication() (3.8s)
+When enter valid '<username>', '<hqpassword>'
+-> done: HQLoginSteps.WhenEnterValid("<username>", "<hqpassword>") (0.3s)
+And Clicks on Log In button
+-> done: HQLoginSteps.WhenClicksOnLogInButton() (9.1s)
+When User clicks on the Left Menu
+-> done: ScaleConfiguration.WhenUserClicksOnTheLeftMenu() (8.1s)
+Then menu should be displayed
+-> done: ScaleConfiguration.ThenMenuShouldBeDisplayed() (0.0s)
+When User enters Scale Configuration in the Search Box
+-> done: ScaleConfiguration.WhenUserEntersScaleConfigurationInTheSearchBox() (0.3s)
+Then User click on Scale Configuration Item should be displayed on the Menu
+-> done: PreRequisite.ThenUserClickOnScaleConfigurationItemShouldBeDisplayedOnTheMenu() (0.6s)
+When user click the StoreLocation tab
+-> done: Store_LocationSteps.WhenUserClickTheStoreLocationTab() (4.2s)
+And Add new location
+-> done: Store_LocationSteps.WhenAddNewLocation() (0.5s)
+And Create New Scale Location '96' and 'Butter'
+-> done: Store_LocationSteps.WhenCreateNewScaleLocationAnd("96", "Butter") (4.4s)
+When User clicks on Tab Print Format
+-> done: ScaleConfiguration.WhenUserClicksOnTabPrintFormat() (0.1s)
+Then Click on the New Button
+-> done: ScaleConfiguration.ClickonNewButton() (0.3s)
+And Enter '16' and 'Organic butter'
+-> done: ScaleConfiguration.ThenEnterAnd("16", "Organic butter") (1.5s)
+Then User should click on PF edit 'Organic butter' ,'16'and set the Print Format fields
+-> done: ScaleConfiguration.ThenUserShouldClickOnPFEditAndSetThePrintFormatFields("Organic butter", "16") (5.2s)
+Then Add the PF to location '96','Organic butter'
+-> done: ScaleConfiguration.ThenAddThePFToLocation("96", "Organic butter'") (22.4s)
+When User click on left menu and select the item maintenance
+-> done: ScaleConfiguration.WhenUserClickOnLeftMenuAndSelectTheItemMaintenance() (17.0s)
+Then user should select an item and add PF & location 'Organic butter' ,'Butter
+-> done: ScaleConfiguration.ThenUserShouldSelectAnItemAndAddPFLocation("Organic butter", "Butter") (18.8s)
+And User should navigate to config page and delete the location '96'
+-> error: no such element: Unable to locate element: {"method":"xpath","selector":"(//td[text()=''])[1]"}
+  (Session info: chrome=106.0.5249.103) (31.0s)
+Then Go to item location and publish 'Butter'
+-> skipped because of previous errors

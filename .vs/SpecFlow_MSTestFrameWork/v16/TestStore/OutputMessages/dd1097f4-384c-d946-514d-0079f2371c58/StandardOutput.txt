@@ -1,0 +1,176 @@
+-> Loading plugin C:\Users\jesni.as\source\Git\LatestPush\GCRFramework\bin\Debug\netcoreapp3.1\LivingDoc.SpecFlowPlugin.dll
+-> Loading plugin C:\Users\jesni.as\source\Git\LatestPush\GCRFramework\bin\Debug\netcoreapp3.1\TechTalk.SpecFlow.MSTest.SpecFlowPlugin.dll
+-> Loading plugin C:\Users\jesni.as\source\Git\LatestPush\GCRFramework\bin\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.dll
+-> Using default config
+Setup
+Given user navigates to SR application
+-> done: HQLoginSteps.GivenUserNavigatesToSRApplication() (4.3s)
+When enter valid '<username>', '<hqpassword>'
+-> done: HQLoginSteps.WhenEnterValid("<username>", "<hqpassword>") (0.2s)
+And Clicks on Login button of SR app
+-> done: HQLoginSteps.WhenClicksOnLoginButtonOfSRApp() (5.1s)
+When User clicks on the Left Menu
+-> done: ScaleConfiguration.WhenUserClicksOnTheLeftMenu() (8.1s)
+Then menu should be displayed
+-> done: ScaleConfiguration.ThenMenuShouldBeDisplayed() (0.0s)
+When User enters Scale Configuration in the Search Box
+-> done: ScaleConfiguration.WhenUserEntersScaleConfigurationInTheSearchBox() (0.4s)
+Then Scale Configuration Item should be displayed on the Menu
+-> done: ScaleConfiguration.ThenScaleConfigurationItemShouldBeDisplayedOnTheMenu() (0.3s)
+When User Selects the Scale Configuration
+-> done: ScaleConfiguration.WhenUserSelectsTheScaleConfiguration() (0.0s)
+Then Click on PF tab in SR
+-> done: Store_LocationSteps.ThenClickOnPFTabInSR() (0.6s)
+And Click on add new PF button in SR
+-> done: Store_LocationSteps.ThenClickOnAddNewPFButtonInSR() (0.3s)
+Then Enter the new PF in SR '53' and 'Almond'
+-> done: Store_LocationSteps.ThenEnterTheNewPFInSRAnd("53", "Almond") (2.5s)
+When user search for the PF in SR'53'
+-> done: Store_LocationSteps.WhenUserSearchForThePFInSR("53") (5.1s)
+And Open PF in edit page as per TD FourZeroZero
+-> done: Store_LocationSteps.WhenOpenPFInEditPageAsPerTDFourZeroZero() (3.8s)
+And Save and close PF in SR
+-> done: Store_LocationSteps.WhenSaveAndClosePFInSR() (0.1s)
+And User navigate to Location tab
+-> done: Store_LocationSteps.WhenUserNavigateToLocationTab() (4.2s)
+And Click new location button
+-> done: Store_LocationSteps.WhenClickNewLocationButton() (0.2s)
+Then Add new location in SR application '93' and 'Butterhoney'
+-> done: Store_LocationSteps.ThenAddNewLocationInSRApplicationAnd("93", "Butterhoney") (2.7s)
+Then search for a location '93'
+-> done: Store_LocationSteps.ThenSearchForALocation("93") (5.1s)
+And Open location in edit page
+-> done: Store_LocationSteps.ThenOpenLocationInEditPage() (3.4s)
+Then add Vendor to location
+-> done: Store_LocationSteps.ThenAddVendorToLocation() (0.1s)
+And Link PF to Lcation Almond'
+-> done: Store_LocationSteps.ThenLinkPFToLcation("Almond") (0.1s)
+Then Save and close location in SR
+-> done: Store_LocationSteps.ThenSaveAndCloseLocationInSR() (0.1s)
+And user navigates to next tab
+-> done: Store_LocationSteps.ThenUserNavigatesToNextTab() (0.0s)
+When user navigates to HQ application
+-> done: Store_LocationSteps.WhenUserNavigatesToHQApplication() (4.3s)
+When enter valid '<username>', '<hqpassword>'
+-> done: HQLoginSteps.WhenEnterValid("<username>", "<hqpassword>") (0.2s)
+And Clicks on Log In button
+-> done: HQLoginSteps.WhenClicksOnLogInButton() (1.4s)
+When User clicks on the Left Menu
+-> done: ScaleConfiguration.WhenUserClicksOnTheLeftMenu() (8.1s)
+Then menu should be displayed
+-> done: ScaleConfiguration.ThenMenuShouldBeDisplayed() (0.0s)
+When User enters Scale Configuration in the Search Box
+-> done: ScaleConfiguration.WhenUserEntersScaleConfigurationInTheSearchBox() (0.3s)
+Then User click on Scale Configuration Item should be displayed on the Menu
+-> done: PreRequisite.ThenUserClickOnScaleConfigurationItemShouldBeDisplayedOnTheMenu() (0.6s)
+When User clicks on Tab Print Format
+-> done: ScaleConfiguration.WhenUserClicksOnTabPrintFormat() (0.9s)
+Then Click on the New Button
+-> done: ScaleConfiguration.ClickonNewButton() (0.2s)
+And Enter '53' and 'Almond'
+-> done: ScaleConfiguration.ThenEnterAnd("53", "Almond") (1.5s)
+And User search for the PF '53'
+-> done: Store_LocationSteps.ThenUserSearchForThePF("53") (5.1s)
+When user search and select the printformat code
+-> done: ScaleConfiguration.WhenUserSearchAndSelectThePrintformatCode() (6.4s)
+And Open PF and update as per TD FourZeroZero
+-> done: Store_LocationSteps.WhenOpenPFAndUpdateAsPerTDFourZeroZero() (0.5s)
+Then Save and close the PF
+-> done: ScaleConfiguration.ThenSaveAndCloseThePF() (8.2s)
+When user click the StoreLocation tab
+-> done: Store_LocationSteps.WhenUserClickTheStoreLocationTab() (4.2s)
+And Add new location
+-> done: Store_LocationSteps.WhenAddNewLocation() (0.4s)
+And Create New Scale Location '93' and 'Butterhoney'
+-> done: Store_LocationSteps.WhenCreateNewScaleLocationAnd("93", "Butterhoney") (9.6s)
+Then Add the PF to location '93','Almond'
+-> done: ScaleConfiguration.ThenAddThePFToLocation("93", "Almond'") (42.5s)
+Then publish the location to store '93'
+-> error: System error. (69.4s)
+
+
+TestContext Messages:
+Given user navigates to SR application
+-> done: HQLoginSteps.GivenUserNavigatesToSRApplication() (4.3s)
+When enter valid '<username>', '<hqpassword>'
+-> done: HQLoginSteps.WhenEnterValid("<username>", "<hqpassword>") (0.2s)
+And Clicks on Login button of SR app
+-> done: HQLoginSteps.WhenClicksOnLoginButtonOfSRApp() (5.1s)
+When User clicks on the Left Menu
+-> done: ScaleConfiguration.WhenUserClicksOnTheLeftMenu() (8.1s)
+Then menu should be displayed
+-> done: ScaleConfiguration.ThenMenuShouldBeDisplayed() (0.0s)
+When User enters Scale Configuration in the Search Box
+-> done: ScaleConfiguration.WhenUserEntersScaleConfigurationInTheSearchBox() (0.4s)
+Then Scale Configuration Item should be displayed on the Menu
+-> done: ScaleConfiguration.ThenScaleConfigurationItemShouldBeDisplayedOnTheMenu() (0.3s)
+When User Selects the Scale Configuration
+-> done: ScaleConfiguration.WhenUserSelectsTheScaleConfiguration() (0.0s)
+Then Click on PF tab in SR
+-> done: Store_LocationSteps.ThenClickOnPFTabInSR() (0.6s)
+And Click on add new PF button in SR
+-> done: Store_LocationSteps.ThenClickOnAddNewPFButtonInSR() (0.3s)
+Then Enter the new PF in SR '53' and 'Almond'
+-> done: Store_LocationSteps.ThenEnterTheNewPFInSRAnd("53", "Almond") (2.5s)
+When user search for the PF in SR'53'
+-> done: Store_LocationSteps.WhenUserSearchForThePFInSR("53") (5.1s)
+And Open PF in edit page as per TD FourZeroZero
+-> done: Store_LocationSteps.WhenOpenPFInEditPageAsPerTDFourZeroZero() (3.8s)
+And Save and close PF in SR
+-> done: Store_LocationSteps.WhenSaveAndClosePFInSR() (0.1s)
+And User navigate to Location tab
+-> done: Store_LocationSteps.WhenUserNavigateToLocationTab() (4.2s)
+And Click new location button
+-> done: Store_LocationSteps.WhenClickNewLocationButton() (0.2s)
+Then Add new location in SR application '93' and 'Butterhoney'
+-> done: Store_LocationSteps.ThenAddNewLocationInSRApplicationAnd("93", "Butterhoney") (2.7s)
+Then search for a location '93'
+-> done: Store_LocationSteps.ThenSearchForALocation("93") (5.1s)
+And Open location in edit page
+-> done: Store_LocationSteps.ThenOpenLocationInEditPage() (3.4s)
+Then add Vendor to location
+-> done: Store_LocationSteps.ThenAddVendorToLocation() (0.1s)
+And Link PF to Lcation Almond'
+-> done: Store_LocationSteps.ThenLinkPFToLcation("Almond") (0.1s)
+Then Save and close location in SR
+-> done: Store_LocationSteps.ThenSaveAndCloseLocationInSR() (0.1s)
+And user navigates to next tab
+-> done: Store_LocationSteps.ThenUserNavigatesToNextTab() (0.0s)
+When user navigates to HQ application
+-> done: Store_LocationSteps.WhenUserNavigatesToHQApplication() (4.3s)
+When enter valid '<username>', '<hqpassword>'
+-> done: HQLoginSteps.WhenEnterValid("<username>", "<hqpassword>") (0.2s)
+And Clicks on Log In button
+-> done: HQLoginSteps.WhenClicksOnLogInButton() (1.4s)
+When User clicks on the Left Menu
+-> done: ScaleConfiguration.WhenUserClicksOnTheLeftMenu() (8.1s)
+Then menu should be displayed
+-> done: ScaleConfiguration.ThenMenuShouldBeDisplayed() (0.0s)
+When User enters Scale Configuration in the Search Box
+-> done: ScaleConfiguration.WhenUserEntersScaleConfigurationInTheSearchBox() (0.3s)
+Then User click on Scale Configuration Item should be displayed on the Menu
+-> done: PreRequisite.ThenUserClickOnScaleConfigurationItemShouldBeDisplayedOnTheMenu() (0.6s)
+When User clicks on Tab Print Format
+-> done: ScaleConfiguration.WhenUserClicksOnTabPrintFormat() (0.9s)
+Then Click on the New Button
+-> done: ScaleConfiguration.ClickonNewButton() (0.2s)
+And Enter '53' and 'Almond'
+-> done: ScaleConfiguration.ThenEnterAnd("53", "Almond") (1.5s)
+And User search for the PF '53'
+-> done: Store_LocationSteps.ThenUserSearchForThePF("53") (5.1s)
+When user search and select the printformat code
+-> done: ScaleConfiguration.WhenUserSearchAndSelectThePrintformatCode() (6.4s)
+And Open PF and update as per TD FourZeroZero
+-> done: Store_LocationSteps.WhenOpenPFAndUpdateAsPerTDFourZeroZero() (0.5s)
+Then Save and close the PF
+-> done: ScaleConfiguration.ThenSaveAndCloseThePF() (8.2s)
+When user click the StoreLocation tab
+-> done: Store_LocationSteps.WhenUserClickTheStoreLocationTab() (4.2s)
+And Add new location
+-> done: Store_LocationSteps.WhenAddNewLocation() (0.4s)
+And Create New Scale Location '93' and 'Butterhoney'
+-> done: Store_LocationSteps.WhenCreateNewScaleLocationAnd("93", "Butterhoney") (9.6s)
+Then Add the PF to location '93','Almond'
+-> done: ScaleConfiguration.ThenAddThePFToLocation("93", "Almond'") (42.5s)
+Then publish the location to store '93'
+-> error: System error. (69.4s)
