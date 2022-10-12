@@ -182,7 +182,7 @@ namespace SpecFlow_MSTestFrameWork.Hooks
                 }
                 finally
                 {
-                    //Logout
+                    /*//Logout
                     _driverHelper.driver.SwitchTo().Window(_driverHelper.driver.WindowHandles[0]);
                     _driverHelper.driver.Navigate().Refresh();
                     Thread.Sleep(4000);
@@ -192,7 +192,7 @@ namespace SpecFlow_MSTestFrameWork.Hooks
                     submitbutton.Click();
 
                     //Quit Driver
-                    _driverHelper.driver.Quit();
+                    _driverHelper.driver.Quit();*/
                 }
             }
         
@@ -214,7 +214,7 @@ namespace SpecFlow_MSTestFrameWork.Hooks
                     Deletebutton.Click();
                 }
 
-                //Logout
+               /* //Logout
                 Thread.Sleep(4000);
                 ProfileIcon.Click();
                 Thread.Sleep(2000);
@@ -222,7 +222,7 @@ namespace SpecFlow_MSTestFrameWork.Hooks
                 submitbutton.Click();
 
                 //Quit Driver
-                _driverHelper.driver.Quit();
+                _driverHelper.driver.Quit();*/
             }
         }
 

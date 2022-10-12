@@ -92,6 +92,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement ScaleSelectPF => Driver.FindElement(By.XPath($"//span[text()=' {PFName}']"));
         private CustomControls ScaleContentSymblDrpDwn => new CustomControls(Driver, By.XPath("//select[@ng-model='ctrl.formData.scaleCSymbolId']"));
         IWebElement SaveScalePF => Driver.FindElement(By.XPath("(//button[@class='button-save ng-scope'])[2]"));
+        IWebElement LocationNameColumn => Driver.FindElement(By.XPath("//*[@id='dx-col-603'][@aria-label='Column Location Name']"));
 
 
 
@@ -308,9 +309,12 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         public void PublishLocation(string locCode)
         {
             Thread.Sleep(8000);
+            LocationNameColumn.Click();
             LocCodeSearch.SendKeys(locCode);
             Thread.Sleep(3000);
-            PublishIcon.Click();
+            Actions action = new Actions(Driver);
+            action.Click(PublishIcon).Perform();
+            Thread.Sleep(5000);
             SaveLocationYes.Click();
         }
     }
