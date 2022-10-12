@@ -270,6 +270,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         public void PublishLocFromItem(string LocName)
         {
             LocSearch = LocName;
+            Thread.Sleep(1000);
             ItemTab.Click();
             StoreLocation.Click();
             PublishItem.Click();

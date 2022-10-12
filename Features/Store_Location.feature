@@ -157,15 +157,24 @@ Scenario: Publish location and verify queue messages
 	Then user should select an item and add PF & location '<PFname>' ,'<LocationName>
 	And User should navigate to config page and delete the location '<LocationCode>'
 	Then Go to item location and publish '<LocationName>' 
-#	And user navigates to SR application
-#	When enter valid '<username>', '<hqpassword>'
-#	And Clicks on Login button of SR app
-#	When User clicks on the Left Menu
-#	Then menu should be displayed
-#	When User enters Scale Configuration in the Search Box
-#	Then Scale Configuration Item should be displayed on the Menu
-#	When User Selects the Scale Configuration
-#	And Verify that deleted location in HQ is not published and other item locations are published '<LocationName>'
+    Given user navigates to SR application
+	When enter valid '<username>', '<hqpassword>'
+	And Clicks on Login button of SR app
+	When User clicks on the Left Menu
+	Then menu should be displayed
+	When User enters Scale Configuration in the Search Box
+	Then Scale Configuration Item should be displayed on the Menu
+	Then User navigates to Location 
+	And Verify that deleted location in HQ is not published and other item locations are published '<LocationName>' and '<LocationCode>'
+	When user navigates to HQ application
+	When enter valid '<username>', '<hqpassword>'
+	And Clicks on Log In button
+	When User clicks on the Left Menu
+	Then menu should be displayed
+	When User enters Scale Configuration in the Search Box
+	Then User click on Scale Configuration Item should be displayed on the Menu
+	When User clicks on Tab Print Format
+	And User Search the PF and delete the PF from HQ '<code>' and '<PFname>'
 	
 	
 

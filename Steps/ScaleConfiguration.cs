@@ -142,6 +142,18 @@ namespace SpecFlow_MSTestFrameWork.Steps
         {
             scaleConfigurationPage.TabPrintFormatClick();
         }
+        /// <summary>
+        /// Delete the existing PF from HQ
+        /// </summary>
+        /// <param name="p0"></param>
+
+        [When(@"User Search the PF and delete the PF from HQ '(.*)' and '(.*)'")]
+        public void WhenUserSearchThePFAndDeleteThePFFromHQAnd(string PFCode, string PFname)
+        {
+            scaleConfigurationPage.SearchPFName(PFname, PFCode);
+            scaleConfigurationPage.DeletePrint();
+            Thread.Sleep(1000);
+        }
 
         [Then(@"Print Format Page should be displayed")]
         public void ThenPrintFormatPageShouldBeDisplayed()
@@ -217,6 +229,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         public void ThenUserShouldNavigateToConfigPageAndDeleteTheLocation(string locCode)
         {
             storeLocation.DeleteLocation(locCode);
+            Thread.Sleep(1000);
         }
 
         [Then(@"Go to item location and publish '(.*)'")]

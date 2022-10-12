@@ -37,6 +37,8 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement ElementSelectFromLocationTable => Driver.FindElement(By.XPath("//*[@id='gridSCALELOC']/div/div[6]/div/div/div[1]/div/table/tbody/tr[last()-1]/td[1]"));
         IWebElement SaveClosePF => Driver.FindElement(By.XPath("//button[@ng-click='ctrl.submit(ctrl.editPrintFormatForm,1)']"));
         IWebElement LocSearchbox => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[9]"));
+        IWebElement LocSearchboxSR => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[6]"));
+        IWebElement RecordsFound => Driver.FindElement(By.XPath("//span[text()='No records found']"));
         private CustomControls VendorSelection => new CustomControls(Driver, By.XPath("//div[@class='selectize-control ng-pristine ng-untouched ng-valid ng-scope ng-isolate-scope single']"));
         IWebElement PFSelection => Driver.FindElement(By.XPath("//button[@ng-click='toggleDropdown()']"));
         IWebElement SelectPF => Driver.FindElement(By.XPath($"//span[text()='{PFname}']"));
@@ -66,6 +68,14 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Thread.Sleep(1000);
             LocSearchbox.SendKeys(locCode);
             Thread.Sleep(5000);
+        }
+        public void SearchDeletedLocationInSR(string locCode)
+        {
+            Thread.Sleep(1500);
+            LocSearchboxSR.SendKeys(locCode);
+            Thread.Sleep(1000);
+            Assert.AreEqual("No records found", RecordsFound.Text);
+            Thread.Sleep(500);
         }
         public void SearchPFInSR(string pfcode)
         {

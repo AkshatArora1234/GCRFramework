@@ -135,6 +135,24 @@ namespace SpecFlow_MSTestFrameWork.Features
             store_Location.CheckContentSR();
         }
         /// <summary>
+        /// Verify that the deleted location in HQ is not found in SR
+        /// </summary>
+        /// <param name="p0"></param>
+        /// <param name="p1"></param>
+        [Then(@"User navigates to Location")]
+        public void ThenUserNavigatesToLocation()
+        {
+            store_Location_SR.NavigateToLocationTab();
+        }
+
+        [Then(@"Verify that deleted location in HQ is not published and other item locations are published '(.*)' and '(.*)'")]
+        public void ThenVerifyThatDeletedLocationInHQIsNotPublishedAndOtherItemLocationsArePublishedAnd(string LocName, string LocCode)
+        {
+            store_Location_SR.SearchDeletedLocationInSR(LocCode);
+        }
+
+        
+        /// <summary>
         /// Save the PF in SR and close
         /// </summary>
         [When(@"Save and close PF in SR")]
