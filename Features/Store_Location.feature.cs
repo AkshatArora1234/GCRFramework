@@ -906,6 +906,97 @@ this.PublishLocationAndVerifyQueueMessages("59", "Plum Cakes", "51", "Burgers", 
  this.CreateLocationAndVerifyThatDeletedLocationIsNotPublished("96", "Butter", "16", "Organic butter", ((string[])(null)));
 #line hidden
         }
+        
+        public virtual void PublishScaleItemLocationsToSelectedStores(string store1, string store2, string locCode1, string locCode2, string locName1, string locName2, string code, string pFname, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("store1", store1);
+            argumentsOfScenario.Add("store2", store2);
+            argumentsOfScenario.Add("LocCode1", locCode1);
+            argumentsOfScenario.Add("LocCode2", locCode2);
+            argumentsOfScenario.Add("LocName1", locName1);
+            argumentsOfScenario.Add("LocName2", locName2);
+            argumentsOfScenario.Add("code", code);
+            argumentsOfScenario.Add("PFname", pFname);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Publish Scale item locations to selected stores", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 235
+ this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 236
+    testRunner.Given("user navigates to HQ application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 237
+ testRunner.When("enter valid \'<username>\', \'<hqpassword>\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 238
+ testRunner.And("Clicks on Log In button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 239
+ testRunner.When("User clicks on the Left Menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 240
+ testRunner.Then("menu should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 241
+ testRunner.When("User enters Scale Configuration in the Search Box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 242
+ testRunner.Then("User click on Scale Configuration Item should be displayed on the Menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 243
+ testRunner.When("user click the StoreLocation tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 244
+ testRunner.And("Add new location", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 245
+ testRunner.Then(string.Format("Create multiple locations \'{0}\',\'{1}\',\'{2}\',\'{3}\',\'{4}\',\'{5}\'", store1, store2, locCode1, locCode2, locName1, locName2), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 246
+ testRunner.When("User clicks on Tab Print Format", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 247
+ testRunner.Then("Click on the New Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 248
+ testRunner.And(string.Format("Enter \'{0}\' and \'{1}\'", code, pFname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 249
+ testRunner.Then(string.Format("Add the PF to Multiple location \'{0}\',\'{1}\',\'{2}\',\'{3}\',\'{4}\',\'{5}\'", store1, store2, locCode1, locCode2, pFname, code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 250
+ testRunner.Then("Publish the locations", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Publish Scale item locations to selected stores: Crace (1501)")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Store_Location")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Crace (1501)")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:store1", "Crace (1501)")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:store2", "Kingston (1500)")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:LocCode1", "11")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:LocCode2", "11")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:LocName1", "Chocolate")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:LocName2", "Chocolate")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:code", "11")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:PFname", "Coco")]
+        public void PublishScaleItemLocationsToSelectedStores_Crace1501()
+        {
+#line 235
+ this.PublishScaleItemLocationsToSelectedStores("Crace (1501)", "Kingston (1500)", "11", "11", "Chocolate", "Chocolate", "11", "Coco", ((string[])(null)));
+#line hidden
+        }
     }
 }
 #pragma warning restore

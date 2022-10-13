@@ -16,7 +16,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         string LocSearch;
         string PFName;
         string columChoosed;
-
+        string Store;
         public Store_Location(IWebDriver driver)
         {
             Driver = driver;
@@ -29,6 +29,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement TabStore_Location => Driver.FindElement(By.XPath("//a[@ng-click='select($event)']//uib-tab-heading[text()='Stores / Locations']"));
         IWebElement TabPF => Driver.FindElement(By.XPath("//a[@ng-click='select($event)']//uib-tab-heading[text()='Print Format']"));
         IWebElement NewLocation => Driver.FindElement(By.XPath("//a[@ng-click='ctrl.createStoreLocation()']"));
+        IWebElement SelectStore => Driver.FindElement(By.XPath($"//div[text()='{Store}']"));
         IWebElement Productlife => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasProductLife']"));
         IWebElement SellBy => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasSellBuy']"));
         IWebElement Tare => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.hasTare']"));
@@ -88,11 +89,14 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement DeleteLoc => Driver.FindElement(By.XPath("(//i[@class='fa fa-trash-o ng-scope'])[74]"));
         IWebElement LocCodeSearch => Driver.FindElement(By.XPath("(//gm-grid[@grid-id=\"'scaleStoreLocationGrid'\"]//input[@class='dx-texteditor-input'])[2]"));
         IWebElement PublishIcon => Driver.FindElement(By.XPath("//i[@ng-click='ctrl.actions.publishSLToStore(row.data)']"));
+        IWebElement PublishLocations => Driver.FindElement(By.XPath("//i[@uib-tooltip='Publish scale locations to selected stores']"));
         IWebElement ScalePFDrpDwn => Driver.FindElement(By.XPath("(//div[@class='selectize-control ng-pristine ng-untouched ng-valid ng-scope ng-isolate-scope single'])[6]"));
         IWebElement ScaleSelectPF => Driver.FindElement(By.XPath($"//span[text()=' {PFName}']"));
         private CustomControls ScaleContentSymblDrpDwn => new CustomControls(Driver, By.XPath("//select[@ng-model='ctrl.formData.scaleCSymbolId']"));
         IWebElement SaveScalePF => Driver.FindElement(By.XPath("(//button[@class='button-save ng-scope'])[2]"));
         IWebElement LocationNameColumn => Driver.FindElement(By.XPath("//*[@id='dx-col-603'][@aria-label='Column Location Name']"));
+        IWebElement NewStoreDrpDwn => Driver.FindElement(By.XPath("//div[@class='selectize-input items not-full ng-valid ng-pristine has-options']//following::input[1]/.."));
+        IWebElement CraceStore => Driver.FindElement(By.XPath("(//div[text()='Crace (1501)'])[1]"));
 
 
 
@@ -135,7 +139,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Thread.Sleep(2000);
         }
         public void ChangePFValue(string PFname)
-        {  
+        {
             string Text = "KGTest";
             PFName = PFname;
             ScalePFDrpDwn.Click();
@@ -276,7 +280,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             StoreLocation.Click();
             PublishItem.Click();
             ConfirmPublish.Click();
-             Thread.Sleep(1000);
+            Thread.Sleep(1000);
 
         }
 
@@ -295,15 +299,55 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Thread.Sleep(1000);
             StoreItemDropDown.Click();
             Thread.Sleep(1000);
-             SelectPF.Click();
+            SelectPF.Click();
             PFTab.Click();
-              SaveItem.Click();
+            SaveItem.Click();
             Thread.Sleep(2000);
 
         }
         public void storeLocationRowOneSelect()
         {
             storeLocationRowOne.Click();
+        }
+        public void CreateMultipleLocation(string store1, string store2, string code, string name)
+        {
+            Thread.Sleep(2000);
+            for (int i = 0; i < 2; i++)
+            {
+                if (i == 0)
+                { Store = store1; }
+                else { Store = store2; }
+                try
+                {
+                    Thread.Sleep(1000);
+                    if (Store.Equals("Crace (1501)"))
+                    { CraceStore.Click(); }
+
+                    else
+                    {
+                        NewLocation.Click();
+                        Thread.Sleep(1000);
+                        SelectStore.Click();
+                    }
+                    Thread.Sleep(1000);
+                }
+                catch (Exception e)
+                {
+                    Cancel.Click();
+                    Thread.Sleep(4000);
+                    NewLocation.Click();
+                    Thread.Sleep(1000);
+                    if (Store.Equals("Crace (1501)"))
+                    { CraceStore.Click(); }
+                    else { SelectStore.Click(); }
+                }
+
+                locCode.SendKeys(code);
+                locName.SendKeys(name);
+                Thread.Sleep(1000);
+                locName.SendKeys(Keys.Enter);
+                Thread.Sleep(2000);
+            }
         }
 
         public void PublishLocation(string locCode)
@@ -316,6 +360,11 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             action.Click(PublishIcon).Perform();
             Thread.Sleep(5000);
             SaveLocationYes.Click();
+        }
+        public void PublishLocationToSelectedStores()
+        {
+            PublishLocations.Click();
+            Thread.Sleep(1000);
         }
     }
 }

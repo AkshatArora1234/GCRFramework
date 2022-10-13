@@ -116,10 +116,12 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement ClickDropdown => Driver.FindElement(By.XPath("(//div[@class='dx-dropdowneditor-icon'])[6]"));
         IWebElement PFTextBox => Driver.FindElement(By.XPath("//td[@aria-colindex='4'and @class='inline_edit_enabled_cell']"));
         IWebElement SelectPF => Driver.FindElement(By.XPath($"//div[text()='{PFName}]"));
+        IWebElement SelectPrintF => Driver.FindElement(By.XPath($"//div[text()='{PFName}']"));
         IWebElement SavePF => Driver.FindElement(By.XPath("//span[text()='Save']"));
         IWebElement SaveChanges => Driver.FindElement(By.XPath("//button[@id='submitButton']"));
         IWebElement StoreLocation => Driver.FindElement(By.XPath("//uib-tab-heading[text()='Stores / Locations']"));
         IWebElement LocationName => Driver.FindElement(By.XPath("//div[text()='Location Name']"));
+        IWebElement StoreNameSearch => Driver.FindElement(By.XPath("(//input[@role='textbox'])[13]"));
 
 
 
@@ -211,6 +213,44 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Thread.Sleep(1000);
             SaveChanges.Click();
             Thread.Sleep(1000);
+        }
+        public void AddPFMultipleLocation(string store1, string store2, string Loc1, string Loc2, string PFname, string code)
+        {
+            Actions act = new Actions(Driver);
+            PFName = PFname;
+            string Store;
+            Thread.Sleep(1000);
+            StoreLocation.Click();
+            Thread.Sleep(1000);
+            for (int i = 0; i < 2; i++)
+            {   if(i==0){ Store = store1; }
+                else { Store = store2; }
+                Thread.Sleep(2000);
+                LocationName.Click();
+                StoreEdit.Click();
+                Thread.Sleep(2000);
+                if(Store== "Crace (1501)")
+                {
+                    StoreNameSearch.SendKeys("crace");
+                    act.SendKeys(Keys.Tab).SendKeys(Loc1).Build().Perform();
+                }
+                else
+                {
+                    StoreNameSearch.SendKeys("kingston");
+                    act.SendKeys(Keys.Tab).SendKeys(Loc2).Build().Perform();
+                }
+                
+                Thread.Sleep(2000);
+                act.DoubleClick(PFTextBox).Build().Perform();
+                Thread.Sleep(6000);
+                SelectPrintF.Click();
+                LocationName.Click();
+                Thread.Sleep(2000);
+                SavePF.Click();
+                Thread.Sleep(1000);
+                SaveChanges.Click();
+                Thread.Sleep(1000);
+            }
         }
         public void EnterFontCodeandName(string code, string name)
         {

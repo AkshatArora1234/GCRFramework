@@ -202,6 +202,22 @@ namespace SpecFlow_MSTestFrameWork.Steps
         {
             scaleConfigurationPage.AddPFToLocation(LocCode,PFname);
         }
+        /// <summary>
+        /// Add PF to multiple location
+        /// </summary>
+        /// <param name="p0"></param>
+        /// <param name="p1"></param>
+        /// <param name="p2"></param>
+        /// <param name="p3"></param>
+        /// <param name="p4"></param>
+        /// 
+         [Then(@"Add the PF to Multiple location '(.*)','(.*)','(.*)','(.*)','(.*)','(.*)'")]
+         public void ThenAddThePFToMultipleLocation(string store1,string store2, string Loc1, string Loc2, string PFname,string code)
+        {
+            scaleConfigurationPage.AddPFMultipleLocation(store1, store2, Loc1, Loc2, PFname,code);
+        }
+
+
         [When(@"User click on left menu and select the item maintenance")]
         public void WhenUserClickOnLeftMenuAndSelectTheItemMaintenance()
         {

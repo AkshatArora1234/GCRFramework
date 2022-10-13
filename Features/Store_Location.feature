@@ -231,3 +231,23 @@ Scenario: Publish location and verify queue messages
 	Examples:
     | LocationCode | LocationName     | code | PFname           |
     | 96           | Butter           | 16   | Organic butter   |
+
+	Scenario: Publish Scale item locations to selected stores
+    Given user navigates to HQ application
+	When enter valid '<username>', '<hqpassword>'
+	And Clicks on Log In button
+	When User clicks on the Left Menu
+	Then menu should be displayed
+	When User enters Scale Configuration in the Search Box
+	Then User click on Scale Configuration Item should be displayed on the Menu
+	When user click the StoreLocation tab
+	And Add new location
+	Then Create multiple locations '<store1>','<store2>','<LocCode1>','<LocCode2>','<LocName1>','<LocName2>'
+	When User clicks on Tab Print Format
+	Then Click on the New Button
+	And Enter '<code>' and '<PFname>'
+	Then Add the PF to Multiple location '<store1>','<store2>','<LocCode1>','<LocCode2>','<PFname>','<code>'
+	Then Publish the locations
+	Examples:
+    | store1       | store2          | LocCode1 | LocCode2 | LocName1  | LocName2  | code   | PFname     |
+    | Crace (1501) | Kingston (1500) | 11       | 11       | Chocolate | Chocolate |  11    |   Coco     |

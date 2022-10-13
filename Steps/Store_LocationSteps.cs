@@ -268,6 +268,26 @@ namespace SpecFlow_MSTestFrameWork.Features
             store_Location.AddNewStoreLocation();
         }
 
+        /// <summary>
+        /// Create multiple locations
+        /// </summary>
+        /// <param name="p0"></param>
+        /// <param name="p1"></param>
+        /// <param name="p2"></param>
+        /// <param name="p3"></param>
+        /// <param name="p4"></param>
+        /// <param name="p5"></param>
+        [Then(@"Create multiple locations '(.*)','(.*)','(.*)','(.*)','(.*)','(.*)'")]
+        public void ThenCreateMultipleLocations(string Store1, string Store2, string LocCode1, string LocCode2, string LocName1, string LocName2)
+        {
+            store_Location.CreateMultipleLocation(Store1,Store2, LocCode1, LocName1);
+        }
+
+        [Then(@"Publish the locations")]
+        public void ThenPublishTheLocations()
+        {
+            store_Location.PublishLocationToSelectedStores();
+        }
 
         /// <summary>
         /// Create New Scale Location using enter key
