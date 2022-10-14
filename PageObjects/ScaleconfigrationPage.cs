@@ -134,7 +134,13 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             LeftMenu.Click();
         }
 
-        public void ScaleConfiguration() => Searchbar.SendKeys("Scale Configuration");
+        public void ScaleConfiguration()
+        {
+            Searchbar.Clear();
+            Thread.Sleep(1000);
+            Searchbar.SendKeys("Scale Configuration");
+        }
+
         public void MenuScaleConfigurationClick() => ScaleConfigurationMenu.Click();
         public void TabPrintFormatClick() => TabPrintFormat.Click();
         public void TabConfiGrationClick() => TabConfigration.Click();
@@ -328,7 +334,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         }
         public void ClickCheckboxes_4_0_5_loc3()
         {
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
             CheckProductlife.Click();
             Thread.Sleep(2000);
             CheckTare.Click();
@@ -341,7 +347,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         }
         public void ClickCheckboxes_4_0_5_loc4()
         {
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
             CheckProductlife.Click();
             Thread.Sleep(2000);
             CheckTare.Click();

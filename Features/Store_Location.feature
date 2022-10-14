@@ -176,9 +176,60 @@ Scenario: Publish location and verify queue messages
     Then User should click on PF edit '<PFnameD>' ,'<codeD>'and set the Print Format fields  for FourZeroFiveD
     Then Add the PF to location '<LocationCodeD>','<PFnameD>'
     Then publish the location to store '<LocationCodeA>'
+	When User clicks on the Left Menu
+    Then menu should be displayed
+    When User enters Queue Manager in the Search Box
+    Then User click on Queue Manager Item should be displayed on the Menu
+    When user click the Scale queue
+	And navigate to history tab
+	Then click on view summary of the entry
+	Then Validate queue message for location A
+	Then close the view summary popup
+	 When User clicks on the Left Menu
+    Then menu should be displayed
+    When User enters Scale Configuration in the Search Box
+    Then User click on Scale Configuration Item should be displayed on the Menu
+    When user click the StoreLocation tab
     Then publish the location to store '<LocationCodeB>'
+	When User clicks on the Left Menu
+    Then menu should be displayed
+    When User enters Queue Manager in the Search Box
+    Then User click on Queue Manager Item should be displayed on the Menu
+    When user click the Scale queue
+	And navigate to history tab
+	Then click on view summary of the entry
+	Then Validate queue message for location B
+	Then close the view summary popup
+	 When User clicks on the Left Menu
+    Then menu should be displayed
+    When User enters Scale Configuration in the Search Box
+    Then User click on Scale Configuration Item should be displayed on the Menu
+    When user click the StoreLocation tab
     Then publish the location to store '<LocationCodeC>'
+	When User clicks on the Left Menu
+    Then menu should be displayed
+    When User enters Queue Manager in the Search Box
+    Then User click on Queue Manager Item should be displayed on the Menu
+    When user click the Scale queue
+	And navigate to history tab
+	Then click on view summary of the entry
+	Then Validate queue message for location C
+	Then close the view summary popup
+	 When User clicks on the Left Menu
+    Then menu should be displayed
+    When User enters Scale Configuration in the Search Box
+    Then User click on Scale Configuration Item should be displayed on the Menu
+    When user click the StoreLocation tab
     Then publish the location to store '<LocationCodeD>'
+	When User clicks on the Left Menu
+    Then menu should be displayed
+    When User enters Queue Manager in the Search Box
+    Then User click on Queue Manager Item should be displayed on the Menu
+    When user click the Scale queue
+	And navigate to history tab
+	Then click on view summary of the entry
+	Then Validate queue message for location D
+	Then close the view summary popup
 
 
      Examples:

@@ -17,6 +17,7 @@ namespace SpecFlow_MSTestFrameWork.Features
         ColumnChooser columnChooser;
         Store_Location_SR store_Location_SR;
         Scaleconfig scaleConfigurationPage;
+        QueueManager queueManager;
 
         public Store_LocationSteps(DriverHelper driverHelper)
         {
@@ -26,6 +27,7 @@ namespace SpecFlow_MSTestFrameWork.Features
             columnChooser = new ColumnChooser(_driverHelper.driver);
             store_Location_SR = new Store_Location_SR(_driverHelper.driver);
             scaleConfigurationPage = new Scaleconfig(_driverHelper.driver);
+            queueManager = new QueueManager(_driverHelper.driver);
         }
         //Sheet 1 scenarios steps
 
@@ -442,6 +444,78 @@ namespace SpecFlow_MSTestFrameWork.Features
         public void ThenChooseToYes(string column)
         {
             store_Location_SR.setFlagToTrue(column);
+        }
+        /// <summary>
+        /// User click on Queue Manager Item should be displayed on the Menu
+        /// </summary>
+        [Then(@"User click on Queue Manager Item should be displayed on the Menu")]
+        public void ThenUserClickOnQueueManagerItemShouldBeDisplayedOnTheMenu()
+        {
+            queueManager.QueueManagerMenuClick();
+        }
+        /// <summary>
+        /// User click on scale queue
+        /// </summary>
+        [When(@"user click the Scale queue")]
+        public void WhenUserClickTheScaleQueue()
+        {
+            queueManager.scaleQueueDoubleClick();
+        }
+        /// <summary>
+        /// User navigate to History tab
+        /// </summary>
+        [When(@"navigate to history tab")]
+        public void WhenNavigateToHistoryTab()
+        {
+            queueManager.HistoryTabClick();
+        }
+        /// <summary>
+        /// View summary link click
+        /// </summary>
+        [Then(@"click on view summary of the entry")]
+        public void ThenClickOnViewSummaryOfTheEntry()
+        {
+            queueManager.viewSummaryLinkClick();
+        }
+        /// <summary>
+        /// Validate queue message for location A
+        /// </summary>
+        [Then(@"Validate queue message for location A")]
+        public void ThenValidateQueueMessageForLocationA()
+        {
+            queueManager.validateQueueMessageA();
+        }
+        /// <summary>
+        /// Validate queue message for location B
+        /// </summary>
+        [Then(@"Validate queue message for location B")]
+        public void ThenValidateQueueMessageForLocationB()
+        {
+            queueManager.validateQueueMessageB();
+        }
+        /// <summary>
+        /// Validate queue message for location C
+        /// </summary>
+        [Then(@"Validate queue message for location C")]
+        public void ThenValidateQueueMessageForLocationC()
+        {
+            queueManager.validateQueueMessageC();
+        }
+        /// <summary>
+        /// Validate queue message for location D
+        /// </summary>
+        [Then(@"Validate queue message for location D")]
+        public void ThenValidateQueueMessageForLocationD()
+        {
+            queueManager.validateQueueMessageD();
+        }
+        /// <summary>
+        /// close the view summary popup
+        /// </summary>
+        [Then(@"close the view summary popup")]
+        public void ThenCloseTheViewSummaryPopup()
+        {
+            queueManager.refreshPage();
         }
 
     }

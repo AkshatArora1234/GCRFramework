@@ -24,6 +24,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
         ConfigurationPage configurationPage;
         Store_Location storeLocation;
         SRConfigurationPage sRConfigurationPage;
+        QueueManager queueManager;
                        
         public ScaleConfiguration(DriverHelper driverHelper)
         {
@@ -37,6 +38,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
             configurationPage = new ConfigurationPage(_driverHelper.driver);
             sRConfigurationPage = new SRConfigurationPage(_driverHelper.driver);
             storeLocation = new Store_Location(_driverHelper.driver);
+            queueManager = new QueueManager(_driverHelper.driver);
         }
 
 
@@ -65,6 +67,15 @@ namespace SpecFlow_MSTestFrameWork.Steps
         {
             scaleConfigurationPage.ScaleConfiguration();
         }
+        /// <summary>
+        /// enter text Queue MAnager in the text field
+        /// </summary>
+        [When(@"User enters Queue Manager in the Search Box")]
+        public void WhenUserEntersQueueManagerInTheSearchBox()
+        {
+            queueManager.QueueManagerText();
+        }
+
 
         /// <summary>
         /// Common Function for all test cases, Scale Configuration should be displayed on the Menu and click on Scale Configuration

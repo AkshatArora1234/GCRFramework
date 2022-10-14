@@ -94,7 +94,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement ScaleSelectPF => Driver.FindElement(By.XPath($"//span[text()=' {PFName}']"));
         private CustomControls ScaleContentSymblDrpDwn => new CustomControls(Driver, By.XPath("//select[@ng-model='ctrl.formData.scaleCSymbolId']"));
         IWebElement SaveScalePF => Driver.FindElement(By.XPath("(//button[@class='button-save ng-scope'])[2]"));
-        IWebElement LocationNameColumn => Driver.FindElement(By.XPath("//*[@id='dx-col-603'][@aria-label='Column Location Name']"));
+        IWebElement LocationNameColumn => Driver.FindElement(By.XPath("//*[@aria-label='Column Location Name']"));
         IWebElement NewStoreDrpDwn => Driver.FindElement(By.XPath("//div[@class='selectize-input items not-full ng-valid ng-pristine has-options']//following::input[1]/.."));
         IWebElement CraceStore => Driver.FindElement(By.XPath("(//div[text()='Crace (1501)'])[1]"));
 
