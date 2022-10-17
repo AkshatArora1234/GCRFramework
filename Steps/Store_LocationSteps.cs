@@ -347,6 +347,22 @@ namespace SpecFlow_MSTestFrameWork.Features
             store_Location.CheckContentSR();
         }
 
+        /// <summary>
+        /// Edit PF as per TD FourZeroTwo
+        /// </summary>
+        [When(@"Open PF in edit page as per TD FourZeroTwo")]
+        public void WhenOpenPFInEditPageAsPerTDFourZeroTwo()
+        {
+            store_Location_SR.EditPFinSR();
+            store_Location.CheckProductlifeSR();
+            store_Location.CheckTareSR();
+            store_Location.CheckSellBySR();
+            store_Location.CheckPresetmessagesSR();
+            store_Location.CheckPrintdateformatSR();
+            store_Location.CheckCookingTimeSR();
+            store_Location.CheckContentSR();
+        }
+
 
         /// <summary>
         /// Add new location with test data 4.0.0
