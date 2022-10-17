@@ -51,7 +51,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement Storename => Driver.FindElement(By.XPath("//div[text()='Kingston (1500)']"));
         IWebElement locCode => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.locationCode']"));
         IWebElement locName => Driver.FindElement(By.XPath("//input[@ng-model='ctrl.formData.locationName']"));
-        IWebElement SaveLocation => Driver.FindElement(By.XPath("//a[@ng-click='ctrl.saveButtonAction()']"));
+        IWebElement PublishConfirm => Driver.FindElement(By.XPath("//button[@type='submit']"));
         IWebElement SaveLocationYes => Driver.FindElement(By.XPath("//button[@id='submitButton']"));
         IWebElement storeLocationRowOne => Driver.FindElement(By.XPath("(//div[text()='Location Name']/ancestor::div[@class='item-list-table clearfix']//table[@class='dx-datagrid-table dx-datagrid-table-fixed'])[2]//tr[1]"));
         //IWebElement ShowColumnChooser => Driver.FindElement(By.XPath("(//div[@aria-label='Show Column Chooser'])[6]"));
@@ -90,6 +90,8 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement LocCodeSearch => Driver.FindElement(By.XPath("(//gm-grid[@grid-id=\"'scaleStoreLocationGrid'\"]//input[@class='dx-texteditor-input'])[2]"));
         IWebElement PublishIcon => Driver.FindElement(By.XPath("//i[@ng-click='ctrl.actions.publishSLToStore(row.data)']"));
         IWebElement PublishLocations => Driver.FindElement(By.XPath("//i[@uib-tooltip='Publish scale locations to selected stores']"));
+        IWebElement PublishDrpDwn => Driver.FindElement(By.XPath("(//button[@ng-click='toggleDropdown()'])[1]"));
+        IWebElement SelectAllStore => Driver.FindElement(By.XPath("//input[@ng-model='isSelectAll']"));
         IWebElement ScalePFDrpDwn => Driver.FindElement(By.XPath("(//div[@class='selectize-control ng-pristine ng-untouched ng-valid ng-scope ng-isolate-scope single'])[6]"));
         IWebElement ScaleSelectPF => Driver.FindElement(By.XPath($"//span[text()=' {PFName}']"));
         private CustomControls ScaleContentSymblDrpDwn => new CustomControls(Driver, By.XPath("//select[@ng-model='ctrl.formData.scaleCSymbolId']"));
@@ -365,6 +367,12 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         {
             PublishLocations.Click();
             Thread.Sleep(1000);
+            PublishDrpDwn.Click();
+            SelectAllStore.Click();
+            PublishDrpDwn.Click();
+            PublishConfirm.Click();
+            Thread.Sleep(1000);
+            
         }
     }
 }
