@@ -236,6 +236,11 @@ namespace SpecFlow_MSTestFrameWork.Steps
             Thread.Sleep(8000);
 
         }
+        /// <summary>
+        /// Select an item and Add PF to the location
+        /// </summary>
+        /// <param name="PFname"></param>
+        /// <param name="locName"></param>
         [Then(@"user should select an item and add PF & location '(.*)' ,'(.*)")]
         public void ThenUserShouldSelectAnItemAndAddPFLocation(string PFname, string locName)
         {
@@ -251,6 +256,25 @@ namespace SpecFlow_MSTestFrameWork.Steps
             storeLocation.AddPFAndLocationFromItem(locName, PFname);
 
         }
+
+        [Then(@"Select stores/locations tab from item page")]
+        public void ThenSelectStoresLocationsTabFromItemPage()
+        {
+            storeLocation.ClickItemStoreLocation();
+        }
+
+        [Then(@"Select the location '(.*)' and click on import")]
+        public void ThenSelectTheLocationAndClickOnImport(string p0)
+        {
+            
+        }
+
+        [Then(@"verify the Queue message'(.*)'")]
+        public void ThenVerifyTheQueueMessage(string p0)
+        {
+            
+        }
+
 
         [Then(@"User should navigate to config page and delete the location '(.*)'")]
         public void ThenUserShouldNavigateToConfigPageAndDeleteTheLocation(string locCode)

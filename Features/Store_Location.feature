@@ -350,3 +350,23 @@ Scenario: Publish Scale item locations to selected stores
 	Examples:
     | store1       | store2          | LocCode1 | LocCode2 | LocName1  | LocName2  | code   | PFname     |
     | Crace (1501) | Kingston (1500) | 11       | 11       | Chocolate | Chocolate |  11    |   Coco     |
+
+	Scenario:Import against a location, where  no locations are there to import from a store.
+	 Given user navigates to HQ application
+	 When enter valid '<username>', '<hqpassword>'
+	 And Clicks on Log In button
+	 When User clicks on the Left Menu
+	 Then menu should be displayed
+	 When User enters Scale Configuration in the Search Box
+	 Then User click on Scale Configuration Item should be displayed on the Menu
+	 When user click the StoreLocation tab
+	 And Add new location
+	 And Create New Scale Location '<LocationCode>' and '<LocationName>'
+	 When User click on left menu and select the item maintenance
+	 Then select a scale item
+	 And Select stores/locations tab from item page
+	 Then Select the location '<LocationName>' and click on import 
+     And verify the Queue message'<Queue Message>'
+	 Examples:
+    | LocationCode | LocationName | Queue Message                          |
+    | 76           | ButterBun    | Scale location not configured in store |

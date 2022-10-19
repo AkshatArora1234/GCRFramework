@@ -1324,6 +1324,28 @@ this.ScenarioInitialize(scenarioInfo);
 this.PublishScaleItemLocationsToSelectedStores("Crace (1501)", "Kingston (1500)", "11", "11", "Chocolate", "Chocolate", "11", "Coco", ((string[])(null)));
 #line hidden
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Import against a location, where  no locations are there to import from a store.")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Store_Location")]
+        public void ImportAgainstALocationWhereNoLocationsAreThereToImportFromAStore_()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Import against a location, where  no locations are there to import from a store.", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 354
+ this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+            }
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore
