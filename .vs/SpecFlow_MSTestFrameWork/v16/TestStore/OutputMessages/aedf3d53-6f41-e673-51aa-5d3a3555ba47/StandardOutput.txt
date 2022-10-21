@@ -1,0 +1,84 @@
+-> Loading plugin C:\Source\GitCode\GCRFramework\bin\Debug\netcoreapp3.1\LivingDoc.SpecFlowPlugin.dll
+-> Loading plugin C:\Source\GitCode\GCRFramework\bin\Debug\netcoreapp3.1\TechTalk.SpecFlow.MSTest.SpecFlowPlugin.dll
+-> Loading plugin C:\Source\GitCode\GCRFramework\bin\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.dll
+-> Using default config
+Setup
+Given user navigates to HQ application
+-> done: HQLoginSteps.GivenUserNavigatesToHQApplication() (7.7s)
+When enter valid '<username>', '<hqpassword>'
+-> done: HQLoginSteps.WhenEnterValid("<username>", "<hqpassword>") (0.6s)
+And Clicks on Log In button
+-> done: HQLoginSteps.WhenClicksOnLogInButton() (1.4s)
+When User clicks on the Left Menu
+-> done: ScaleConfiguration.WhenUserClicksOnTheLeftMenu() (8.1s)
+Then menu should be displayed
+-> done: ScaleConfiguration.ThenMenuShouldBeDisplayed() (0.0s)
+When User enters Scale Configuration in the Search Box
+-> done: ScaleConfiguration.WhenUserEntersScaleConfigurationInTheSearchBox() (1.2s)
+Then User click on Scale Configuration Item should be displayed on the Menu
+-> done: PreRequisite.ThenUserClickOnScaleConfigurationItemShouldBeDisplayedOnTheMenu() (0.6s)
+When User clicks on Tab Print Format
+-> done: ScaleConfiguration.WhenUserClicksOnTabPrintFormat() (1.6s)
+Then Click on the New Button
+-> done: ScaleConfiguration.ClickonNewButton() (0.3s)
+And Enter '35' and 'White Chocolate'
+-> done: ScaleConfiguration.ThenEnterAnd("35", "White Chocolate") (1.5s)
+And User search for the PF '35'
+-> done: Store_LocationSteps.ThenUserSearchForThePF("35") (5.2s)
+When user search and select the printformat code
+-> done: ScaleConfiguration.WhenUserSearchAndSelectThePrintformatCode() (6.5s)
+And Open PF and update as per TD FourZeroFour
+-> done: Store_LocationSteps.WhenOpenPFAndUpdateAsPerTDFourZeroFour() (0.6s)
+Then Save and close the PF
+-> done: ScaleConfiguration.ThenSaveAndCloseThePF() (8.3s)
+When user click the StoreLocation tab
+-> done: Store_LocationSteps.WhenUserClickTheStoreLocationTab() (4.3s)
+And Add new location
+-> done: Store_LocationSteps.WhenAddNewLocation() (0.7s)
+And Create New Scale Location '95' and 'Vanilla Cream'
+-> done: Store_LocationSteps.WhenCreateNewScaleLocationAnd("95", "Vanilla Cream") (4.5s)
+Then Add the PF to location '95','White Chocolate'
+-> done: ScaleConfiguration.ThenAddThePFToLocation("95", "White Chocolate'") (22.8s)
+Then publish the location to store '95'
+-> done: Store_LocationSteps.ThenPublishTheLocationToStore("95") (17.4s)
+
+
+TestContext Messages:
+Given user navigates to HQ application
+-> done: HQLoginSteps.GivenUserNavigatesToHQApplication() (7.7s)
+When enter valid '<username>', '<hqpassword>'
+-> done: HQLoginSteps.WhenEnterValid("<username>", "<hqpassword>") (0.6s)
+And Clicks on Log In button
+-> done: HQLoginSteps.WhenClicksOnLogInButton() (1.4s)
+When User clicks on the Left Menu
+-> done: ScaleConfiguration.WhenUserClicksOnTheLeftMenu() (8.1s)
+Then menu should be displayed
+-> done: ScaleConfiguration.ThenMenuShouldBeDisplayed() (0.0s)
+When User enters Scale Configuration in the Search Box
+-> done: ScaleConfiguration.WhenUserEntersScaleConfigurationInTheSearchBox() (1.2s)
+Then User click on Scale Configuration Item should be displayed on the Menu
+-> done: PreRequisite.ThenUserClickOnScaleConfigurationItemShouldBeDisplayedOnTheMenu() (0.6s)
+When User clicks on Tab Print Format
+-> done: ScaleConfiguration.WhenUserClicksOnTabPrintFormat() (1.6s)
+Then Click on the New Button
+-> done: ScaleConfiguration.ClickonNewButton() (0.3s)
+And Enter '35' and 'White Chocolate'
+-> done: ScaleConfiguration.ThenEnterAnd("35", "White Chocolate") (1.5s)
+And User search for the PF '35'
+-> done: Store_LocationSteps.ThenUserSearchForThePF("35") (5.2s)
+When user search and select the printformat code
+-> done: ScaleConfiguration.WhenUserSearchAndSelectThePrintformatCode() (6.5s)
+And Open PF and update as per TD FourZeroFour
+-> done: Store_LocationSteps.WhenOpenPFAndUpdateAsPerTDFourZeroFour() (0.6s)
+Then Save and close the PF
+-> done: ScaleConfiguration.ThenSaveAndCloseThePF() (8.3s)
+When user click the StoreLocation tab
+-> done: Store_LocationSteps.WhenUserClickTheStoreLocationTab() (4.3s)
+And Add new location
+-> done: Store_LocationSteps.WhenAddNewLocation() (0.7s)
+And Create New Scale Location '95' and 'Vanilla Cream'
+-> done: Store_LocationSteps.WhenCreateNewScaleLocationAnd("95", "Vanilla Cream") (4.5s)
+Then Add the PF to location '95','White Chocolate'
+-> done: ScaleConfiguration.ThenAddThePFToLocation("95", "White Chocolate'") (22.8s)
+Then publish the location to store '95'
+-> done: Store_LocationSteps.ThenPublishTheLocationToStore("95") (17.4s)

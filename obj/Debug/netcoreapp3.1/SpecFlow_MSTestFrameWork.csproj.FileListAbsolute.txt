@@ -7081,6 +7081,7 @@ C:\Source\GitCode\GCRFramework\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstand
 C:\Source\GitCode\GCRFramework\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Source\GitCode\GCRFramework\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Source\GitCode\GCRFramework\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+C:\Source\GitCode\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.csproj.AssemblyReference.cache
 C:\Source\GitCode\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.GeneratedMSBuildEditorConfig.editorconfig
 C:\Source\GitCode\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.AssemblyInfoInputs.cache
 C:\Source\GitCode\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.AssemblyInfo.cs

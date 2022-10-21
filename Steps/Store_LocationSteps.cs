@@ -333,7 +333,7 @@ namespace SpecFlow_MSTestFrameWork.Features
 
 
         /// <summary>
-        /// Edit PF as per TD FourZeroOne
+        /// Edit PF as per TD FourZeroOne in SR
         /// </summary>
         [When(@"Open PF in edit page as per TD FourZeroOne")]
         public void WhenOpenPFInEditPageAsPerTDFourZeroOne()
@@ -348,7 +348,7 @@ namespace SpecFlow_MSTestFrameWork.Features
         }
 
         /// <summary>
-        /// Edit PF as per TD FourZeroTwo
+        /// Edit PF as per TD FourZeroTwo in SR
         /// </summary>
         [When(@"Open PF in edit page as per TD FourZeroTwo")]
         public void WhenOpenPFInEditPageAsPerTDFourZeroTwo()
@@ -361,6 +361,52 @@ namespace SpecFlow_MSTestFrameWork.Features
             store_Location.CheckPrintdateformatSR();
             store_Location.CheckCookingTimeSR();
             store_Location.CheckContentSR();
+        }
+
+
+        /// <summary>
+        /// Edit PF as per TD FourZeroThree in SR
+        /// </summary>
+        [When(@"Open PF in edit page as per TD FourZeroThree")]
+        public void WhenOpenPFInEditPageAsPerTDFourZeroThree()
+        {
+            store_Location_SR.EditPFinSR();
+            store_Location.CheckProductlifeSR();
+            store_Location.CheckTareSR();
+            store_Location.CheckSellBySR();
+            store_Location.CheckPresetmessagesSR();
+            store_Location.CheckPrintdateformatSR();
+            store_Location.CheckCookingTimeSR();
+            store_Location.CheckContentSR();
+            store_Location.CheckPerKGSR();
+        }
+
+        /// <summary>
+        /// Edit PF as per TD FourZeroThree in HQ
+        /// </summary>
+        [When(@"Open PF and update as per TD FourZeroThree")]
+        public void WhenOpenPFAndUpdateAsPerTDFourZeroThree()
+        {
+            store_Location.CheckProductlife();
+            store_Location.CheckTare();
+            store_Location.CheckContent();
+            store_Location.CheckPresetmessages();
+            store_Location.CheckPrintdateformat();
+            store_Location.CheckCookingTime();
+            store_Location.CheckPerKG();
+        }
+
+        /// <summary>
+        /// Edit PF as per TD FourZeroFour in HQ
+        /// </summary>
+        [When(@"Open PF and update as per TD FourZeroFour")]
+        public void WhenOpenPFAndUpdateAsPerTDFourZeroFour()
+        {
+            store_Location.CheckProductlife();
+            store_Location.CheckTare();
+            store_Location.CheckContent();
+            store_Location.CheckPresetmessages();
+            store_Location.CheckCookingTime();
         }
 
 

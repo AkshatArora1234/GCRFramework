@@ -150,6 +150,95 @@ Scenario: Publish location and verify store location exists at store with same n
 
 
 
+Scenario: Publish location and verify store location exists at store with same name and code against different print formats
+    Given user navigates to SR application
+	When enter valid '<username>', '<hqpassword>'
+	And Clicks on Login button of SR app
+	When User clicks on the Left Menu
+	Then menu should be displayed
+	When User enters Scale Configuration in the Search Box
+	Then Scale Configuration Item should be displayed on the Menu
+	When User Selects the Scale Configuration
+	Then Click on PF tab in SR
+	And Click on add new PF button in SR
+	Then Enter the new PF in SR '<SRCode1>' and '<SRPFname1>'
+	When user search for the PF in SR'<SRCode1>'
+	And Open PF in edit page as per TD FourZeroTwo
+	And Save and close PF in SR
+	Then Click on PF tab in SR
+	And Click on add new PF button in SR
+	Then Enter the new PF in SR '<SRCode2>' and '<SRPFname2>'
+	When user search for the PF in SR'<SRCode2>'
+	And Open PF in edit page as per TD FourZeroThree
+	And Save and close PF in SR
+	And User navigate to Location tab
+	And Click new location button
+	Then Add new location in SR application '<SRLocationCode1>' and '<SRLocationName1>'
+    Then search for a location '<SRLocationCode1>'
+	And Open location in edit page
+	Then add Vendor to location
+	And Link PF to Lcation <SRPFname1>'
+	Then Save and close location in SR
+	When Click new location button
+	Then Add new location in SR application '<SRLocationCode2>' and '<SRLocationName2>'
+    Then search for a location '<SRLocationCode2>'
+	And Open location in edit page
+	Then add Vendor to location
+	And Link PF to Lcation <SRPFname2>'
+	Then Save and close location in SR
+	And user navigates to next tab
+	When user navigates to HQ application
+	When enter valid '<username>', '<hqpassword>'
+	And Clicks on Log In button
+	When User clicks on the Left Menu
+	Then menu should be displayed
+	When User enters Scale Configuration in the Search Box
+	Then User click on Scale Configuration Item should be displayed on the Menu
+	When User clicks on Tab Print Format
+	Then Click on the New Button
+	And Enter '<code>' and '<PFname>'
+	And User search for the PF '<code>'
+	When user search and select the printformat code
+	And Open PF and update as per TD FourZeroThree
+	Then Save and close the PF
+	When user click the StoreLocation tab
+	And Add new location
+	And Create New Scale Location '<LocationCode>' and '<LocationName>'
+	Then Add the PF to location '<LocationCode>','<PFname>'
+	Then publish the location to store '<LocationCode>'
+
+	 Examples: 
+	  | SRCode1| SRPFname1| SRCode2| SRPFname2| SRLocationCode1 | SRLocationName1 | SRLocationCode2 | SRLocationName2 | LocationCode | LocationName | code | PFname   |
+	  | 60     | Cashew   | 53     | Almond   | 87              | Strawberry      | 72              | Sandwich        | 87           | Sandwich     | 65   | Pastries |
+
+
+Scenario: Publish location and verify store location does not exist at store with code or name or Print format 
+    Given user navigates to HQ application
+	When enter valid '<username>', '<hqpassword>'
+	And Clicks on Log In button
+	When User clicks on the Left Menu
+	Then menu should be displayed
+	When User enters Scale Configuration in the Search Box
+	Then User click on Scale Configuration Item should be displayed on the Menu
+	When User clicks on Tab Print Format
+	Then Click on the New Button
+	And Enter '<code>' and '<PFname>'
+	And User search for the PF '<code>'
+	When user search and select the printformat code
+	And Open PF and update as per TD FourZeroFour
+	Then Save and close the PF
+	When user click the StoreLocation tab
+	And Add new location
+	And Create New Scale Location '<LocationCode>' and '<LocationName>'
+	Then Add the PF to location '<LocationCode>','<PFname>'
+	Then publish the location to store '<LocationCode>'
+
+	 Examples: 
+	  | LocationCode | LocationName  | code | PFname          |
+	  | 95           | Vanilla Cream | 35   | White Chocolate |
+
+
+
 Scenario: Publish location and verify queue messages
     Given user navigates to SR application
     When enter valid '<username>', '<hqpassword>'
