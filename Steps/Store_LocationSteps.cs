@@ -258,7 +258,7 @@ namespace SpecFlow_MSTestFrameWork.Features
         [When(@"user click the StoreLocation tab")]
         public void WhenUserClickTheStoreLocationTab()
         {
-            store_Location.TabStore_LocationClick();
+          store_Location.TabStore_LocationClick();
         }
 
         /// <summary>

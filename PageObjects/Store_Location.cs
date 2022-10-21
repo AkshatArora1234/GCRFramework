@@ -84,6 +84,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement Cancel => Driver.FindElement(By.XPath("//button[@class='button-cancel']"));
         IWebElement SelectLoc => Driver.FindElement(By.XPath($"(//td[text()='{LocSearch}'])[1]"));
         IWebElement Locationsearchbox => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[106]"));
+        IWebElement ItemLocationsearchbox => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[102]"));
         IWebElement PFbox => Driver.FindElement(By.XPath("(//td[@class='inline_edit_enabled_cell'])[31]"));
         IWebElement StoreItemDropDown => Driver.FindElement(By.XPath("(//div[@class='dx-dropdowneditor-icon'])[23]"));
         IWebElement DeleteLoc => Driver.FindElement(By.XPath("(//i[@class='fa fa-trash-o ng-scope'])[74]"));
@@ -99,7 +100,9 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement LocationNameColumn => Driver.FindElement(By.XPath("//*[@aria-label='Column Location Name']"));
         IWebElement NewStoreDrpDwn => Driver.FindElement(By.XPath("//div[@class='selectize-input items not-full ng-valid ng-pristine has-options']//following::input[1]/.."));
         IWebElement CraceStore => Driver.FindElement(By.XPath("(//div[text()='Crace (1501)'])[1]"));
-
+        IWebElement Import => Driver.FindElement(By.XPath("(//i[@uib-tooltip='Import'])[2]"));
+        IWebElement QueueMessage => Driver.FindElement(By.XPath("//div[@ng-bind-html='message']"));
+        IWebElement LocNameBox => Driver.FindElement(By.XPath($"//td[text()='{LocSearch}']"));
 
 
 
@@ -285,7 +288,39 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Thread.Sleep(1000);
 
         }
+        public void ImportLocFromItem(string LocName)
+        {
+            LocSearch = LocName;
+            LocSearch = LocName;
+            Thread.Sleep(1000);
+            ItemLocationsearchbox.Click();
+            Thread.Sleep(2000);
+            ItemLocationsearchbox.SendKeys(LocName);
+            Thread.Sleep(2000);
+            CustomControls.MoveToAElement(LocNameBox, Driver);
+            Thread.Sleep(1500);
+            Import.Click();
+            Thread.Sleep(1000);
+            Confirm.Click();
+            Thread.Sleep(1500);
+           
+        }
 
+        public void VerifyQueueMessage(string Message)
+        {
+            for(int i=0;i<15;i++)
+            {
+                if ((QueueMessage.Text).Equals(Message))
+                {
+                    break;
+                }
+                else
+                {
+                    Thread.Sleep(1000);
+                }
+            }
+            Assert.AreEqual(Message, QueueMessage.Text);
+        }
         public void AddPFAndLocationFromItem(string locname, string PFname)
         {
             LocSearch = locname;

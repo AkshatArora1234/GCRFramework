@@ -260,19 +260,20 @@ namespace SpecFlow_MSTestFrameWork.Steps
         [Then(@"Select stores/locations tab from item page")]
         public void ThenSelectStoresLocationsTabFromItemPage()
         {
+            Thread.Sleep(1500);
             storeLocation.ClickItemStoreLocation();
         }
 
         [Then(@"Select the location '(.*)' and click on import")]
-        public void ThenSelectTheLocationAndClickOnImport(string p0)
+        public void ThenSelectTheLocationAndClickOnImport(string locName)
         {
-            
+            storeLocation.ImportLocFromItem(locName);
         }
 
         [Then(@"verify the Queue message'(.*)'")]
-        public void ThenVerifyTheQueueMessage(string p0)
+        public void ThenVerifyTheQueueMessage(string Message)
         {
-            
+            storeLocation.VerifyQueueMessage(Message);
         }
 
 
@@ -742,7 +743,7 @@ namespace SpecFlow_MSTestFrameWork.Steps
             columnChooser.SelectScaleValue();
             Thread.Sleep(5000);
             columnChooser.SelectFirstScaleRecord();
-            Thread.Sleep(10000);
+            Thread.Sleep(8000);
             columnChooser.ClickScaleTabInItems();
         }
 

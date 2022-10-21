@@ -362,11 +362,10 @@ Scenario: Publish Scale item locations to selected stores
 	 When user click the StoreLocation tab
 	 And Add new location
 	 And Create New Scale Location '<LocationCode>' and '<LocationName>'
-	 When User click on left menu and select the item maintenance
 	 Then select a scale item
 	 And Select stores/locations tab from item page
 	 Then Select the location '<LocationName>' and click on import 
      And verify the Queue message'<Queue Message>'
 	 Examples:
-    | LocationCode | LocationName | Queue Message                          |
-    | 76           | ButterBun    | Scale location not configured in store |
+    | LocationCode | LocationName | Queue Message                           |
+    | 76           | ButterBun    | Scale location not configured in store. |

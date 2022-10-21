@@ -1325,13 +1325,13 @@ this.PublishScaleItemLocationsToSelectedStores("Crace (1501)", "Kingston (1500)"
 #line hidden
         }
         
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Import against a location, where  no locations are there to import from a store.")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Store_Location")]
-        public void ImportAgainstALocationWhereNoLocationsAreThereToImportFromAStore_()
+        public virtual void ImportAgainstALocationWhereNoLocationsAreThereToImportFromAStore_(string locationCode, string locationName, string queueMessage, string[] exampleTags)
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("LocationCode", locationCode);
+            argumentsOfScenario.Add("LocationName", locationName);
+            argumentsOfScenario.Add("Queue Message", queueMessage);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Import against a location, where  no locations are there to import from a store.", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 354
  this.ScenarioInitialize(scenarioInfo);
@@ -1343,8 +1343,65 @@ this.PublishScaleItemLocationsToSelectedStores("Crace (1501)", "Kingston (1500)"
             else
             {
                 this.ScenarioStart();
+#line 355
+  testRunner.Given("user navigates to HQ application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 356
+  testRunner.When("enter valid \'<username>\', \'<hqpassword>\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 357
+  testRunner.And("Clicks on Log In button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 358
+  testRunner.When("User clicks on the Left Menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 359
+  testRunner.Then("menu should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 360
+  testRunner.When("User enters Scale Configuration in the Search Box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 361
+  testRunner.Then("User click on Scale Configuration Item should be displayed on the Menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 362
+  testRunner.When("user click the StoreLocation tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 363
+  testRunner.And("Add new location", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 364
+  testRunner.And(string.Format("Create New Scale Location \'{0}\' and \'{1}\'", locationCode, locationName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 365
+  testRunner.Then("select a scale item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 366
+  testRunner.And("Select stores/locations tab from item page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 367
+  testRunner.Then(string.Format("Select the location \'{0}\' and click on import", locationName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 368
+     testRunner.And(string.Format("verify the Queue message\'{0}\'", queueMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
             }
             this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Import against a location, where  no locations are there to import from a store.:" +
+            " 76")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Store_Location")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "76")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:LocationCode", "76")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:LocationName", "ButterBun")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Queue Message", "Scale location not configured in store.")]
+        public void ImportAgainstALocationWhereNoLocationsAreThereToImportFromAStore__76()
+        {
+#line 354
+ this.ImportAgainstALocationWhereNoLocationsAreThereToImportFromAStore_("76", "ButterBun", "Scale location not configured in store.", ((string[])(null)));
+#line hidden
         }
     }
 }
