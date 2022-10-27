@@ -458,3 +458,33 @@ Scenario: Publish Scale item locations to selected stores
 	 Examples:
     | LocationCode | LocationName | Queue Message                           |
     | 76           | ButterBun    | Scale location not configured in store. |
+
+	Scenario:Publish Scale item locations to selected stores in which location is soft deleted 
+	 Given user navigates to HQ application
+	 When enter valid '<username>', '<hqpassword>'
+	 And Clicks on Log In button
+	 When User clicks on the Left Menu
+	 Then menu should be displayed
+	 When User enters Scale Configuration in the Search Box
+	 Then User click on Scale Configuration Item should be displayed on the Menu
+	 When user click the StoreLocation tab
+
+	 Scenario:Import all scale location data for selected item from the stores that are active. 
+	 Given user navigates to HQ application
+	 When enter valid '<username>', '<hqpassword>'
+	 And Clicks on Log In button
+	 When User clicks on the Left Menu
+	 Then menu should be displayed
+	 When User enters Scale Configuration in the Search Box
+	 Then User click on Scale Configuration Item should be displayed on the Menu
+	 When user click the StoreLocation tab
+	 And Add new location
+	Then Create multiple locations '<store1>','<store2>','<LocCode1>','<LocCode2>','<LocName1>','<LocName2>'
+	When User clicks on the Left Menu
+	 Then menu should be displayed
+	 And User enters Store Maintenance in the Search Box
+	 Then User click on Store Maintenance should be displayed on the Menu
+	 Examples:
+    | store1       | store2          | LocCode1 | LocCode2 | LocName1   | LocName2   | 
+    | Crace (1501) | Kingston (1500) | 33       | 33       | Diary Milk | Diary Milk |  
+    

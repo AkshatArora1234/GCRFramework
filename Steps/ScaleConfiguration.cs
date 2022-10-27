@@ -68,6 +68,15 @@ namespace SpecFlow_MSTestFrameWork.Steps
             scaleConfigurationPage.ScaleConfiguration();
         }
         /// <summary>
+        /// Common Function for all test cases, enter text store maintenance in the text field
+        /// </summary>
+        [Then(@"User enters Store Maintenance in the Search Box")]
+        public void ThenUserEntersStoreMaintenanceInTheSearchBox()
+        {
+            scaleConfigurationPage.StoreMaintenance();
+        }
+
+        /// <summary>
         /// enter text Queue MAnager in the text field
         /// </summary>
         [When(@"User enters Queue Manager in the Search Box")]

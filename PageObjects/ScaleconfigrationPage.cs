@@ -25,6 +25,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement NutritionalPanel => Driver.FindElement(By.XPath("//a[@ng-click='ctrl.createNutritionalPanel()']"));
         IWebElement LeftMenu => Driver.FindElement(By.XPath("//*[@class='SideMenuWrapper SideMenuWrapperSmall']//*[@class='fa fa-bars N_P_A']"));
         IWebElement ScaleConfigurationMenu => Driver.FindElement(By.XPath("//span/strong[text()='Scale Configuration']"));
+        IWebElement StoreMaintenanceMenu => Driver.FindElement(By.XPath("//span/strong[text()='Store Maintenanc']"));
         IWebElement ElementSelectFromTable => Driver.FindElement(By.XPath("//*[@id='gridSCALEPF']/div/div[6]/div/div/div[1]/div/table/tbody/tr[last()-1]/td[1]"));
         IWebElement EnterCode => Driver.FindElement(By.XPath("(//*[@name='pFCode'])"));
         IWebElement EnterFontCode => Driver.FindElement(By.XPath("//*[@name='scaleFontCode']"));
@@ -140,8 +141,16 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             Thread.Sleep(1000);
             Searchbar.SendKeys("Scale Configuration");
         }
+        public void StoreMaintenance()
+        {
+            Searchbar.Clear();
+            Thread.Sleep(1000);
+            Searchbar.SendKeys("Store Maintenance");
+            Thread.Sleep(500);
+        }
 
         public void MenuScaleConfigurationClick() => ScaleConfigurationMenu.Click();
+        public void MenuStoreMaintenanceClick() => Searchbar.SendKeys(Keys.Enter);
         public void TabPrintFormatClick() => TabPrintFormat.Click();
         public void TabConfiGrationClick() => TabConfigration.Click();
         public void srPrintFormat() => SRPrintFormat.Click();

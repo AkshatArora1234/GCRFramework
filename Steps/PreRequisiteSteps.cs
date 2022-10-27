@@ -363,6 +363,14 @@ namespace SpecFlow_MSTestFrameWork.Steps
         {
             scaleConfigurationPage.MenuScaleConfigurationClick();
         }
+        /// <summary>
+        /// Click on Store Maintenanace Menu. Common function for all scale configuration tests
+        /// </summary>
+        [Then(@"User click on Store Maintenance should be displayed on the Menu")]
+        public void ThenUserClickOnStoreMaintenanceShouldBeDisplayedOnTheMenu()
+        {
+            scaleConfigurationPage.MenuStoreMaintenanceClick();
+        }
 
         /// <summary>
         /// Enter Font COde and Font Name. Prerequisite for Print Format tests
