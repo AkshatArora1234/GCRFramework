@@ -46,7 +46,18 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement flagCheckbox => Driver.FindElement(By.XPath($"//span[text()='{columChoosed}']/ancestor::div/input[@type='checkbox']"));
 
 
-        public void AddNewSRLocation() => NewLocation.Click();
+        public void AddNewSRLocation()
+        {
+            try
+            {
+                NewLocation.Click();
+            }
+            catch(Exception e)
+            {
+                Thread.Sleep(5000);
+                NewLocation.Click();
+            }
+        }
         public void SaveandClosePFinSR() => SaveClosePF.Click();
         public void NewSRPFbuttonClick() => NewPF.Click();
         public void AddVendorinLoc() => VendorSelection.SelectType("Wedderburn");

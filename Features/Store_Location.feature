@@ -352,7 +352,7 @@ Scenario: Publish location and verify queue messages
 	Then click on view summary of the entry
 	Then Validate queue message for location C
 	Then close the view summary popup
-	 When User clicks on the Left Menu
+	When User clicks on the Left Menu
     Then menu should be displayed
     When User enters Scale Configuration in the Search Box
     Then User click on Scale Configuration Item should be displayed on the Menu

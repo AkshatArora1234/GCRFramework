@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 using SpecFlow_MSTestFrameWork.PageObjects;
 using System;
 using System.Linq;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace SpecFlow_MSTestFrameWork.Features
@@ -66,6 +67,7 @@ namespace SpecFlow_MSTestFrameWork.Features
         [Then(@"Click on PF tab in SR")]
         public void ThenClickOnPFTabInSR()
         {
+            Thread.Sleep(3000);
             scaleConfigurationPage.srPrintFormat();
         }
         /// <summary>
@@ -74,6 +76,7 @@ namespace SpecFlow_MSTestFrameWork.Features
         [Then(@"Click on add new PF button in SR")]
         public void ThenClickOnAddNewPFButtonInSR()
         {
+            Thread.Sleep(3000);
             store_Location_SR.NewSRPFbuttonClick();
         }
         /// <summary>
@@ -84,6 +87,7 @@ namespace SpecFlow_MSTestFrameWork.Features
         [Then(@"Enter the new PF in SR '(.*)' and '(.*)'")]
         public void ThenEnterTheNewPFInSRAnd(string SRcode, string SRPFname)
         {
+            Thread.Sleep(3000);
             store_Location_SR.SRPFCreation(SRcode, SRPFname);
         }
         /// <summary>
@@ -93,6 +97,7 @@ namespace SpecFlow_MSTestFrameWork.Features
         [When(@"user search for the PF in SR'(.*)'")]
         public void WhenUserSearchForThePFInSR(string SRcode)
         {
+            Thread.Sleep(3000);
             store_Location_SR.SearchPFInSR(SRcode);
         }
         /// <summary>

@@ -6882,6 +6882,7 @@ C:\Users\jesni.as\source\Git\sheet2\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlo
 C:\Users\jesni.as\source\Git\sheet2\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.dll
 C:\Users\jesni.as\source\Git\sheet2\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.pdb
 C:\Users\jesni.as\source\Git\sheet2\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.genruntimeconfig.cache
+C:\Users\jesni.as\source\Git\Latest\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.csproj.AssemblyReference.cache
 C:\Source\GitCode\GCRFramework\bin\Debug\netcoreapp3.1\testhost.dll
 C:\Source\GitCode\GCRFramework\bin\Debug\netcoreapp3.1\LivingDoc.Dtos.dll
 C:\Source\GitCode\GCRFramework\bin\Debug\netcoreapp3.1\LivingDoc.SpecFlowPlugin.dll
@@ -7090,4 +7091,3 @@ C:\Source\GitCode\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.
 C:\Source\GitCode\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.dll
 C:\Source\GitCode\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.pdb
 C:\Source\GitCode\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.genruntimeconfig.cache
-C:\Users\jesni.as\source\Git\Latest\GCRFramework\obj\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.csproj.AssemblyReference.cache
