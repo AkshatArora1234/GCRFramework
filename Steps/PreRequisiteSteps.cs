@@ -371,6 +371,25 @@ namespace SpecFlow_MSTestFrameWork.Steps
         {
             scaleConfigurationPage.MenuStoreMaintenanceClick();
         }
+        /// <summary>
+        /// click on the store edit button in store maintenance page
+        /// </summary>
+        /// <param name="store0"></param>
+        [Then(@"User click on the store edit button in store maintenance page '(.*)'")]
+        public void ThenUserClickOnTheStoreEditButtonInStoreMaintenancePage(string store)
+        {
+            scaleConfigurationPage.ClickOnStoreEdit(store);
+        }
+        /// <summary>
+        /// Deactivate the store
+        /// </summary>
+        /// <param name="p0"></param>
+        [Then(@"Deactivate the store '(.*)'")]
+        public void ThenDeactivateTheStore(string store)
+        {
+            scaleConfigurationPage.DeactivateStore(store);
+        }
+
 
         /// <summary>
         /// Enter Font COde and Font Name. Prerequisite for Print Format tests

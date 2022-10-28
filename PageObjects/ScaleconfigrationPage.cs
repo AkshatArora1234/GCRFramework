@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
+using System;
 using System.Threading;
 
 namespace SpecFlow_MSTestFrameWork.PageObjects
@@ -10,6 +11,7 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
 
         private IWebDriver Driver;
         string PFName;
+        string Store;
         public Scaleconfig(IWebDriver driver)
         {
             Driver = driver;
@@ -123,7 +125,11 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
         IWebElement StoreLocation => Driver.FindElement(By.XPath("//uib-tab-heading[text()='Stores / Locations']"));
         IWebElement LocationName => Driver.FindElement(By.XPath("//div[text()='Location Name']"));
         IWebElement StoreNameSearch => Driver.FindElement(By.XPath("(//input[@role='textbox'])[13]"));
-
+        IWebElement StoreNameSearchMaintenance => Driver.FindElement(By.XPath("(//input[@class='dx-texteditor-input'])[24]"));
+        IWebElement ClickStoreName => Driver.FindElement(By.XPath($"(//td[text()='{Store}'])[2]"));
+        IWebElement ClickStoreEdit => Driver.FindElement(By.XPath("(//i[@uib-tooltip='Edit'])[3]"));
+        IWebElement StoreActive => Driver.FindElement(By.XPath("(//input[@ng-model='ctrl.currentStore.isActive'])[1]"));
+        IWebElement SavenClose => Driver.FindElement(By.XPath("(//span[text()='Save & Close'])[1]"));
 
 
         public void ButtonSaveClick() => ButtonSave.Click();
@@ -272,7 +278,44 @@ namespace SpecFlow_MSTestFrameWork.PageObjects
             EnterFontCode.SendKeys(code);
             EnterFontPrintFormat.SendKeys(name);
         }
-
+        public void DeactivateStore(string store)
+        {
+            if(StoreActive.Enabled)
+            {
+                StoreActive.Click();
+            }
+            Thread.Sleep(1000);
+            SavenClose.Click();
+        }
+        public void ClickOnStoreEdit(string store)
+        {
+            if(store.Equals("Kingston(1500)"))
+            { 
+                Store = "Kingston";
+            }
+            else if(store.Equals("Crace (1501)"))
+            {
+                Store = "Crace";
+            }
+            Thread.Sleep(2000);
+            StoreNameSearchMaintenance.Click();
+            Thread.Sleep(1000);
+            StoreNameSearchMaintenance.SendKeys(Store);
+            Thread.Sleep(1000);
+            try
+            {
+                CustomControls.MoveToAElement(ClickStoreName, Driver);
+                Thread.Sleep(1000);
+                ClickStoreEdit.Click();
+            }
+            catch(Exception e)
+            {
+                ClickStoreName.Click();
+                Thread.Sleep(1000);
+                ClickStoreEdit.Click();
+            }
+           
+        }
         public void EnterTaretCodeNameValue(string code, string name, string value)
         {
             EnterTareCode.SendKeys(code);

@@ -484,6 +484,8 @@ Scenario: Publish Scale item locations to selected stores
 	 Then menu should be displayed
 	 And User enters Store Maintenance in the Search Box
 	 Then User click on Store Maintenance should be displayed on the Menu
+	 And User click on the store edit button in store maintenance page '<store1>'
+	 Then Deactivate the store '<store1>'
 	 Examples:
     | store1       | store2          | LocCode1 | LocCode2 | LocName1   | LocName2   | 
     | Crace (1501) | Kingston (1500) | 33       | 33       | Diary Milk | Diary Milk |  

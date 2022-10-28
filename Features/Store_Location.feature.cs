@@ -1324,7 +1324,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("close the view summary popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 355
-  testRunner.When("User clicks on the Left Menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("User clicks on the Left Menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 356
     testRunner.Then("menu should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1833,6 +1833,12 @@ this.PublishScaleItemLocationsToSelectedStores("Crace (1501)", "Kingston (1500)"
 #line hidden
 #line 486
   testRunner.Then("User click on Store Maintenance should be displayed on the Menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 487
+  testRunner.And(string.Format("User click on the store edit button in store maintenance page \'{0}\'", store1), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 488
+  testRunner.Then(string.Format("Deactivate the store \'{0}\'", store1), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -1,0 +1,72 @@
+-> Loading plugin C:\Users\jesni.as\source\Git\GCRFramework\GCRFramework\bin\Debug\netcoreapp3.1\LivingDoc.SpecFlowPlugin.dll
+-> Loading plugin C:\Users\jesni.as\source\Git\GCRFramework\GCRFramework\bin\Debug\netcoreapp3.1\TechTalk.SpecFlow.MSTest.SpecFlowPlugin.dll
+-> Loading plugin C:\Users\jesni.as\source\Git\GCRFramework\GCRFramework\bin\Debug\netcoreapp3.1\SpecFlow_MSTestFrameWork.dll
+-> Using default config
+Setup
+Given user navigates to HQ application
+-> done: HQLoginSteps.GivenUserNavigatesToHQApplication() (2.9s)
+When enter valid '<username>', '<hqpassword>'
+-> done: HQLoginSteps.WhenEnterValid("<username>", "<hqpassword>") (0.2s)
+And Clicks on Log In button
+-> done: HQLoginSteps.WhenClicksOnLogInButton() (9.1s)
+When User clicks on the Left Menu
+-> done: ScaleConfiguration.WhenUserClicksOnTheLeftMenu() (8.1s)
+Then menu should be displayed
+-> done: ScaleConfiguration.ThenMenuShouldBeDisplayed() (0.0s)
+When User enters Scale Configuration in the Search Box
+-> done: ScaleConfiguration.WhenUserEntersScaleConfigurationInTheSearchBox() (1.2s)
+Then User click on Scale Configuration Item should be displayed on the Menu
+-> done: PreRequisite.ThenUserClickOnScaleConfigurationItemShouldBeDisplayedOnTheMenu() (0.6s)
+When user click the StoreLocation tab
+-> done: Store_LocationSteps.WhenUserClickTheStoreLocationTab() (4.2s)
+And Add new location
+-> done: Store_LocationSteps.WhenAddNewLocation() (0.5s)
+Then Create multiple locations 'Crace (1501)','Kingston (1500)','33','33','Diary Milk','Diary Milk'
+-> done: Store_LocationSteps.ThenCreateMultipleLocations("Crace (1501)", "Kingston (1500)", "33", "33", "Diary Milk", "Diary Milk") (13.8s)
+When User clicks on the Left Menu
+-> done: ScaleConfiguration.WhenUserClicksOnTheLeftMenu() (8.1s)
+Then menu should be displayed
+-> done: ScaleConfiguration.ThenMenuShouldBeDisplayed() (0.0s)
+And User enters Store Maintenance in the Search Box
+-> done: ScaleConfiguration.ThenUserEntersStoreMaintenanceInTheSearchBox() (1.9s)
+Then User click on Store Maintenance should be displayed on the Menu
+-> done: PreRequisite.ThenUserClickOnStoreMaintenanceShouldBeDisplayedOnTheMenu() (0.2s)
+And User click on the store edit button in store maintenance page 'Crace (1501)'
+-> done: PreRequisite.ThenUserClickOnTheStoreEditButtonInStoreMaintenancePage("Crace (1501)") (6.2s)
+Then Deactivate the store 'Crace (1501)'
+-> done: PreRequisite.ThenDeactivateTheStore("Crace (1501)") (105.9s)
+
+
+TestContext Messages:
+Given user navigates to HQ application
+-> done: HQLoginSteps.GivenUserNavigatesToHQApplication() (2.9s)
+When enter valid '<username>', '<hqpassword>'
+-> done: HQLoginSteps.WhenEnterValid("<username>", "<hqpassword>") (0.2s)
+And Clicks on Log In button
+-> done: HQLoginSteps.WhenClicksOnLogInButton() (9.1s)
+When User clicks on the Left Menu
+-> done: ScaleConfiguration.WhenUserClicksOnTheLeftMenu() (8.1s)
+Then menu should be displayed
+-> done: ScaleConfiguration.ThenMenuShouldBeDisplayed() (0.0s)
+When User enters Scale Configuration in the Search Box
+-> done: ScaleConfiguration.WhenUserEntersScaleConfigurationInTheSearchBox() (1.2s)
+Then User click on Scale Configuration Item should be displayed on the Menu
+-> done: PreRequisite.ThenUserClickOnScaleConfigurationItemShouldBeDisplayedOnTheMenu() (0.6s)
+When user click the StoreLocation tab
+-> done: Store_LocationSteps.WhenUserClickTheStoreLocationTab() (4.2s)
+And Add new location
+-> done: Store_LocationSteps.WhenAddNewLocation() (0.5s)
+Then Create multiple locations 'Crace (1501)','Kingston (1500)','33','33','Diary Milk','Diary Milk'
+-> done: Store_LocationSteps.ThenCreateMultipleLocations("Crace (1501)", "Kingston (1500)", "33", "33", "Diary Milk", "Diary Milk") (13.8s)
+When User clicks on the Left Menu
+-> done: ScaleConfiguration.WhenUserClicksOnTheLeftMenu() (8.1s)
+Then menu should be displayed
+-> done: ScaleConfiguration.ThenMenuShouldBeDisplayed() (0.0s)
+And User enters Store Maintenance in the Search Box
+-> done: ScaleConfiguration.ThenUserEntersStoreMaintenanceInTheSearchBox() (1.9s)
+Then User click on Store Maintenance should be displayed on the Menu
+-> done: PreRequisite.ThenUserClickOnStoreMaintenanceShouldBeDisplayedOnTheMenu() (0.2s)
+And User click on the store edit button in store maintenance page 'Crace (1501)'
+-> done: PreRequisite.ThenUserClickOnTheStoreEditButtonInStoreMaintenancePage("Crace (1501)") (6.2s)
+Then Deactivate the store 'Crace (1501)'
+-> done: PreRequisite.ThenDeactivateTheStore("Crace (1501)") (105.9s)
